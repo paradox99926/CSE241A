@@ -1,0 +1,27 @@
+*----------------------------------------------------------------------------------------
+*	Voltus Power Analysis - Power Calculator - Version v23.14-s083_1 64-bit (03/05/2025 19:55:08)
+*	Copyright 2007, Cadence Design Systems, Inc.
+*
+* 	Date & Time:	2025-Jun-02 13:06:00 (2025-Jun-02 20:06:00 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*
+* Non switching instances with dynamic_switch_pattern report
+* Cause keyword explanations:
+*   Constant - if output of inst is set to constant in TWF
+*   NoTiming - if output of inst has no timing information
+*   HighFanout - if flop fanout load is higher than threshold specified
+*   TieHighLow - if inst is tie-high or tie-low
+*   FloatingOutput - if inst output pin is floating
+*   OutOfWindow - if toggle time is out of window
+*   SwitchPatternFail - if inst fails applying switch pattern
+*   NoScheduled - if flop/mem/primary input is not scheduled
+*   UserSkip - if user specify to skip schedule
+*   NoEventPropagated - if combo inst has no event being propagated to its output
+*   VcdAnnotated - if inst/pin has DSP applied, or has VCD specified
+*   ToggleInit - if inst has toggle initialized
+*   ToggleCreateEmpty - if inst has toggle created but not initialized
+*
+*InstanceName 		 CellName 	 Cause
+*----------------------------------------------------------------------------------------

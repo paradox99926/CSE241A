@@ -1,0 +1,83 @@
+{
+    "num_nets": "2",
+    "net_info": [
+        {
+            "die": "",
+            "net": "VSS",
+            "nominal_voltage": "0",
+            "power_or_ground": "ground"
+        },
+        {
+            "die": "",
+            "net": "VDD",
+            "nominal_voltage": "0.699999988",
+            "power_or_ground": "power"
+        }
+    ],
+    "instance_voltage": [
+        {
+            "analysis_mode": "Avg",
+            "measurement_mode": "elapsed",
+            "min": "0.66976404190063477",
+            "max": "0.69116479158401489",
+            "average": "0.68405459950986347",
+            "size": "13872",
+            "die": "",
+            "net": "VDD"
+        },
+        {
+            "analysis_mode": "Worst",
+            "measurement_mode": "elapsed",
+            "min": "0.66976404190063477",
+            "max": "0.69116479158401489",
+            "average": "0.68405459950986347",
+            "size": "13872",
+            "die": "",
+            "net": "VDD"
+        },
+        {
+            "analysis_mode": "Avg",
+            "measurement_mode": "elapsed",
+            "min": "0.0098731936886906624",
+            "max": "0.031348545104265213",
+            "average": "0.016365469832697318",
+            "size": "13872",
+            "die": "",
+            "net": "VSS"
+        },
+        {
+            "analysis_mode": "Worst",
+            "measurement_mode": "elapsed",
+            "min": "0.0098731936886906624",
+            "max": "0.031348545104265213",
+            "average": "0.016365469832697318",
+            "size": "13872",
+            "die": "",
+            "net": "VSS"
+        }
+    ],
+    "effective_instance_voltage": [
+        {
+            "analysis_mode": "Avg",
+            "measurement_mode": "elapsed",
+            "min": "0.63939384743571281",
+            "max": "0.68112200405448675",
+            "average": "0.66768912967716609",
+            "size": "13872",
+            "die": "",
+            "power_net": "VDD",
+            "ground_net": "VSS"
+        },
+        {
+            "analysis_mode": "Worst",
+            "measurement_mode": "elapsed",
+            "min": "0.63939384743571281",
+            "max": "0.68112200405448675",
+            "average": "0.66768912967716609",
+            "size": "13872",
+            "die": "",
+            "power_net": "VDD",
+            "ground_net": "VSS"
+        }
+    ]
+}

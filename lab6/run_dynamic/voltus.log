@@ -1,0 +1,1433 @@
+
+Cadence Voltus(TM) IC Power Integrity Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v23.14-s089_1, built Fri Mar 7 10:32:07 PST 2025
+Options:	-no_logv -init run_voltus.tcl 
+Date:		Mon Jun  2 11:35:20 2025
+Host:		ieng6-ece-08.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB)
+OS:		CentOS Linux 7 (Core)
+
+License:
+		[11:35:20.201059] Configured Lic search path (23.02-s006): 1704@acms-flexlm-lnx4.ucsd.edu,1704@acms-flexlm-lnx5.ucsd.edu,1704@acms-flexlm-lnx6.ucsd.edu:/software/MATLAB/network.lic:1705@its-flexlm-lnx4.ucsd.edu
+
+		vtsxl	Voltus Power Integrity Solution XL	23.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (64 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_16717_134ad8c5-40f9-42c9-b30b-90fff88acc70_V93BU9'.
+#@ Processing -files option
+Sourcing tcl/tk file 'run_voltus.tcl' ...
+<CMD> read_lib -lef {asap7_tech_1x_201209.lef asap7sc7p5t_27_L_1x_201211.lef asap7sc7p5t_27_R_1x_201211.lef asap7sc7p5t_27_SL_1x_201211.lef}
+<CMD> read_view_definition viewDefinition.tcl
+<CMD> read_verilog mpeg2_top.v
+<CMD> set_top_module mpeg2_top -ignore_undefined_cell
+#% Begin Load MMMC data ... (date=06/02 11:35:55, mem=1477.9M)
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=06/02 11:35:55, total cpu=0:00:00.0, real=0:00:00.0, peak res=1479.0M, current mem=1479.0M)
+RC_wc_25
+
+Loading LEF file asap7_tech_1x_201209.lef ...
+
+Loading LEF file asap7sc7p5t_27_L_1x_201211.lef ...
+**WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+so you are unable to create rectilinear partition in a hierarchical flow.
+Set DBUPerIGU to M1 pitch 36.
+
+Loading LEF file asap7sc7p5t_27_R_1x_201211.lef ...
+
+Loading LEF file asap7sc7p5t_27_SL_1x_201211.lef ...
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from viewDefinition.tcl
+Starting library reading in 'Multi-threaded flow' (with '4' threads)
+Reading   timing library /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/LEFLIB/lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib.
+**ERROR: (TECHLIB-1171):	The attribute 'values' of group 'fall_constraint' has one or more values which are greater than 100sec. This may lead to unexpected analysis results. (File /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/LEFLIB/lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, Line 854633)
+**ERROR: (TECHLIB-1171):	The attribute 'values' of group 'fall_constraint' has one or more values which are greater than 100sec. This may lead to unexpected analysis results. (File /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/LEFLIB/lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, Line 854650)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/LEFLIB/lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, Line 901735)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/LEFLIB/lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, Line 904635)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/LEFLIB/lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, Line 1844369)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/LEFLIB/lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, Line 1847269)
+**ERROR: (TECHLIB-1171):	The attribute 'values' of group 'fall_constraint' has one or more values which are greater than 100sec. This may lead to unexpected analysis results. (File /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/LEFLIB/lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, Line 2739901)
+**ERROR: (TECHLIB-1171):	The attribute 'values' of group 'fall_constraint' has one or more values which are greater than 100sec. This may lead to unexpected analysis results. (File /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/LEFLIB/lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, Line 2739918)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/LEFLIB/lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, Line 2787003)
+**WARN: (TECHLIB-1277):	The attribute 'input_signal_level' has been defined for output pin 'CON'. 'input_signal_level' cannot be defined at this level and is being ignored. (File /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/LEFLIB/lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, Line 2789903)
+Read 606 cells in library asap7sc7p5t_AllVT_TT_nldm_201020.
+Library reading multithread flow ended.
+*** End library_loading (cpu=0.35min, real=0.13min, mem=436.0M, fe_cpu=0.87min, fe_real=0.72min, fe_mem=2265.7M) ***
+#% Begin Load netlist data ... (date=06/02 11:36:03, mem=1587.2M)
+*** Begin netlist parsing (mem=2265.7M) ***
+Reading verilog netlist 'mpeg2_top.v'
+
+*** Memory Usage v#2 (Current mem = 2513.688M, initial mem = 828.410M) ***
+*** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=2513.7M) ***
+#% End Load netlist data ... (date=06/02 11:36:04, total cpu=0:00:01.0, real=0:00:01.0, peak res=1695.5M, current mem=1695.5M)
+Set top cell to mpeg2_top.
+Building hierarchical netlist for Cell mpeg2_top ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+Set DBUPerIGU to techSite asap7sc7p5t width 54.
+** info: there are 637 modules.
+** info: there are 13872 stdCell insts.
+** info: there are 13872 stdCell insts with at least one signal pin.
+
+*** Memory Usage v#2 (Current mem = 2821.688M, initial mem = 828.410M) ***
+
+Honor LEF defined pitches for advanced node
+Start create_tracks
+Set Default Input Pin Transition as 0.1 ps.
+mpeg2_top.sdc
+Extraction setup Started for TopCell mpeg2_top 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: AV_wc_on
+    RC-Corner Name        : RC_wc_25
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner Technology file: 'ASAP7.tch'
+Initializing multi-corner resistance tables ...
+Multithreaded Timing Analysis is initialized with 4 threads
+
+Reading timing constraints file 'mpeg2_top.sdc' ...
+Current (total cpu=0:00:55.2, real=0:00:46.0, peak res=2440.2M, current mem=2440.2M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File mpeg2_top.sdc, Line 4).
+
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File mpeg2_top.sdc, Line 5).
+
+mpeg2_top
+------------------------------------------------------------------------------------
+CONSTRAINT READING SUMMARY                                                          
+------------------------------------------------------------------------------------
+Constraint                                        | Success        | Fail           
+------------------------------------------------------------------------------------
+create_clock                                      | 1              | 0              
+::set_wire_load_mode                              | 1              | 0              
+set_clock_gating_check                            | 1              | 0              
+get_ports                                         | 1              | 0              
+current_design                                    | 1              | 0              
+set_units                                         | 2              | 0              
+------------------------------------------------------------------------------------
+INFO (CTE): Reading of timing constraints file mpeg2_top.sdc completed, with 2 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2441.6M, current mem=2441.6M)
+Current (total cpu=0:00:55.3, real=0:00:46.0, peak res=2441.6M, current mem=2441.6M)
+Total number of combinational cells: 507
+Total number of sequential cells: 99
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFx10_ASAP7_75t_L BUFx12_ASAP7_75t_L BUFx12f_ASAP7_75t_L BUFx16f_ASAP7_75t_L BUFx24_ASAP7_75t_L BUFx2_ASAP7_75t_L BUFx3_ASAP7_75t_L BUFx4_ASAP7_75t_L BUFx5_ASAP7_75t_L BUFx4f_ASAP7_75t_L BUFx6f_ASAP7_75t_L BUFx8_ASAP7_75t_L HB1xp67_ASAP7_75t_L BUFx10_ASAP7_75t_R BUFx12f_ASAP7_75t_R BUFx16f_ASAP7_75t_R BUFx2_ASAP7_75t_R BUFx3_ASAP7_75t_R BUFx5_ASAP7_75t_R BUFx4f_ASAP7_75t_R BUFx6f_ASAP7_75t_R HB1xp67_ASAP7_75t_R BUFx10_ASAP7_75t_SL BUFx12_ASAP7_75t_SL BUFx12f_ASAP7_75t_SL BUFx16f_ASAP7_75t_SL BUFx24_ASAP7_75t_SL BUFx2_ASAP7_75t_SL BUFx3_ASAP7_75t_SL BUFx4_ASAP7_75t_SL BUFx5_ASAP7_75t_SL BUFx4f_ASAP7_75t_SL BUFx6f_ASAP7_75t_SL BUFx8_ASAP7_75t_SL HB1xp67_ASAP7_75t_SL HB2xp67_ASAP7_75t_SL
+Total number of usable buffers: 36
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CKINVDCx10_ASAP7_75t_L CKINVDCx12_ASAP7_75t_L CKINVDCx11_ASAP7_75t_L CKINVDCx14_ASAP7_75t_L CKINVDCx16_ASAP7_75t_L CKINVDCx20_ASAP7_75t_L CKINVDCx8_ASAP7_75t_L CKINVDCx5p33_ASAP7_75t_L CKINVDCx6p67_ASAP7_75t_L CKINVDCx9p33_ASAP7_75t_L INVx11_ASAP7_75t_L INVx13_ASAP7_75t_L INVx1_ASAP7_75t_L INVx2_ASAP7_75t_L INVx3_ASAP7_75t_L INVx4_ASAP7_75t_L INVx5_ASAP7_75t_L INVx6_ASAP7_75t_L INVx8_ASAP7_75t_L INVxp67_ASAP7_75t_L INVxp33_ASAP7_75t_L CKINVDCx10_ASAP7_75t_R CKINVDCx12_ASAP7_75t_R CKINVDCx11_ASAP7_75t_R CKINVDCx14_ASAP7_75t_R CKINVDCx16_ASAP7_75t_R CKINVDCx20_ASAP7_75t_R CKINVDCx8_ASAP7_75t_R CKINVDCx5p33_ASAP7_75t_R CKINVDCx6p67_ASAP7_75t_R CKINVDCx9p33_ASAP7_75t_R INVx11_ASAP7_75t_R INVx13_ASAP7_75t_R INVx1_ASAP7_75t_R INVx2_ASAP7_75t_R INVx3_ASAP7_75t_R INVx4_ASAP7_75t_R INVx5_ASAP7_75t_R INVx6_ASAP7_75t_R INVx8_ASAP7_75t_R INVxp67_ASAP7_75t_R INVxp33_ASAP7_75t_R CKINVDCx10_ASAP7_75t_SL CKINVDCx12_ASAP7_75t_SL CKINVDCx11_ASAP7_75t_SL CKINVDCx14_ASAP7_75t_SL CKINVDCx16_ASAP7_75t_SL CKINVDCx20_ASAP7_75t_SL CKINVDCx8_ASAP7_75t_SL CKINVDCx5p33_ASAP7_75t_SL CKINVDCx6p67_ASAP7_75t_SL CKINVDCx9p33_ASAP7_75t_SL INVx11_ASAP7_75t_SL INVx13_ASAP7_75t_SL INVx1_ASAP7_75t_SL INVx2_ASAP7_75t_SL INVx3_ASAP7_75t_SL INVx4_ASAP7_75t_SL INVx5_ASAP7_75t_SL INVx6_ASAP7_75t_SL INVx8_ASAP7_75t_SL INVxp67_ASAP7_75t_SL INVxp33_ASAP7_75t_SL
+Total number of usable inverters: 63
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: HB2xp67_ASAP7_75t_L HB3xp67_ASAP7_75t_L HB4xp67_ASAP7_75t_L BUFx12_ASAP7_75t_R BUFx24_ASAP7_75t_R BUFx4_ASAP7_75t_R BUFx8_ASAP7_75t_R HB2xp67_ASAP7_75t_R HB3xp67_ASAP7_75t_R HB4xp67_ASAP7_75t_R HB3xp67_ASAP7_75t_SL HB4xp67_ASAP7_75t_SL
+Total number of identified usable delay cells: 12
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+**ERROR: (TCLCMD-1097):	The -opcond_library 'slow' specified in create_delay_corner -name 'DC_wc' not found
+#% Begin Load MMMC data post ... (date=06/02 11:36:06, mem=2470.0M)
+#% End Load MMMC data post ... (date=06/02 11:36:06, total cpu=0:00:00.0, real=0:00:00.0, peak res=2470.0M, current mem=2470.0M)
+<CMD> read_def mpeg2_top.def
+Reading DEF file 'mpeg2_top.def', current time is Mon Jun  2 11:36:07 2025 ...
+--- DIVIDERCHAR '/'
+--- UnitsPerDBU = 1.0000
+
+Honor LEF defined pitches for advanced node
+Start create_tracks
+--- DIEAREA (0 0) (47628 47160)
+**WARN: (IMPDF-228):	The value of the property 'FE_SOFT_FIXED' on instance
+'FE_USKC4140_CTS_50' is ignored because the status of the instance is not FIXED.
+**WARN: (IMPDF-228):	The value of the property 'FE_SOFT_FIXED' on instance
+'FE_USKC4139_CTS_29' is ignored because the status of the instance is not FIXED.
+**WARN: (IMPDF-228):	The value of the property 'FE_SOFT_FIXED' on instance
+'FE_USKC4138_CTS_29' is ignored because the status of the instance is not FIXED.
+**WARN: (IMPDF-228):	The value of the property 'FE_SOFT_FIXED' on instance
+'FE_USKC4137_CTS_29' is ignored because the status of the instance is not FIXED.
+**WARN: (IMPDF-228):	The value of the property 'FE_SOFT_FIXED' on instance
+'FE_USKC4136_CTS_29' is ignored because the status of the instance is not FIXED.
+**WARN: (IMPDF-228):	The value of the property 'FE_SOFT_FIXED' on instance
+'FE_USKC4135_CTS_36' is ignored because the status of the instance is not FIXED.
+**WARN: (IMPDF-228):	The value of the property 'FE_SOFT_FIXED' on instance
+'FE_USKC4134_CTS_29' is ignored because the status of the instance is not FIXED.
+**WARN: (IMPDF-228):	The value of the property 'FE_SOFT_FIXED' on instance
+'FE_USKC4133_CTS_29' is ignored because the status of the instance is not FIXED.
+**WARN: (IMPDF-228):	The value of the property 'FE_SOFT_FIXED' on instance
+'FE_USKC4132_CTS_36' is ignored because the status of the instance is not FIXED.
+**WARN: (IMPDF-228):	The value of the property 'FE_SOFT_FIXED' on instance
+'CTS_ccl_a_buf_00269' is ignored because the status of the instance is not FIXED.
+**WARN: (IMPDF-228):	The value of the property 'FE_SOFT_FIXED' on instance
+'CTS_ccl_a_buf_00258' is ignored because the status of the instance is not FIXED.
+defIn read 10000 lines...
+defIn read 20000 lines...
+**WARN: (IMPDF-245):	Net 'VSS' specified in Pin 'v1_sd_pichead_s' is undefined.
+**WARN: (IMPDF-245):	Net 'VDD' specified in Pin 'v1_dspfld_num1[3]' is undefined.
+**WARN: (IMPDF-245):	Net 'VDD' specified in Pin 'v1_dspfld_num1[2]' is undefined.
+**WARN: (IMPDF-245):	Net 'VDD' specified in Pin 'v1_dspfld_num1[1]' is undefined.
+**WARN: (IMPDF-245):	Net 'VDD' specified in Pin 'v1_dspfld_num1[0]' is undefined.
+**WARN: (IMPDF-245):	Net 'VSS' specified in Pin 'v1_dspfld_sc1' is undefined.
+**WARN: (IMPDF-245):	Net 'VDD' specified in Pin 'v1_dspfld_num2[3]' is undefined.
+**WARN: (IMPDF-245):	Net 'VDD' specified in Pin 'v1_dspfld_num2[2]' is undefined.
+**WARN: (IMPDF-245):	Net 'VDD' specified in Pin 'v1_dspfld_num2[1]' is undefined.
+**WARN: (IMPDF-245):	Net 'VDD' specified in Pin 'v1_dspfld_num2[0]' is undefined.
+**WARN: (IMPDF-245):	Net 'VSS' specified in Pin 'v1_dspfld_sc2' is undefined.
+**WARN: (IMPDF-245):	Net 'VSS' specified in Pin 'v1_dsp_ps' is undefined.
+**WARN: (IMPDF-245):	Net 'VSS' specified in Pin 'vmem_data_out[31]' is undefined.
+**WARN: (IMPDF-245):	Net 'VSS' specified in Pin 'vmem_data_out[30]' is undefined.
+**WARN: (IMPDF-245):	Net 'VSS' specified in Pin 'vmem_data_out[29]' is undefined.
+**WARN: (IMPDF-245):	Net 'VSS' specified in Pin 'vmem_data_out[28]' is undefined.
+**WARN: (IMPDF-245):	Net 'VSS' specified in Pin 'vmem_data_out[27]' is undefined.
+**WARN: (IMPDF-245):	Net 'VSS' specified in Pin 'vmem_data_out[26]' is undefined.
+defIn read 30000 lines...
+Extracting standard cell pins and blockage ...... 
+**WARN: (IMPTR-2104):	Layer M10: Pitch=80 is less than min width=40 + min spacing=2000.
+**ERROR: (IMPTR-2101):	Layer M10: Pitch=720x9 is still less than min width=2000 + min spacing=40.
+**WARN: (IMPTR-2108):	For layer M10, the gaps of 588 out of 588 tracks are narrower than 2.040um (space 2.000 + width 0.040).
+ As a result, your trialRoute congestion could be incorrect.
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+defIn read 40000 lines...
+defIn read 50000 lines...
+defIn read 60000 lines...
+defIn read 70000 lines...
+defIn read 80000 lines...
+defIn read 90000 lines...
+defIn read 100000 lines...
+defIn read 110000 lines...
+defIn read 120000 lines...
+defIn read 130000 lines...
+defIn read 140000 lines...
+defIn read 150000 lines...
+defIn read 160000 lines...
+defIn read 170000 lines...
+defIn read 180000 lines...
+defIn read 190000 lines...
+defIn read 200000 lines...
+defIn read 210000 lines...
+defIn read 220000 lines...
+defIn read 230000 lines...
+**WARN: (IMPDF-136):	The component pin ( PIN v1_dspfld_num2[0] ) in NETS section is connected to net 'v1_dspfld_num2[0]' in db, not 'VDD' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN v1_dspfld_num2[1] ) in NETS section is connected to net 'v1_dspfld_num2[1]' in db, not 'VDD' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN v1_dspfld_num2[2] ) in NETS section is connected to net 'v1_dspfld_num2[2]' in db, not 'VDD' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN v1_dspfld_num2[3] ) in NETS section is connected to net 'v1_dspfld_num2[3]' in db, not 'VDD' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN v1_dspfld_num1[0] ) in NETS section is connected to net 'v1_dspfld_num1[0]' in db, not 'VDD' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN v1_dspfld_num1[1] ) in NETS section is connected to net 'v1_dspfld_num1[1]' in db, not 'VDD' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN v1_dspfld_num1[2] ) in NETS section is connected to net 'v1_dspfld_num1[2]' in db, not 'VDD' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN v1_dspfld_num1[3] ) in NETS section is connected to net 'v1_dspfld_num1[3]' in db, not 'VDD' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN vmem_data_out[26] ) in NETS section is connected to net 'vmem_data_out[26]' in db, not 'VSS' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN vmem_data_out[27] ) in NETS section is connected to net 'vmem_data_out[27]' in db, not 'VSS' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN vmem_data_out[28] ) in NETS section is connected to net 'vmem_data_out[28]' in db, not 'VSS' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN vmem_data_out[29] ) in NETS section is connected to net 'vmem_data_out[29]' in db, not 'VSS' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN vmem_data_out[30] ) in NETS section is connected to net 'vmem_data_out[30]' in db, not 'VSS' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN vmem_data_out[31] ) in NETS section is connected to net 'vmem_data_out[31]' in db, not 'VSS' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN v1_dsp_ps ) in NETS section is connected to net 'v1_dsp_ps' in db, not 'VSS' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN v1_dspfld_sc2 ) in NETS section is connected to net 'v1_dspfld_sc2' in db, not 'VSS' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN v1_dspfld_sc1 ) in NETS section is connected to net 'v1_dspfld_sc1' in db, not 'VSS' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+**WARN: (IMPDF-136):	The component pin ( PIN v1_sd_pichead_s ) in NETS section is connected to net 'v1_sd_pichead_s' in db, not 'VSS' as defined in DEF. The DEF definition is ignored. Check the connectivity of the design.
+DEF file 'mpeg2_top.def' is parsed, current time is Mon Jun  2 11:36:08 2025.
+**WARN: (IMPTR-2104):	Layer M10: Pitch=80 is less than min width=40 + min spacing=2000.
+**ERROR: (IMPTR-2101):	Layer M10: Pitch=720x9 is still less than min width=2000 + min spacing=40.
+**WARN: (IMPTR-2108):	For layer M10, the gaps of 588 out of 588 tracks are narrower than 2.040um (space 2.000 + width 0.040).
+ As a result, your trialRoute congestion could be incorrect.
+Updating the floorplan ...
+<CMD> set_pg_nets -net VDD -voltage 0.7 -threshold 0.4 -force
+<CMD> set_pg_nets -net VSS -voltage 0.0 -threshold 0.3 -force
+<CMD> read_spef mpeg2_top.spef
+Used active corner RC_wc_25 for reading SPEF file as option '-rc_corner <cornerName>' is not specified in MMMC mode.
+
+SPEF files for RC Corner RC_wc_25:
+Top-level spef file 'mpeg2_top.spef'.
+Start spef parsing (MEM=3299.11).
+The SPEF file, 'mpeg2_top.spef', has encountered the error/warning message(s) during its reading.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[31] ( having pins vmem_data_in[31] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[30] ( having pins vmem_data_in[30] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[29] ( having pins vmem_data_in[29] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[28] ( having pins vmem_data_in[28] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[27] ( having pins vmem_data_in[27] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[26] ( having pins vmem_data_in[26] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[25] ( having pins vmem_data_in[25] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[24] ( having pins vmem_data_in[24] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[23] ( having pins vmem_data_in[23] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[22] ( having pins vmem_data_in[22] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[21] ( having pins vmem_data_in[21] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[20] ( having pins vmem_data_in[20] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[19] ( having pins vmem_data_in[19] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[18] ( having pins vmem_data_in[18] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[17] ( having pins vmem_data_in[17] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[16] ( having pins vmem_data_in[16] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[15] ( having pins vmem_data_in[15] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[14] ( having pins vmem_data_in[14] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[13] ( having pins vmem_data_in[13] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (SPEF-1152):	Net 'vmem_data_in[12] ( having pins vmem_data_in[12] )' is not fully specified as per its connectivity in design netlist. Missing ports have been added to the net using low RC values. The timing accuracy is not reliable for such nets.
+**WARN: (EMS-27):	Message (SPEF-1152) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+SPEF file mpeg2_top.spef.
+Number of Resistors     : 82770
+Number of Ground Caps   : 92027
+Number of Coupling Caps : 956
+
+End spef parsing (MEM=3345.11 CPU=0:00:01.3 REAL=0:00:01.0).
+2 nets are missing in SPEF file. The names of these nets are saved in ./RC_wc_25.missing_nets.rpt.
+<CMD> specify_spef mpeg2_top.spef
+<CMD> set_power_analysis_mode -reset
+<CMD> set_power_pads -reset
+<CMD> set_power_data -reset
+<CMD> set_pg_library_mode -celltype techonly -default_area_cap 0.5 -extraction_tech_file ASAP7.tch -power_pins {VDD 0.7} -ground_pins VSS
+<CMD> generate_pg_library
+Started PGV Library Generator at 11:36:09 06/02/2025
+
+** INFO:  (VOLTUS_LGEN-3599): Library generation settings: 
+	Mode: TECH 
+	Capacitance: area_cap 
+	Current Distribution: estimation 
+	Grid Port Definition: LEF 
+	Grid Current Sinks: LEF pin 
+	Power Gate: no
+
+** INFO:  (VOLTUS_LGEN-3598): Processing LEF files: 
+/home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/asap7_tech_1x_201209.lef
+/home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/asap7sc7p5t_27_L_1x_201211.lef
+/home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/asap7sc7p5t_27_R_1x_201211.lef
+/home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/asap7sc7p5t_27_SL_1x_201211.lef
+
+** WARN:  (VOLTUS_LGEN-4286): The Lef Layer to Library Layer mapping for
+the layers given below may be inconsistent and lead to incorrect results.
+It is recommended to review the automatically generated Lef Layermap and
+provide a correct one manually in case of incorrect results. 
+
+	LEF LAYER NAME			LIBRARY LAYER NAME
+	M1			LISD
+	Pad			M9
+
+
+** INFO:  (VOLTUS_LGEN-3611): No lef leyarmap specified. Tool has
+internally generated the mapping between technology layers and lef layers
+using information in technology file and technology lef. To specify your
+own layer mapping, use set_pg_library_mode -lef_layermap.
+
+  TECH-LAYER    LEF-LAYER
+  LISD    M1
+  V0    V1
+  M1    M2
+  V1    V2
+  M2    M3
+  V2    V3
+  M3    M4
+  V3    V4
+  M4    M5
+  V4    V5
+  M5    M6
+  V5    V6
+  M6    M7
+  V6    V7
+  M7    M8
+  V7    V8
+  M8    M9
+  V8    V9
+  M9    Pad
+
+
+** INFO:  (VOLTUS_LGEN-3606): 
+Power Grid View Generation Statistics:
+        # Total number of cells: 636 
+        # TECH view created: 636 (100%)
+Finished PGV Library Generator at 11:36:17 06/02/2025 (cpu=0:00:03, real=0:00:08)
+<CMD> set_power_analysis_mode -method dynamic_vectorless -corner max -create_binary_db true -write_dynamic_currents true -enable_state_propagation true
+<CMD> set_power_output_dir ./dynamic_power
+<CMD> report_power
+env CDS_WORKAREA is set to /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic
+-add_simulation false                     # bool, default=false
+-adjust_input_activity_in_iterations true
+                                          # bool, default=true
+-adjust_macro_activity_in_iterations true
+                                          # bool, default=true
+-annotation_detail_report false           # bool, default=false
+-auto_twf_delay_annotation false          # bool, default=false
+-average_rise_fall_cap false              # bool, default=false
+-binary_db_name {}                        # string, default=""
+-block_independent_peakpower false        # bool, default=false
+-boundary_gate_leakage_file {}            # string, default=""
+-boundary_gate_leakage_report false       # bool, default=false
+-boundary_leakage_cell_property_file {}   # string, default=""
+-boundary_leakage_edge_annotation_file {}
+                                          # string, default=""
+-boundary_leakage_multi_pgpin_support false
+                                          # bool, default=false
+-boundary_leakage_pessimism_removal true
+                                          # bool, default=true
+-boundary_leakage_PXE_support false       # bool, default=false
+-bulk_pins {}                             # string, default=""
+-capacity low                             # enums={low medium high}, default=low
+-case_insensitive_mapping false           # bool, default=false
+-clock_source_as_clock false              # bool, default=false
+-comprehensive_automapping false          # bool, default=false
+-compress_reports false                   # string, default=false
+-constant_override false                  # bool, default=false
+-corner max                               # string, default="", user setting
+-create_binary_db true                    # bool, default=false, user setting
+-create_driver_db false                   # bool, default=false
+-create_gui_db true                       # bool, default=true
+-current_generation_method avg            # string, default=avg
+-custom_report_config {}                  # string, default=""
+-decap_cell_list {}                       # string, default=""
+-default_frequency -1                     # float, default=-1
+-default_slew {}                          # string, default=""
+-default_supply_voltage {}                # string, default=""
+-detailed_view_current_only true          # bool, default=true
+-disable_clock_gate_clipping true         # bool, default=true
+-disable_leakage_scaling false            # bool, default=false
+-disable_static false                     # bool, default=false
+-distribute_switching_power false         # bool, default=false
+-distributed_combine_report_format reduced
+                                          # string, default=reduced
+-distributed_setup {}                     # string, default=""
+-domain_based_clipping false              # bool, default=false
+-dynamic_glitch_filter -1                 # float, default=-1
+-dynamic_scale_clock_by_frequency {}      # string, default=""
+-dynamic_scale_clock_by_name {}           # string, default=""
+-dynamic_vectorless_ranking_methods {}    # string, default=""
+-enable_auto_mapping false                # bool, default=false
+-enable_auto_queue false                  # bool, default=false
+-enable_disk_mapping false                # bool, default=false
+-enable_duty_prop_with_global false       # bool, default=false
+-enable_dynamic_current_slew_load_interpolation false
+                                          # bool, default=false
+-enable_dynamic_scaling false             # bool, default=false
+-enable_flop_state_propagation false      # bool, default=false
+-enable_generated_clock true              # bool, default=true
+-enable_input_net_power false             # bool, default=false
+-enable_interactive_reports true          # bool, default=true
+-enable_mt_in_vectorbasedflow true        # bool, default=true
+-enable_mt_reports false                  # bool, default=false
+-enable_mt_state_propagation true         # bool, default=true
+-enable_pba_for_tempus_pi true            # bool, default=true
+-enable_power_target_flow false           # bool, default=false
+-enable_rtl_vectorbased_dynamic_analysis false
+                                          # bool, default=false
+-enable_scan_report false                 # bool, default=false
+-enable_single_cycle_scheduling false     # bool, default=false
+-enable_slew_based_ccs_pin_cap false      # bool, default=false
+-enable_stable_clock_gating false         # bool, default=false
+-enable_stable_flop_scheduling false      # bool, default=false
+-enable_state_propagation true            # bool, default=false, user setting
+-enable_tempus_pi false                   # bool, default=false
+-enable_xp false                          # bool, default=false
+-enhanced_blackbox_avg false              # bool, default=false
+-enhanced_blackbox_max false              # bool, default=false
+-equivalent_annotation false              # bool, default=false
+-event_based_leakage_power false          # bool, default=false
+-external_load_config_file {}             # string, default=""
+-extraction_tech_file {}                  # string, default=""
+-extractor_include {}                     # string, default=""
+-fanout_limit -1                          # int, default=-1
+-flatten_xpgv_block_instances {}          # string, default=""
+-force_library_merging false              # bool, default=false
+-from_x_transition_factor 0.5             # float, default=0.5
+-from_z_transition_factor 0.25            # float, default=0.25
+-generate_activity_mapping_report false   # bool, default=false
+-generate_current_for_rail {}             # string, default=""
+-generate_flop_ranking_data {}            # string, default=""
+-generate_leakage_power_map_based_on_calculated_leakage false
+                                          # bool, default=false
+-generate_static_report_from_state_propagation false
+                                          # bool, default=false
+-handle_glitch false                      # bool, default=false
+-handle_transport_glitch false            # bool, default=false
+-handle_tri_state false                   # bool, default=false
+-hier_delimiter {}                        # string, default=""
+-honor_combinational_logic_on_clock_net true
+                                          # bool, default=true
+-honor_negative_energy true               # bool, default=true
+-honor_net_activity true                  # bool, default=true
+-honor_non_mission_leakage false          # bool, default=false
+-hybrid_analysis false                    # bool, default=false
+-ignore_control_signals true              # bool, default=true
+-ignore_data_phase_for_clk false          # bool, default=false
+-ignore_end_toggles_in_profile false      # bool, default=false
+-ignore_glitches_at_same_time_stamp true
+                                          # bool, default=true
+-ignore_inout_pin_cap false               # bool, default=false
+-ignore_macro_leakage_scale_for_temp false
+                                          # bool, default=false
+-include_seq_clockpin_power false         # bool, default=false
+-include_timing_in_current_file false     # bool, default=false
+-ir_derated_timing_view {}                # string, default=""
+-keep_clock_gate_ratio_in_iterations false
+                                          # bool, default=false
+-leakage_scale_factor_for_temp 1          # float, default=1
+-library_preference voltage               # string, default=voltage
+-macro_pgv_leakage true                   # bool, default=true
+-macro_toggle_pin_percentage 0            # float, default=0
+-mbff_toggle_behavior independent         # enums={simultaneous independent sbff pin_percentage}, default=independent
+-mbff_toggle_pin_percentage 0             # float, default=0
+-memory_current_scaling_method 0          # int, default=0
+-merge_switched_net_currents false        # bool, default=false
+-method dynamic_vectorless                # enums={static dynamic dynamic_vectorless dynamic_vectorbased dynamic_mixed_mode vector_profile event_based}, default=static, user setting
+-min_leaf_count 0                         # int, default=0
+-multi_scenario_simulation false          # bool, default=false
+-off_pg_nets {}                           # string, default=""
+-output_current_data_prefix {}            # string, default=""
+-partition_count 0                        # int, default=0
+-partition_twf false                      # bool, default=false
+-pin_based_twf false                      # bool, default=false
+-power_grid_library {}                    # string, default=""
+-power_include_initial_x_transitions true
+                                          # bool, default=true
+-power_match_state_for_logic_x x          # string, default=x
+-pre_simulation_empty_period {}           # string, default=""
+-pre_simulation_period {}                 # string, default=""
+-pre_simulation_power_exclude_period {}   # string, default=""
+-precision 8                              # int, default=8
+-quit_on_activity_coverage_threshold 0    # float, default=0
+-read_rcdb false                          # bool, default=false
+-relax_arc_match false                    # bool, default=false
+-report_black_boxes false                 # bool, default=false
+-report_clock_instance_switching_info None
+                                          # string, default=None
+-report_idle_instances false              # bool, default=false
+-report_instance_switching_info none      # enums={all output_logic none}, default=none
+-report_instance_switching_list {}        # string, default=""
+-report_library_usage false               # bool, default=false
+-report_missing_bulk_connectivity false   # bool, default=false
+-report_missing_input false               # bool, default=false
+-report_missing_nets false                # bool, default=false
+-report_scan_chain_stats false            # bool, default=false
+-report_stat false                        # bool, default=false
+-report_time_display_fraction_digits -1   # int, default=-1
+-report_twf_attributes {}                 # string, default=""
+-reuse_flop_ranking_data {}               # string, default=""
+-reuse_flop_ranking_data_hier {}          # string, default=""
+-save_bbox false                          # bool, default=false
+-scale_to_sdc_clock_frequency false       # bool, default=false
+-scan_chain_activity {}                   # string, default=""
+-scan_chain_name {}                       # string, default=""
+-scan_control_file {}                     # string, default=""
+-scan_mbff_chain_type liberty             # string, default=liberty
+-set_power_event_based false              # bool, default=false
+-settling_buffer {}                       # string, default=""
+-show_cell_usage_stats false              # bool, default=false
+-smart_window false                       # bool, default=false
+-split_bus_power false                    # bool, default=false
+-start_time_alignment true                # bool, default=true
+-state_dependent_leakage true             # bool, default=true
+-stateprop_ignore_unannot_pins false      # bool, default=false
+-static_multi_mode_scenario_file {}       # string, default=""
+-static_netlist verilog                   # string, default=verilog
+-switching_power_on_rise_only false       # bool, default=false
+-thermal_input_file {}                    # string, default=""
+-thermal_leakage_temperature_scale_table_file {}
+                                          # string, default=""
+-to_x_transition_factor 0.5               # float, default=0.5
+-to_z_transition_factor 0.25              # float, default=0.25
+-transition_factor_based_duty false       # bool, default=false
+-transition_time_method max               # string, default=max
+-twf_delay_annotation avg                 # string, default=avg
+-twf_load_cap max                         # string, default=max
+-unified_power_switch_flow false          # bool, default=false
+-use_cell_leakage_power_density true      # bool, default=true
+-use_fastest_clock_for_dynamic_scheduling false
+                                          # bool, default=false
+-use_lef_for_missing_cells false          # bool, default=false
+-use_only_ddv_current true                # bool, default=true
+-use_physical_partition false             # bool, default=false
+-use_twf_stable_randomized_arrival_delay none
+                                          # string, default=none
+-use_zero_delay_vector_file false         # bool, default=false
+-vector_profile_mode event_based          # enums={activity event_based power_density transient}, default=event_based
+-worst_case_vector_activity false         # bool, default=false
+-worst_step_size {}                       # string, default=""
+-worst_window_count 1                     # int, default=1
+-worst_window_coverage {}                 # string, default=""
+-worst_window_reports full                # string, default=full
+-worst_window_size {}                     # string, default=""
+-worst_window_type {}                     # string, default=""
+-write_boundary_leakage_edge_annotation false
+                                          # bool, default=false
+-write_default_uti true                   # bool, default=true
+-write_dynamic_currents true              # bool, default=false, user setting
+-write_profiling_db false                 # bool, default=false
+-write_simulation_db false                # bool, default=false
+-write_static_currents false              # bool, default=false
+-x_count_transition_using_3_states false
+                                          # bool, default=false
+-x_transition_factor 0.5                  # float, default=0.5
+-z_transition_factor 0.25                 # float, default=0.25
+-zero_delay_vector_toggle_shift {}        # string, default=""
+
+
+Power Net Detected:
+        Voltage	    Name
+             0V	    VSS
+           0.7V	    VDD
+#################################################################################
+# Design Name: mpeg2_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+AAE DB initialization (MEM=2575.050781 CPU=0:00:00.0 REAL=0:00:00.0) 
+Start delay calculation (fullDC) (4 T). (MEM=2518.89)
+mpeg2_top.sdc
+End delay calculation. (MEM=2590.12 CPU=0:00:05.1 REAL=0:00:03.0)
+Begin loading slews from CTE ...
+Loading slews from CTE completed...
+End delay calculation (fullDC). (MEM=2582.95 CPU=0:00:06.0 REAL=0:00:03.0)
+**WARN: (TCLCMD-1233):	The -view option should be specified for the command write_timing_windows in MMMC mode. For now The tool will assume the view specified as 'AV_wc_on' and write the timing windows corresponding to this view. For compatibility with future releases, update your scripts to provide -view option.
+** WARN:  (VOLTUS_POWR-1229): Power binary database will not be created during dynamic power analysis as
+set_power_analysis_mode -disable_static is set to true (default).
+User should set the -disable_static option to false and re-run power calculation to generate the power db.
+
+
+
+
+Started Power Analysis at 11:36:23 06/02/2025
+
+
+asap7_tech_1x_201209.lef
+asap7sc7p5t_27_L_1x_201211.lef
+asap7sc7p5t_27_R_1x_201211.lef
+asap7sc7p5t_27_SL_1x_201211.lef
+Begin Processing Netlist for Power Calculation
+** INFO:  (VOLTUS_POWR-3013): Loading DEF file "mpeg2_top.def".
+
+
+  Netlist Statistics:
+    Cell         :  636
+    Instance     :  13872
+    Decap/Filler :  0
+    Net          :  13997
+    Port         :  223
+
+Ended Processing Netlist for Power Calculation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=612.32MB/8774.71MB/3197.05MB)
+
+
+Begin Processing Timing Library for Power Calculation
+./lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib
+** WARN:  (VOLTUS_POWR-1725): The attribute 'input_signal_level' has been defined for output pin 
+             'CON'. 'input_signal_level' cannot be defined at this level and is 
+             being ignored. (File ./lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, 
+             Line 901735) <TECHLIB-1277>.
+
+
+** WARN:  (VOLTUS_POWR-1725): The attribute 'input_signal_level' has been defined for output pin 
+             'CON'. 'input_signal_level' cannot be defined at this level and is 
+             being ignored. (File ./lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, 
+             Line 904635) <TECHLIB-1277>.
+
+
+** WARN:  (VOLTUS_POWR-1725): The attribute 'input_signal_level' has been defined for output pin 
+             'CON'. 'input_signal_level' cannot be defined at this level and is 
+             being ignored. (File ./lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, 
+             Line 1844369) <TECHLIB-1277>.
+
+
+** WARN:  (VOLTUS_POWR-1725): The attribute 'input_signal_level' has been defined for output pin 
+             'CON'. 'input_signal_level' cannot be defined at this level and is 
+             being ignored. (File ./lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, 
+             Line 1847269) <TECHLIB-1277>.
+
+
+** WARN:  (VOLTUS_POWR-1725): The attribute 'input_signal_level' has been defined for output pin 
+             'CON'. 'input_signal_level' cannot be defined at this level and is 
+             being ignored. (File ./lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, 
+             Line 2789903) <TECHLIB-1277>.
+
+
+Ended Processing Timing Library for Power Calculation: (cpu=0:00:03, real=0:00:03, mem(process/total/peak)=706.91MB/8878.91MB/3291.62MB)
+
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+
+Rail status:
+  0.7V    VDD
+  0V    VSS
+  
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=707.05MB/8878.91MB/3291.77MB)
+
+
+Begin Processing Timing Window Data for Power Calculation
+   clk(5000MHz) 
+  
+
+** WARN:  (VOLTUS_POWR-2187): Timing windows for 18 nets/pins could not be assigned.
+To view the names that did not match, use the option 'set_power_analysis_mode -report_missing_nets [true|false]' and rerun.
+
+
+  Timing Window Statistics:
+    File name                                           : design.twf.gz
+    Generator                                           : Voltus IC Power Integrity Solution
+    Block of current design (read_twf -scope)           : ""
+    Remove hierarchy from TWF (read_twf -strip_prefix)  : ""
+    Waveform definitions parsed                         : 1
+    Clock roots assigned/parsed                         : 1/1 (100%)
+    Constants assigned/parsed                           : 18/18 (100%)
+    External loads assigned/parsed                      : 0/0 (0%)
+    Slews assigned/parsed                               : 28970/28970 (100%)
+    Nets with slew/Nets in design                       : 13963/13995 (99.7713%)
+    Slew range                                          : 1.25e-13s - 2.3025e-10s
+
+
+
+  SPEF    : mpeg2_top.spef
+    Name matched: 13961/13961
+    Annotation coverage for this file      : 13961/13995 (99.7571%)
+
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=708.51MB/8878.92MB/3293.22MB)
+
+
+Begin Processing VCD Vectors
+Ended Processing VCD Vectors: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=708.55MB/8878.92MB/3293.27MB)
+
+
+Begin Processing FSDB Vectors
+Ended Processing FSDB Vectors: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=708.56MB/8878.92MB/3293.28MB)
+
+
+Begin Processing User Attributes
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=708.57MB/8878.92MB/3293.30MB)
+
+
+Begin Processing Signal Activity
+
+Starting Levelizing
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT)
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 10%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 20%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 30%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 40%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 50%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 60%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 70%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 80%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 90%
+
+Finished Levelizing
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT)
+
+Starting Activity Propagation
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT)
+** INFO:  (VOLTUS_POWR-1356): No default input activity has been set. Defaulting to 0.2.
+Use 'set_default_switching_activity -input_activity' command to change the default activity value.
+
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 10%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 20%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 30%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 40%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 50%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 60%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 70%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 80%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 90%
+
+Finished Activity Propagation
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=708.84MB/8878.92MB/3293.55MB)
+
+
+Begin Power Analysis
+  ----------------------------------------------------------
+  # of cell(s) missing both power/leakage table: 0
+  # of cell(s) missing power table: 0
+  # of cell(s) missing leakage table: 0
+  ----------------------------------------------------------
+  
+
+
+Starting Calculating power
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT)
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 10%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 20%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 30%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 40%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 50%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 60%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 70%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 80%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 90%
+
+Finished Calculating power
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT)
+  # of MSMV cell(s) missing power_level: 0
+Begin Processing set_power
+Ended Processing set_power: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=712.02MB/8886.94MB/3296.80MB)
+Begin Processing set_power stats
+Ended Processing set_power stats: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=712.12MB/8886.94MB/3296.83MB)
+Ended Power Analysis: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=712.12MB/8886.94MB/3296.83MB)
+
+
+** INFO:  (VOLTUS_POWR-2223): Dominant clock 5000MHz is used in the vless with state propagation flow.
+
+  CPU              : 4
+  Simulation Period: 0.4ns
+  Step Size        : 27.103ps
+
+** INFO:  (VOLTUS_POWR-2220): Running vectorless analysis with state propagation for period of 0.4ns. 
+
+
+Starting Processing toggles for instances
+2025-Jun-02 11:36:33 (2025-Jun-02 18:36:33 GMT)
+** INFO:  (VOLTUS_POWR-2042): Beginning parallel processing, using 4 CPUs
+
+2025-Jun-02 11:36:33 (2025-Jun-02 18:36:33 GMT): 10%
+2025-Jun-02 11:36:33 (2025-Jun-02 18:36:33 GMT): 20%
+2025-Jun-02 11:36:33 (2025-Jun-02 18:36:33 GMT): 30%
+2025-Jun-02 11:36:33 (2025-Jun-02 18:36:33 GMT): 40%
+2025-Jun-02 11:36:33 (2025-Jun-02 18:36:33 GMT): 50%
+2025-Jun-02 11:36:34 (2025-Jun-02 18:36:34 GMT): 60%
+2025-Jun-02 11:36:34 (2025-Jun-02 18:36:34 GMT): 70%
+2025-Jun-02 11:36:34 (2025-Jun-02 18:36:34 GMT): 80%
+2025-Jun-02 11:36:34 (2025-Jun-02 18:36:34 GMT): 90%
+
+Finished Processing toggles for instances
+2025-Jun-02 11:36:34 (2025-Jun-02 18:36:34 GMT)
+Begin Writing Current Files
+
+Generating Instance Power (IPW)  Report
+
+
+Ended Writing Current Files: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=725.70MB/8915.97MB/3310.58MB)
+
+
+Power Analysis Statistics:
+  Warning messages: 6
+  Error messages: 0
+
+
+Finished Power Analysis at 11:36:34 06/02/2025 (cpu=0:00:11, real=0:00:11, peak mem=3310.58MB)
+Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:01:22, real=0:01:16, mem=3310.58MB)
+
+
+
+Exit code 0.
+Voltus Power Analysis exited successfully.
+<CMD> set_rail_analysis_mode -method dynamic -power_switch_eco false -accuracy xd -power_grid_library techonly.cl -process_techgen_em_rules false -enable_rlrp_analysis false -vsrc_search_distance 50 -ignore_shorts false -enable_manufacturing_effects false -report_via_current_direction false -limit_number_of_steps false
+**WARN: (VOLTUS-1007):	The distributed processing (DP) mode will be made obsolete in a future release and it is recommended to use the Extensively Parallel (XP) mode. The obsolete DP mode still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your scripts to use the set_rail_analysis_mode -enable_xp true..
+<CMD> set_pg_nets -net VDD -voltage 0.7 -threshold 0.4 -force
+<CMD> set_pg_nets -net VSS -voltage 0.0 -threshold 0.3 -force
+<CMD> set_rail_analysis_domain -name core -pwrnets VDD -gndnets VSS
+<CMD> set_power_pads -net VDD -format xy -file VDD.vsrc
+<CMD> set_power_pads -net VSS -format xy -file VSS.vsrc
+<CMD> set_power_data -format current -scale 1 { dynamic_power/dynamic_VDD.ptiavg dynamic_power/dynamic_VSS.ptiavg}
+<CMD> analyze_rail -type domain -output dynamic_IR core
+
+
+Started Rail Analysis at 11:36:43 06/02/2025
+
+ 
+Opening dproc sockets
+connection complete
+
+Multi-CPU Configuration:
+	#CPU: 4
+	Mode: local
+	Host: ieng6-ece-08.ucsd.edu
+
+
+Start distributed processes ...
+INFO (PRL-36): The timeout for a remote job to respond is 3600 seconds.
+
+Submit command for task runs will be: local
+INFO (PRL-725): EDP: start server on ieng6-ece-08.ucsd.edu:54950
+
+INFO (PRL-725): EDP: start server on ieng6-ece-08.ucsd.edu:42976
+
+INFO (PRL-819): Connected to ieng6-ece-08.ucsd.edu 48186 0 ( PID=17618 ). Wait time was 1 seconds
+
+INFO (PRL-819): Connected to ieng6-ece-08.ucsd.edu 48417 1 ( PID=17623 ). Wait time was 0 seconds
+
+INFO (PRL-742): EDP: all 2 edp client(s) are launched
+
+
+Running OCI  extraction for /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/mpeg2_top.def ...
+
+Extraction option setup as:
+setenv gray_data NONE
+setenv enable_cluster_overhang_via false
+setenv enable_dfm_mask_conflict_shape false
+Begin Preparing Data for Parasitic Extraction
+Extracting following DFM effects:
+MetalFill        : n/a
+WEE Effects      : n/a
+Erosion Effects  : n/a
+T/B Enlargements : ON
+R(w) Effects     : ON
+R(w,s) Effects   : n/a
+R(sw,st) Effects : n/a
+TC(w) Effects    : n/a
+Some effects indicate n/a because of non-availability of relevant input data (or) requested to be off.
+Ended Preparing Data for Parasitic Extraction: (cpu=0:00:04, real=0:00:03, mem(process/total/peak)=25.55MB/10633.77MB/3310.59MB)
+
+Extraction option setup as:
+setenv gray_data NONE
+setenv enable_cluster_overhang_via false
+setenv enable_dfm_mask_conflict_shape false
+Begin Parasitic Extraction
+Extracting Progress:
+    0% at 11:36:50 06/02/2025
+  100% at 11:36:57 06/02/2025
+Ended Parasitic Extraction: (cpu=0:00:11, real=0:00:06, mem(process/total/peak)=7.83MB/9069.34MB/3310.59MB)
+
+
+Analyze Rail Settings:
+	Temp directory: /tmp/ssv_tmpdir_16717_134ad8c5-40f9-42c9-b30b-90fff88acc70_V93BU9
+	Output directory: dynamic_IR
+	Run directory: dynamic_IR/core_25C_dynamic_1/
+
+
+(proc 1) Invoking: "/software/ECE/Cadence-Voltus-23.10/tools.lnx86/ssvtools/bin/64bit/voltus_rail_smg -cmd dynamic_IR/core_25C_dynamic_1/voltus_rail_smg.VDD.cmd -l dynamic_IR/core_25C_dynamic_1/voltus_rail_smg.VDD.log" ...
+(proc 1) Begin Merging power grid
+(proc 0) Invoking: "/software/ECE/Cadence-Voltus-23.10/tools.lnx86/ssvtools/bin/64bit/voltus_rail_smg -cmd dynamic_IR/core_25C_dynamic_1/voltus_rail_smg.VSS.cmd -l dynamic_IR/core_25C_dynamic_1/voltus_rail_smg.VSS.log" ...
+(proc 0) Begin Merging power grid
+(proc 1) Tech reference temperature: 25
+(proc 0) Tech reference temperature: 25
+(proc 0) Target temperature: 25
+(proc 0) 
+(proc 1) Target temperature: 25
+(proc 1) 
+(proc 1) Grid Statistics of Net VDD:
+(proc 1) - NODE
+(proc 1)   Total node: 25656
+(proc 1)     Top Level grid node: 25656
+(proc 1)       Top level interface node: 13872
+(proc 1)     Missing interface node: 0
+(proc 1)     Cell internal node: 0
+(proc 1) - ELEM
+(proc 0) Grid Statistics of Net VSS:
+(proc 0) - NODE
+(proc 0)   Total node: 25539
+(proc 1)   Total element: 31518
+(proc 1)     Top Level grid element: 31518
+(proc 0)     Top Level grid node: 25539
+(proc 0)       Top level interface node: 13872
+(proc 0)     Missing interface node: 0
+(proc 0)     Cell internal node: 0
+(proc 0) - ELEM
+(proc 1)     Cell internal element: 0
+(proc 0)   Total element: 31364
+(proc 0)     Top Level grid element: 31364
+(proc 0)     Cell internal element: 0
+(proc 0) - INST
+(proc 0)   Instance logically connected: 13872
+(proc 0)     Tech: 13872
+(proc 0)     StdCell: 0
+(proc 1) - INST
+(proc 0)     Macro:
+(proc 0)       Early: 0
+(proc 1)   Instance logically connected: 13872
+(proc 0)       IR: 0
+(proc 1)     Tech: 13872
+(proc 1)     StdCell: 0
+(proc 0)     Current Region:  0
+(proc 1)     Macro:
+(proc 1)       Early: 0
+(proc 0)   Dropped instance due to missing/incomplete cell library: 0
+(proc 1)       IR: 0
+(proc 0) - TAP
+(proc 0)   Total tap: 13872
+(proc 1)     Current Region:  0
+(proc 0) 
+(proc 1)   Dropped instance due to missing/incomplete cell library: 0
+(proc 0) Ended Merging power grid: (cpu=0:00:02, real=0:00:01, mem(process/total/peak)=33.77MB/8939.89MB/3310.59MB)
+(proc 1) - TAP
+(proc 1)   Total tap: 13872
+(proc 1) 
+(proc 1) Ended Merging power grid: (cpu=0:00:02, real=0:00:01, mem(process/total/peak)=33.79MB/9158.20MB/3310.59MB)
+
+Begin Preparing Data for Rail Analysis
+
+Net VSS
+  Power Pin Location File: /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/VSS.vsrc
+  # Voltage Source Added/Total (%): 4/4 (100.00%)
+
+  Power Database: dynamic_power/dynamic_VSS.ptiavg
+  # Current Taps Matched/Total (%): 13872/13872 (100.00%)
+  # Instances Matched: 13872
+
+Net VDD
+  Power Pin Location File: /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/VDD.vsrc
+  # Voltage Source Added/Total (%): 4/4 (100.00%)
+
+  Power Database: dynamic_power/dynamic_VDD.ptiavg
+  # Current Taps Matched/Total (%): 13872/13872 (100.00%)
+  # Instances Matched: 13872
+
+Begin PowerGrid Integrity Analysis
+
+Begin Redistribute Disconnected Cap
+Ended Redistribute Disconnected Cap: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=79.02MB/10523.70MB/3310.59MB)
+
+Ended PowerGrid Integrity Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=83.03MB/10523.70MB/3310.59MB)
+
+Ended Preparing Data for Rail Analysis: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=78.06MB/10523.70MB/3310.59MB)
+
+
+Begin Steady-State Analysis
+Ended Steady-State Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=100.27MB/12068.87MB/3310.59MB)
+
+Begin Dynamic Rail Simulation
+  Start Time: 0s
+  End Time: 4.06546e-10s
+  Steps: 15
+  Resolution: 2.7103e-11s
+    0% at 11:37:02 06/02/25 
+   10% at 11:37:03 06/02/25 
+   20% at 11:37:03 06/02/25 
+   30% at 11:37:03 06/02/25 
+   40% at 11:37:03 06/02/25 
+   50% at 11:37:03 06/02/25 
+   60% at 11:37:03 06/02/25 
+   70% at 11:37:03 06/02/25 
+   80% at 11:37:03 06/02/25 
+   90% at 11:37:03 06/02/25 
+  100% at 11:37:04 06/02/25 
+Ended Dynamic Rail Simulation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=108.65MB/12325.87MB/3310.59MB)
+
+Begin Report Generation
+The report generation will be performed on multiple processes and the voltus.log will be updated once all the reports are generated.
+
+
+Net VSS:
+
+
+Begin Preparing Database for Report Generation
+
+Circuit profile:
+                                                      Current    Voltage
+Layer Name                       Nodes   Resistors    Sources    Sources
+----- --------------------  ----------  ----------  ---------  ---------
+0     M9                            88          86          0          4
+1     V8                             0          70          0          0
+2     M8                           133         126          0          0
+3     V7                             0          49          0          0
+4     M7                           210         203          0          0
+5     V6                             0          98          0          0
+6     M6                           140         133          0          0
+7     V5                             0          28          0          0
+8     M5                            90          85          0          0
+9     V4                             0          53          0          0
+10    M4                            62           6          0          0
+11    V3                             0          58          0          0
+12    M3                            64           8          0          0
+13    V2                             0          57          0          0
+14    M2                          1196        1178          0          0
+15    V1                             0        1134          0          0
+16    M1                          5832        5744          0          0
+17    V0                             0        4611          0          0
+18    LISD                       17724       17637      13303          0
+                            ----------  ----------  ---------  ---------
+19    Circuit total              25540       31364      13303          4
+Ended Preparing Database for Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=291.57MB/15688.32MB/3364.10MB)
+
+Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=291.75MB/15688.32MB/3364.10MB)
+
+Begin IR Drop (Linear) Report Generation
+  Voltage: 0
+  Threshold: 0.3
+  Minimum, Average, Maximum IR Drop: 0.000V, 47.625mV, 0.103V
+    Range 1(  90.386mV  -      0.103V ):        13 (  0.05%)
+    Range 2(  77.474mV  -    90.386mV ):        41 (  0.16%)
+    Range 3(  64.562mV  -    77.474mV ):       857 (  3.36%)
+    Range 4(  51.649mV  -    64.562mV ):      6848 ( 26.81%)
+    Range 5(  38.737mV  -    51.649mV ):     14429 ( 56.50%)
+    Range 6(  25.825mV  -    38.737mV ):      2679 ( 10.49%)
+    Range 7(  12.912mV  -    25.825mV ):       107 (  0.42%)
+    Range 8(    0.000V  -    12.912mV ):       565 (  2.21%)
+    Layer with maximum IR Drop:  LISD
+      M9: 0.0041889 [0 - 0.0041889]
+      M8: 0.0076132 [1.7938e-05 - 0.0076311]
+      M7: 0.0083627 [0.00058968 - 0.0089523]
+      M6: 0.01396 [0.0018224 - 0.015782]
+      M5: 0.042657 [0.01138 - 0.054036]
+      M4: 0.034083 [0.019953 - 0.054036]
+      M3: 0.027329 [0.026708 - 0.054037]
+      M2: 0.033676 [0.028911 - 0.062587]
+      M1: 0.049126 [0.029566 - 0.078692]
+      LISD: 0.073728 [0.029571 - 0.1033]
+  Worst case interval: 11
+  IR Report: dynamic_IR/core_25C_dynamic_1/Reports/VSS/VSS.main.rpt
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VSS/ir_linear.gif
+Ended IR Drop (Linear) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.23MB/15688.35MB/3364.10MB)
+
+
+Begin IR Drop (Limit) Report Generation
+  Voltage: 0
+  Threshold: 0.3
+  Minimum, Average, Maximum IR Drop: 0.000V, 47.625mV, 0.103V
+    Range 1(    0.300V  -      0.300V ):         0 (  0.00%)
+    Range 2(    0.275V  -      0.300V ):         0 (  0.00%)
+    Range 3(    0.250V  -      0.275V ):         0 (  0.00%)
+    Range 4(    0.225V  -      0.250V ):         0 (  0.00%)
+    Range 5(    0.200V  -      0.225V ):         0 (  0.00%)
+    Range 6(    0.175V  -      0.200V ):         0 (  0.00%)
+    Range 7(    0.150V  -      0.175V ):         0 (  0.00%)
+    Range 8(  -1.000uV  -      0.150V ):     25539 (100.00%)
+    Layer with maximum IR Drop:  LISD
+      M9: 0.0041889 [0 - 0.0041889]
+      M8: 0.0076132 [1.7938e-05 - 0.0076311]
+      M7: 0.0083627 [0.00058968 - 0.0089523]
+      M6: 0.01396 [0.0018224 - 0.015782]
+      M5: 0.042657 [0.01138 - 0.054036]
+      M4: 0.034083 [0.019953 - 0.054036]
+      M3: 0.027329 [0.026708 - 0.054037]
+      M2: 0.033676 [0.028911 - 0.062587]
+      M1: 0.049126 [0.029566 - 0.078692]
+      LISD: 0.073728 [0.029571 - 0.1033]
+  Worst case interval: 11
+  IR Report: dynamic_IR/core_25C_dynamic_1/Reports/VSS/VSS.main.rpt
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VSS/ir_limit.gif
+Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.24MB/15688.36MB/3364.10MB)
+
+
+Begin Tap Current Report Generation
+  Minimum, Average, Maximum Tap Current: -1.309mA, -37.945uA, -22.714pA
+  Total Current: -0.505A
+    Range 1(  -1.000GA  -    -1.000mA ):        29 (  0.22%)
+    Range 2(  -1.000mA  -  -100.000uA ):       746 (  5.61%)
+    Range 3(-100.000uA  -   -10.000uA ):     10158 ( 76.36%)
+    Range 4( -10.000uA  -    -1.000uA ):       513 (  3.86%)
+    Range 5(  -1.000uA  -  -100.000nA ):         8 (  0.06%)
+    Range 6(-100.000nA  -   -10.000nA ):       496 (  3.73%)
+    Range 7( -10.000nA  -    -1.000nA ):       589 (  4.43%)
+    Range 8(  -1.000nA  -      0.000A ):       764 (  5.74%)
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VSS/tc.gif
+Ended Tap Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.37MB/15688.35MB/3364.10MB)
+
+
+Begin Instance Based IR Drop Report Generation
+  Minimum, Average, Maximum Instance Based IR Drop: 30.184mV, 49.590mV, 0.103V
+    Range 1(    0.300V  -      0.300V ):         0 (  0.00%)
+    Range 2(    0.275V  -      0.300V ):         0 (  0.00%)
+    Range 3(    0.250V  -      0.275V ):         0 (  0.00%)
+    Range 4(    0.225V  -      0.250V ):         0 (  0.00%)
+    Range 5(    0.200V  -      0.225V ):         0 (  0.00%)
+    Range 6(    0.175V  -      0.200V ):         0 (  0.00%)
+    Range 7(    0.150V  -      0.175V ):         0 (  0.00%)
+    Range 8(  -1.000uV  -      0.150V ):     13303 (100.00%)
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VSS/iv.gif
+Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.55MB/15688.33MB/3364.10MB)
+
+
+Begin Effective Instance Voltage Report Generation
+Ended Effective Instance Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.55MB/15688.33MB/3364.10MB)
+
+
+Begin Voltage Source Current Report Generation
+  Minimum, Average, Maximum Voltage Source Current: 22.133mA, 41.380mA, 62.500mA
+  Total Current: 0.166A
+    Range 1(  57.454mA  -    62.507mA ):         1 ( 25.00%)
+    Range 2(  52.409mA  -    57.454mA ):         0 (  0.00%)
+    Range 3(  47.363mA  -    52.409mA ):         0 (  0.00%)
+    Range 4(  42.317mA  -    47.363mA ):         1 ( 25.00%)
+    Range 5(  37.271mA  -    42.317mA ):         1 ( 25.00%)
+    Range 6(  32.225mA  -    37.271mA ):         0 (  0.00%)
+    Range 7(  27.179mA  -    32.225mA ):         0 (  0.00%)
+    Range 8(  22.131mA  -    27.179mA ):         1 ( 25.00%)
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VSS/vc.gif
+Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.62MB/15688.34MB/3364.10MB)
+
+
+Begin Power Gate I/Idsat Report Generation
+  No data found
+Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.62MB/15688.34MB/3364.10MB)
+
+
+Begin Power Gate Voltage Report Generation
+  No data found.
+Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.65MB/15688.33MB/3364.10MB)
+
+
+Begin Decoupling Cap Density Report Generation
+  Minimum, Average, Maximum Decoupling Cap Density: 431.233aF/um^2, 441.035aF/um^2, 445.506aF/um^2
+    Range 1( 443.722aF/um^2  -   445.550aF/um^2 ):     14099 ( 55.21%)
+    Range 2( 441.938aF/um^2  -   443.722aF/um^2 ):         0 (  0.00%)
+    Range 3( 440.154aF/um^2  -   441.938aF/um^2 ):         0 (  0.00%)
+    Range 4( 438.369aF/um^2  -   440.154aF/um^2 ):      6052 ( 23.70%)
+    Range 5( 436.585aF/um^2  -   438.369aF/um^2 ):         0 (  0.00%)
+    Range 6( 434.801aF/um^2  -   436.585aF/um^2 ):         0 (  0.00%)
+    Range 7( 433.017aF/um^2  -   434.801aF/um^2 ):         0 (  0.00%)
+    Range 8( 431.190aF/um^2  -   433.017aF/um^2 ):      5388 ( 21.10%)
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VSS/dd.gif
+Ended Decoupling Cap Density Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.70MB/15688.35MB/3364.10MB)
+
+
+Begin Capacitance Report Generation
+	Type                  disconnected          connected             used                
+	Intrinsic-decap/filler  0.000F                0.000F                0.000F              
+	Intrinsic-standard    0.000F                0.990pF               0.990pF             
+	Intrinsic-macro       0.000F                0.000F                0.000F              
+	Load Cap              0.000F                15.207pF              15.207pF            
+	Grid Cap              0.000F                1.513pF               1.513pF             
+	Total Cap             0.000F                17.710pF              17.710pF            
+Ended Capacitance Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.72MB/15688.35MB/3364.10MB)
+
+
+Begin Voltage Across Vias and Contacts Report Generation
+Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.73MB/15688.35MB/3364.10MB)
+
+
+Begin Weak Grid Connectivity Report
+Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.75MB/15688.35MB/3364.10MB)
+
+
+Begin Grid Integrity Report Generation
+  # Missing Cell Power-Grid Views: 0
+  # Physically Disconnected Instances: 0
+  # Instances with Floating Power Pins: 0
+  # Disconnected Wire Segments: 0
+  # Weakly Connected Metal Segments: 5
+  # Dropped Voltage Sources: 0
+Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.83MB/15688.35MB/3364.10MB)
+
+
+
+Net VDD:
+
+
+Begin Preparing Database for Report Generation
+
+Circuit profile:
+                                                      Current    Voltage
+Layer Name                       Nodes   Resistors    Sources    Sources
+----- --------------------  ----------  ----------  ---------  ---------
+0     M9                           106         104          0          4
+1     V8                             0          80          0          0
+2     M8                           168         160          0          0
+3     V7                             0          64          0          0
+4     M7                           256         248          0          0
+5     V6                             0         112          0          0
+6     M6                           161         154          0          0
+7     V5                             0          28          0          0
+8     M5                            92          88          0          0
+9     V4                             0          52          0          0
+10    M4                            52           0          0          0
+11    V3                             0          52          0          0
+12    M3                            60           4          0          0
+13    V2                             0          56          0          0
+14    M2                          1192        1178          0          0
+15    V1                             0        1136          0          0
+16    M1                          5838        5747          0          0
+17    V0                             0        4611          0          0
+18    LISD                       17731       17644      13315          0
+                            ----------  ----------  ---------  ---------
+19    Circuit total              25657       31518      13315          4
+Ended Preparing Database for Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=291.52MB/15688.32MB/3364.10MB)
+
+Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=291.69MB/15688.32MB/3364.10MB)
+
+Begin IR Drop (Linear) Report Generation
+  Voltage: 0.7
+  Threshold: 0.4
+  Minimum, Average, Maximum IR Drop: 0.603V, 0.646V, 0.700V
+    Range 1(    0.603V  -      0.615V ):        20 (  0.08%)
+    Range 2(    0.615V  -      0.627V ):       993 (  3.87%)
+    Range 3(    0.627V  -      0.639V ):      4527 ( 17.64%)
+    Range 4(    0.639V  -      0.652V ):     15128 ( 58.96%)
+    Range 5(    0.652V  -      0.664V ):      4006 ( 15.61%)
+    Range 6(    0.664V  -      0.676V ):       202 (  0.79%)
+    Range 7(    0.676V  -      0.688V ):        85 (  0.33%)
+    Range 8(    0.688V  -      0.700V ):       695 (  2.71%)
+    Layer with maximum IR Drop:  LISD
+      M9: 0.0059979 [0.694 - 0.7]
+      M8: 0.0072277 [0.69192 - 0.69914]
+      M7: 0.007255 [0.69163 - 0.69888]
+      M6: 0.008377 [0.68998 - 0.69836]
+      M5: 0.015808 [0.67268 - 0.68849]
+      M4: 0.016824 [0.65928 - 0.6761]
+      M3: 0.023906 [0.6457 - 0.66961]
+      M2: 0.039814 [0.62654 - 0.66636]
+      M1: 0.051026 [0.61445 - 0.66548]
+      LISD: 0.06224 [0.6032 - 0.66544]
+  Worst case interval: 11
+  IR Report: dynamic_IR/core_25C_dynamic_1/Reports/VDD/VDD.main.rpt
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD/ir_linear.gif
+Ended IR Drop (Linear) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.18MB/15688.34MB/3364.10MB)
+
+
+Begin IR Drop (Limit) Report Generation
+  Voltage: 0.7
+  Threshold: 0.4
+  Minimum, Average, Maximum IR Drop: 0.603V, 0.646V, 0.700V
+    Range 1(    0.400V  -      0.400V ):         0 (  0.00%)
+    Range 2(    0.400V  -      0.425V ):         0 (  0.00%)
+    Range 3(    0.425V  -      0.450V ):         0 (  0.00%)
+    Range 4(    0.450V  -      0.475V ):         0 (  0.00%)
+    Range 5(    0.475V  -      0.500V ):         0 (  0.00%)
+    Range 6(    0.500V  -      0.525V ):         0 (  0.00%)
+    Range 7(    0.525V  -      0.550V ):         0 (  0.00%)
+    Range 8(    0.550V  -      0.700V ):     25656 (100.00%)
+    Layer with maximum IR Drop:  LISD
+      M9: 0.0059979 [0.694 - 0.7]
+      M8: 0.0072277 [0.69192 - 0.69914]
+      M7: 0.007255 [0.69163 - 0.69888]
+      M6: 0.008377 [0.68998 - 0.69836]
+      M5: 0.015808 [0.67268 - 0.68849]
+      M4: 0.016824 [0.65928 - 0.6761]
+      M3: 0.023906 [0.6457 - 0.66961]
+      M2: 0.039814 [0.62654 - 0.66636]
+      M1: 0.051026 [0.61445 - 0.66548]
+      LISD: 0.06224 [0.6032 - 0.66544]
+  Worst case interval: 11
+  IR Report: dynamic_IR/core_25C_dynamic_1/Reports/VDD/VDD.main.rpt
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD/ir_limit.gif
+Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.18MB/15688.34MB/3364.10MB)
+
+
+Begin Tap Current Report Generation
+  Minimum, Average, Maximum Tap Current: 22.714pA, 36.334uA, 1.034mA
+  Total Current: 0.484A
+    Range 1(   1.000mA  -     1.000GA ):         2 (  0.02%)
+    Range 2( 100.000uA  -     1.000mA ):       742 (  5.57%)
+    Range 3(  10.000uA  -   100.000uA ):     10193 ( 76.55%)
+    Range 4(   1.000uA  -    10.000uA ):       532 (  4.00%)
+    Range 5( 100.000nA  -     1.000uA ):         8 (  0.06%)
+    Range 6(  10.000nA  -   100.000nA ):       503 (  3.78%)
+    Range 7(   1.000nA  -    10.000nA ):       580 (  4.36%)
+    Range 8(    0.000A  -     1.000nA ):       755 (  5.67%)
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD/tc.gif
+Ended Tap Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.31MB/15688.36MB/3364.10MB)
+
+
+Begin Instance Based IR Drop Report Generation
+  Minimum, Average, Maximum Instance Based IR Drop: 0.603V, 0.644V, 0.664V
+    Range 1(    0.400V  -      0.400V ):         0 (  0.00%)
+    Range 2(    0.400V  -      0.425V ):         0 (  0.00%)
+    Range 3(    0.425V  -      0.450V ):         0 (  0.00%)
+    Range 4(    0.450V  -      0.475V ):         0 (  0.00%)
+    Range 5(    0.475V  -      0.500V ):         0 (  0.00%)
+    Range 6(    0.500V  -      0.525V ):         0 (  0.00%)
+    Range 7(    0.525V  -      0.550V ):         0 (  0.00%)
+    Range 8(    0.550V  -      0.700V ):     13315 (100.00%)
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD/iv.gif
+Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.50MB/15688.35MB/3364.10MB)
+
+
+Begin Effective Instance Voltage Report Generation
+
+ Worst EIV:
+  Minimum, Average, Maximum Effective Instance Voltage: 0.527V, 0.604V, 0.683V
+    Range 1(    0.527V  -      0.547V ):         8 (  0.07%)
+    Range 2(    0.547V  -      0.566V ):       217 (  1.82%)
+    Range 3(    0.566V  -      0.586V ):      1973 ( 16.57%)
+    Range 4(    0.586V  -      0.605V ):      4815 ( 40.44%)
+    Range 5(    0.605V  -      0.625V ):      3024 ( 25.40%)
+    Range 6(    0.625V  -      0.644V ):      1109 (  9.31%)
+    Range 7(    0.644V  -      0.664V ):       428 (  3.59%)
+    Range 8(    0.664V  -      0.683V ):       332 (  2.79%)
+  *** Note: 1966 instance(s) don't have valid window-based EIV results and they are excluded from histogram and gif file. For more details, please check the EIV report.
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD_VSS.worst_eiv.gif
+  GIF Limit plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD_VSS.worst_limit_eiv.gif
+  **** Note: Histogram and gif file are generated based on window-based EIV results.
+Ended Effective Instance Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.71MB/15688.32MB/3364.10MB)
+
+
+Begin Voltage Source Current Report Generation
+  Minimum, Average, Maximum Voltage Source Current: -69.104mA, -49.978mA, -32.282mA
+  Total Current: -0.200A
+    Range 1( -69.110mA  -   -64.501mA ):         1 ( 25.00%)
+    Range 2( -64.501mA  -   -59.898mA ):         0 (  0.00%)
+    Range 3( -59.898mA  -   -55.296mA ):         0 (  0.00%)
+    Range 4( -55.296mA  -   -50.693mA ):         0 (  0.00%)
+    Range 5( -50.693mA  -   -46.090mA ):         2 ( 50.00%)
+    Range 6( -46.090mA  -   -41.488mA ):         0 (  0.00%)
+    Range 7( -41.488mA  -   -36.885mA ):         0 (  0.00%)
+    Range 8( -36.885mA  -   -32.279mA ):         1 ( 25.00%)
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD/vc.gif
+Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.80MB/15688.32MB/3364.10MB)
+
+
+Begin Power Gate I/Idsat Report Generation
+  No data found
+Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.80MB/15688.32MB/3364.10MB)
+
+
+Begin Power Gate Voltage Report Generation
+  No data found.
+Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.84MB/15688.32MB/3364.10MB)
+
+
+Begin Decoupling Cap Density Report Generation
+  Minimum, Average, Maximum Decoupling Cap Density: 434.410aF/um^2, 440.975aF/um^2, 450.980aF/um^2
+    Range 1( 448.909aF/um^2  -   451.025aF/um^2 ):      6491 ( 25.30%)
+    Range 2( 446.838aF/um^2  -   448.909aF/um^2 ):         0 (  0.00%)
+    Range 3( 444.766aF/um^2  -   446.838aF/um^2 ):         0 (  0.00%)
+    Range 4( 442.695aF/um^2  -   444.766aF/um^2 ):         0 (  0.00%)
+    Range 5( 440.624aF/um^2  -   442.695aF/um^2 ):      7660 ( 29.86%)
+    Range 6( 438.553aF/um^2  -   440.624aF/um^2 ):         0 (  0.00%)
+    Range 7( 436.482aF/um^2  -   438.553aF/um^2 ):      5462 ( 21.29%)
+    Range 8( 434.367aF/um^2  -   436.482aF/um^2 ):      6043 ( 23.55%)
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD/dd.gif
+Ended Decoupling Cap Density Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.88MB/15688.32MB/3364.10MB)
+
+
+Begin Capacitance Report Generation
+	Type                  disconnected          connected             used                
+	Intrinsic-decap/filler  0.000F                0.000F                0.000F              
+	Intrinsic-standard    0.000F                0.990pF               0.990pF             
+	Intrinsic-macro       0.000F                0.000F                0.000F              
+	Load Cap              0.000F                15.207pF              15.207pF            
+	Grid Cap              0.000F                1.568pF               1.568pF             
+	Total Cap             0.000F                17.766pF              17.766pF            
+Ended Capacitance Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.89MB/15688.32MB/3364.10MB)
+
+
+Begin Voltage Across Vias and Contacts Report Generation
+Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.91MB/15688.32MB/3364.10MB)
+
+
+Begin Weak Grid Connectivity Report
+Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.93MB/15688.32MB/3364.10MB)
+
+
+Begin Grid Integrity Report Generation
+  # Missing Cell Power-Grid Views: 0
+  # Physically Disconnected Instances: 0
+  # Instances with Floating Power Pins: 0
+  # Disconnected Wire Segments: 0
+  # Weakly Connected Metal Segments: 4
+  # Dropped Voltage Sources: 0
+Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=293.00MB/15688.32MB/3364.10MB)
+
+Ended Report Generation: (cpu=0:00:00, real=0:00:09, mem(process/total/peak)=79.21MB/15688.32MB/3364.10MB)
+
+
+Rail Analysis Statistics:
+Warning messages:      0
+Error messages:        0
+
+Rail Analysis completed successfully.
+
+Finished Rail Analysis at 11:37:15 06/02/2025 (cpu=0:00:18, real=0:00:32, peak mem=3364.10MB)
+Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:01:34, real=0:01:57, mem=2675.56MB)
+<CMD> win
+**WARN: (UI-10001):	The 'win' command will be obsolete, use 'start_gui' instead. 
+Has not load the powerDB, will keep enalbed
+Has not load the powerDB, will keep enalbed
+Turn off visibility of signal net in Voltus by default.
+<CMD_INTERNAL> zoomBox 5.32000 6.82000 45.76500 44.67100
+<CMD_INTERNAL> zoomBox -17.41700 -15.67400 60.06500 56.83900
+
+--------------------------------------------------------------------------------
+Exiting Voltus IC Power Integrity Solution on Mon Jun  2 11:41:01 2025
+  Total CPU time:     0:01:51
+  Total real time:    0:05:43
+  Peak memory (main): 3364.10MB
+

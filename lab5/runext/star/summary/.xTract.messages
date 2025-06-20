@@ -1,0 +1,73 @@
+Parsing option_file: xtract.tech (EX-304)
+Running Amd_64b    
+Initializing extraction ... (EX-724)
+Reading binary grd file ../../nxtgrd/cln65g+_1p08m+alrdl_cworst.nxtgrd ... (EX-135)
+Process 1R 1C
+use_partitioned_sig2idx is Inactive
+----- R mode: reuse cap  environments -----
+[XinLoad] Xin reading and cleaning duration is 1.03 seconds.
+Ary stats nx=222 ny=221 dx=11532 dy=11575 nentry=1060861  max/cell=64 av/cell=21.6229
+ Stats DB 0 484734 0 0 0 0 0 255850 0 0
+[DBinit] Import design duration is 0.67 seconds.
+----- Extracting 17593 nets ----- 
+Completed   0%  Time=00:00:00  RemainingTime=00:00:15  Mem=976.641
+Completed   1%  Time=00:00:00  RemainingTime=00:00:15  Mem=979.141
+Completed   2%  Time=00:00:00  RemainingTime=00:00:15  Mem=981.766
+Completed   3%  Time=00:00:00  RemainingTime=00:00:15  Mem=984.391
+Completed   4%  Time=00:00:00  RemainingTime=00:00:15  Mem=987.016
+ Processing 1000 of 17593 nets (5.68408%) ...
+Completed   5%  Time=00:00:00  RemainingTime=00:00:15  Mem=989.391
+Completed  10%  Time=00:00:01  RemainingTime=00:00:12  Mem=1000.64
+ Processing 2000 of 17593 nets (11.3682%) ...
+Completed  15%  Time=00:00:02  RemainingTime=00:00:11  Mem=1011.77
+ Processing 3000 of 17593 nets (17.0522%) ...
+Completed  20%  Time=00:00:02  RemainingTime=00:00:11  Mem=1024.64
+ Processing 4000 of 17593 nets (22.7363%) ...
+Completed  25%  Time=00:00:03  RemainingTime=00:00:10  Mem=1036.27
+ Processing 5000 of 17593 nets (28.4204%) ...
+Completed  30%  Time=00:00:04  RemainingTime=00:00:09  Mem=1049.02
+ Processing 6000 of 17593 nets (34.1045%) ...
+Completed  35%  Time=00:00:04  RemainingTime=00:00:09  Mem=1059.64
+ Processing 7000 of 17593 nets (39.7886%) ...
+Completed  40%  Time=00:00:05  RemainingTime=00:00:07  Mem=1071.14
+ Processing 8000 of 17593 nets (45.4726%) ...
+Completed  45%  Time=00:00:06  RemainingTime=00:00:07  Mem=1082.77
+Completed  50%  Time=00:00:06  RemainingTime=00:00:07  Mem=1093.77
+ Processing 9000 of 17593 nets (51.1567%) ...
+Completed  55%  Time=00:00:07  RemainingTime=00:00:06  Mem=1106.89
+ Processing 10000 of 17593 nets (56.8408%) ...
+Completed  60%  Time=00:00:08  RemainingTime=00:00:05  Mem=1118.14
+ Processing 11000 of 17593 nets (62.5249%) ...
+Completed  65%  Time=00:00:08  RemainingTime=00:00:05  Mem=1129.14
+ Processing 12000 of 17593 nets (68.2089%) ...
+Completed  70%  Time=00:00:09  RemainingTime=00:00:04  Mem=1140.27
+ Processing 13000 of 17593 nets (73.893%) ...
+Completed  75%  Time=00:00:09  RemainingTime=00:00:03  Mem=1150.52
+ Processing 14000 of 17593 nets (79.5771%) ...
+Completed  80%  Time=00:00:10  RemainingTime=00:00:02  Mem=1161.39
+ Processing 15000 of 17593 nets (85.2612%) ...
+Completed  85%  Time=00:00:11  RemainingTime=00:00:01  Mem=1173.77
+Completed  90%  Time=00:00:11  RemainingTime=00:00:01  Mem=1185.89
+ Processing 16000 of 17593 nets (90.9453%) ...
+Completed  95%  Time=00:00:12  RemainingTime=00:00:00  Mem=1196.14
+ Processing 17000 of 17593 nets (96.6293%) ...
+Completed 100%  Time=00:00:12  RemainingTime=00:00:00  Mem=1203.02
+[NetExtr] Net extraction duration is 12.73 seconds.
+ CapExtractionCounters PolyExt=108167 PolyExtReal=108167 CapEnvD=2020720 CapEnvND=108615 NumCap=6751484 OtFgain=187975 Area=1386393 EdgeSingle=374007 EdgeSingleFringe=78202 EdgeMulti=707871 EdgeMultiFringe=58255 CacheEdgeQuery=1081878 CacheEdgeHit=875359 CacheFringeQuery=157323 CacheFringeHit=120754 CacheAreaQuery=2066633 CacheAreaHit=1963490 CacheEtchQuery=820564 CacheEtchHit=753984 TVEnginesQuery=1030598 TVEnginesHit=1006180
+ ResExtractionCounters PolyExt=239051 EnvExt=789788 CacheResQuery=789788 CacheResHit=685554
+[Extract] Core extraction duration is 12.73 seconds.
+----- Reducing 17593 nets ----- 
+----- Floating fill reduction ----- 
+Extracted 0 capacitors, 620907 resistors, 610008 nodes
+Reduced to 126153 nodes,  (79.3195%)
+Reduced to 109638 resistors,  (82.3423%)
+Increased the number of caps to 63077 capacitors,  (keep nodes on a skip polygons?)
+Including -63076 coupling caps and 126153 grounded caps
+  
+xTractor      Elp=00:00:16 Cpu=00:00:16 Usr=15.7   Sys=0.5    Mem=1203.5
+  
+Done          Elp=00:00:16 Cpu=00:00:16 Usr=15.7   Sys=0.5    Mem=1203.5
+[Reduc] Fill and Net reduction duration is 0.76 seconds.
+[CircWrt] Final circuit write duration is 0.65 seconds.
+Partition 0 total time is 16.07 seconds.
+

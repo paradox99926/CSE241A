@@ -1,0 +1,62 @@
+{
+  "file_type": "UTI",
+  "file_info": [
+    {
+      "block": "",
+      "path": "/home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/./dynamic_power/dynamic_generalVDD.ptiavg"
+    },
+    {
+      "block": "",
+      "path": "/home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/./dynamic_power/dynamic_generalVSS.ptiavg"
+    },
+    {
+      "block": "",
+      "path": "/home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/./dynamic_power/dynamic_VDD.ptiavg"
+    },
+    {
+      "block": "",
+      "path": "/home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/./dynamic_power/dynamic_VSS.ptiavg"
+    }
+  ],
+  "current_files": [
+    {
+      "block": "",
+      "path": "/home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/./dynamic_power/dynamic_generalVDD.ptiavg",
+      "file_type": "UTI",
+      "datatype": "average",
+      "sim_type": "dynamic",
+      "has_rail_connection": false
+    },
+    {
+      "block": "",
+      "path": "/home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/./dynamic_power/dynamic_generalVSS.ptiavg",
+      "file_type": "UTI",
+      "datatype": "average",
+      "sim_type": "dynamic",
+      "has_rail_connection": false
+    },
+    {
+      "block": "",
+      "path": "/home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/./dynamic_power/dynamic_VDD.ptiavg",
+      "file_type": "UTI",
+      "datatype": "average",
+      "sim_type": "dynamic",
+      "has_rail_connection": true
+    },
+    {
+      "block": "",
+      "path": "/home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic/./dynamic_power/dynamic_VSS.ptiavg",
+      "file_type": "UTI",
+      "datatype": "average",
+      "sim_type": "dynamic",
+      "has_rail_connection": true
+    }
+  ],
+  "trigger_files": [],
+  "pgtrigger_files": [],
+  "driver_db": [],
+  "timing_db": [],
+  "is_pin_based_dynamic_current": false,
+  "is_enable_voltage_interpolation": false,
+  "cell_type": ""
+}

@@ -1,0 +1,1652 @@
+[05/24 13:38:01      0s] 
+[05/24 13:38:01      0s] Cadence Innovus(TM) Implementation System.
+[05/24 13:38:01      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[05/24 13:38:01      0s] 
+[05/24 13:38:01      0s] Version:	v21.10-p004_1, built Tue May 18 11:58:29 PDT 2021
+[05/24 13:38:01      0s] Options:	-no_gui -file run_eco.tcl 
+[05/24 13:38:01      0s] Date:		Sat May 24 13:38:01 2025
+[05/24 13:38:01      0s] Host:		ieng6-ece-07.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB)
+[05/24 13:38:01      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[05/24 13:38:01      0s] 
+[05/24 13:38:01      0s] License:
+[05/24 13:38:01      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[05/24 13:38:01      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[05/24 13:38:16     13s] Reset Parastics called with the command setExtractRCMode -reset**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+[05/24 13:38:19     16s] @(#)CDS: Innovus v21.10-p004_1 (64bit) 05/18/2021 11:58 (Linux 3.10.0-693.el7.x86_64)
+[05/24 13:38:19     16s] @(#)CDS: NanoRoute 21.10-p004_1 NR210506-1544/21_10-UB (database version 18.20.544) {superthreading v2.14}
+[05/24 13:38:19     16s] @(#)CDS: AAE 21.10-p006 (64bit) 05/18/2021 (Linux 3.10.0-693.el7.x86_64)
+[05/24 13:38:19     16s] @(#)CDS: CTE 21.10-p004_1 () May 13 2021 20:04:41 ( )
+[05/24 13:38:19     16s] @(#)CDS: SYNTECH 21.10-b006_1 () Apr 18 2021 22:44:07 ( )
+[05/24 13:38:19     16s] @(#)CDS: CPE v21.10-p004
+[05/24 13:38:19     16s] @(#)CDS: IQuantus/TQuantus 20.1.2-s510 (64bit) Sun Apr 18 10:29:16 PDT 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+[05/24 13:38:19     16s] @(#)CDS: OA 22.60-p052 Thu Feb 25 10:35:13 2021
+[05/24 13:38:19     16s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[05/24 13:38:19     16s] @(#)CDS: RCDB 11.15.0
+[05/24 13:38:19     16s] @(#)CDS: STYLUS 21.10-d038_1 (02/12/2021 04:34 PST)
+[05/24 13:38:19     16s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g.
+
+[05/24 13:38:19     16s] Change the soft stacksize limit to 0.2%RAM (64 mbytes). Set global soft_stack_size_limit to change the value.
+[05/24 13:38:21     18s] 
+[05/24 13:38:21     18s] **INFO:  MMMC transition support version v31-84 
+[05/24 13:38:21     18s] 
+[05/24 13:38:21     18s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[05/24 13:38:21     18s] <CMD> suppressMessage ENCEXT-2799
+[05/24 13:38:21     18s] Sourcing file "run_eco.tcl" ...
+[05/24 13:38:21     18s] <CMD> set init_pwr_net VDD
+[05/24 13:38:21     18s] <CMD> set init_gnd_net VSS
+[05/24 13:38:21     18s] <CMD> set init_verilog ./dynamic_node_top.v
+[05/24 13:38:21     18s] <CMD> set init_design_netlisttype Verilog
+[05/24 13:38:21     18s] <CMD> set init_design_settop 1
+[05/24 13:38:21     18s] <CMD> set init_top_cell dynamic_node_top
+[05/24 13:38:21     18s] <CMD> set init_lef_file /home/linux/ieng6/cs241asp25/public/data/libraries/techfiles/contest.lef
+[05/24 13:38:21     18s] <CMD> create_library_set -name WC_LIB -timing $libworst
+[05/24 13:38:21     18s] <CMD> create_library_set -name BC_LIB -timing $libworst
+[05/24 13:38:21     18s] <CMD> create_rc_corner -name Cmax -cap_table $captblworst -T 125
+[05/24 13:38:21     18s] <CMD> create_rc_corner -name Cmin -cap_table $captblworst -T -40
+[05/24 13:38:21     18s] <CMD> create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
+[05/24 13:38:21     18s] <CMD> create_delay_corner -name BC -library_set BC_LIB -rc_corner Cmin
+[05/24 13:38:21     18s] <CMD> create_constraint_mode -name CON -sdc_file [list $sdc]
+[05/24 13:38:21     18s] <CMD> create_analysis_view -name WC_VIEW -delay_corner WC -constraint_mode CON
+[05/24 13:38:21     18s] <CMD> create_analysis_view -name BC_VIEW -delay_corner BC -constraint_mode CON
+[05/24 13:38:21     18s] <CMD> init_design -setup WC_VIEW -hold BC_VIEW
+[05/24 13:38:21     18s] 
+[05/24 13:38:21     18s] Loading LEF file /home/linux/ieng6/cs241asp25/public/data/libraries/techfiles/contest.lef ...
+[05/24 13:38:21     18s] Set DBUPerIGU to M2 pitch 280.
+[05/24 13:38:21     18s] 
+[05/24 13:38:21     18s] viaInitial starts at Sat May 24 13:38:21 2025
+viaInitial ends at Sat May 24 13:38:21 2025
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[05/24 13:38:21     18s] Reading WC_LIB timing library '/home/linux/ieng6/cs241asp25/public/data/libraries/lib/contest.lib' ...
+[05/24 13:38:22     18s] Read 333 cells in library 'contest' 
+[05/24 13:38:22     18s] Ending "PreSetAnalysisView" (total cpu=0:00:00.3, real=0:00:01.0, peak res=604.9M, current mem=572.4M)
+[05/24 13:38:22     18s] *** End library_loading (cpu=0.00min, real=0.02min, mem=25.0M, fe_cpu=0.31min, fe_real=0.35min, fe_mem=749.6M) ***
+[05/24 13:38:22     18s] #% Begin Load netlist data ... (date=05/24 13:38:22, mem=572.4M)
+[05/24 13:38:22     18s] *** Begin netlist parsing (mem=749.6M) ***
+[05/24 13:38:22     18s] Created 333 new cells from 1 timing libraries.
+[05/24 13:38:22     18s] Reading netlist ...
+[05/24 13:38:22     18s] Backslashed names will retain backslash and a trailing blank character.
+[05/24 13:38:22     18s] Reading verilog netlist './dynamic_node_top.v'
+[05/24 13:38:22     18s] 
+[05/24 13:38:22     18s] *** Memory Usage v#1 (Current mem = 755.605M, initial mem = 308.801M) ***
+[05/24 13:38:22     18s] *** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=755.6M) ***
+[05/24 13:38:22     18s] #% End Load netlist data ... (date=05/24 13:38:22, total cpu=0:00:00.1, real=0:00:00.0, peak res=581.7M, current mem=581.7M)
+[05/24 13:38:22     18s] Set top cell to dynamic_node_top.
+[05/24 13:38:22     18s] Hooked 333 DB cells to tlib cells.
+[05/24 13:38:22     18s] ** Removed 2 unused lib cells.
+[05/24 13:38:22     18s] Ending "BindLib:" (total cpu=0:00:00.0, real=0:00:00.0, peak res=582.7M, current mem=582.7M)
+[05/24 13:38:22     18s] Starting recursive module instantiation check.
+[05/24 13:38:22     18s] No recursion found.
+[05/24 13:38:22     18s] Building hierarchical netlist for Cell dynamic_node_top ...
+[05/24 13:38:22     18s] *** Netlist is unique.
+[05/24 13:38:22     18s] Setting Std. cell height to 2520 DBU (smallest netlist inst).
+[05/24 13:38:22     18s] ** info: there are 333 modules.
+[05/24 13:38:22     18s] ** info: there are 14289 stdCell insts.
+[05/24 13:38:22     18s] 
+[05/24 13:38:22     18s] *** Memory Usage v#1 (Current mem = 807.531M, initial mem = 308.801M) ***
+[05/24 13:38:22     18s] **WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[05/24 13:38:22     18s] Type 'man IMPFP-3961' for more detail.
+[05/24 13:38:22     18s] **WARN: (IMPFP-3961):	The techSite 'core' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[05/24 13:38:22     18s] Type 'man IMPFP-3961' for more detail.
+[05/24 13:38:22     18s] **WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[05/24 13:38:22     18s] Type 'man IMPFP-3961' for more detail.
+[05/24 13:38:22     18s] **WARN: (IMPFP-3961):	The techSite 'core' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[05/24 13:38:22     18s] Type 'man IMPFP-3961' for more detail.
+[05/24 13:38:22     18s] Generated pitch 0.84 in M8 is different from 0.8 defined in technology file in preferred direction.
+[05/24 13:38:22     18s] Generated pitch 0.84 in M7 is different from 0.8 defined in technology file in preferred direction.
+[05/24 13:38:22     18s] Set Default Net Delay as 1000 ps.
+[05/24 13:38:22     18s] Set Default Net Load as 0.5 pF. 
+[05/24 13:38:22     18s] Set Default Input Pin Transition as 0.1 ps.
+[05/24 13:38:22     19s] Extraction setup Started 
+[05/24 13:38:22     19s] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[05/24 13:38:22     19s] Reading Capacitance Table File /home/linux/ieng6/cs241asp25/public/data/libraries/techfiles/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[05/24 13:38:22     19s] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[05/24 13:38:22     19s] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[05/24 13:38:22     19s] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[05/24 13:38:22     19s] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[05/24 13:38:22     19s] Reading Capacitance Table File /home/linux/ieng6/cs241asp25/public/data/libraries/techfiles/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[05/24 13:38:22     19s] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[05/24 13:38:22     19s] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[05/24 13:38:22     19s] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[05/24 13:38:22     19s] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[05/24 13:38:22     19s] Importing multi-corner RC tables ... 
+[05/24 13:38:22     19s] Summary of Active RC-Corners : 
+[05/24 13:38:22     19s]  
+[05/24 13:38:22     19s]  Analysis View: WC_VIEW
+[05/24 13:38:22     19s]     RC-Corner Name        : Cmax
+[05/24 13:38:22     19s]     RC-Corner Index       : 0
+[05/24 13:38:22     19s]     RC-Corner Temperature : 125 Celsius
+[05/24 13:38:22     19s]     RC-Corner Cap Table   : '/home/linux/ieng6/cs241asp25/public/data/libraries/techfiles/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[05/24 13:38:22     19s]     RC-Corner PreRoute Res Factor         : 1
+[05/24 13:38:22     19s]     RC-Corner PreRoute Cap Factor         : 1
+[05/24 13:38:22     19s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[05/24 13:38:22     19s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[05/24 13:38:22     19s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[05/24 13:38:22     19s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[05/24 13:38:22     19s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[05/24 13:38:22     19s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[05/24 13:38:22     19s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[05/24 13:38:22     19s]  
+[05/24 13:38:22     19s]  Analysis View: BC_VIEW
+[05/24 13:38:22     19s]     RC-Corner Name        : Cmin
+[05/24 13:38:22     19s]     RC-Corner Index       : 1
+[05/24 13:38:22     19s]     RC-Corner Temperature : -40 Celsius
+[05/24 13:38:22     19s]     RC-Corner Cap Table   : '/home/linux/ieng6/cs241asp25/public/data/libraries/techfiles/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[05/24 13:38:22     19s]     RC-Corner PreRoute Res Factor         : 1
+[05/24 13:38:22     19s]     RC-Corner PreRoute Cap Factor         : 1
+[05/24 13:38:22     19s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[05/24 13:38:22     19s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[05/24 13:38:22     19s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[05/24 13:38:22     19s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[05/24 13:38:22     19s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[05/24 13:38:22     19s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[05/24 13:38:22     19s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[05/24 13:38:22     19s] LayerId::1 widthSet size::5
+[05/24 13:38:22     19s] LayerId::2 widthSet size::5
+[05/24 13:38:22     19s] LayerId::3 widthSet size::5
+[05/24 13:38:22     19s] LayerId::4 widthSet size::5
+[05/24 13:38:22     19s] LayerId::5 widthSet size::5
+[05/24 13:38:22     19s] LayerId::6 widthSet size::5
+[05/24 13:38:22     19s] LayerId::7 widthSet size::4
+[05/24 13:38:22     19s] LayerId::8 widthSet size::4
+[05/24 13:38:22     19s] Updating RC grid for preRoute extraction ...
+[05/24 13:38:22     19s] eee: pegSigSF::1.070000
+[05/24 13:38:22     19s] Initializing multi-corner capacitance tables ... 
+[05/24 13:38:22     19s] Initializing multi-corner resistance tables ...
+[05/24 13:38:23     19s] eee: l::1 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[05/24 13:38:23     19s] eee: l::2 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[05/24 13:38:23     19s] eee: l::3 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[05/24 13:38:23     19s] eee: l::4 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[05/24 13:38:23     19s] eee: l::5 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[05/24 13:38:23     19s] eee: l::6 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[05/24 13:38:23     19s] eee: l::7 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[05/24 13:38:23     19s] eee: l::8 avDens::0.000000 usedTrk::0.000000 availTrk::0.000000 sigTrk::0.000000
+[05/24 13:38:23     19s] **Info: Trial Route has Max Route Layer 15/8.
+[05/24 13:38:23     19s] {RT Cmax 0 8 8 {7 0} 1}
+[05/24 13:38:23     19s] Preroute length aware model : n: 40 ; LLS: 2-3 ; HLS: 3-5 ; rDens: 0.000000 ; uaWl: 0.000000 ; uaWlH: 0.000000 ; aWlH: 0.000000 ; Pmax: 0.850000 ; wcR: 0.000000 ; newSi: 0.000000 ; pMod: 82 ; 
+[05/24 13:38:23     19s] *Info: initialize multi-corner CTS.
+[05/24 13:38:23     19s] Ending "SetAnalysisView" (total cpu=0:00:00.0, real=0:00:00.0, peak res=837.9M, current mem=616.4M)
+[05/24 13:38:23     19s] Reading timing constraints file './dynamic_node_top.sdc' ...
+[05/24 13:38:23     19s] Current (total cpu=0:00:19.7, real=0:00:22.0, peak res=854.6M, current mem=854.6M)
+[05/24 13:38:23     19s] **WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ./dynamic_node_top.sdc, Line 4).
+[05/24 13:38:23     19s] 
+[05/24 13:38:23     19s] INFO (CTE): Reading of timing constraints file ./dynamic_node_top.sdc completed, with 1 WARNING
+[05/24 13:38:23     19s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=873.6M, current mem=873.6M)
+[05/24 13:38:23     19s] Current (total cpu=0:00:19.9, real=0:00:22.0, peak res=873.6M, current mem=873.6M)
+[05/24 13:38:23     19s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[05/24 13:38:23     19s] 
+[05/24 13:38:23     19s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) Begin ...
+[05/24 13:38:23     19s] Summary for sequential cells identification: 
+[05/24 13:38:23     19s]   Identified SBFF number: 1
+[05/24 13:38:23     19s]   Identified MBFF number: 0
+[05/24 13:38:23     19s]   Identified SB Latch number: 0
+[05/24 13:38:23     19s]   Identified MB Latch number: 0
+[05/24 13:38:23     19s]   Not identified SBFF number: 0
+[05/24 13:38:23     19s]   Not identified MBFF number: 0
+[05/24 13:38:23     19s]   Not identified SB Latch number: 0
+[05/24 13:38:23     19s]   Not identified MB Latch number: 0
+[05/24 13:38:23     19s]   Number of sequential cells which are not FFs: 0
+[05/24 13:38:23     19s] Total number of combinational cells: 330
+[05/24 13:38:23     19s] Total number of sequential cells: 1
+[05/24 13:38:23     19s] Total number of tristate cells: 0
+[05/24 13:38:23     19s] Total number of level shifter cells: 0
+[05/24 13:38:23     19s] Total number of power gating cells: 0
+[05/24 13:38:23     19s] Total number of isolation cells: 0
+[05/24 13:38:23     19s] Total number of power switch cells: 0
+[05/24 13:38:23     19s] Total number of pulse generator cells: 0
+[05/24 13:38:23     19s] Total number of always on buffers: 0
+[05/24 13:38:23     19s] Total number of retention cells: 0
+[05/24 13:38:23     19s] List of usable buffers:
+[05/24 13:38:23     19s] Total number of usable buffers: 0
+[05/24 13:38:23     19s] List of unusable buffers:
+[05/24 13:38:23     19s] Total number of unusable buffers: 0
+[05/24 13:38:23     19s] List of usable inverters: in01s01 in01s02 in01s03 in01s04 in01s06 in01s08 in01s10 in01s20 in01s40 in01s80 in01m01 in01m02 in01m03 in01m04 in01m06 in01m08 in01m10 in01m20 in01m40 in01m80 in01f01 in01f02 in01f03 in01f04 in01f06 in01f08 in01f10 in01f20 in01f40 in01f80
+[05/24 13:38:23     19s] Total number of usable inverters: 30
+[05/24 13:38:23     19s] List of unusable inverters:
+[05/24 13:38:23     19s] Total number of unusable inverters: 0
+[05/24 13:38:23     19s] List of identified usable delay cells:
+[05/24 13:38:23     19s] Total number of identified usable delay cells: 0
+[05/24 13:38:23     19s] List of identified unusable delay cells:
+[05/24 13:38:23     19s] Total number of identified unusable delay cells: 0
+[05/24 13:38:23     19s] 
+[05/24 13:38:23     19s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) End ...
+[05/24 13:38:23     19s] No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+[05/24 13:38:23     19s] 
+[05/24 13:38:23     19s] TimeStamp Deleting Cell Server Begin ...
+[05/24 13:38:23     19s] 
+[05/24 13:38:23     19s] TimeStamp Deleting Cell Server End ...
+[05/24 13:38:23     19s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=894.7M, current mem=894.6M)
+[05/24 13:38:23     19s] 
+[05/24 13:38:23     19s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) Begin ...
+[05/24 13:38:23     19s] Summary for sequential cells identification: 
+[05/24 13:38:23     19s]   Identified SBFF number: 1
+[05/24 13:38:23     19s]   Identified MBFF number: 0
+[05/24 13:38:23     19s]   Identified SB Latch number: 0
+[05/24 13:38:23     19s]   Identified MB Latch number: 0
+[05/24 13:38:23     19s]   Not identified SBFF number: 0
+[05/24 13:38:23     19s]   Not identified MBFF number: 0
+[05/24 13:38:23     19s]   Not identified SB Latch number: 0
+[05/24 13:38:23     19s]   Not identified MB Latch number: 0
+[05/24 13:38:23     19s]   Number of sequential cells which are not FFs: 0
+[05/24 13:38:23     19s] **WARN: (IMPOPT-3000):	Buffer footprint is not defined or is an invalid buffer footprint.
+[05/24 13:38:23     19s] Type 'man IMPOPT-3000' for more detail.
+[05/24 13:38:23     19s]  Visiting view : WC_VIEW
+[05/24 13:38:23     19s]    : PowerDomain = none : Weighted F : unweighted  = 10.20 (1.000) with rcCorner = 0
+[05/24 13:38:23     19s]    : PowerDomain = none : Weighted F : unweighted  = 10.20 (1.000) with rcCorner = -1
+[05/24 13:38:23     19s]  Visiting view : BC_VIEW
+[05/24 13:38:23     19s]    : PowerDomain = none : Weighted F : unweighted  = 10.20 (1.000) with rcCorner = 1
+[05/24 13:38:23     19s]    : PowerDomain = none : Weighted F : unweighted  = 10.20 (1.000) with rcCorner = -1
+[05/24 13:38:23     19s] TLC MultiMap info (StdDelay):
+[05/24 13:38:23     19s]   : BC + BC_LIB + 1 + no RcCorner := 10.2ps
+[05/24 13:38:23     19s]   : BC + BC_LIB + 1 + Cmin := 10.2ps
+[05/24 13:38:23     19s]   : WC + WC_LIB + 1 + no RcCorner := 10.2ps
+[05/24 13:38:23     19s]   : WC + WC_LIB + 1 + Cmax := 10.2ps
+[05/24 13:38:23     19s]  Setting StdDelay to: 10.2ps
+[05/24 13:38:23     19s] 
+[05/24 13:38:23     19s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) End ...
+[05/24 13:38:23     19s] 
+[05/24 13:38:23     19s] *** Summary of all messages that are not suppressed in this session:
+[05/24 13:38:23     19s] Severity  ID               Count  Summary                                  
+[05/24 13:38:23     19s] WARNING   IMPFP-3961           4  The techSite '%s' has no related standar...
+[05/24 13:38:23     19s] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[05/24 13:38:23     19s] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[05/24 13:38:23     19s] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[05/24 13:38:23     19s] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[05/24 13:38:23     19s] WARNING   IMPOPT-3000          1  Buffer footprint is not defined or is an...
+[05/24 13:38:23     19s] WARNING   TCLCMD-1461          1  Skipped unsupported command: %s          
+[05/24 13:38:23     19s] *** Message Summary: 14 warning(s), 0 error(s)
+[05/24 13:38:23     19s] 
+[05/24 13:38:23     19s] <CMD> set_interactive_constraint_modes {CON}
+[05/24 13:38:23     19s] <CMD> setDesignMode -process 65
+[05/24 13:38:23     19s] ##  Process: 65            (User Set)               
+[05/24 13:38:23     19s] ##     Node: (not set)                           
+[05/24 13:38:23     19s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[05/24 13:38:23     19s] Applying the recommended capacitance filtering threshold values for 65nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[05/24 13:38:23     19s] 	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+[05/24 13:38:23     19s] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[05/24 13:38:23     19s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[05/24 13:38:23     19s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[05/24 13:38:23     19s] <CMD> defIn dynamic_node_top.def
+[05/24 13:38:23     19s] Reading DEF file 'dynamic_node_top.def', current time is Sat May 24 13:38:23 2025 ...
+[05/24 13:38:23     19s] --- DIVIDERCHAR '/'
+[05/24 13:38:23     19s] --- UnitsPerDBU = 1.0000
+[05/24 13:38:23     19s] **WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[05/24 13:38:23     19s] Type 'man IMPFP-3961' for more detail.
+[05/24 13:38:23     19s] **WARN: (IMPFP-3961):	The techSite 'core' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[05/24 13:38:23     19s] Type 'man IMPFP-3961' for more detail.
+[05/24 13:38:23     19s] **WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[05/24 13:38:23     19s] Type 'man IMPFP-3961' for more detail.
+[05/24 13:38:23     19s] **WARN: (IMPFP-3961):	The techSite 'core' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[05/24 13:38:23     19s] Type 'man IMPFP-3961' for more detail.
+[05/24 13:38:23     19s] Generated pitch 0.84 in M8 is different from 0.8 defined in technology file in preferred direction.
+[05/24 13:38:23     19s] Generated pitch 0.84 in M7 is different from 0.8 defined in technology file in preferred direction.
+[05/24 13:38:23     19s] --- DIEAREA (0 0) (555520 553560)
+[05/24 13:38:23     20s] defIn read 10000 lines...
+[05/24 13:38:23     20s] defIn read 20000 lines...
+[05/24 13:38:23     20s] defIn read 30000 lines...
+[05/24 13:38:23     20s] Extracting standard cell pins and blockage ...... 
+[05/24 13:38:23     20s] Pin and blockage extraction finished
+[05/24 13:38:23     20s] Extracting macro/IO cell pins and blockage ...... 
+[05/24 13:38:23     20s] Pin and blockage extraction finished
+[05/24 13:38:23     20s] defIn read 40000 lines...
+[05/24 13:38:23     20s] defIn read 50000 lines...
+[05/24 13:38:23     20s] defIn read 60000 lines...
+[05/24 13:38:23     20s] defIn read 70000 lines...
+[05/24 13:38:23     20s] defIn read 80000 lines...
+[05/24 13:38:23     20s] defIn read 90000 lines...
+[05/24 13:38:23     20s] defIn read 100000 lines...
+[05/24 13:38:24     20s] defIn read 110000 lines...
+[05/24 13:38:24     20s] defIn read 120000 lines...
+[05/24 13:38:24     20s] defIn read 130000 lines...
+[05/24 13:38:24     20s] defIn read 140000 lines...
+[05/24 13:38:24     20s] defIn read 150000 lines...
+[05/24 13:38:24     20s] defIn read 160000 lines...
+[05/24 13:38:24     20s] defIn read 170000 lines...
+[05/24 13:38:24     20s] defIn read 180000 lines...
+[05/24 13:38:24     20s] defIn read 190000 lines...
+[05/24 13:38:24     20s] defIn read 200000 lines...
+[05/24 13:38:24     20s] defIn read 210000 lines...
+[05/24 13:38:24     20s] defIn read 220000 lines...
+[05/24 13:38:24     20s] defIn read 230000 lines...
+[05/24 13:38:24     20s] defIn read 240000 lines...
+[05/24 13:38:24     20s] defIn read 250000 lines...
+[05/24 13:38:24     21s] defIn read 260000 lines...
+[05/24 13:38:24     21s] DEF file 'dynamic_node_top.def' is parsed, current time is Sat May 24 13:38:24 2025.
+[05/24 13:38:24     21s] Updating the floorplan ...
+[05/24 13:38:24     21s] <CMD> setAnalysisMode -analysisType onChipVariation -cppr both
+[05/24 13:38:24     21s] <CMD> setDelayCalMode -reset
+[05/24 13:38:24     21s] <CMD> setDelayCalMode -SIAware true
+[05/24 13:38:24     21s] AAE_INFO: switching -siAware from false to true ...
+[05/24 13:38:24     21s] AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
+[05/24 13:38:24     21s] <CMD> setExtractRCMode -coupled true -engine postRoute
+[05/24 13:38:24     21s] <CMD> report_timing
+[05/24 13:38:24     21s] AAE_INFO: opIsDesignInPostRouteState() is 1
+[05/24 13:38:25     21s] AAE DB initialization (MEM=1141.84 CPU=0:00:00.0 REAL=0:00:00.0) 
+[05/24 13:38:25     21s] Starting SI iteration 1 using Infinite Timing Windows
+[05/24 13:38:25     21s] #################################################################################
+[05/24 13:38:25     21s] # Design Stage: PostRoute
+[05/24 13:38:25     21s] # Design Name: dynamic_node_top
+[05/24 13:38:25     21s] # Design Mode: 65nm
+[05/24 13:38:25     21s] # Analysis Mode: MMMC OCV 
+[05/24 13:38:25     21s] # Parasitics Mode: No SPEF/RCDB 
+[05/24 13:38:25     21s] # Signoff Settings: SI On 
+[05/24 13:38:25     21s] #################################################################################
+[05/24 13:38:25     21s] **WARN: (IMPEXT-3518):	The lower process node is set (using command 'setDesignMode') but the technology file for TQuantus extraction not specified. Therefore, going for postRoute (effortLevel low) extraction instead of recommended extractor 'TQuantus' for lower nodes. Use command 'set_analysis_view/update_rc_corner' to specify the technology file for TQuantus extraction to take place.
+[05/24 13:38:25     21s] Extraction called for design 'dynamic_node_top' of instances=14289 and nets=14681 using extraction engine 'postRoute' at effort level 'low' .
+[05/24 13:38:25     21s] PostRoute (effortLevel low) RC Extraction called for design dynamic_node_top.
+[05/24 13:38:25     21s] RC Extraction called in multi-corner(2) mode.
+[05/24 13:38:25     21s] **WARN: (IMPEXT-3442):	The version of the capacitance table file being used is obsolete and is no longer recommended. For improved accuracy, generate the capacitance table file using the generateCapTbl command.
+[05/24 13:38:25     21s] Process corner(s) are loaded.
+[05/24 13:38:25     21s]  Corner: Cmax
+[05/24 13:38:25     21s]  Corner: Cmin
+[05/24 13:38:25     21s] extractDetailRC Option : -outfile /tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_qX6Rd9.rcdb.d  -extended
+[05/24 13:38:25     21s] RC Mode: PostRoute -effortLevel low [Extended CapTable, LEF Resistances]
+[05/24 13:38:25     21s]       RC Corner Indexes            0       1   
+[05/24 13:38:25     21s] Capacitance Scaling Factor   : 1.00000 1.00000 
+[05/24 13:38:25     21s] Coupling Cap. Scaling Factor : 1.00000 1.00000 
+[05/24 13:38:25     21s] Resistance Scaling Factor    : 1.00000 1.00000 
+[05/24 13:38:25     21s] Clock Cap. Scaling Factor    : 1.00000 1.00000 
+[05/24 13:38:25     21s] Clock Res. Scaling Factor    : 1.00000 1.00000 
+[05/24 13:38:25     21s] Shrink Factor                : 1.00000
+[05/24 13:38:25     22s] LayerId::1 widthSet size::5
+[05/24 13:38:25     22s] LayerId::2 widthSet size::5
+[05/24 13:38:25     22s] LayerId::3 widthSet size::5
+[05/24 13:38:25     22s] LayerId::4 widthSet size::5
+[05/24 13:38:25     22s] LayerId::5 widthSet size::5
+[05/24 13:38:25     22s] LayerId::6 widthSet size::5
+[05/24 13:38:25     22s] LayerId::7 widthSet size::4
+[05/24 13:38:25     22s] LayerId::8 widthSet size::4
+[05/24 13:38:25     22s] eee: pegSigSF::1.070000
+[05/24 13:38:25     22s] Initializing multi-corner capacitance tables ... 
+[05/24 13:38:25     22s] Initializing multi-corner resistance tables ...
+[05/24 13:38:25     22s] eee: l::1 avDens::0.049362 usedTrk::2021.384522 availTrk::40950.000000 sigTrk::2021.384522
+[05/24 13:38:25     22s] eee: l::2 avDens::0.152564 usedTrk::6247.497645 availTrk::40950.000000 sigTrk::6247.497645
+[05/24 13:38:25     22s] eee: l::3 avDens::0.130100 usedTrk::5432.966391 availTrk::41760.000000 sigTrk::5432.966391
+[05/24 13:38:25     22s] eee: l::4 avDens::0.056403 usedTrk::2010.213018 availTrk::35640.000000 sigTrk::2010.213018
+[05/24 13:38:25     22s] eee: l::5 avDens::0.032001 usedTrk::636.491470 availTrk::19890.000000 sigTrk::636.491470
+[05/24 13:38:25     22s] eee: l::6 avDens::0.017817 usedTrk::543.592183 availTrk::30510.000000 sigTrk::543.592183
+[05/24 13:38:25     22s] eee: l::7 avDens::0.130668 usedTrk::776.170795 availTrk::5940.000000 sigTrk::776.170795
+[05/24 13:38:25     22s] eee: l::8 avDens::0.188498 usedTrk::1181.879642 availTrk::6270.000000 sigTrk::1181.879642
+[05/24 13:38:25     22s] Preroute length aware model : n: 40 ; LLS: 2-3 ; HLS: 3-5 ; rDens: 0.310883 ; uaWl: 1.000000 ; uaWlH: 0.271387 ; aWlH: 0.000000 ; Pmax: 0.836500 ; wcR: 0.625000 ; newSi: 0.079800 ; pMod: 82 ; 
+[05/24 13:38:26     22s] Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1142.8M)
+[05/24 13:38:26     22s] Creating parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_qX6Rd9.rcdb.d' for storing RC.
+[05/24 13:38:26     22s] Extracted 10.0012% (CPU Time= 0:00:00.5  MEM= 1214.2M)
+[05/24 13:38:26     22s] Extracted 20.0009% (CPU Time= 0:00:00.6  MEM= 1217.2M)
+[05/24 13:38:26     22s] Extracted 30.0013% (CPU Time= 0:00:00.7  MEM= 1218.2M)
+[05/24 13:38:26     22s] Extracted 40.001% (CPU Time= 0:00:00.8  MEM= 1219.2M)
+[05/24 13:38:26     22s] Extracted 50.0015% (CPU Time= 0:00:00.9  MEM= 1221.2M)
+[05/24 13:38:26     23s] Extracted 60.0012% (CPU Time= 0:00:01.0  MEM= 1223.2M)
+[05/24 13:38:26     23s] Extracted 70.0009% (CPU Time= 0:00:01.2  MEM= 1226.2M)
+[05/24 13:38:26     23s] Extracted 80.0013% (CPU Time= 0:00:01.3  MEM= 1227.2M)
+[05/24 13:38:27     23s] Extracted 90.001% (CPU Time= 0:00:01.5  MEM= 1228.2M)
+[05/24 13:38:27     23s] Extracted 100% (CPU Time= 0:00:02.0  MEM= 1237.2M)
+[05/24 13:38:27     23s] Number of Extracted Resistors     : 241218
+[05/24 13:38:27     23s] Number of Extracted Ground Cap.   : 239391
+[05/24 13:38:27     23s] Number of Extracted Coupling Cap. : 336184
+[05/24 13:38:27     23s] Opening parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_qX6Rd9.rcdb.d' for reading (mem: 1217.203M)
+[05/24 13:38:27     23s] Filtering XCap in 'relativeAndCoupling' mode using values coupling_c_threshold=0.1fF, relative_c_threshold=1, and total_c_threshold=0fF.
+[05/24 13:38:27     23s]  Corner: Cmax
+[05/24 13:38:27     23s]  Corner: Cmin
+[05/24 13:38:27     23s] Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1217.2M)
+[05/24 13:38:27     23s] Creating parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_qX6Rd9.rcdb_Filter.rcdb.d' for storing RC.
+[05/24 13:38:27     24s] Closing parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_qX6Rd9.rcdb.d': 14666 access done (mem: 1217.203M)
+[05/24 13:38:27     24s] Lumped Parasitic Loading Started (total cpu=0:00:00.0, real=0:00:00.0, current mem=1217.203M)
+[05/24 13:38:27     24s] Opening parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_qX6Rd9.rcdb.d' for reading (mem: 1217.203M)
+[05/24 13:38:27     24s] processing rcdb (/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_qX6Rd9.rcdb.d) for hinst (top) of cell (dynamic_node_top);
+[05/24 13:38:28     24s] Closing parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_qX6Rd9.rcdb.d': 0 access done (mem: 1217.203M)
+[05/24 13:38:28     24s] Lumped Parasitic Loading Completed (total cpu=0:00:00.5, real=0:00:01.0, current mem=1217.203M)
+[05/24 13:38:28     24s] PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:02.9  Real Time: 0:00:03.0  MEM: 1217.203M)
+[05/24 13:38:28     25s] AAE_INFO: 1 threads acquired from CTE.
+[05/24 13:38:28     25s] Setting infinite Tws ...
+[05/24 13:38:28     25s] First Iteration Infinite Tw... 
+[05/24 13:38:28     25s] Calculate early delays in OCV mode...
+[05/24 13:38:28     25s] Calculate late delays in OCV mode...
+[05/24 13:38:28     25s] Topological Sorting (REAL = 0:00:00.0, MEM = 1217.2M, InitMEM = 1217.2M)
+[05/24 13:38:28     25s] Start delay calculation (fullDC) (1 T). (MEM=1217.2)
+[05/24 13:38:28     25s] LayerId::1 widthSet size::5
+[05/24 13:38:28     25s] LayerId::2 widthSet size::5
+[05/24 13:38:28     25s] LayerId::3 widthSet size::5
+[05/24 13:38:28     25s] LayerId::4 widthSet size::5
+[05/24 13:38:28     25s] LayerId::5 widthSet size::5
+[05/24 13:38:28     25s] LayerId::6 widthSet size::5
+[05/24 13:38:28     25s] LayerId::7 widthSet size::4
+[05/24 13:38:28     25s] LayerId::8 widthSet size::4
+[05/24 13:38:28     25s] eee: pegSigSF::1.070000
+[05/24 13:38:28     25s] Initializing multi-corner capacitance tables ... 
+[05/24 13:38:29     25s] Initializing multi-corner resistance tables ...
+[05/24 13:38:29     25s] eee: l::1 avDens::0.049362 usedTrk::2021.384522 availTrk::40950.000000 sigTrk::2021.384522
+[05/24 13:38:29     25s] eee: l::2 avDens::0.152564 usedTrk::6247.497645 availTrk::40950.000000 sigTrk::6247.497645
+[05/24 13:38:29     25s] eee: l::3 avDens::0.130100 usedTrk::5432.966391 availTrk::41760.000000 sigTrk::5432.966391
+[05/24 13:38:29     25s] eee: l::4 avDens::0.056403 usedTrk::2010.213018 availTrk::35640.000000 sigTrk::2010.213018
+[05/24 13:38:29     25s] eee: l::5 avDens::0.032001 usedTrk::636.491470 availTrk::19890.000000 sigTrk::636.491470
+[05/24 13:38:29     25s] eee: l::6 avDens::0.017817 usedTrk::543.592183 availTrk::30510.000000 sigTrk::543.592183
+[05/24 13:38:29     25s] eee: l::7 avDens::0.130668 usedTrk::776.170795 availTrk::5940.000000 sigTrk::776.170795
+[05/24 13:38:29     25s] eee: l::8 avDens::0.188498 usedTrk::1181.879642 availTrk::6270.000000 sigTrk::1181.879642
+[05/24 13:38:29     25s] Preroute length aware model : n: 40 ; LLS: 2-3 ; HLS: 3-5 ; rDens: 0.310883 ; uaWl: 1.000000 ; uaWlH: 0.271387 ; aWlH: 0.000000 ; Pmax: 0.836500 ; wcR: 0.625000 ; newSi: 0.079800 ; pMod: 82 ; 
+[05/24 13:38:29     26s] Start AAE Lib Loading. (MEM=1228.81)
+[05/24 13:38:29     26s] End AAE Lib Loading. (MEM=1238.35 CPU=0:00:00.0 Real=0:00:00.0)
+[05/24 13:38:29     26s] End AAE Lib Interpolated Model. (MEM=1238.35 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[05/24 13:38:29     26s] Opening parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_qX6Rd9.rcdb.d' for reading (mem: 1247.891M)
+[05/24 13:38:29     26s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1247.9M)
+[05/24 13:38:33     30s] Total number of fetched objects 14666
+[05/24 13:38:33     30s] AAE_INFO-618: Total number of nets in the design is 14681,  100.0 percent of the nets selected for SI analysis
+[05/24 13:38:33     30s] End Timing Check Calculation. (CPU Time=0:00:00.1, Real Time=0:00:00.0)
+[05/24 13:38:33     30s] End delay calculation. (MEM=1241.41 CPU=0:00:04.1 REAL=0:00:04.0)
+[05/24 13:38:33     30s] End delay calculation (fullDC). (MEM=1223.88 CPU=0:00:05.1 REAL=0:00:05.0)
+[05/24 13:38:33     30s] *** CDM Built up (cpu=0:00:08.6  real=0:00:08.0  mem= 1223.9M) ***
+[05/24 13:38:34     30s] Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1223.9M)
+[05/24 13:38:34     30s] Add other clocks and setupCteToAAEClockMapping during iter 1
+[05/24 13:38:34     31s] Loading CTE timing window is completed (CPU = 0:00:00.1, REAL = 0:00:00.0, MEM = 1223.9M)
+[05/24 13:38:34     31s] Starting SI iteration 2
+[05/24 13:38:34     31s] Calculate early delays in OCV mode...
+[05/24 13:38:34     31s] Calculate late delays in OCV mode...
+[05/24 13:38:34     31s] Start delay calculation (fullDC) (1 T). (MEM=1196.99)
+[05/24 13:38:34     31s] End AAE Lib Interpolated Model. (MEM=1196.99 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[05/24 13:38:34     31s] Glitch Analysis: View WC_VIEW -- Total Number of Nets Skipped = 8. 
+[05/24 13:38:34     31s] Glitch Analysis: View WC_VIEW -- Total Number of Nets Analyzed = 14666. 
+[05/24 13:38:34     31s] Total number of fetched objects 14666
+[05/24 13:38:34     31s] AAE_INFO-618: Total number of nets in the design is 14681,  0.7 percent of the nets selected for SI analysis
+[05/24 13:38:34     31s] End delay calculation. (MEM=1241.68 CPU=0:00:00.2 REAL=0:00:00.0)
+[05/24 13:38:34     31s] End delay calculation (fullDC). (MEM=1241.68 CPU=0:00:00.3 REAL=0:00:00.0)
+[05/24 13:38:34     31s] *** CDM Built up (cpu=0:00:00.3  real=0:00:00.0  mem= 1241.7M) ***
+[05/24 13:38:35     31s] <CMD> setEcoMode -refinePlace true
+[05/24 13:38:35     31s] <CMD> setEcoMode -batchMode true
+[05/24 13:38:35     31s] **WARN: (IMPOPT-6115):	ECO batch mode has been activated, and '(batch mode)' has been added to the prompt as a reminder of that situation. Specify 'setEcoMode -batchMode  false' after all ECOs are over.
+[05/24 13:38:35     31s] Type 'man IMPOPT-6115' for more detail.
+[05/24 13:38:35     31s] **WARN: (IMPOPT-6103):	Timing updates for ECO operations done inside batch mode will happen when exiting batch mode.
+[05/24 13:38:35     31s] <CMD> ecoChangeCell -inst FE_OCPC2404_n18959 -cell in01m20
+[05/24 13:38:35     31s] #################################################################################
+[05/24 13:38:35     31s] # Design Stage: PostRoute
+[05/24 13:38:35     31s] # Design Name: dynamic_node_top
+[05/24 13:38:35     31s] # Design Mode: 65nm
+[05/24 13:38:35     31s] # Analysis Mode: MMMC OCV 
+[05/24 13:38:35     31s] # Parasitics Mode: SPEF/RCDB 
+[05/24 13:38:35     31s] # Signoff Settings: SI On 
+[05/24 13:38:35     31s] #################################################################################
+[05/24 13:38:35     31s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1241.7M)
+[05/24 13:38:35     31s] ### Creating TopoMgr, started
+[05/24 13:38:35     31s] ### Creating TopoMgr, finished
+[05/24 13:38:35     31s] **Info: Trial Route has Max Route Layer 15/8.
+[05/24 13:38:35     31s] **Info: Trial Route has Max Route Layer 15/8.
+[05/24 13:38:35     31s] **Info: Trial Route has Max Route Layer 15/8.
+[05/24 13:38:35     31s] **Info: Trial Route has Max Route Layer 15/8.
+[05/24 13:38:35     31s] **Info: Trial Route has Max Route Layer 15/8.
+[05/24 13:38:35     31s] #optDebug: Start CG creation (mem=1241.7M)
+[05/24 13:38:35     31s]  ...initializing CG **Info: Trial Route has Max Route Layer 15/8.
+[05/24 13:38:35     31s]  maxDriveDist -0.000500 stdCellHgt 1.260000 defLenToSkip 8.820000 IgnoreMultFactor 7.000000 RTBasedMultFactor 0.100000  length 8.820000 
+[05/24 13:38:35     32s] (cpu=0:00:00.1, mem=1337.0M)
+[05/24 13:38:35     32s]  ...processing cgPrt (cpu=0:00:00.1, mem=1337.0M)
+[05/24 13:38:35     32s]  ...processing cgEgp (cpu=0:00:00.1, mem=1337.0M)
+[05/24 13:38:35     32s]  ...processing cgPbk (cpu=0:00:00.1, mem=1337.0M)
+[05/24 13:38:35     32s]  ...processing cgNrb(cpu=0:00:00.1, mem=1337.0M)
+[05/24 13:38:35     32s]  ...processing cgObs (cpu=0:00:00.1, mem=1337.0M)
+[05/24 13:38:35     32s]  ...processing cgCon (cpu=0:00:00.1, mem=1337.0M)
+[05/24 13:38:35     32s]  ...processing cgPdm (cpu=0:00:00.1, mem=1337.0M)
+[05/24 13:38:35     32s] #optDebug: Finish CG creation (cpu=0:00:00.1, mem=1337.0M)
+[05/24 13:38:35     32s] **Info: Trial Route has Max Route Layer 15/8.
+[05/24 13:38:35     32s] **Info: Trial Route has Max Route Layer 15/8.
+[05/24 13:38:35     32s] **Info: Trial Route has Max Route Layer 15/8.
+[05/24 13:38:35     32s] **Info: Trial Route has Max Route Layer 15/8.
+[05/24 13:38:35     32s] **Info: Trial Route has Max Route Layer 15/8.
+[05/24 13:38:35     32s] OPERPROF: Starting DPlace-Init at level 1, MEM:1337.0M, EPOCH TIME: 1748119115.541453
+[05/24 13:38:35     32s] z: 2, totalTracks: 1
+[05/24 13:38:35     32s] z: 4, totalTracks: 1
+[05/24 13:38:35     32s] z: 6, totalTracks: 1
+[05/24 13:38:35     32s] z: 8, totalTracks: 1
+[05/24 13:38:35     32s] #spOpts: N=65 
+[05/24 13:38:35     32s] All LLGs are deleted
+[05/24 13:38:35     32s] OPERPROF:   Starting spSiteCleanup(true) at level 2, MEM:1337.0M, EPOCH TIME: 1748119115.561278
+[05/24 13:38:35     32s] OPERPROF:   Finished spSiteCleanup(true) at level 2, CPU:0.000, REAL:0.001, MEM:1337.0M, EPOCH TIME: 1748119115.562010
+[05/24 13:38:35     32s] # Building dynamic_node_top llgBox search-tree.
+[05/24 13:38:35     32s] OPERPROF:   Starting spInitSiteArr at level 2, MEM:1337.0M, EPOCH TIME: 1748119115.566856
+[05/24 13:38:35     32s] OPERPROF:     Starting spiInitFpSiteArr at level 3, MEM:1337.0M, EPOCH TIME: 1748119115.567531
+[05/24 13:38:35     32s] Core basic site is core
+[05/24 13:38:35     32s] **Info: (IMPSP-307): Design contains fractional 18 cells.
+[05/24 13:38:35     32s] OPERPROF:       Starting spiCheckSiteIfFastDPInitAvailable at level 4, MEM:1337.0M, EPOCH TIME: 1748119115.571690
+[05/24 13:38:35     32s] OPERPROF:       Finished spiCheckSiteIfFastDPInitAvailable at level 4, CPU:0.010, REAL:0.011, MEM:1369.0M, EPOCH TIME: 1748119115.582524
+[05/24 13:38:35     32s] Use non-trimmed site array because memory saving is not enough.
+[05/24 13:38:35     32s] SiteArray: non-trimmed site array dimensions = 219 x 1978
+[05/24 13:38:35     32s] SiteArray: use 1,794,048 bytes
+[05/24 13:38:35     32s] SiteArray: current memory after site array memory allocation 1370.7M
+[05/24 13:38:35     32s] SiteArray: FP blocked sites are writable
+[05/24 13:38:35     32s] Estimated cell power/ground rail width = 0.158 um
+[05/24 13:38:35     32s] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[05/24 13:38:35     32s] OPERPROF:       Starting RoutingBlockageFromWireViaStBox at level 4, MEM:1370.7M, EPOCH TIME: 1748119115.596916
+[05/24 13:38:35     32s] OPERPROF:       Finished RoutingBlockageFromWireViaStBox at level 4, CPU:0.000, REAL:0.000, MEM:1370.7M, EPOCH TIME: 1748119115.596997
+[05/24 13:38:35     32s] OPERPROF:     Finished spiInitFpSiteArr at level 3, CPU:0.030, REAL:0.031, MEM:1370.7M, EPOCH TIME: 1748119115.598942
+[05/24 13:38:35     32s] 
+[05/24 13:38:35     32s]  Pre_CCE_Colorizing is not ON! (0:0:331:0)
+[05/24 13:38:35     32s] OPERPROF:     Starting CMU at level 3, MEM:1370.7M, EPOCH TIME: 1748119115.602190
+[05/24 13:38:35     32s] OPERPROF:     Finished CMU at level 3, CPU:0.000, REAL:0.002, MEM:1370.7M, EPOCH TIME: 1748119115.603824
+[05/24 13:38:35     32s] OPERPROF:   Finished spInitSiteArr at level 2, CPU:0.040, REAL:0.038, MEM:1370.7M, EPOCH TIME: 1748119115.605085
+[05/24 13:38:35     32s] [CPU] DPlace-Init (cpu=0:00:00.1, real=0:00:00.0, mem=1370.7MB).
+[05/24 13:38:35     32s] OPERPROF: Finished DPlace-Init at level 1, CPU:0.060, REAL:0.066, MEM:1370.7M, EPOCH TIME: 1748119115.607859
+[05/24 13:38:35     32s] #################################################################################
+[05/24 13:38:35     32s] # Design Stage: PostRoute
+[05/24 13:38:35     32s] # Design Name: dynamic_node_top
+[05/24 13:38:35     32s] # Design Mode: 65nm
+[05/24 13:38:35     32s] # Analysis Mode: MMMC OCV 
+[05/24 13:38:35     32s] # Parasitics Mode: SPEF/RCDB 
+[05/24 13:38:35     32s] # Signoff Settings: SI On 
+[05/24 13:38:35     32s] #################################################################################
+[05/24 13:38:35     32s]    _____________________________________________________________
+[05/24 13:38:35     32s]   /  Design State
+[05/24 13:38:35     32s]  +--------------------------------------------------------------
+[05/24 13:38:35     32s]  | unconnected nets:       10
+[05/24 13:38:35     32s]  | signal nets: 
+[05/24 13:38:35     32s]  |    routed nets:    14665 (100.0% routed)
+[05/24 13:38:35     32s]  |     total nets:    14665
+[05/24 13:38:35     32s]  | clock nets: 
+[05/24 13:38:35     32s]  |    routed nets:        1 (100.0% routed)
+[05/24 13:38:35     32s]  |     total nets:        1
+[05/24 13:38:35     32s]  +--------------------------------------------------------------
+[05/24 13:38:35     32s] #################################################################################
+[05/24 13:38:35     32s] # Design Stage: PostRoute
+[05/24 13:38:35     32s] # Design Name: dynamic_node_top
+[05/24 13:38:35     32s] # Design Mode: 65nm
+[05/24 13:38:35     32s] # Analysis Mode: MMMC OCV 
+[05/24 13:38:35     32s] # Parasitics Mode: SPEF/RCDB 
+[05/24 13:38:35     32s] # Signoff Settings: SI On 
+[05/24 13:38:35     32s] #################################################################################
+[05/24 13:38:35     32s] Resize FE_OCPC2404_n18959 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2407_n18959 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OCPC2407_n18959 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2411_n18959 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OCPC2411_n18959 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2413_n19499_dup -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2413_n19499_dup (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2414_n19499 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2414_n19499 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2418_proc_input_NIB_head_ptr_f_1 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2418_proc_input_NIB_head_ptr_f_1 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2423_FE_OFN186_n24453 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2423_FE_OFN186_n24453 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2433_west_input_NIB_head_ptr_f_1 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2433_west_input_NIB_head_ptr_f_1 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2434_west_input_NIB_head_ptr_f_1 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2434_west_input_NIB_head_ptr_f_1 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2467_n24342 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OCPC2467_n24342 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2481_FE_OFN97_n21865 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2481_FE_OFN97_n21865 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2539_west_input_NIB_head_ptr_f_0 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2539_west_input_NIB_head_ptr_f_0 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2540_west_input_NIB_head_ptr_f_0 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2540_west_input_NIB_head_ptr_f_0 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2541_west_input_NIB_head_ptr_f_0 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2541_west_input_NIB_head_ptr_f_0 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2543_west_input_NIB_head_ptr_f_0 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2543_west_input_NIB_head_ptr_f_0 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2582_n18648 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2582_n18648 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2583_n18648 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2583_n18648 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2584_n18648 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2584_n18648 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2584_n18648_dup -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2584_n18648_dup (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2585_n18648 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2585_n18648 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2604_n19306 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2604_n19306 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2604_n19306_dup -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2604_n19306_dup (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2610_n19306 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2610_n19306 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2610_n19306_dup -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2610_n19306_dup (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2611_n19504 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2611_n19504 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2612_n19504 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2612_n19504 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2613_n19504 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2613_n19504 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2621_n24342 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2621_n24342 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2622_n24342 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OCPC2622_n24342 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2623_n19498 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2623_n19498 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2625_n19498 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2625_n19498 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2626_n19980 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2626_n19980 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2627_n19550 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2627_n19550 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2627_n19550_dup -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2627_n19550_dup (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2628_n19914 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2628_n19914 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2631_n19914 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OCPC2631_n19914 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2632_n19914 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2632_n19914 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2633_n19914 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2633_n19914 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2635_n24965 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2635_n24965 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2652_n19071 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2652_n19071 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2653_n19071 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2653_n19071 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2654_n19071 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2654_n19071 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2658_n19501 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2658_n19501 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2659_n19501 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2659_n19501 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2660_n19501 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2660_n19501 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2661_n21747 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2661_n21747 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2662_n19595 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2662_n19595 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2674_n19595 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2674_n19595 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2676_n18039 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2676_n18039 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2688_n18039 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OCPC2688_n18039 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2699_n21739 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2699_n21739 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2700_n19530 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OCPC2700_n19530 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2701_proc_input_NIB_head_ptr_f_2 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2701_proc_input_NIB_head_ptr_f_2 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2704_n19500 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2704_n19500 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OCPC2713_n19500 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OCPC2713_n19500 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1105_n18131 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OFC1105_n18131 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1112_n22273 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1112_n22273 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1119_n20814 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1119_n20814 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1147_n23737 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1147_n23737 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1150_n21174 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC1150_n21174 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1161_n21219 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC1161_n21219 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1162_n21219 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC1162_n21219 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1170_n23050 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1170_n23050 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1178_n20655 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC1178_n20655 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1193_east_input_NIB_head_ptr_f_0 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1193_east_input_NIB_head_ptr_f_0 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1200_n20152 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1200_n20152 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1205_n21052 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC1205_n21052 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1206_n18683 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1206_n18683 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1207_n18683 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1207_n18683 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1209_n18683 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1209_n18683 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1210_n18683 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1210_n18683 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1211_north_input_NIB_head_ptr_f_0 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1211_north_input_NIB_head_ptr_f_0 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1228_n21914 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1228_n21914 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1265_n23761 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC1265_n23761 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1267_n23761 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1267_n23761 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1273_n23045 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1273_n23045 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1276_n20971 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1276_n20971 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1292_n21069 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC1292_n21069 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1299_n19075 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1299_n19075 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1302_n19075 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1302_n19075 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1305_n19075 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1305_n19075 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1345_n23101 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1345_n23101 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1348_n20995 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1348_n20995 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1349_n20995 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1349_n20995 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1350_east_input_NIB_head_ptr_f_1 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1350_east_input_NIB_head_ptr_f_1 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1364_n23089 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1364_n23089 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1381_n22778 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1381_n22778 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1383_n22084 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC1383_n22084 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1384_n22084 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1384_n22084 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1397_n20858 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1397_n20858 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1400_n22139 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC1400_n22139 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1401_n22139 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1401_n22139 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1523_myChipID_f_7 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1523_myChipID_f_7 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1532_myChipID_f_8 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1532_myChipID_f_8 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1535_n21667 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1535_n21667 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1579_n22517 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1579_n22517 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1633_myChipID_f_13 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1633_myChipID_f_13 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1641_n19871 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1641_n19871 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1643_n20501 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1643_n20501 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1656_reset -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1656_reset (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1658_reset -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1658_reset (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1688_n21944 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1688_n21944 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1700_n18377 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1700_n18377 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1702_n22097 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC1702_n22097 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1703_n22097 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC1703_n22097 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1708_n23739 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1708_n23739 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1726_n19507 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1726_n19507 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1727_n21745 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1727_n21745 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1739_n17934 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1739_n17934 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1740_n17934 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1740_n17934 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1755_n19932 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1755_n19932 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1756_n19932 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1756_n19932 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1757_n19932 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1757_n19932 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1758_n19932 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1758_n19932 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1759_n19932 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1759_n19932 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1761_north_input_NIB_head_ptr_f_1_dup -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OFC1761_north_input_NIB_head_ptr_f_1_dup (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1796_n18815 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1796_n18815 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1797_n18815 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1797_n18815 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1798_n18815 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1798_n18815 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1798_n18815_dup -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1798_n18815_dup (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1799_n18815 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1799_n18815 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1800_n18815_dup -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1800_n18815_dup (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1805_south_input_NIB_head_ptr_f_1 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1805_south_input_NIB_head_ptr_f_1 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1805_south_input_NIB_head_ptr_f_1_dup -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OFC1805_south_input_NIB_head_ptr_f_1_dup (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1821_n20933 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC1821_n20933 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1873_n19225 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1873_n19225 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1875_n19225 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1875_n19225 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1875_n19225_dup -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1875_n19225_dup (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1885_n19073 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1885_n19073 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1886_n19073 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1886_n19073 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1889_n19073 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1889_n19073 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1891_n19073 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1891_n19073 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1896_n21748 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1896_n21748 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1903_reset -cell in01m06
+[05/24 13:38:35     32s] Resize FE_OFC1903_reset (in01f06) to in01m06.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1907_n18960 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1907_n18960 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1908_n18960 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1908_n18960 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1911_n18960 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OFC1911_n18960 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1915_n18762 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC1915_n18762 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC1990_myChipID_f_10 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC1990_myChipID_f_10 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2027_n19482 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC2027_n19482 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2032_proc_input_NIB_head_ptr_f_3 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2032_proc_input_NIB_head_ptr_f_3 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2036_n21747 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2036_n21747 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2115_n19655 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2115_n19655 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2119_n19655 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2119_n19655 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2121_myChipID_f_4 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC2121_myChipID_f_4 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2132_n19530 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2132_n19530 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2199_n19508 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2199_n19508 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2260_n19508 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2260_n19508 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2260_n19508_dup -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2260_n19508_dup (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2263_n19508 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OFC2263_n19508 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2276_proc_input_NIB_head_ptr_f_0 -cell in01m40
+[05/24 13:38:35     32s] Resize FE_OFC2276_proc_input_NIB_head_ptr_f_0 (in01f40) to in01m40.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2279_n17814 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2279_n17814 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2281_n17814 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2281_n17814 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2288_n17814 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2288_n17814 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2290_n19372 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC2290_n19372 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2292_n18151 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2292_n18151 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2293_n18151 -cell in01m20
+[05/24 13:38:35     32s] Resize FE_OFC2293_n18151 (in01f20) to in01m20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2335_FE_OFN25605_n21944 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC2335_FE_OFN25605_n21944 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2339_FE_OFN25605_n21944 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC2339_FE_OFN25605_n21944 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2356_FE_OFN1077_n17766 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC2356_FE_OFN1077_n17766 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2365_FE_OFN1077_n17766 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC2365_FE_OFN1077_n17766 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2374_FE_OFN582_n25619 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC2374_FE_OFN582_n25619 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2377_FE_OFN448_n23236 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC2377_FE_OFN448_n23236 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2379_FE_OFN448_n23236 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC2379_FE_OFN448_n23236 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2382_n17770 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC2382_n17770 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2506_FE_OFN24766_n21069 -cell in01m08
+[05/24 13:38:35     32s] Resize FE_OFC2506_FE_OFN24766_n21069 (in01f08) to in01m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2516_n25842 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC2516_n25842 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2520_n19446 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC2520_n19446 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2531_n25395 -cell in01m10
+[05/24 13:38:35     32s] Resize FE_OFC2531_n25395 (in01f10) to in01m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_16_0 -cell ao22m08
+[05/24 13:38:35     32s] Resize FE_RC_16_0 (ao22f08) to ao22m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_39_0 -cell oa22m10
+[05/24 13:38:35     32s] Resize FE_RC_39_0 (oa22f10) to oa22m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_51_0 -cell ao22m10
+[05/24 13:38:35     32s] Resize FE_RC_51_0 (ao22f10) to ao22m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_54_0 -cell oa22m10
+[05/24 13:38:35     32s] Resize FE_RC_54_0 (oa22f10) to oa22m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_56_0 -cell ao22m10
+[05/24 13:38:35     32s] Resize FE_RC_56_0 (ao22f10) to ao22m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_5_0 -cell ao12m08
+[05/24 13:38:35     32s] Resize FE_RC_5_0 (ao12f08) to ao12m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_62_0 -cell ao22m10
+[05/24 13:38:35     32s] Resize FE_RC_62_0 (ao22f10) to ao22m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_69_0 -cell ao22m10
+[05/24 13:38:35     32s] Resize FE_RC_69_0 (ao22f10) to ao22m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_75_0 -cell ao12m06
+[05/24 13:38:35     32s] Resize FE_RC_75_0 (ao12f06) to ao12m06.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_76_0 -cell oa22m10
+[05/24 13:38:35     32s] Resize FE_RC_76_0 (oa22f10) to oa22m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_77_0 -cell ao22m08
+[05/24 13:38:35     32s] Resize FE_RC_77_0 (ao22f08) to ao22m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_78_0 -cell ao22m08
+[05/24 13:38:35     32s] Resize FE_RC_78_0 (ao22f08) to ao22m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_83_0 -cell ao22m08
+[05/24 13:38:35     32s] Resize FE_RC_83_0 (ao22f08) to ao22m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_90_0 -cell ao22m08
+[05/24 13:38:35     32s] Resize FE_RC_90_0 (ao22f08) to ao22m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_91_0 -cell ao22m08
+[05/24 13:38:35     32s] Resize FE_RC_91_0 (ao22f08) to ao22m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_98_0 -cell ao22m10
+[05/24 13:38:35     32s] Resize FE_RC_98_0 (ao22f10) to ao22m10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst U18436 -cell na03m08
+[05/24 13:38:35     32s] Resize U18436 (na03f08) to na03m08.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_55_0 -cell ao22s20
+[05/24 13:38:35     32s] Resize FE_RC_55_0 (ao22f20) to ao22s20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_33_0 -cell ao22s20
+[05/24 13:38:35     32s] Resize FE_RC_33_0 (ao22f20) to ao22s20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_61_0 -cell ao22s20
+[05/24 13:38:35     32s] Resize FE_RC_61_0 (ao22f20) to ao22s20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_38_0 -cell ao22s20
+[05/24 13:38:35     32s] Resize FE_RC_38_0 (ao22f20) to ao22s20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_46_0 -cell na04s20
+[05/24 13:38:35     32s] Resize FE_RC_46_0 (na04f20) to na04s20.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_RC_84_0 -cell ao22s10
+[05/24 13:38:35     32s] Resize FE_RC_84_0 (ao22f10) to ao22s10.
+[05/24 13:38:35     32s] <CMD> ecoChangeCell -inst FE_OFC2183_n20506 -cell in01s40
+[05/24 13:38:35     32s] Resize FE_OFC2183_n20506 (in01f40) to in01s40.
+[05/24 13:38:35     32s] <CMD> setEcoMode -batchMode false
+[05/24 13:38:35     32s] OPERPROF: Starting spDPlaceCleanup(partial) at level 1, MEM:1370.7M, EPOCH TIME: 1748119115.972861
+[05/24 13:38:36     32s] OPERPROF:   Starting spSiteCleanup(false) at level 2, MEM:1370.7M, EPOCH TIME: 1748119116.014527
+[05/24 13:38:36     32s] OPERPROF:   Finished spSiteCleanup(false) at level 2, CPU:0.000, REAL:0.000, MEM:1370.7M, EPOCH TIME: 1748119116.014888
+[05/24 13:38:36     32s] OPERPROF: Finished spDPlaceCleanup(partial) at level 1, CPU:0.040, REAL:0.044, MEM:1300.7M, EPOCH TIME: 1748119116.017249
+[05/24 13:38:36     32s] OPERPROF: Starting RefinePlaceInit at level 1, MEM:1300.7M, EPOCH TIME: 1748119116.017364
+[05/24 13:38:36     32s] OPERPROF:   Starting DPlace-Init at level 2, MEM:1300.7M, EPOCH TIME: 1748119116.017904
+[05/24 13:38:36     32s] z: 2, totalTracks: 1
+[05/24 13:38:36     32s] z: 4, totalTracks: 1
+[05/24 13:38:36     32s] z: 6, totalTracks: 1
+[05/24 13:38:36     32s] z: 8, totalTracks: 1
+[05/24 13:38:36     32s] #spOpts: N=65 mergeVia=F 
+[05/24 13:38:36     32s] All LLGs are deleted
+[05/24 13:38:36     32s] OPERPROF:     Starting spSiteCleanup(true) at level 3, MEM:1300.7M, EPOCH TIME: 1748119116.027510
+[05/24 13:38:36     32s] OPERPROF:     Finished spSiteCleanup(true) at level 3, CPU:0.000, REAL:0.001, MEM:1300.7M, EPOCH TIME: 1748119116.028160
+[05/24 13:38:36     32s] OPERPROF:     Starting spInitSiteArr at level 3, MEM:1300.7M, EPOCH TIME: 1748119116.032752
+[05/24 13:38:36     32s] OPERPROF:       Starting spiInitFpSiteArr at level 4, MEM:1300.7M, EPOCH TIME: 1748119116.033446
+[05/24 13:38:36     32s] Core basic site is core
+[05/24 13:38:36     32s] **Info: (IMPSP-307): Design contains fractional 18 cells.
+[05/24 13:38:36     32s] OPERPROF:         Starting spiCheckSiteIfFastDPInitAvailable at level 5, MEM:1300.7M, EPOCH TIME: 1748119116.037289
+[05/24 13:38:36     32s] OPERPROF:         Finished spiCheckSiteIfFastDPInitAvailable at level 5, CPU:0.000, REAL:0.006, MEM:1300.7M, EPOCH TIME: 1748119116.043462
+[05/24 13:38:36     32s] Fast DP-INIT is on for default
+[05/24 13:38:36     32s] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[05/24 13:38:36     32s] OPERPROF:       Finished spiInitFpSiteArr at level 4, CPU:0.010, REAL:0.019, MEM:1300.7M, EPOCH TIME: 1748119116.052060
+[05/24 13:38:36     32s] 
+[05/24 13:38:36     32s]  Pre_CCE_Colorizing is not ON! (0:0:331:0)
+[05/24 13:38:36     32s] OPERPROF:       Starting CMU at level 4, MEM:1300.7M, EPOCH TIME: 1748119116.054914
+[05/24 13:38:36     32s] OPERPROF:       Finished CMU at level 4, CPU:0.000, REAL:0.002, MEM:1300.7M, EPOCH TIME: 1748119116.056468
+[05/24 13:38:36     32s] OPERPROF:     Finished spInitSiteArr at level 3, CPU:0.020, REAL:0.025, MEM:1300.7M, EPOCH TIME: 1748119116.057831
+[05/24 13:38:36     32s] [CPU] DPlace-Init (cpu=0:00:00.0, real=0:00:00.0, mem=1300.7MB).
+[05/24 13:38:36     32s] OPERPROF:   Finished DPlace-Init at level 2, CPU:0.040, REAL:0.043, MEM:1300.7M, EPOCH TIME: 1748119116.060542
+[05/24 13:38:36     32s] OPERPROF: Finished RefinePlaceInit at level 1, CPU:0.040, REAL:0.044, MEM:1300.7M, EPOCH TIME: 1748119116.061131
+[05/24 13:38:36     32s] TDRefine: refinePlace mode is spiral
+[05/24 13:38:36     32s] GigaOpt Checkpoint: Intermediate DB Saving Point beforeRefinePlace.15155.1
+[05/24 13:38:36     32s] OPERPROF: Starting RefinePlace at level 1, MEM:1300.7M, EPOCH TIME: 1748119116.062074
+[05/24 13:38:36     32s] *** Starting refinePlace (0:00:32.3 mem=1300.7M) ***
+[05/24 13:38:36     32s] Total net bbox length = 1.991e+05 (9.157e+04 1.075e+05) (ext = 3.521e+04)
+[05/24 13:38:36     32s] 
+[05/24 13:38:36     32s]  Pre_CCE_Colorizing is not ON! (0:0:331:0)
+[05/24 13:38:36     32s] Move report: placeLevelShifters moves 0 insts, mean move: 0.00 um, max move: 0.00 um 
+[05/24 13:38:36     32s] (I)      Default power domain name = dynamic_node_top
+[05/24 13:38:36     32s] .Default power domain name = dynamic_node_top
+[05/24 13:38:36     32s] .OPERPROF:   Starting RefinePlace2 at level 2, MEM:1300.7M, EPOCH TIME: 1748119116.086465
+[05/24 13:38:36     32s] Starting refinePlace ...
+[05/24 13:38:36     32s] Default power domain name = dynamic_node_top
+[05/24 13:38:36     32s] .One DDP V2 for no tweak run.
+[05/24 13:38:36     32s] Default power domain name = dynamic_node_top
+[05/24 13:38:36     32s] .  Spread Effort: high, post-route mode, useDDP on.
+[05/24 13:38:36     32s] [CPU] RefinePlace/preRPlace (cpu=0:00:00.1, real=0:00:00.0, mem=1305.7MB) @(0:00:32.3 - 0:00:32.3).
+[05/24 13:38:36     32s] Move report: preRPlace moves 0 insts, mean move: 0.00 um, max move: 0.00 um 
+[05/24 13:38:36     32s] wireLenOptFixPriorityInst 0 inst fixed
+[05/24 13:38:36     32s] 
+[05/24 13:38:36     32s] Running Spiral with 1 thread in Normal Mode  fetchWidth=100 
+[05/24 13:38:36     32s] Move report: legalization moves 0 insts, mean move: 0.00 um, max move: 0.00 um spiral
+[05/24 13:38:36     32s] [CPU] RefinePlace/Spiral (cpu=0:00:00.1, real=0:00:00.0)
+[05/24 13:38:36     32s] [CPU] RefinePlace/Commit (cpu=0:00:00.1, real=0:00:00.0), EEQ(cpu=0:00:00.0, real=0:00:00.0), MTComit(cpu=0:00:00.1, real=0:00:00.0), leftOver(cpu=0:00:00.0, real=0:00:00.0)
+[05/24 13:38:36     32s] [CPU] RefinePlace/Legalization (cpu=0:00:00.3, real=0:00:00.0, mem=1305.7MB) @(0:00:32.3 - 0:00:32.6).
+[05/24 13:38:36     32s] Move report: Detail placement moves 0 insts, mean move: 0.00 um, max move: 0.00 um 
+[05/24 13:38:36     32s] 	Runtime: CPU: 0:00:00.3 REAL: 0:00:00.0 MEM: 1305.7MB
+[05/24 13:38:36     32s] Statistics of distance of Instance movement in refine placement:
+[05/24 13:38:36     32s]   maximum (X+Y) =         0.00 um
+[05/24 13:38:36     32s]   mean    (X+Y) =         0.00 um
+[05/24 13:38:36     32s] Summary Report:
+[05/24 13:38:36     32s] Instances move: 0 (out of 14289 movable)
+[05/24 13:38:36     32s] Instances flipped: 0
+[05/24 13:38:36     32s] Mean displacement: 0.00 um
+[05/24 13:38:36     32s] Max displacement: 0.00 um 
+[05/24 13:38:36     32s] Total instances moved : 0
+[05/24 13:38:36     32s] OPERPROF:   Finished RefinePlace2 at level 2, CPU:0.340, REAL:0.334, MEM:1305.7M, EPOCH TIME: 1748119116.420952
+[05/24 13:38:36     32s] Total net bbox length = 1.991e+05 (9.157e+04 1.075e+05) (ext = 3.521e+04)
+[05/24 13:38:36     32s] Runtime: CPU: 0:00:00.4 REAL: 0:00:00.0 MEM: 1305.7MB
+[05/24 13:38:36     32s] [CPU] RefinePlace/total (cpu=0:00:00.4, real=0:00:00.0, mem=1305.7MB) @(0:00:32.3 - 0:00:32.6).
+[05/24 13:38:36     32s] *** Finished refinePlace (0:00:32.6 mem=1305.7M) ***
+[05/24 13:38:36     32s] GigaOpt Checkpoint: Intermediate DB Saving Point afterRefinePlace.15155.1
+[05/24 13:38:36     32s] OPERPROF: Finished RefinePlace at level 1, CPU:0.370, REAL:0.376, MEM:1305.7M, EPOCH TIME: 1748119116.437880
+[05/24 13:38:36     32s] OPERPROF: Starting spDPlaceCleanup(partial) at level 1, MEM:1305.7M, EPOCH TIME: 1748119116.438408
+[05/24 13:38:36     32s] OPERPROF:   Starting spSiteCleanup(false) at level 2, MEM:1305.7M, EPOCH TIME: 1748119116.481043
+[05/24 13:38:36     32s] OPERPROF:   Finished spSiteCleanup(false) at level 2, CPU:0.010, REAL:0.006, MEM:1305.7M, EPOCH TIME: 1748119116.487419
+[05/24 13:38:36     32s] OPERPROF: Finished spDPlaceCleanup(partial) at level 1, CPU:0.050, REAL:0.051, MEM:1305.7M, EPOCH TIME: 1748119116.489809
+[05/24 13:38:37     33s] <CMD> routeDesign
+[05/24 13:38:37     33s] #% Begin routeDesign (date=05/24 13:38:37, mem=1083.0M)
+[05/24 13:38:37     33s] ### Time Record (routeDesign) is installed.
+[05/24 13:38:37     34s] #routeDesign: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1083.86 (MB), peak = 1088.37 (MB)
+[05/24 13:38:37     34s] AAE_INFO: Pre Route call back at the beginning of routeDesign
+[05/24 13:38:37     34s] **INFO: User settings:
+[05/24 13:38:37     34s] setDesignMode -process           65
+[05/24 13:38:37     34s] setExtractRCMode -coupled        true
+[05/24 13:38:37     34s] setExtractRCMode -coupling_c_th  0.1
+[05/24 13:38:37     34s] setExtractRCMode -engine         postRoute
+[05/24 13:38:37     34s] setExtractRCMode -relative_c_th  1
+[05/24 13:38:37     34s] setExtractRCMode -total_c_th     0
+[05/24 13:38:37     34s] setDelayCalMode -SIAware         true
+[05/24 13:38:37     34s] 
+[05/24 13:38:37     34s] #Cmax has no qx tech file defined
+[05/24 13:38:37     34s] #No active RC corner or QRC tech file is missing.
+[05/24 13:38:37     34s] #**INFO: setDesignMode -flowEffort standard
+[05/24 13:38:37     34s] #**INFO: multi-cut via swapping will be performed after routing.
+[05/24 13:38:37     34s] #**INFO: All auto set options tuned by routeDesign will be restored to their original settings on command completion.
+[05/24 13:38:37     34s] OPERPROF: Starting checkPlace at level 1, MEM:1326.0M, EPOCH TIME: 1748119117.879086
+[05/24 13:38:37     34s] z: 2, totalTracks: 1
+[05/24 13:38:37     34s] z: 4, totalTracks: 1
+[05/24 13:38:37     34s] z: 6, totalTracks: 1
+[05/24 13:38:37     34s] z: 8, totalTracks: 1
+[05/24 13:38:37     34s] #spOpts: N=65 
+[05/24 13:38:37     34s] All LLGs are deleted
+[05/24 13:38:37     34s] OPERPROF:   Starting spSiteCleanup(true) at level 2, MEM:1326.0M, EPOCH TIME: 1748119117.892860
+[05/24 13:38:37     34s] OPERPROF:   Finished spSiteCleanup(true) at level 2, CPU:0.010, REAL:0.001, MEM:1326.0M, EPOCH TIME: 1748119117.893805
+[05/24 13:38:37     34s] OPERPROF:   Starting spInitSiteArr at level 2, MEM:1326.0M, EPOCH TIME: 1748119117.894936
+[05/24 13:38:37     34s] OPERPROF:     Starting spiInitFpSiteArr at level 3, MEM:1326.0M, EPOCH TIME: 1748119117.896370
+[05/24 13:38:37     34s] Core basic site is core
+[05/24 13:38:37     34s] OPERPROF:       Starting spiCheckSiteIfFastDPInitAvailable at level 4, MEM:1326.0M, EPOCH TIME: 1748119117.897236
+[05/24 13:38:37     34s] OPERPROF:       Finished spiCheckSiteIfFastDPInitAvailable at level 4, CPU:0.010, REAL:0.013, MEM:1326.0M, EPOCH TIME: 1748119117.909991
+[05/24 13:38:37     34s] SiteArray: non-trimmed site array dimensions = 219 x 1978
+[05/24 13:38:37     34s] SiteArray: use 1,794,048 bytes
+[05/24 13:38:37     34s] SiteArray: current memory after site array memory allocation 1326.0M
+[05/24 13:38:37     34s] SiteArray: FP blocked sites are writable
+[05/24 13:38:37     34s] OPERPROF:     Finished spiInitFpSiteArr at level 3, CPU:0.020, REAL:0.025, MEM:1326.0M, EPOCH TIME: 1748119117.921472
+[05/24 13:38:37     34s] 
+[05/24 13:38:37     34s]  Pre_CCE_Colorizing is not ON! (0:0:331:0)
+[05/24 13:38:37     34s] OPERPROF:   Finished spInitSiteArr at level 2, CPU:0.030, REAL:0.028, MEM:1326.0M, EPOCH TIME: 1748119117.923360
+[05/24 13:38:37     34s] Begin checking placement ... (start mem=1326.0M, init mem=1326.0M)
+[05/24 13:38:37     34s] 
+[05/24 13:38:37     34s] Running CheckPlace using 1 thread in normal mode...
+[05/24 13:38:38     34s] 
+[05/24 13:38:38     34s] ...checkPlace normal is done!
+[05/24 13:38:38     34s] OPERPROF:   Starting checkPlace/Vio-Check at level 2, MEM:1328.0M, EPOCH TIME: 1748119118.060780
+[05/24 13:38:38     34s] OPERPROF:   Finished checkPlace/Vio-Check at level 2, CPU:0.010, REAL:0.006, MEM:1328.0M, EPOCH TIME: 1748119118.067193
+[05/24 13:38:38     34s] *info: Placed = 14289         
+[05/24 13:38:38     34s] *info: Unplaced = 0           
+[05/24 13:38:38     34s] Placement Density:67.86%(51852/76413)
+[05/24 13:38:38     34s] Placement Density (including fixed std cells):67.86%(51852/76413)
+[05/24 13:38:38     34s] All LLGs are deleted
+[05/24 13:38:38     34s] OPERPROF:   Starting spSiteCleanup(true) at level 2, MEM:1328.0M, EPOCH TIME: 1748119118.070750
+[05/24 13:38:38     34s] OPERPROF:   Finished spSiteCleanup(true) at level 2, CPU:0.010, REAL:0.004, MEM:1328.0M, EPOCH TIME: 1748119118.075023
+[05/24 13:38:38     34s] Finished checkPlace (total: cpu=0:00:00.2, real=0:00:01.0; vio checks: cpu=0:00:00.1, real=0:00:01.0; mem=1328.0M)
+[05/24 13:38:38     34s] OPERPROF: Finished checkPlace at level 1, CPU:0.200, REAL:0.197, MEM:1328.0M, EPOCH TIME: 1748119118.076457
+[05/24 13:38:38     34s] 
+[05/24 13:38:38     34s] changeUseClockNetStatus Option :  -noFixedNetWires 
+[05/24 13:38:38     34s] *** Changed status on (0) nets in Clock.
+[05/24 13:38:38     34s] *** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=1328.0M) ***
+[05/24 13:38:38     34s] #**INFO: auto set of droutePostRouteSwapVia to multiCut
+[05/24 13:38:38     34s] % Begin globalDetailRoute (date=05/24 13:38:38, mem=1088.2M)
+[05/24 13:38:38     34s] 
+[05/24 13:38:38     34s] globalDetailRoute
+[05/24 13:38:38     34s] 
+[05/24 13:38:38     34s] #Start globalDetailRoute on Sat May 24 13:38:38 2025
+[05/24 13:38:38     34s] #
+[05/24 13:38:38     34s] ### Time Record (globalDetailRoute) is installed.
+[05/24 13:38:38     34s] ### Time Record (Pre Callback) is installed.
+[05/24 13:38:38     34s] Closing parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_qX6Rd9.rcdb.d': 18769 access done (mem: 1327.984M)
+[05/24 13:38:38     34s] ### Time Record (Pre Callback) is uninstalled.
+[05/24 13:38:38     34s] ### Time Record (DB Import) is installed.
+[05/24 13:38:38     34s] ### Time Record (Timing Data Generation) is installed.
+[05/24 13:38:38     34s] #Generating timing data, please wait...
+[05/24 13:38:38     34s] #14666 total nets, 14666 already routed, 14666 will ignore in trialRoute
+[05/24 13:38:38     34s] ### run_trial_route starts on Sat May 24 13:38:38 2025 with memory = 1043.77 (MB), peak = 1089.09 (MB)
+[05/24 13:38:38     34s] ### run_trial_route cpu:00:00:00, real:00:00:00, mem:1023.5 MB, peak:1.1 GB
+[05/24 13:38:38     34s] ### dump_timing_file starts on Sat May 24 13:38:38 2025 with memory = 1023.54 (MB), peak = 1089.09 (MB)
+[05/24 13:38:38     34s] 
+[05/24 13:38:38     34s] TimeStamp Deleting Cell Server Begin ...
+[05/24 13:38:38     34s] 
+[05/24 13:38:38     34s] TimeStamp Deleting Cell Server End ...
+[05/24 13:38:38     34s] ### extractRC starts on Sat May 24 13:38:38 2025 with memory = 1023.55 (MB), peak = 1089.09 (MB)
+[05/24 13:38:38     34s] **WARN: (IMPEXT-3442):	The version of the capacitance table file being used is obsolete and is no longer recommended. For improved accuracy, generate the capacitance table file using the generateCapTbl command.
+[05/24 13:38:39     35s] {RT Cmax 0 8 8 {7 0} 1}
+[05/24 13:38:39     35s] ### extractRC cpu:00:00:01, real:00:00:01, mem:1.0 GB, peak:1.1 GB
+[05/24 13:38:39     35s] #Dump tif for version 2.1
+[05/24 13:38:39     35s] **WARN: (IMPESI-2017):	There is no coupling capacitance found in the design. Use 'setDelayCalMode -siAware false' to perform base delay analysis. SI analysis requires the parasitics database to contain coupling capacitance. To perform SI analysis, use 'setExtractRCMode -coupled true' prior to extraction or load a SPEF with coupling capacitance and re-run. If the design is small and does not have any coupling, this message can be ignored.
+[05/24 13:38:39     36s] End AAE Lib Interpolated Model. (MEM=1288.1 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[05/24 13:38:43     39s] Total number of fetched objects 14666
+[05/24 13:38:43     39s] AAE_INFO-618: Total number of nets in the design is 14681,  100.0 percent of the nets selected for SI analysis
+[05/24 13:38:43     39s] End Timing Check Calculation. (CPU Time=0:00:00.1, Real Time=0:00:00.0)
+[05/24 13:38:43     39s] End delay calculation. (MEM=1308.3 CPU=0:00:03.0 REAL=0:00:03.0)
+[05/24 13:38:44     40s] **WARN: (IMPESI-2017):	There is no coupling capacitance found in the design. Use 'setDelayCalMode -siAware false' to perform base delay analysis. SI analysis requires the parasitics database to contain coupling capacitance. To perform SI analysis, use 'setExtractRCMode -coupled true' prior to extraction or load a SPEF with coupling capacitance and re-run. If the design is small and does not have any coupling, this message can be ignored.
+[05/24 13:38:44     40s] End AAE Lib Interpolated Model. (MEM=1276.42 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[05/24 13:38:44     40s] Glitch Analysis: View WC_VIEW -- Total Number of Nets Skipped = 0. 
+[05/24 13:38:44     40s] Glitch Analysis: View WC_VIEW -- Total Number of Nets Analyzed = 14666. 
+[05/24 13:38:44     40s] Total number of fetched objects 14666
+[05/24 13:38:44     40s] AAE_INFO-618: Total number of nets in the design is 14681,  1.0 percent of the nets selected for SI analysis
+[05/24 13:38:44     40s] End delay calculation. (MEM=1321.11 CPU=0:00:00.1 REAL=0:00:00.0)
+[05/24 13:38:45     42s] #Generating timing data took: cpu time = 00:00:07, elapsed time = 00:00:07, memory = 1025.64 (MB), peak = 1096.47 (MB)
+[05/24 13:38:45     42s] ### dump_timing_file cpu:00:00:07, real:00:00:07, mem:1.0 GB, peak:1.1 GB
+[05/24 13:38:45     42s] #Done generating timing data.
+[05/24 13:38:45     42s] ### Time Record (Timing Data Generation) is uninstalled.
+[05/24 13:38:45     42s] #create default rule from bind_ndr_rule rule=0x7f2f81bd8c10 0x7f2f60c734f8
+[05/24 13:38:45     42s] #WARNING (NRIG-1303) The congestion map does not match the GCELL grid. Clearing the map.
+[05/24 13:38:45     42s] ### Net info: total nets: 14681
+[05/24 13:38:45     42s] ### Net info: dirty nets: 14666
+[05/24 13:38:45     42s] ### Net info: marked as disconnected nets: 0
+[05/24 13:38:46     42s] #num needed restored net=0
+[05/24 13:38:46     42s] #need_extraction net=0 (total=14681)
+[05/24 13:38:46     42s] ### Net info: fully routed nets: 14666
+[05/24 13:38:46     42s] ### Net info: trivial (< 2 pins) nets: 15
+[05/24 13:38:46     42s] ### Net info: unrouted nets: 0
+[05/24 13:38:46     42s] ### Net info: re-extraction nets: 0
+[05/24 13:38:46     42s] ### Net info: ignored nets: 0
+[05/24 13:38:46     42s] ### Net info: skip routing nets: 0
+[05/24 13:38:46     42s] #Start reading timing information from file .timing_file_15155.tif.gz ...
+[05/24 13:38:46     42s] #Read in timing information for 726 ports, 14289 instances from timing file .timing_file_15155.tif.gz.
+[05/24 13:38:46     42s] ### import design signature (1): route=424063706 fixed_route=1276043718 flt_obj=0 vio=1905142130 swire=282492057 shield_wire=1 net_attr=544040801 dirty_area=0 del_dirty_area=0 cell=563123472 placement=1091498684 pin_access=1 inst_pattern=1
+[05/24 13:38:46     42s] ### Time Record (DB Import) is uninstalled.
+[05/24 13:38:46     42s] #NanoRoute Version 21.10-p004_1 NR210506-1544/21_10-UB
+[05/24 13:38:46     42s] #RTESIG:78da8dce3b6fc2301405e0cefc8a2b27432a01f5357e90b588955651cb8a4c6382a5c4a9
+[05/24 13:38:46     42s] #       fc18faefb1d4a9551a3a9fefe89ca23cee1b200cd748579f94f213c2a1614805952b149c
+[05/24 13:38:46     42s] #       3f313ce5e8fd992c8af2e5f58da91a2eba0f06aaf338f64b68bf9c1eec07b4e6a2531f21
+[05/24 13:38:46     42s] #       9818adeb1ebf39670a2854d645d319bf84148cff45241740865cb5bb14095421fa1c4ed2
+[05/24 13:38:46     42s] #       7a237f8e4f18e4dbed7d2424de4752492057db5de75fa112d985a85dab7d9bad7169f84b
+[05/24 13:38:46     42s] #       2a206e746656d55241f469ee1ba31cff61f88c79b801fc059a4b
+[05/24 13:38:46     42s] #
+[05/24 13:38:46     42s] ### Time Record (Data Preparation) is installed.
+[05/24 13:38:46     42s] #RTESIG:78da8dd03d6fc2301006e0cefc8a93610812509feb0fb282ba42856857648809961207f9
+[05/24 13:38:46     42s] #       63e8bfaf05532b9a30df737adfbbf1e4eb7d0784e102e9fc4a293f206c760ca9a0728e82
+[05/24 13:38:46     42s] #       f35786873cfa5c91d178b2fdd83355c25937c14071ecba6606d5b7d3ad3d4165ce3a3511
+[05/24 13:38:46     42s] #       8289d1ba7a7ae79c29a05058174d6dfc0c5230fe0f915c0069f3aa5da748a008d1e7e143
+[05/24 13:38:46     42s] #       5abec9dfe10f0cf2e572180989c3482a09e462eb4b7f2b5422bb10b5abb4afb2352eb5ff
+[05/24 13:38:46     42s] #       4905c475cef4ab327fe4d66e20b8940aa24f7d4730caf109c37bcccb0fb346a705
+[05/24 13:38:46     42s] #
+[05/24 13:38:46     42s] ### Time Record (Data Preparation) is uninstalled.
+[05/24 13:38:46     42s] ### Time Record (Global Routing) is installed.
+[05/24 13:38:46     42s] ### Time Record (Global Routing) is uninstalled.
+[05/24 13:38:46     42s] #Total number of trivial nets (e.g. < 2 pins) = 15 (skipped).
+[05/24 13:38:46     42s] #Total number of routable nets = 14666.
+[05/24 13:38:46     42s] #Total number of nets in the design = 14681.
+[05/24 13:38:46     42s] #14666 routable nets have routed wires.
+[05/24 13:38:46     42s] #No nets have been global routed.
+[05/24 13:38:46     43s] ### Time Record (Data Preparation) is installed.
+[05/24 13:38:46     43s] #Start routing data preparation on Sat May 24 13:38:46 2025
+[05/24 13:38:46     43s] #
+[05/24 13:38:46     43s] #Minimum voltage of a net in the design = 0.000.
+[05/24 13:38:46     43s] #Maximum voltage of a net in the design = 0.700.
+[05/24 13:38:46     43s] #Voltage range [0.000 - 0.700] has 14676 nets.
+[05/24 13:38:46     43s] #Voltage range [0.000 - 0.000] has 4 nets.
+[05/24 13:38:46     43s] #Voltage range [0.700 - 0.700] has 1 net.
+[05/24 13:38:46     43s] ### Time Record (Cell Pin Access) is installed.
+[05/24 13:38:46     43s] #Rebuild pin access data for design.
+[05/24 13:38:46     43s] #Initial pin access analysis.
+[05/24 13:38:47     43s] #Detail pin access analysis.
+[05/24 13:38:47     43s] ### Time Record (Cell Pin Access) is uninstalled.
+[05/24 13:38:47     43s] # M1           H   Track-Pitch = 0.14000    Line-2-Via Pitch = 0.14000
+[05/24 13:38:47     43s] # M2           V   Track-Pitch = 0.14000    Line-2-Via Pitch = 0.14000
+[05/24 13:38:47     43s] # M3           H   Track-Pitch = 0.14000    Line-2-Via Pitch = 0.14000
+[05/24 13:38:47     43s] # M4           V   Track-Pitch = 0.14000    Line-2-Via Pitch = 0.14000
+[05/24 13:38:47     43s] # M5           H   Track-Pitch = 0.14000    Line-2-Via Pitch = 0.14000
+[05/24 13:38:47     43s] # M6           V   Track-Pitch = 0.14000    Line-2-Via Pitch = 0.14000
+[05/24 13:38:47     43s] # M7           H   Track-Pitch = 0.84000    Line-2-Via Pitch = 0.80000
+[05/24 13:38:47     43s] # M8           V   Track-Pitch = 0.84000    Line-2-Via Pitch = 0.80000
+[05/24 13:38:47     43s] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1073.59 (MB), peak = 1106.24 (MB)
+[05/24 13:38:47     43s] #Regenerating Ggrids automatically.
+[05/24 13:38:47     43s] #Auto generating G-grids with size=15 tracks, using layer M3's pitch = 0.14000.
+[05/24 13:38:47     43s] #Using automatically generated G-grids.
+[05/24 13:38:49     45s] #Done routing data preparation.
+[05/24 13:38:49     45s] #cpu time = 00:00:02, elapsed time = 00:00:02, memory = 1089.79 (MB), peak = 1106.24 (MB)
+[05/24 13:38:49     45s] #
+[05/24 13:38:49     45s] #Finished routing data preparation on Sat May 24 13:38:49 2025
+[05/24 13:38:49     45s] #
+[05/24 13:38:49     45s] #Cpu time = 00:00:03
+[05/24 13:38:49     45s] #Elapsed time = 00:00:03
+[05/24 13:38:49     45s] #Increased memory = 27.63 (MB)
+[05/24 13:38:49     45s] #Total memory = 1089.90 (MB)
+[05/24 13:38:49     45s] #Peak memory = 1106.24 (MB)
+[05/24 13:38:49     45s] #
+[05/24 13:38:49     45s] ### Time Record (Data Preparation) is uninstalled.
+[05/24 13:38:49     45s] ### Time Record (Global Routing) is installed.
+[05/24 13:38:49     45s] #
+[05/24 13:38:49     45s] #Start global routing on Sat May 24 13:38:49 2025
+[05/24 13:38:49     45s] #
+[05/24 13:38:49     45s] #
+[05/24 13:38:49     45s] #Start global routing initialization on Sat May 24 13:38:49 2025
+[05/24 13:38:49     45s] #
+[05/24 13:38:49     45s] #WARNING (NRGR-22) Design is already detail routed.
+[05/24 13:38:49     45s] ### Time Record (Global Routing) is uninstalled.
+[05/24 13:38:49     45s] ### Time Record (Data Preparation) is installed.
+[05/24 13:38:49     45s] ### Time Record (Data Preparation) is uninstalled.
+[05/24 13:38:49     45s] ### track-assign external-init starts on Sat May 24 13:38:49 2025 with memory = 1089.95 (MB), peak = 1106.24 (MB)
+[05/24 13:38:49     45s] ### Time Record (Track Assignment) is installed.
+[05/24 13:38:49     45s] ### Time Record (Track Assignment) is uninstalled.
+[05/24 13:38:49     45s] ### track-assign external-init cpu:00:00:00, real:00:00:00, mem:1.1 GB, peak:1.1 GB
+[05/24 13:38:49     45s] #Routing data preparation, pin analysis, global routing and track assignment statistics:
+[05/24 13:38:49     45s] #Cpu time = 00:00:03
+[05/24 13:38:49     45s] #Elapsed time = 00:00:03
+[05/24 13:38:49     45s] #Increased memory = 27.78 (MB)
+[05/24 13:38:49     45s] #Total memory = 1089.99 (MB)
+[05/24 13:38:49     45s] #Peak memory = 1106.24 (MB)
+[05/24 13:38:49     45s] ### Time Record (Detail Routing) is installed.
+[05/24 13:38:49     45s] ### drc_pitch = 5660 ( 2.83000 um) drc_range = 3230 ( 1.61500 um) route_pitch = 5660 ( 2.83000 um) patch_pitch = 6460 ( 3.23000 um) top_route_layer = 8 top_pin_layer = 8
+[05/24 13:38:49     46s] #
+[05/24 13:38:49     46s] #Start Detail Routing..
+[05/24 13:38:49     46s] #start initial detail routing ...
+[05/24 13:38:50     46s] ### Design has 13836 dirty nets, 193 dirty-areas)
+[05/24 13:39:07     63s] #   number of violations = 0
+[05/24 13:39:07     63s] #193 out of 14289 instances (1.4%) need to be verified(marked ipoed), dirty area = 4.3%.
+[05/24 13:39:07     63s] #36.2% of the total area is being checked for drcs
+[05/24 13:39:10     66s] #36.2% of the total area was checked
+[05/24 13:39:10     66s] #   number of violations = 0
+[05/24 13:39:10     66s] #cpu time = 00:00:20, elapsed time = 00:00:20, memory = 1108.97 (MB), peak = 1293.76 (MB)
+[05/24 13:39:10     66s] #Complete Detail Routing.
+[05/24 13:39:10     66s] #Total wire length = 236975 um.
+[05/24 13:39:10     66s] #Total half perimeter of net bounding box = 212576 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M1 = 25440 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M2 = 78630 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M3 = 68159 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M4 = 25296 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M5 = 7974 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M6 = 6830 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M7 = 9761 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M8 = 14885 um.
+[05/24 13:39:10     66s] #Total number of vias = 88812
+[05/24 13:39:10     66s] #Up-Via Summary (total 88812):
+[05/24 13:39:10     66s] #           
+[05/24 13:39:10     66s] #-----------------------
+[05/24 13:39:10     66s] # M1              51157
+[05/24 13:39:10     66s] # M2              24970
+[05/24 13:39:10     66s] # M3               6139
+[05/24 13:39:10     66s] # M4               2139
+[05/24 13:39:10     66s] # M5               1632
+[05/24 13:39:10     66s] # M6               1314
+[05/24 13:39:10     66s] # M7               1461
+[05/24 13:39:10     66s] #-----------------------
+[05/24 13:39:10     66s] #                 88812 
+[05/24 13:39:10     66s] #
+[05/24 13:39:10     66s] #Total number of DRC violations = 0
+[05/24 13:39:10     66s] ### Time Record (Detail Routing) is uninstalled.
+[05/24 13:39:10     66s] #Cpu time = 00:00:21
+[05/24 13:39:10     66s] #Elapsed time = 00:00:21
+[05/24 13:39:10     66s] #Increased memory = 19.02 (MB)
+[05/24 13:39:10     66s] #Total memory = 1109.02 (MB)
+[05/24 13:39:10     66s] #Peak memory = 1293.76 (MB)
+[05/24 13:39:10     66s] ### Time Record (Post Route Via Swapping) is installed.
+[05/24 13:39:10     66s] ### drc_pitch = 5660 ( 2.83000 um) drc_range = 3230 ( 1.61500 um) route_pitch = 5660 ( 2.83000 um) patch_pitch = 6460 ( 3.23000 um) top_route_layer = 8 top_pin_layer = 8
+[05/24 13:39:10     66s] #
+[05/24 13:39:10     66s] #Start Post Route via swapping...
+[05/24 13:39:10     66s] #   number of violations = 0
+[05/24 13:39:10     66s] #cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1109.05 (MB), peak = 1293.76 (MB)
+[05/24 13:39:10     66s] #CELL_VIEW dynamic_node_top,init has no DRC violation.
+[05/24 13:39:10     66s] #Total number of DRC violations = 0
+[05/24 13:39:10     66s] #No via is swapped.
+[05/24 13:39:10     66s] #Post Route via swapping is done.
+[05/24 13:39:10     66s] ### Time Record (Post Route Via Swapping) is uninstalled.
+[05/24 13:39:10     66s] #Total wire length = 236975 um.
+[05/24 13:39:10     66s] #Total half perimeter of net bounding box = 212576 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M1 = 25440 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M2 = 78630 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M3 = 68159 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M4 = 25296 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M5 = 7974 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M6 = 6830 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M7 = 9761 um.
+[05/24 13:39:10     66s] #Total wire length on LAYER M8 = 14885 um.
+[05/24 13:39:10     66s] #Total number of vias = 88812
+[05/24 13:39:10     66s] #Up-Via Summary (total 88812):
+[05/24 13:39:10     66s] #           
+[05/24 13:39:10     66s] #-----------------------
+[05/24 13:39:10     66s] # M1              51157
+[05/24 13:39:10     66s] # M2              24970
+[05/24 13:39:10     66s] # M3               6139
+[05/24 13:39:10     66s] # M4               2139
+[05/24 13:39:10     66s] # M5               1632
+[05/24 13:39:10     66s] # M6               1314
+[05/24 13:39:10     66s] # M7               1461
+[05/24 13:39:10     66s] #-----------------------
+[05/24 13:39:10     66s] #                 88812 
+[05/24 13:39:10     66s] #
+[05/24 13:39:10     66s] ### Time Record (Post Route Wire Spreading) is installed.
+[05/24 13:39:10     66s] ### drc_pitch = 5660 ( 2.83000 um) drc_range = 3230 ( 1.61500 um) route_pitch = 5660 ( 2.83000 um) patch_pitch = 6460 ( 3.23000 um) top_route_layer = 8 top_pin_layer = 8
+[05/24 13:39:10     66s] #
+[05/24 13:39:10     66s] #Start Post Route wire spreading..
+[05/24 13:39:10     67s] ### drc_pitch = 5660 ( 2.83000 um) drc_range = 3230 ( 1.61500 um) route_pitch = 5660 ( 2.83000 um) patch_pitch = 6460 ( 3.23000 um) top_route_layer = 8 top_pin_layer = 8
+[05/24 13:39:10     67s] #
+[05/24 13:39:10     67s] #Start DRC checking..
+[05/24 13:39:19     75s] #   number of violations = 2
+[05/24 13:39:19     75s] #
+[05/24 13:39:19     75s] #    By Layer and Type :
+[05/24 13:39:19     75s] #	           Loop   Totals
+[05/24 13:39:19     75s] #	M1            2        2
+[05/24 13:39:19     75s] #	Totals        2        2
+[05/24 13:39:19     75s] #cpu time = 00:00:08, elapsed time = 00:00:08, memory = 1108.97 (MB), peak = 1293.76 (MB)
+[05/24 13:39:19     75s] #CELL_VIEW dynamic_node_top,init has 2 DRC violations
+[05/24 13:39:19     75s] #Total number of DRC violations = 2
+[05/24 13:39:19     75s] #Total number of violations on LAYER M1 = 2
+[05/24 13:39:19     75s] #Total number of violations on LAYER M2 = 0
+[05/24 13:39:19     75s] #Total number of violations on LAYER M3 = 0
+[05/24 13:39:19     75s] #Total number of violations on LAYER M4 = 0
+[05/24 13:39:19     75s] #Total number of violations on LAYER M5 = 0
+[05/24 13:39:19     75s] #Total number of violations on LAYER M6 = 0
+[05/24 13:39:19     75s] #Total number of violations on LAYER M7 = 0
+[05/24 13:39:19     75s] #Total number of violations on LAYER M8 = 0
+[05/24 13:39:19     75s] #
+[05/24 13:39:19     75s] #Start data preparation for wire spreading...
+[05/24 13:39:19     75s] #
+[05/24 13:39:19     75s] #Data preparation is done on Sat May 24 13:39:19 2025
+[05/24 13:39:19     75s] #
+[05/24 13:39:19     75s] ### track-assign engine-init starts on Sat May 24 13:39:19 2025 with memory = 1108.98 (MB), peak = 1293.76 (MB)
+[05/24 13:39:19     75s] ### track-assign engine-init cpu:00:00:00, real:00:00:00, mem:1.1 GB, peak:1.3 GB
+[05/24 13:39:19     75s] #
+[05/24 13:39:19     75s] #Start Post Route Wire Spread.
+[05/24 13:39:20     76s] #Done with 177 horizontal wires in 9 hboxes and 256 vertical wires in 9 hboxes.
+[05/24 13:39:20     77s] #Complete Post Route Wire Spread.
+[05/24 13:39:20     77s] #
+[05/24 13:39:20     77s] #Total wire length = 237008 um.
+[05/24 13:39:20     77s] #Total half perimeter of net bounding box = 212576 um.
+[05/24 13:39:20     77s] #Total wire length on LAYER M1 = 25440 um.
+[05/24 13:39:20     77s] #Total wire length on LAYER M2 = 78647 um.
+[05/24 13:39:20     77s] #Total wire length on LAYER M3 = 68170 um.
+[05/24 13:39:20     77s] #Total wire length on LAYER M4 = 25298 um.
+[05/24 13:39:20     77s] #Total wire length on LAYER M5 = 7974 um.
+[05/24 13:39:20     77s] #Total wire length on LAYER M6 = 6830 um.
+[05/24 13:39:20     77s] #Total wire length on LAYER M7 = 9762 um.
+[05/24 13:39:20     77s] #Total wire length on LAYER M8 = 14887 um.
+[05/24 13:39:20     77s] #Total number of vias = 88812
+[05/24 13:39:20     77s] #Up-Via Summary (total 88812):
+[05/24 13:39:20     77s] #           
+[05/24 13:39:20     77s] #-----------------------
+[05/24 13:39:20     77s] # M1              51157
+[05/24 13:39:20     77s] # M2              24970
+[05/24 13:39:20     77s] # M3               6139
+[05/24 13:39:20     77s] # M4               2139
+[05/24 13:39:20     77s] # M5               1632
+[05/24 13:39:20     77s] # M6               1314
+[05/24 13:39:20     77s] # M7               1461
+[05/24 13:39:20     77s] #-----------------------
+[05/24 13:39:21     77s] #                 88812 
+[05/24 13:39:21     77s] #
+[05/24 13:39:21     77s] ### drc_pitch = 5660 ( 2.83000 um) drc_range = 3230 ( 1.61500 um) route_pitch = 5660 ( 2.83000 um) patch_pitch = 6460 ( 3.23000 um) top_route_layer = 8 top_pin_layer = 8
+[05/24 13:39:21     77s] #
+[05/24 13:39:21     77s] #Start DRC checking..
+[05/24 13:39:30     86s] #   number of violations = 2
+[05/24 13:39:30     86s] #
+[05/24 13:39:30     86s] #    By Layer and Type :
+[05/24 13:39:30     86s] #	           Loop   Totals
+[05/24 13:39:30     86s] #	M1            2        2
+[05/24 13:39:30     86s] #	Totals        2        2
+[05/24 13:39:30     86s] #cpu time = 00:00:09, elapsed time = 00:00:09, memory = 1110.57 (MB), peak = 1293.76 (MB)
+[05/24 13:39:30     86s] #CELL_VIEW dynamic_node_top,init has 2 DRC violations
+[05/24 13:39:30     86s] #Total number of DRC violations = 2
+[05/24 13:39:30     86s] #Total number of violations on LAYER M1 = 2
+[05/24 13:39:30     86s] #Total number of violations on LAYER M2 = 0
+[05/24 13:39:30     86s] #Total number of violations on LAYER M3 = 0
+[05/24 13:39:30     86s] #Total number of violations on LAYER M4 = 0
+[05/24 13:39:30     86s] #Total number of violations on LAYER M5 = 0
+[05/24 13:39:30     86s] #Total number of violations on LAYER M6 = 0
+[05/24 13:39:30     86s] #Total number of violations on LAYER M7 = 0
+[05/24 13:39:30     86s] #Total number of violations on LAYER M8 = 0
+[05/24 13:39:30     86s] #   number of violations = 2
+[05/24 13:39:30     86s] #
+[05/24 13:39:30     86s] #    By Layer and Type :
+[05/24 13:39:30     86s] #	           Loop   Totals
+[05/24 13:39:30     86s] #	M1            2        2
+[05/24 13:39:30     86s] #	Totals        2        2
+[05/24 13:39:30     86s] #cpu time = 00:00:11, elapsed time = 00:00:11, memory = 1110.57 (MB), peak = 1293.76 (MB)
+[05/24 13:39:30     86s] #CELL_VIEW dynamic_node_top,init has 2 DRC violations
+[05/24 13:39:30     86s] #Total number of DRC violations = 2
+[05/24 13:39:30     86s] #Total number of violations on LAYER M1 = 2
+[05/24 13:39:30     86s] #Total number of violations on LAYER M2 = 0
+[05/24 13:39:30     86s] #Total number of violations on LAYER M3 = 0
+[05/24 13:39:30     86s] #Total number of violations on LAYER M4 = 0
+[05/24 13:39:30     86s] #Total number of violations on LAYER M5 = 0
+[05/24 13:39:30     86s] #Total number of violations on LAYER M6 = 0
+[05/24 13:39:30     86s] #Total number of violations on LAYER M7 = 0
+[05/24 13:39:30     86s] #Total number of violations on LAYER M8 = 0
+[05/24 13:39:30     86s] #Post Route wire spread is done.
+[05/24 13:39:30     86s] ### Time Record (Post Route Wire Spreading) is uninstalled.
+[05/24 13:39:30     86s] #Total wire length = 237008 um.
+[05/24 13:39:30     86s] #Total half perimeter of net bounding box = 212576 um.
+[05/24 13:39:30     86s] #Total wire length on LAYER M1 = 25440 um.
+[05/24 13:39:30     86s] #Total wire length on LAYER M2 = 78647 um.
+[05/24 13:39:30     86s] #Total wire length on LAYER M3 = 68170 um.
+[05/24 13:39:30     86s] #Total wire length on LAYER M4 = 25298 um.
+[05/24 13:39:30     86s] #Total wire length on LAYER M5 = 7974 um.
+[05/24 13:39:30     86s] #Total wire length on LAYER M6 = 6830 um.
+[05/24 13:39:30     86s] #Total wire length on LAYER M7 = 9762 um.
+[05/24 13:39:30     86s] #Total wire length on LAYER M8 = 14887 um.
+[05/24 13:39:30     86s] #Total number of vias = 88812
+[05/24 13:39:30     86s] #Up-Via Summary (total 88812):
+[05/24 13:39:30     86s] #           
+[05/24 13:39:30     86s] #-----------------------
+[05/24 13:39:30     86s] # M1              51157
+[05/24 13:39:30     86s] # M2              24970
+[05/24 13:39:30     86s] # M3               6139
+[05/24 13:39:30     86s] # M4               2139
+[05/24 13:39:30     86s] # M5               1632
+[05/24 13:39:30     86s] # M6               1314
+[05/24 13:39:30     86s] # M7               1461
+[05/24 13:39:30     86s] #-----------------------
+[05/24 13:39:30     86s] #                 88812 
+[05/24 13:39:30     86s] #
+[05/24 13:39:30     86s] #detailRoute Statistics:
+[05/24 13:39:30     86s] #Cpu time = 00:00:41
+[05/24 13:39:30     86s] #Elapsed time = 00:00:41
+[05/24 13:39:30     86s] #Increased memory = 20.60 (MB)
+[05/24 13:39:30     86s] #Total memory = 1110.59 (MB)
+[05/24 13:39:30     86s] #Peak memory = 1293.76 (MB)
+[05/24 13:39:30     86s] ### global_detail_route design signature (28): route=1897560108 flt_obj=0 vio=964642325 shield_wire=1
+[05/24 13:39:30     86s] ### Time Record (DB Export) is installed.
+[05/24 13:39:30     86s] ### export design design signature (29): route=1897560108 fixed_route=1276043718 flt_obj=0 vio=964642325 swire=282492057 shield_wire=1 net_attr=725740403 dirty_area=0 del_dirty_area=0 cell=563123472 placement=1091498684 pin_access=661002450 inst_pattern=1
+[05/24 13:39:31     87s] ### Time Record (DB Export) is uninstalled.
+[05/24 13:39:31     87s] ### Time Record (Post Callback) is installed.
+[05/24 13:39:31     87s] ### Time Record (Post Callback) is uninstalled.
+[05/24 13:39:31     87s] #
+[05/24 13:39:31     87s] #globalDetailRoute statistics:
+[05/24 13:39:31     87s] #Cpu time = 00:00:53
+[05/24 13:39:31     87s] #Elapsed time = 00:00:53
+[05/24 13:39:31     87s] #Increased memory = 19.21 (MB)
+[05/24 13:39:31     87s] #Total memory = 1107.42 (MB)
+[05/24 13:39:31     87s] #Peak memory = 1293.76 (MB)
+[05/24 13:39:31     87s] #Number of warnings = 2
+[05/24 13:39:31     87s] #Total number of warnings = 3
+[05/24 13:39:31     87s] #Number of fails = 0
+[05/24 13:39:31     87s] #Total number of fails = 0
+[05/24 13:39:31     87s] #Complete globalDetailRoute on Sat May 24 13:39:31 2025
+[05/24 13:39:31     87s] #
+[05/24 13:39:31     87s] ### Time Record (globalDetailRoute) is uninstalled.
+[05/24 13:39:31     87s] % End globalDetailRoute (date=05/24 13:39:31, total cpu=0:00:52.9, real=0:00:53.0, peak res=1293.8M, current mem=1106.9M)
+[05/24 13:39:31     87s] #Default setup view is reset to WC_VIEW.
+[05/24 13:39:31     87s] #Default setup view is reset to WC_VIEW.
+[05/24 13:39:31     87s] AAE_INFO: Post Route call back at the end of routeDesign
+[05/24 13:39:31     87s] #routeDesign: cpu time = 00:00:53, elapsed time = 00:00:54, memory = 1095.41 (MB), peak = 1293.76 (MB)
+[05/24 13:39:31     87s] 
+[05/24 13:39:31     87s] *** Summary of all messages that are not suppressed in this session:
+[05/24 13:39:31     87s] Severity  ID               Count  Summary                                  
+[05/24 13:39:31     87s] WARNING   IMPEXT-3442          1  The version of the capacitance table fil...
+[05/24 13:39:31     87s] WARNING   IMPESI-2017          2  There is no coupling capacitance found i...
+[05/24 13:39:31     87s] *** Message Summary: 3 warning(s), 0 error(s)
+[05/24 13:39:31     87s] 
+[05/24 13:39:31     87s] ### Time Record (routeDesign) is uninstalled.
+[05/24 13:39:31     87s] ### 
+[05/24 13:39:31     87s] ###   Scalability Statistics
+[05/24 13:39:31     87s] ### 
+[05/24 13:39:31     87s] ### --------------------------------+----------------+----------------+----------------+
+[05/24 13:39:31     87s] ###   routeDesign                   |        cpu time|    elapsed time|     scalability|
+[05/24 13:39:31     87s] ### --------------------------------+----------------+----------------+----------------+
+[05/24 13:39:31     87s] ###   Pre Callback                  |        00:00:00|        00:00:00|             1.0|
+[05/24 13:39:31     87s] ###   Post Callback                 |        00:00:00|        00:00:00|             1.0|
+[05/24 13:39:31     87s] ###   Timing Data Generation        |        00:00:08|        00:00:08|             1.0|
+[05/24 13:39:31     87s] ###   DB Import                     |        00:00:01|        00:00:01|             1.0|
+[05/24 13:39:31     87s] ###   DB Export                     |        00:00:00|        00:00:00|             1.0|
+[05/24 13:39:31     87s] ###   Cell Pin Access               |        00:00:01|        00:00:01|             1.0|
+[05/24 13:39:31     87s] ###   Data Preparation              |        00:00:02|        00:00:02|             1.0|
+[05/24 13:39:31     87s] ###   Global Routing                |        00:00:00|        00:00:00|             1.0|
+[05/24 13:39:31     87s] ###   Track Assignment              |        00:00:00|        00:00:00|             1.0|
+[05/24 13:39:31     87s] ###   Detail Routing                |        00:00:21|        00:00:21|             1.0|
+[05/24 13:39:31     87s] ###   Post Route Via Swapping       |        00:00:00|        00:00:00|             1.0|
+[05/24 13:39:31     87s] ###   Post Route Wire Spreading     |        00:00:20|        00:00:20|             1.0|
+[05/24 13:39:31     87s] ###   Entire Command                |        00:00:53|        00:00:54|             1.0|
+[05/24 13:39:31     87s] ### --------------------------------+----------------+----------------+----------------+
+[05/24 13:39:31     87s] ### 
+[05/24 13:39:31     87s] #% End routeDesign (date=05/24 13:39:31, total cpu=0:00:53.5, real=0:00:54.0, peak res=1293.8M, current mem=1095.4M)
+[05/24 13:39:31     87s] <CMD> report_timing
+[05/24 13:39:31     87s] AAE_INFO: opIsDesignInPostRouteState() is 1
+[05/24 13:39:31     87s] AAE DB initialization (MEM=1338.04 CPU=0:00:00.0 REAL=0:00:00.0) 
+[05/24 13:39:31     87s] Starting SI iteration 1 using Infinite Timing Windows
+[05/24 13:39:31     87s] #################################################################################
+[05/24 13:39:31     87s] # Design Stage: PostRoute
+[05/24 13:39:31     87s] # Design Name: dynamic_node_top
+[05/24 13:39:31     87s] # Design Mode: 65nm
+[05/24 13:39:31     87s] # Analysis Mode: MMMC OCV 
+[05/24 13:39:31     87s] # Parasitics Mode: No SPEF/RCDB 
+[05/24 13:39:31     87s] # Signoff Settings: SI On 
+[05/24 13:39:31     87s] #################################################################################
+[05/24 13:39:31     87s] **WARN: (IMPEXT-3518):	The lower process node is set (using command 'setDesignMode') but the technology file for TQuantus extraction not specified. Therefore, going for postRoute (effortLevel low) extraction instead of recommended extractor 'TQuantus' for lower nodes. Use command 'set_analysis_view/update_rc_corner' to specify the technology file for TQuantus extraction to take place.
+[05/24 13:39:31     87s] Extraction called for design 'dynamic_node_top' of instances=14289 and nets=14681 using extraction engine 'postRoute' at effort level 'low' .
+[05/24 13:39:31     87s] PostRoute (effortLevel low) RC Extraction called for design dynamic_node_top.
+[05/24 13:39:31     87s] RC Extraction called in multi-corner(2) mode.
+[05/24 13:39:31     87s] **WARN: (IMPEXT-3442):	The version of the capacitance table file being used is obsolete and is no longer recommended. For improved accuracy, generate the capacitance table file using the generateCapTbl command.
+[05/24 13:39:31     87s] Process corner(s) are loaded.
+[05/24 13:39:31     87s]  Corner: Cmax
+[05/24 13:39:31     87s]  Corner: Cmin
+[05/24 13:39:31     87s] extractDetailRC Option : -outfile /tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_6cZPkz.rcdb.d -maxResLength 200  -extended
+[05/24 13:39:31     87s] RC Mode: PostRoute -effortLevel low [Extended CapTable, LEF Resistances]
+[05/24 13:39:31     87s]       RC Corner Indexes            0       1   
+[05/24 13:39:31     87s] Capacitance Scaling Factor   : 1.00000 1.00000 
+[05/24 13:39:31     87s] Coupling Cap. Scaling Factor : 1.00000 1.00000 
+[05/24 13:39:31     87s] Resistance Scaling Factor    : 1.00000 1.00000 
+[05/24 13:39:31     87s] Clock Cap. Scaling Factor    : 1.00000 1.00000 
+[05/24 13:39:31     87s] Clock Res. Scaling Factor    : 1.00000 1.00000 
+[05/24 13:39:31     87s] Shrink Factor                : 1.00000
+[05/24 13:39:32     87s] LayerId::1 widthSet size::5
+[05/24 13:39:32     87s] LayerId::2 widthSet size::5
+[05/24 13:39:32     87s] LayerId::3 widthSet size::5
+[05/24 13:39:32     87s] LayerId::4 widthSet size::5
+[05/24 13:39:32     87s] LayerId::5 widthSet size::5
+[05/24 13:39:32     87s] LayerId::6 widthSet size::5
+[05/24 13:39:32     87s] LayerId::7 widthSet size::4
+[05/24 13:39:32     87s] LayerId::8 widthSet size::4
+[05/24 13:39:32     87s] eee: pegSigSF::1.070000
+[05/24 13:39:32     87s] Initializing multi-corner capacitance tables ... 
+[05/24 13:39:32     87s] Initializing multi-corner resistance tables ...
+[05/24 13:39:32     87s] eee: l::1 avDens::0.049363 usedTrk::2021.406745 availTrk::40950.000000 sigTrk::2021.406745
+[05/24 13:39:32     87s] eee: l::2 avDens::0.152596 usedTrk::6248.811860 availTrk::40950.000000 sigTrk::6248.811860
+[05/24 13:39:32     87s] eee: l::3 avDens::0.130121 usedTrk::5433.856032 availTrk::41760.000000 sigTrk::5433.856032
+[05/24 13:39:32     87s] eee: l::4 avDens::0.056408 usedTrk::2010.368572 availTrk::35640.000000 sigTrk::2010.368572
+[05/24 13:39:32     87s] eee: l::5 avDens::0.032001 usedTrk::636.491470 availTrk::19890.000000 sigTrk::636.491470
+[05/24 13:39:32     87s] eee: l::6 avDens::0.017817 usedTrk::543.592183 availTrk::30510.000000 sigTrk::543.592183
+[05/24 13:39:32     87s] eee: l::7 avDens::0.130691 usedTrk::776.304129 availTrk::5940.000000 sigTrk::776.304129
+[05/24 13:39:32     87s] eee: l::8 avDens::0.188519 usedTrk::1182.012975 availTrk::6270.000000 sigTrk::1182.012975
+[05/24 13:39:32     87s] Preroute length aware model : n: 40 ; LLS: 2-3 ; HLS: 3-5 ; rDens: 0.310927 ; uaWl: 1.000000 ; uaWlH: 0.271373 ; aWlH: 0.000000 ; Pmax: 0.836500 ; wcR: 0.625000 ; newSi: 0.079800 ; pMod: 82 ; 
+[05/24 13:39:32     88s] Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1334.0M)
+[05/24 13:39:32     88s] Creating parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_6cZPkz.rcdb.d' for storing RC.
+[05/24 13:39:32     88s] Extracted 10.0013% (CPU Time= 0:00:00.6  MEM= 1402.4M)
+[05/24 13:39:32     88s] Extracted 20.0012% (CPU Time= 0:00:00.7  MEM= 1402.4M)
+[05/24 13:39:32     88s] Extracted 30.001% (CPU Time= 0:00:00.8  MEM= 1402.4M)
+[05/24 13:39:32     88s] Extracted 40.0009% (CPU Time= 0:00:00.8  MEM= 1402.4M)
+[05/24 13:39:33     88s] Extracted 50.0015% (CPU Time= 0:00:01.0  MEM= 1402.4M)
+[05/24 13:39:33     88s] Extracted 60.0013% (CPU Time= 0:00:01.1  MEM= 1402.4M)
+[05/24 13:39:33     88s] Extracted 70.0012% (CPU Time= 0:00:01.2  MEM= 1402.4M)
+[05/24 13:39:33     89s] Extracted 80.001% (CPU Time= 0:00:01.4  MEM= 1402.4M)
+[05/24 13:39:33     89s] Extracted 90.0009% (CPU Time= 0:00:01.5  MEM= 1402.4M)
+[05/24 13:39:34     89s] Extracted 100% (CPU Time= 0:00:02.0  MEM= 1406.4M)
+[05/24 13:39:34     89s] Number of Extracted Resistors     : 240746
+[05/24 13:39:34     89s] Number of Extracted Ground Cap.   : 238919
+[05/24 13:39:34     89s] Number of Extracted Coupling Cap. : 334300
+[05/24 13:39:34     89s] Opening parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_6cZPkz.rcdb.d' for reading (mem: 1390.402M)
+[05/24 13:39:34     89s] Filtering XCap in 'relativeAndCoupling' mode using values coupling_c_threshold=0.1fF, relative_c_threshold=1, and total_c_threshold=0fF.
+[05/24 13:39:34     89s]  Corner: Cmax
+[05/24 13:39:34     89s]  Corner: Cmin
+[05/24 13:39:34     89s] Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1390.4M)
+[05/24 13:39:34     89s] Creating parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_6cZPkz.rcdb_Filter.rcdb.d' for storing RC.
+[05/24 13:39:34     89s] Closing parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_6cZPkz.rcdb.d': 14666 access done (mem: 1390.402M)
+[05/24 13:39:34     90s] Lumped Parasitic Loading Started (total cpu=0:00:00.0, real=0:00:00.0, current mem=1390.402M)
+[05/24 13:39:34     90s] Opening parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_6cZPkz.rcdb.d' for reading (mem: 1390.402M)
+[05/24 13:39:34     90s] processing rcdb (/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_6cZPkz.rcdb.d) for hinst (top) of cell (dynamic_node_top);
+[05/24 13:39:34     90s] Closing parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_6cZPkz.rcdb.d': 0 access done (mem: 1390.402M)
+[05/24 13:39:34     90s] Lumped Parasitic Loading Completed (total cpu=0:00:00.6, real=0:00:00.0, current mem=1390.402M)
+[05/24 13:39:34     90s] PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:03.1  Real Time: 0:00:03.0  MEM: 1390.402M)
+[05/24 13:39:35     91s] AAE_INFO: 1 threads acquired from CTE.
+[05/24 13:39:35     91s] Setting infinite Tws ...
+[05/24 13:39:35     91s] First Iteration Infinite Tw... 
+[05/24 13:39:35     91s] Calculate early delays in OCV mode...
+[05/24 13:39:35     91s] Calculate late delays in OCV mode...
+[05/24 13:39:35     91s] Topological Sorting (REAL = 0:00:00.0, MEM = 1390.4M, InitMEM = 1390.4M)
+[05/24 13:39:35     91s] Start delay calculation (fullDC) (1 T). (MEM=1390.4)
+[05/24 13:39:35     91s] LayerId::1 widthSet size::5
+[05/24 13:39:35     91s] LayerId::2 widthSet size::5
+[05/24 13:39:35     91s] LayerId::3 widthSet size::5
+[05/24 13:39:35     91s] LayerId::4 widthSet size::5
+[05/24 13:39:35     91s] LayerId::5 widthSet size::5
+[05/24 13:39:35     91s] LayerId::6 widthSet size::5
+[05/24 13:39:35     91s] LayerId::7 widthSet size::4
+[05/24 13:39:35     91s] LayerId::8 widthSet size::4
+[05/24 13:39:35     91s] eee: pegSigSF::1.070000
+[05/24 13:39:35     91s] Initializing multi-corner capacitance tables ... 
+[05/24 13:39:35     91s] Initializing multi-corner resistance tables ...
+[05/24 13:39:35     91s] eee: l::1 avDens::0.049363 usedTrk::2021.406745 availTrk::40950.000000 sigTrk::2021.406745
+[05/24 13:39:35     91s] eee: l::2 avDens::0.152596 usedTrk::6248.811860 availTrk::40950.000000 sigTrk::6248.811860
+[05/24 13:39:35     91s] eee: l::3 avDens::0.130121 usedTrk::5433.856032 availTrk::41760.000000 sigTrk::5433.856032
+[05/24 13:39:35     91s] eee: l::4 avDens::0.056408 usedTrk::2010.368572 availTrk::35640.000000 sigTrk::2010.368572
+[05/24 13:39:35     91s] eee: l::5 avDens::0.032001 usedTrk::636.491470 availTrk::19890.000000 sigTrk::636.491470
+[05/24 13:39:35     91s] eee: l::6 avDens::0.017817 usedTrk::543.592183 availTrk::30510.000000 sigTrk::543.592183
+[05/24 13:39:35     91s] eee: l::7 avDens::0.130691 usedTrk::776.304129 availTrk::5940.000000 sigTrk::776.304129
+[05/24 13:39:35     91s] eee: l::8 avDens::0.188519 usedTrk::1182.012975 availTrk::6270.000000 sigTrk::1182.012975
+[05/24 13:39:35     91s] Preroute length aware model : n: 40 ; LLS: 2-3 ; HLS: 3-5 ; rDens: 0.310927 ; uaWl: 1.000000 ; uaWlH: 0.271373 ; aWlH: 0.000000 ; Pmax: 0.836500 ; wcR: 0.625000 ; newSi: 0.079800 ; pMod: 82 ; 
+[05/24 13:39:36     91s] Start AAE Lib Loading. (MEM=1402.01)
+[05/24 13:39:36     91s] End AAE Lib Loading. (MEM=1411.55 CPU=0:00:00.0 Real=0:00:00.0)
+[05/24 13:39:36     91s] End AAE Lib Interpolated Model. (MEM=1411.55 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[05/24 13:39:36     91s] Opening parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_6cZPkz.rcdb.d' for reading (mem: 1411.551M)
+[05/24 13:39:36     91s] RC Database In Completed (CPU Time= 0:00:00.0  Real Time=0:00:00.0  MEM= 1411.6M)
+[05/24 13:39:40     95s] Total number of fetched objects 14666
+[05/24 13:39:40     95s] AAE_INFO-618: Total number of nets in the design is 14681,  100.0 percent of the nets selected for SI analysis
+[05/24 13:39:40     96s] End Timing Check Calculation. (CPU Time=0:00:00.1, Real Time=0:00:00.0)
+[05/24 13:39:40     96s] End delay calculation. (MEM=1435.23 CPU=0:00:03.9 REAL=0:00:04.0)
+[05/24 13:39:40     96s] End delay calculation (fullDC). (MEM=1417.69 CPU=0:00:05.0 REAL=0:00:05.0)
+[05/24 13:39:40     96s] *** CDM Built up (cpu=0:00:08.5  real=0:00:09.0  mem= 1417.7M) ***
+[05/24 13:39:40     96s] Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1417.7M)
+[05/24 13:39:40     96s] Add other clocks and setupCteToAAEClockMapping during iter 1
+[05/24 13:39:40     96s] Loading CTE timing window is completed (CPU = 0:00:00.1, REAL = 0:00:00.0, MEM = 1417.7M)
+[05/24 13:39:40     96s] Starting SI iteration 2
+[05/24 13:39:41     96s] Calculate early delays in OCV mode...
+[05/24 13:39:41     96s] Calculate late delays in OCV mode...
+[05/24 13:39:41     96s] Start delay calculation (fullDC) (1 T). (MEM=1367.81)
+[05/24 13:39:41     96s] End AAE Lib Interpolated Model. (MEM=1367.81 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[05/24 13:39:41     97s] Glitch Analysis: View WC_VIEW -- Total Number of Nets Skipped = 9. 
+[05/24 13:39:41     97s] Glitch Analysis: View WC_VIEW -- Total Number of Nets Analyzed = 14666. 
+[05/24 13:39:41     97s] Total number of fetched objects 14666
+[05/24 13:39:41     97s] AAE_INFO-618: Total number of nets in the design is 14681,  0.8 percent of the nets selected for SI analysis
+[05/24 13:39:41     97s] End delay calculation. (MEM=1410.49 CPU=0:00:00.3 REAL=0:00:00.0)
+[05/24 13:39:41     97s] End delay calculation (fullDC). (MEM=1410.49 CPU=0:00:00.3 REAL=0:00:00.0)
+[05/24 13:39:41     97s] *** CDM Built up (cpu=0:00:00.3  real=0:00:00.0  mem= 1410.5M) ***
+[05/24 13:39:41     97s] <CMD> saveNetlist dynamic_node_top_eco.v
+[05/24 13:39:41     97s] Writing Netlist "dynamic_node_top_eco.v" ...
+[05/24 13:39:41     97s] <CMD> rcOut -excNetFile excNet.rpt -spef dynamic_node_top_eco.spef
+[05/24 13:39:41     97s] Coupling capacitances are grounded while writing out SPEF for a subset of nets.
+[05/24 13:39:41     97s] Opening parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_6cZPkz.rcdb.d' for reading (mem: 1410.488M)
+[05/24 13:39:41     97s] RC Out has the following PVT Info:
+[05/24 13:39:41     97s]    RC-typical 
+[05/24 13:39:41     97s] Dumping Spef file.....
+[05/24 13:39:41     97s] Printing D_NET...
+[05/24 13:39:42     99s] RC Out from RCDB Completed (CPU Time= 0:00:02.0  MEM= 1442.5M)
+[05/24 13:39:42     99s] Closing parasitic data file '/tmp/innovus_temp_15155_ieng6-ece-07.ucsd.edu_cs241asp25bu_PeyX6g/dynamic_node_top_15155_6cZPkz.rcdb.d': 14666 access done (mem: 1442.504M)
+[05/24 13:39:42     99s] <CMD> defOut -routing dynamic_node_top_eco.def
+[05/24 13:39:42     99s] Writing DEF file 'dynamic_node_top_eco.def', current time is Sat May 24 13:39:42 2025 ...
+[05/24 13:39:42     99s] unitPerMicron=2000, dbgMicronPerDBU=0.000500, unitPerDBU=1.000000
+[05/24 13:39:43    100s] DEF file 'dynamic_node_top_eco.def' is written, current time is Sat May 24 13:39:43 2025 ...
+[05/24 13:39:43    100s] 
+[05/24 13:39:43    100s] *** Memory Usage v#1 (Current mem = 1400.504M, initial mem = 308.801M) ***
+[05/24 13:39:43    100s] 
+[05/24 13:39:43    100s] *** Summary of all messages that are not suppressed in this session:
+[05/24 13:39:43    100s] Severity  ID               Count  Summary                                  
+[05/24 13:39:43    100s] WARNING   IMPFP-3961           8  The techSite '%s' has no related standar...
+[05/24 13:39:43    100s] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[05/24 13:39:43    100s] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[05/24 13:39:43    100s] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[05/24 13:39:43    100s] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[05/24 13:39:43    100s] WARNING   IMPEXT-3442          3  The version of the capacitance table fil...
+[05/24 13:39:43    100s] WARNING   IMPEXT-3518          2  The lower process node is set (using com...
+[05/24 13:39:43    100s] WARNING   IMPESI-2017          2  There is no coupling capacitance found i...
+[05/24 13:39:43    100s] WARNING   IMPOPT-801           1  Genus executable not found in PATH%s. In...
+[05/24 13:39:43    100s] WARNING   IMPOPT-3000          1  Buffer footprint is not defined or is an...
+[05/24 13:39:43    100s] WARNING   IMPOPT-6103          1  Timing updates for ECO operations done i...
+[05/24 13:39:43    100s] WARNING   IMPOPT-6115          1  ECO batch mode has been activated, and '...
+[05/24 13:39:43    100s] WARNING   TCLCMD-1461          1  Skipped unsupported command: %s          
+[05/24 13:39:43    100s] *** Message Summary: 28 warning(s), 0 error(s)
+[05/24 13:39:43    100s] 
+[05/24 13:39:43    100s] --- Ending "Innovus" (totcpu=0:01:40, real=0:01:42, mem=1400.5M) ---

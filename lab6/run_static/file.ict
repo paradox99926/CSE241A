@@ -1,0 +1,10 @@
+process	asap7 {
+  background_dielectric_constant 1
+  temp_reference 25
+  em_output_wlt drawn
+  em_conductor_unit mA
+  em_via_unit mA
+  em_via_area_unit mA
+  em_segment_length centerline
+}		
+

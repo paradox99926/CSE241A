@@ -1,0 +1,227 @@
+
+
+
+Started Power Analysis at 11:36:23 06/02/2025
+
+
+asap7_tech_1x_201209.lef
+asap7sc7p5t_27_L_1x_201211.lef
+asap7sc7p5t_27_R_1x_201211.lef
+asap7sc7p5t_27_SL_1x_201211.lef
+Begin Processing Netlist for Power Calculation
+** INFO:  (VOLTUS_POWR-3013): Loading DEF file "mpeg2_top.def".
+
+
+  Netlist Statistics:
+    Cell         :  636
+    Instance     :  13872
+    Decap/Filler :  0
+    Net          :  13997
+    Port         :  223
+
+Ended Processing Netlist for Power Calculation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=612.32MB/8774.71MB/3197.05MB)
+
+
+Begin Processing Timing Library for Power Calculation
+./lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib
+** WARN:  (VOLTUS_POWR-1725): The attribute 'input_signal_level' has been defined for output pin 
+             'CON'. 'input_signal_level' cannot be defined at this level and is 
+             being ignored. (File ./lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, 
+             Line 901735) <TECHLIB-1277>.
+
+
+** WARN:  (VOLTUS_POWR-1725): The attribute 'input_signal_level' has been defined for output pin 
+             'CON'. 'input_signal_level' cannot be defined at this level and is 
+             being ignored. (File ./lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, 
+             Line 904635) <TECHLIB-1277>.
+
+
+** WARN:  (VOLTUS_POWR-1725): The attribute 'input_signal_level' has been defined for output pin 
+             'CON'. 'input_signal_level' cannot be defined at this level and is 
+             being ignored. (File ./lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, 
+             Line 1844369) <TECHLIB-1277>.
+
+
+** WARN:  (VOLTUS_POWR-1725): The attribute 'input_signal_level' has been defined for output pin 
+             'CON'. 'input_signal_level' cannot be defined at this level and is 
+             being ignored. (File ./lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, 
+             Line 1847269) <TECHLIB-1277>.
+
+
+** WARN:  (VOLTUS_POWR-1725): The attribute 'input_signal_level' has been defined for output pin 
+             'CON'. 'input_signal_level' cannot be defined at this level and is 
+             being ignored. (File ./lib/asap7sc7p5t_AllVT_TT_nldm_201020.lib, 
+             Line 2789903) <TECHLIB-1277>.
+
+
+Ended Processing Timing Library for Power Calculation: (cpu=0:00:03, real=0:00:03, mem(process/total/peak)=706.91MB/8878.91MB/3291.62MB)
+
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+
+Rail status:
+  0.7V    VDD
+  0V    VSS
+  
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=707.05MB/8878.91MB/3291.77MB)
+
+
+Begin Processing Timing Window Data for Power Calculation
+   clk(5000MHz) 
+  
+
+** WARN:  (VOLTUS_POWR-2187): Timing windows for 18 nets/pins could not be assigned.
+To view the names that did not match, use the option 'set_power_analysis_mode -report_missing_nets [true|false]' and rerun.
+
+
+  Timing Window Statistics:
+    File name                                           : design.twf.gz
+    Generator                                           : Voltus IC Power Integrity Solution
+    Block of current design (read_twf -scope)           : ""
+    Remove hierarchy from TWF (read_twf -strip_prefix)  : ""
+    Waveform definitions parsed                         : 1
+    Clock roots assigned/parsed                         : 1/1 (100%)
+    Constants assigned/parsed                           : 18/18 (100%)
+    External loads assigned/parsed                      : 0/0 (0%)
+    Slews assigned/parsed                               : 28970/28970 (100%)
+    Nets with slew/Nets in design                       : 13963/13995 (99.7713%)
+    Slew range                                          : 1.25e-13s - 2.3025e-10s
+
+
+
+  SPEF    : mpeg2_top.spef
+    Name matched: 13961/13961
+    Annotation coverage for this file      : 13961/13995 (99.7571%)
+
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=708.51MB/8878.92MB/3293.22MB)
+
+
+Begin Processing VCD Vectors
+Ended Processing VCD Vectors: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=708.55MB/8878.92MB/3293.27MB)
+
+
+Begin Processing FSDB Vectors
+Ended Processing FSDB Vectors: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=708.56MB/8878.92MB/3293.28MB)
+
+
+Begin Processing User Attributes
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=708.57MB/8878.92MB/3293.30MB)
+
+
+Begin Processing Signal Activity
+
+Starting Levelizing
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT)
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 10%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 20%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 30%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 40%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 50%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 60%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 70%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 80%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 90%
+
+Finished Levelizing
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT)
+
+Starting Activity Propagation
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT)
+** INFO:  (VOLTUS_POWR-1356): No default input activity has been set. Defaulting to 0.2.
+Use 'set_default_switching_activity -input_activity' command to change the default activity value.
+
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 10%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 20%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 30%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 40%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 50%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 60%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 70%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 80%
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT): 90%
+
+Finished Activity Propagation
+2025-Jun-02 11:36:31 (2025-Jun-02 18:36:31 GMT)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=708.84MB/8878.92MB/3293.55MB)
+
+
+Begin Power Analysis
+  ----------------------------------------------------------
+  # of cell(s) missing both power/leakage table: 0
+  # of cell(s) missing power table: 0
+  # of cell(s) missing leakage table: 0
+  ----------------------------------------------------------
+  
+
+
+Starting Calculating power
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT)
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 10%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 20%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 30%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 40%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 50%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 60%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 70%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 80%
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT): 90%
+
+Finished Calculating power
+2025-Jun-02 11:36:32 (2025-Jun-02 18:36:32 GMT)
+  # of MSMV cell(s) missing power_level: 0
+Begin Processing set_power
+Ended Processing set_power: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=712.02MB/8886.94MB/3296.80MB)
+Begin Processing set_power stats
+Ended Processing set_power stats: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=712.12MB/8886.94MB/3296.83MB)
+Ended Power Analysis: (cpu=0:00:01, real=0:00:00, mem(process/total/peak)=712.12MB/8886.94MB/3296.83MB)
+
+
+** INFO:  (VOLTUS_POWR-2223): Dominant clock 5000MHz is used in the vless with state propagation flow.
+
+  CPU              : 4
+  Simulation Period: 0.4ns
+  Step Size        : 27.103ps
+
+** INFO:  (VOLTUS_POWR-2220): Running vectorless analysis with state propagation for period of 0.4ns. 
+
+
+Starting Processing toggles for instances
+2025-Jun-02 11:36:33 (2025-Jun-02 18:36:33 GMT)
+** INFO:  (VOLTUS_POWR-2042): Beginning parallel processing, using 4 CPUs
+
+2025-Jun-02 11:36:33 (2025-Jun-02 18:36:33 GMT): 10%
+2025-Jun-02 11:36:33 (2025-Jun-02 18:36:33 GMT): 20%
+2025-Jun-02 11:36:33 (2025-Jun-02 18:36:33 GMT): 30%
+2025-Jun-02 11:36:33 (2025-Jun-02 18:36:33 GMT): 40%
+2025-Jun-02 11:36:33 (2025-Jun-02 18:36:33 GMT): 50%
+2025-Jun-02 11:36:34 (2025-Jun-02 18:36:34 GMT): 60%
+2025-Jun-02 11:36:34 (2025-Jun-02 18:36:34 GMT): 70%
+2025-Jun-02 11:36:34 (2025-Jun-02 18:36:34 GMT): 80%
+2025-Jun-02 11:36:34 (2025-Jun-02 18:36:34 GMT): 90%
+
+Finished Processing toggles for instances
+2025-Jun-02 11:36:34 (2025-Jun-02 18:36:34 GMT)
+Begin Writing Current Files
+
+Generating Instance Power (IPW)  Report
+
+
+Ended Writing Current Files: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=725.70MB/8915.97MB/3310.58MB)
+
+
+Power Analysis Statistics:
+  Warning messages: 6
+  Error messages: 0
+
+
+Finished Power Analysis at 11:36:34 06/02/2025 (cpu=0:00:11, real=0:00:11, peak mem=3310.58MB)
+Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:01:22, real=0:01:16, mem=3310.58MB)
+
+
+
+Exit code 0.
+Voltus Power Analysis exited successfully.

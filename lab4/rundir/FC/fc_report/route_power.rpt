@@ -1,0 +1,59 @@
+****************************************
+Report : power
+        -significant_digits 2
+Design : jpeg_encoder
+Version: V-2023.12-SP5-5
+Date   : Mon Apr 28 18:49:28 2025
+****************************************
+Information: Activity propagation will be performed for scenario WC.
+Infomation: Fast mode activity propagation power.rtl_activity_annotation setup is ignored. Always use accurate mode.
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 6 ****
+Mode: WC
+Corner: WC
+Scenario: WC
+Voltage: 0.90
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1pF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1nW
+Leakage Power Unit   : 1nW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+Warning: Fall toggles on pin fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_coef_reg_23_/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Fall toggles on pin fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_29_/Q are impossible given input states; converted to rise toggles. (POW-069)
+Note - message 'POW-069' limit (10) exceeded. Remainder will be suppressed.
+
+  Cell Internal Power    = 1.95e+07 nW ( 77.6%)
+  Net Switching Power    = 5.63e+06 nW ( 22.4%)
+Total Dynamic Power      = 2.51e+07 nW (100.0%)
+
+Cell Leakage Power       = 9.77e+05 nW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             1.54e+07               3.39e+06               5.03e+03               1.88e+07    ( 71.9%)        i
+register                  2.03e+06               3.06e+05               2.98e+05               2.63e+06    ( 10.1%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             2.10e+06               1.93e+06               6.74e+05               4.71e+06    ( 18.0%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     1.95e+07 nW            5.63e+06 nW            9.77e+05 nW            2.61e+07 nW
+1

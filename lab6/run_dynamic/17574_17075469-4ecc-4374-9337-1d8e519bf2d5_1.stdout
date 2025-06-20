@@ -1,0 +1,256 @@
+INFO (PRL-725): EDP: start server on ieng6-ece-08.ucsd.edu:48417
+
+INFO (PRL-756): Mon Jun  2 11:36:45 2025: Successfully connected to the client manager.
+
+INFO (PRL-760): sending server data to client ieng6-ece-08.ucsd.edu 48417 1 17623 
+
+Invoking: "/software/ECE/Cadence-Voltus-23.10/tools.lnx86/ssvtools/bin/64bit/voltus_rail_smg -cmd dynamic_IR/core_25C_dynamic_1/voltus_rail_smg.VDD.cmd -l dynamic_IR/core_25C_dynamic_1/voltus_rail_smg.VDD.log" ...
+Begin Merging power grid
+Tech reference temperature: 25
+Target temperature: 25
+
+Grid Statistics of Net VDD:
+- NODE
+  Total node: 25656
+    Top Level grid node: 25656
+      Top level interface node: 13872
+    Missing interface node: 0
+    Cell internal node: 0
+- ELEM
+  Total element: 31518
+    Top Level grid element: 31518
+    Cell internal element: 0
+- INST
+  Instance logically connected: 13872
+    Tech: 13872
+    StdCell: 0
+    Macro:
+      Early: 0
+      IR: 0
+      EM: 0
+    Current Region:  0
+  Dropped instance due to missing/incomplete cell library: 0
+- TAP
+  Total tap: 13872
+
+Ended Merging power grid: (cpu=0:00:02, real=0:00:01, mem(process/total/peak)=33.79MB/9158.20MB/3310.59MB)
+
+Analysis_Output_Directory is dynamic_IR/core_25C_dynamic_1//VDD
+Analysis_Power_Domain is core
+
+
+
+Begin Report Generation
+
+
+Net VDD:
+
+
+Begin Preparing Database for Report Generation
+
+Circuit profile:
+                                                      Current    Voltage
+Layer Name                       Nodes   Resistors    Sources    Sources
+----- --------------------  ----------  ----------  ---------  ---------
+0     M9                           106         104          0          4
+1     V8                             0          80          0          0
+2     M8                           168         160          0          0
+3     V7                             0          64          0          0
+4     M7                           256         248          0          0
+5     V6                             0         112          0          0
+6     M6                           161         154          0          0
+7     V5                             0          28          0          0
+8     M5                            92          88          0          0
+9     V4                             0          52          0          0
+10    M4                            52           0          0          0
+11    V3                             0          52          0          0
+12    M3                            60           4          0          0
+13    V2                             0          56          0          0
+14    M2                          1192        1178          0          0
+15    V1                             0        1136          0          0
+16    M1                          5838        5747          0          0
+17    V0                             0        4611          0          0
+18    LISD                       17731       17644      13315          0
+                            ----------  ----------  ---------  ---------
+19    Circuit total              25657       31518      13315          4
+Ended Preparing Database for Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=291.52MB/15688.32MB/3364.10MB)
+
+Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=291.69MB/15688.32MB/3364.10MB)
+
+Begin IR Drop (Linear) Report Generation
+  Voltage: 0.7
+  Threshold: 0.4
+  Minimum, Average, Maximum IR Drop: 0.603V, 0.646V, 0.700V
+    Range 1(    0.603V  -      0.615V ):        20 (  0.08%)
+    Range 2(    0.615V  -      0.627V ):       993 (  3.87%)
+    Range 3(    0.627V  -      0.639V ):      4527 ( 17.64%)
+    Range 4(    0.639V  -      0.652V ):     15128 ( 58.96%)
+    Range 5(    0.652V  -      0.664V ):      4006 ( 15.61%)
+    Range 6(    0.664V  -      0.676V ):       202 (  0.79%)
+    Range 7(    0.676V  -      0.688V ):        85 (  0.33%)
+    Range 8(    0.688V  -      0.700V ):       695 (  2.71%)
+    Layer with maximum IR Drop:  LISD
+      M9: 0.0059979 [0.694 - 0.7]
+      M8: 0.0072277 [0.69192 - 0.69914]
+      M7: 0.007255 [0.69163 - 0.69888]
+      M6: 0.008377 [0.68998 - 0.69836]
+      M5: 0.015808 [0.67268 - 0.68849]
+      M4: 0.016824 [0.65928 - 0.6761]
+      M3: 0.023906 [0.6457 - 0.66961]
+      M2: 0.039814 [0.62654 - 0.66636]
+      M1: 0.051026 [0.61445 - 0.66548]
+      LISD: 0.06224 [0.6032 - 0.66544]
+  Worst case interval: 11
+  IR Report: dynamic_IR/core_25C_dynamic_1/Reports/VDD/VDD.main.rpt
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD/ir_linear.gif
+Ended IR Drop (Linear) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.18MB/15688.34MB/3364.10MB)
+
+
+Begin IR Drop (Limit) Report Generation
+  Voltage: 0.7
+  Threshold: 0.4
+  Minimum, Average, Maximum IR Drop: 0.603V, 0.646V, 0.700V
+    Range 1(    0.400V  -      0.400V ):         0 (  0.00%)
+    Range 2(    0.400V  -      0.425V ):         0 (  0.00%)
+    Range 3(    0.425V  -      0.450V ):         0 (  0.00%)
+    Range 4(    0.450V  -      0.475V ):         0 (  0.00%)
+    Range 5(    0.475V  -      0.500V ):         0 (  0.00%)
+    Range 6(    0.500V  -      0.525V ):         0 (  0.00%)
+    Range 7(    0.525V  -      0.550V ):         0 (  0.00%)
+    Range 8(    0.550V  -      0.700V ):     25656 (100.00%)
+    Layer with maximum IR Drop:  LISD
+      M9: 0.0059979 [0.694 - 0.7]
+      M8: 0.0072277 [0.69192 - 0.69914]
+      M7: 0.007255 [0.69163 - 0.69888]
+      M6: 0.008377 [0.68998 - 0.69836]
+      M5: 0.015808 [0.67268 - 0.68849]
+      M4: 0.016824 [0.65928 - 0.6761]
+      M3: 0.023906 [0.6457 - 0.66961]
+      M2: 0.039814 [0.62654 - 0.66636]
+      M1: 0.051026 [0.61445 - 0.66548]
+      LISD: 0.06224 [0.6032 - 0.66544]
+  Worst case interval: 11
+  IR Report: dynamic_IR/core_25C_dynamic_1/Reports/VDD/VDD.main.rpt
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD/ir_limit.gif
+Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.18MB/15688.34MB/3364.10MB)
+
+
+Begin Tap Current Report Generation
+  Minimum, Average, Maximum Tap Current: 22.714pA, 36.334uA, 1.034mA
+  Total Current: 0.484A
+    Range 1(   1.000mA  -     1.000GA ):         2 (  0.02%)
+    Range 2( 100.000uA  -     1.000mA ):       742 (  5.57%)
+    Range 3(  10.000uA  -   100.000uA ):     10193 ( 76.55%)
+    Range 4(   1.000uA  -    10.000uA ):       532 (  4.00%)
+    Range 5( 100.000nA  -     1.000uA ):         8 (  0.06%)
+    Range 6(  10.000nA  -   100.000nA ):       503 (  3.78%)
+    Range 7(   1.000nA  -    10.000nA ):       580 (  4.36%)
+    Range 8(    0.000A  -     1.000nA ):       755 (  5.67%)
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD/tc.gif
+Ended Tap Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.31MB/15688.36MB/3364.10MB)
+
+
+Begin Instance Based IR Drop Report Generation
+  Minimum, Average, Maximum Instance Based IR Drop: 0.603V, 0.644V, 0.664V
+    Range 1(    0.400V  -      0.400V ):         0 (  0.00%)
+    Range 2(    0.400V  -      0.425V ):         0 (  0.00%)
+    Range 3(    0.425V  -      0.450V ):         0 (  0.00%)
+    Range 4(    0.450V  -      0.475V ):         0 (  0.00%)
+    Range 5(    0.475V  -      0.500V ):         0 (  0.00%)
+    Range 6(    0.500V  -      0.525V ):         0 (  0.00%)
+    Range 7(    0.525V  -      0.550V ):         0 (  0.00%)
+    Range 8(    0.550V  -      0.700V ):     13315 (100.00%)
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD/iv.gif
+Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.50MB/15688.35MB/3364.10MB)
+
+
+Begin Effective Instance Voltage Report Generation
+
+ Worst EIV:
+  Minimum, Average, Maximum Effective Instance Voltage: 0.527V, 0.604V, 0.683V
+    Range 1(    0.527V  -      0.547V ):         8 (  0.07%)
+    Range 2(    0.547V  -      0.566V ):       217 (  1.82%)
+    Range 3(    0.566V  -      0.586V ):      1973 ( 16.57%)
+    Range 4(    0.586V  -      0.605V ):      4815 ( 40.44%)
+    Range 5(    0.605V  -      0.625V ):      3024 ( 25.40%)
+    Range 6(    0.625V  -      0.644V ):      1109 (  9.31%)
+    Range 7(    0.644V  -      0.664V ):       428 (  3.59%)
+    Range 8(    0.664V  -      0.683V ):       332 (  2.79%)
+  *** Note: 1966 instance(s) don't have valid window-based EIV results and they are excluded from histogram and gif file. For more details, please check the EIV report.
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD_VSS.worst_eiv.gif
+  GIF Limit plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD_VSS.worst_limit_eiv.gif
+  **** Note: Histogram and gif file are generated based on window-based EIV results.
+Ended Effective Instance Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.71MB/15688.32MB/3364.10MB)
+
+
+Begin Voltage Source Current Report Generation
+  Minimum, Average, Maximum Voltage Source Current: -69.104mA, -49.978mA, -32.282mA
+  Total Current: -0.200A
+    Range 1( -69.110mA  -   -64.501mA ):         1 ( 25.00%)
+    Range 2( -64.501mA  -   -59.898mA ):         0 (  0.00%)
+    Range 3( -59.898mA  -   -55.296mA ):         0 (  0.00%)
+    Range 4( -55.296mA  -   -50.693mA ):         0 (  0.00%)
+    Range 5( -50.693mA  -   -46.090mA ):         2 ( 50.00%)
+    Range 6( -46.090mA  -   -41.488mA ):         0 (  0.00%)
+    Range 7( -41.488mA  -   -36.885mA ):         0 (  0.00%)
+    Range 8( -36.885mA  -   -32.279mA ):         1 ( 25.00%)
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD/vc.gif
+Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.80MB/15688.32MB/3364.10MB)
+
+
+Begin Power Gate I/Idsat Report Generation
+  No data found.
+Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.80MB/15688.32MB/3364.10MB)
+
+
+Begin Power Gate Voltage Report Generation
+  No data found.
+Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.84MB/15688.32MB/3364.10MB)
+
+
+Begin Decoupling Cap Density Report Generation
+  Minimum, Average, Maximum Decoupling Cap Density: 434.410aF/um^2, 440.975aF/um^2, 450.980aF/um^2
+    Range 1( 448.909aF/um^2  -   451.025aF/um^2 ):      6491 ( 25.30%)
+    Range 2( 446.838aF/um^2  -   448.909aF/um^2 ):         0 (  0.00%)
+    Range 3( 444.766aF/um^2  -   446.838aF/um^2 ):         0 (  0.00%)
+    Range 4( 442.695aF/um^2  -   444.766aF/um^2 ):         0 (  0.00%)
+    Range 5( 440.624aF/um^2  -   442.695aF/um^2 ):      7660 ( 29.86%)
+    Range 6( 438.553aF/um^2  -   440.624aF/um^2 ):         0 (  0.00%)
+    Range 7( 436.482aF/um^2  -   438.553aF/um^2 ):      5462 ( 21.29%)
+    Range 8( 434.367aF/um^2  -   436.482aF/um^2 ):      6043 ( 23.55%)
+  GIF plot: dynamic_IR/core_25C_dynamic_1/Reports/VDD/dd.gif
+Ended Decoupling Cap Density Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.88MB/15688.32MB/3364.10MB)
+
+
+Begin Capacitance Report Generation
+	Type                  disconnected          connected             used                
+	Intrinsic-decap/filler  0.000F                0.000F                0.000F              
+	Intrinsic-standard    0.000F                0.990pF               0.990pF             
+	Intrinsic-macro       0.000F                0.000F                0.000F              
+	Load Cap              0.000F                15.207pF              15.207pF            
+	Grid Cap              0.000F                1.568pF               1.568pF             
+	Total Cap             0.000F                17.766pF              17.766pF            
+Ended Capacitance Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.89MB/15688.32MB/3364.10MB)
+
+
+Begin Voltage Across Vias and Contacts Report Generation
+Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.91MB/15688.32MB/3364.10MB)
+
+
+Begin Weak Grid Connectivity Report
+Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=292.93MB/15688.32MB/3364.10MB)
+
+
+Begin Grid Integrity Report Generation
+  # Missing Cell Power-Grid Views: 0
+  # Physically Disconnected Instances: 0
+  # Instances with Floating Power Pins: 0
+  # Disconnected Wire Segments: 0
+  # Weakly Connected Metal Segments: 4
+  # Dropped Voltage Sources: 0
+Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=293.00MB/15688.32MB/3364.10MB)
+
+Ended Report Generation: (cpu=0:00:07, real=0:00:08, mem(process/total/peak)=293.05MB/15688.32MB/3364.10MB)
+
+INFO (PRL-701): EDP: Close channel handler 17 when meet event 25 in connection server side
+

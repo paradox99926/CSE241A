@@ -1,0 +1,336 @@
+----------------------------------------------------------------------
+Info:    Log written by SiliconSmart version L-2016.06-SP1-2 on Fri May 23 14:02:24 2025
+Info:    Build date: Dec 07, 2016 16:59:49
+Info:    SiliconSmart Path: /acsnfs3/software/SiliconSmartAce-2016.06-SP1-2/linux64/bin/siliconsmart
+Info:    Host Name: ieng6-ece-08.ucsd.edu, User Name: cs241asp25bu, PID: 25984
+Info:    CPU: 8 x 2195 MHz, Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz (2 socket, 4 core)
+Info:    Memory: 32 GB RAM, 1 GB Swap
+Info:    Directory: /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL
+Info:    Maximum virtual memory size: 587.09MB
+Command-line: /acsnfs3/software/SiliconSmartAce-2016.06-SP1-2/linux64/bin/siliconsmart -server /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/runtime/cdpl/driver_24286.tcl
+Fri May 23 14:02:24 2025: Establishing connection to license server
+The char directory is /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL
+Warning: Operating condition 'SS_0.9_-40_ALL' already exists, skipped.
+Info:    Reading instance file for cell NR2D8... (SMSC-23)
+Info:    Generating timing tests.
+Info:    Generating power tests.
+Info:    Generating template at Fri May 23 14:02:24 2025 
+Info:    Done generating template at Fri May 23 14:02:25 2025
+Info:    Generate Templates: Maximum virtual memory size: 623.246 MB
+Info:    Cell NR2D8 configured for characterization. (SMSC-24)
+Info:    __recordTaskStats__ NR2D8 configure 0.25 0.0 0.0 0.0 1 0.754211187363 ieng6-ece-08.ucsd.edu 1748034144.62 1748034145.38
+Info:    set _SIS_CLIENT_RESULT_ {{NR2D8 configuration {status done exportVars {} errorList {} sifName {} sofName {} eadName {} depFiles {}}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    Reading instance file for cell XNR2D4... (SMSC-23)
+Info:    Generating timing tests.
+Info:    Generating power tests.
+Info:    Generating template at Fri May 23 14:02:25 2025 
+Warning: XNR2D4:For test delay__A1__lh__ZN__lh following when conditions are not possible ['!A2']
+Warning: XNR2D4:For test delay__A1__lh__ZN__hl following when conditions are not possible ['A2']
+Warning: XNR2D4:For test delay__A1__hl__ZN__lh following when conditions are not possible ['A2']
+Warning: XNR2D4:For test delay__A1__hl__ZN__hl following when conditions are not possible ['!A2']
+Warning: XNR2D4:For test delay__A2__lh__ZN__lh following when conditions are not possible ['!A1']
+Warning: XNR2D4:For test delay__A2__lh__ZN__hl following when conditions are not possible ['A1']
+Warning: XNR2D4:For test delay__A2__hl__ZN__lh following when conditions are not possible ['A1']
+Warning: XNR2D4:For test delay__A2__hl__ZN__hl following when conditions are not possible ['!A1']
+Warning: XNR2D4:For test energy__A1__lh__ZN__lh following when conditions are not possible ['!A2']
+Warning: XNR2D4:For test energy__A1__lh__ZN__hl following when conditions are not possible ['A2']
+Warning: XNR2D4:For test energy__A1__hl__ZN__lh following when conditions are not possible ['A2']
+Warning: XNR2D4:For test energy__A1__hl__ZN__hl following when conditions are not possible ['!A2']
+Warning: XNR2D4:For test energy__A2__lh__ZN__lh following when conditions are not possible ['!A1']
+Warning: XNR2D4:For test energy__A2__lh__ZN__hl following when conditions are not possible ['A1']
+Warning: XNR2D4:For test energy__A2__hl__ZN__lh following when conditions are not possible ['A1']
+Warning: XNR2D4:For test energy__A2__hl__ZN__hl following when conditions are not possible ['!A1']
+Info:    Done generating template at Fri May 23 14:02:26 2025
+Info:    Generate Templates: Maximum virtual memory size: 624.262 MB
+Info:    Cell XNR2D4 configured for characterization. (SMSC-24)
+Info:    __recordTaskStats__ XNR2D4 configure 0.36 0.01 0.0 0.0 1 0.993916988373 ieng6-ece-08.ucsd.edu 1748034145.38 1748034146.37
+Info:    set _SIS_CLIENT_RESULT_ {{XNR2D4 configuration {status done exportVars {} errorList {} sifName {} sofName {} eadName {} depFiles {}}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    The char directory is /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL
+Warning: Operating condition 'SS_0.9_-40_ALL' already exists, skipped.
+Info:    The char directory is /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL
+Warning: Operating condition 'SS_0.9_-40_ALL' already exists, skipped.
+Info:    Loading information for cell DFCSNQD1... (SMSC-60)
+Info:    Start Search.seeded_binary.opt_recovery on recovery (SIM-43)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.sif_1' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.sif_2' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.sif_3' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.sif_4' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.sif_5' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.sif_6' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.sif_7' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.sif_8' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.sif_9' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation recover__CDN__lh__CP__lh__ACQ_1.sif for cell DFCSNQD1 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{DFCSNQD1 recover__CDN__lh__CP__lh__ACQ_1 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.sif eadCksum 463503d254356d0e739034c5f4f6e6a1 simulationCount 10 exportVars {{value {{ order { slew_CDN slew_CP } slew_CDN { 2.8e-12 4.2e-11 3.544e-10 } slew_CP { 2.8e-12 4.2e-11 3.544e-10 } values { -1.4518e-10 -1.8153e-10 -3.39105e-10 -1.57823e-10 -1.94885e-10 -3.52981e-10 -3.3147e-10 -3.61366e-10 -5.20712e-10 } }} variable recover__CDN__lh__CP__lh opCond SS_0.9_-40_ALL}} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/recover__CDN__lh__CP__lh__ACQ_1.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/DFCSNQD1.cdl sifCksum 6234f3f1161b33868c39294c580475d7}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ DFCSNQD1 recover__CDN__lh__CP__lh__ACQ_1 0.22 0.05 12.6 0.8 10 44.1197299957 ieng6-ece-08.ucsd.edu 1748034178.1 1748034222.22
+Info:    Loading information for cell DFCSNQD4... (SMSC-60)
+Info:    Start Search.seeded_expand.opt_width on width (SIM-43)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_1' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_2' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_3' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_4' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_5' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_6' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_7' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_8' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_9' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Start Search.seeded_expand.opt_hold on hold (SIM-43)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_10' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Start Search.refine.opt_setup on setup (SIM-43)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_11' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_12' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_13' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_14' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_15' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_16' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_17' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif_18' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation combined_setup_hold__D__hl__CP__lh__ACQ_1.sif for cell DFCSNQD4 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{DFCSNQD4 combined_setup_hold__D__hl__CP__lh__ACQ_1 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sif eadCksum d9be3dec55abf3e4c97517ec754733c4 simulationCount 19 exportVars {} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/combined_setup_hold__D__hl__CP__lh__ACQ_1.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/DFCSNQD4.cdl sifCksum c4155c97fe52976387cd9d25ae74fc74}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ DFCSNQD4 combined_setup_hold__D__hl__CP__lh__ACQ_1 0.3 0.06 23.04 1.5 19 83.7465879917 ieng6-ece-08.ucsd.edu 1748034222.22 1748034305.97
+Info:    Loading information for cell NR2D1... (SMSC-60)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/Cin__A2__hl__ACQ_1.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation Cin__A2__hl__ACQ_1.sif for cell NR2D1 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{NR2D1 Cin__A2__hl__ACQ_1 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/Cin__A2__hl__ACQ_1.sif eadCksum a037e69a822601eb1f36d7314368b584 simulationCount 1 exportVars {} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/Cin__A2__hl__ACQ_1.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/Cin__A2__hl__ACQ_1.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/NR2D1.cdl sifCksum f4078b74f2a0c2c1dbe4570e1d71e3c4}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ NR2D1 Cin__A2__hl__ACQ_1 0.07 0.01 0.33 0.07 1 2.53347206116 ieng6-ece-08.ucsd.edu 1748034305.99 1748034308.53
+Info:    Loading information for cell NR2D2... (SMSC-60)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__lh__ZN__hl__ACQ_1.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation delay__A2__lh__ZN__hl__ACQ_1.sif for cell NR2D2 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{NR2D2 delay__A2__lh__ZN__hl__ACQ_1 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__lh__ZN__hl__ACQ_1.sif eadCksum cb8dc323a859b4900f3eef63e461608a simulationCount 1 exportVars {} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__lh__ZN__hl__ACQ_1.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__lh__ZN__hl__ACQ_1.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/NR2D2.cdl sifCksum ef1e2dbd11df45ca3fb9167d3674f269}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ NR2D2 delay__A2__lh__ZN__hl__ACQ_1 0.11 0.01 1.21 0.08 1 5.86095285416 ieng6-ece-08.ucsd.edu 1748034308.56 1748034314.42
+Info:    Loading information for cell OR2D0... (SMSC-60)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__lh__Z__lh__ACQ_1.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation delay__A2__lh__Z__lh__ACQ_1.sif for cell OR2D0 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{OR2D0 delay__A2__lh__Z__lh__ACQ_1 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__lh__Z__lh__ACQ_1.sif eadCksum 5a95ddcdef497ebe817c814ecea68e6f simulationCount 1 exportVars {} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__lh__Z__lh__ACQ_1.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__lh__Z__lh__ACQ_1.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/OR2D0.cdl sifCksum 4437e192aef58a73600f6c3bb40cdb7f}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ OR2D0 delay__A2__lh__Z__lh__ACQ_1 0.14 0.01 1.14 0.09 1 4.54975104332 ieng6-ece-08.ucsd.edu 1748034314.43 1748034318.98
+Info:    Loading information for cell OR2D4... (SMSC-60)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/leakage_power__ACQ_2.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation leakage_power__ACQ_2.sif for cell OR2D4 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{OR2D4 leakage_power__ACQ_2 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/leakage_power__ACQ_2.sif eadCksum 2ddffc4cdc795159f79a2bd4e88a00ad simulationCount 1 exportVars {} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/leakage_power__ACQ_2.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/leakage_power__ACQ_2.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/OR2D4.cdl sifCksum e2de5bcb6d6f073d1d800ff69d0bab5e}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ OR2D4 leakage_power__ACQ_2 0.08 0.0 0.41 0.07 1 3.51341986656 ieng6-ece-08.ucsd.edu 1748034318.98 1748034322.5
+Info:    Loading information for cell XNR2D0... (SMSC-60)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/leakage_power__ACQ_1.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation leakage_power__ACQ_1.sif for cell XNR2D0 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{XNR2D0 leakage_power__ACQ_1 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/leakage_power__ACQ_1.sif eadCksum b0e23ba06eaf8150a1a4472e92d1bd9f simulationCount 1 exportVars {} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/leakage_power__ACQ_1.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/leakage_power__ACQ_1.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/XNR2D0.cdl sifCksum bb637a79735fe66b980132922568945e}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ XNR2D0 leakage_power__ACQ_1 0.06 0.01 0.36 0.06 1 3.10905003548 ieng6-ece-08.ucsd.edu 1748034322.52 1748034325.62
+Info:    Loading information for cell XNR2D1... (SMSC-60)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__hl__ZN__lh__ACQ_1.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation delay__A2__hl__ZN__lh__ACQ_1.sif for cell XNR2D1 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{XNR2D1 delay__A2__hl__ZN__lh__ACQ_1 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__hl__ZN__lh__ACQ_1.sif eadCksum 0dc61cbc26710461fe08cce018392945 simulationCount 1 exportVars {} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__hl__ZN__lh__ACQ_1.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__hl__ZN__lh__ACQ_1.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/XNR2D1.cdl sifCksum 240c4e801f252ef3185b1f02c8ad41ef}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ XNR2D1 delay__A2__hl__ZN__lh__ACQ_1 0.11 0.01 1.52 0.09 1 6.74722790718 ieng6-ece-08.ucsd.edu 1748034325.64 1748034332.38
+Info:    Loading information for cell XOR2D0... (SMSC-60)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__hl__Z__hl__ACQ_1.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation delay__A2__hl__Z__hl__ACQ_1.sif for cell XOR2D0 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{XOR2D0 delay__A2__hl__Z__hl__ACQ_1 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__hl__Z__hl__ACQ_1.sif eadCksum 23f5b2064c759c9b387aeb71e63a49b9 simulationCount 1 exportVars {} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__hl__Z__hl__ACQ_1.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__A2__hl__Z__hl__ACQ_1.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/XOR2D0.cdl sifCksum eca3e798f0746daa441b3d0e099ab935}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ XOR2D0 delay__A2__hl__Z__hl__ACQ_1 0.12 0.0 1.47 0.09 1 6.64362406731 ieng6-ece-08.ucsd.edu 1748034332.41 1748034339.05
+Info:    Loading information for cell XOR2D2... (SMSC-60)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/leakage_power__ACQ_2.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation leakage_power__ACQ_2.sif for cell XOR2D2 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{XOR2D2 leakage_power__ACQ_2 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/leakage_power__ACQ_2.sif eadCksum 63d5c540f17f28b36eb17f33b6fa2601 simulationCount 1 exportVars {} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/leakage_power__ACQ_2.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/leakage_power__ACQ_2.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/XOR2D2.cdl sifCksum 7d9c4c31c60a51eb6ddd0cafc206d1bf}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ XOR2D2 leakage_power__ACQ_2 0.07 0.01 0.43 0.06 1 1.69933009148 ieng6-ece-08.ucsd.edu 1748034339.05 1748034340.75
+Info:    Loading information for cell BUFFD0... (SMSC-60)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__I__lh__Z__lh__ACQ_1.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation delay__I__lh__Z__lh__ACQ_1.sif for cell BUFFD0 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{BUFFD0 delay__I__lh__Z__lh__ACQ_1 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__I__lh__Z__lh__ACQ_1.sif eadCksum 139eb1a05954889d1e02e8b6f8472587 simulationCount 1 exportVars {} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__I__lh__Z__lh__ACQ_1.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__I__lh__Z__lh__ACQ_1.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/BUFFD0.cdl sifCksum b9dc4e443a36d430e008d3e496552d4d}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ BUFFD0 delay__I__lh__Z__lh__ACQ_1 0.1 0.01 1.01 0.08 1 4.14588880539 ieng6-ece-08.ucsd.edu 1748034340.76 1748034344.9
+Info:    Loading information for cell BUFFD4... (SMSC-60)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__I__hl__Z__hl__ACQ_1.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation delay__I__hl__Z__hl__ACQ_1.sif for cell BUFFD4 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{BUFFD4 delay__I__hl__Z__hl__ACQ_1 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__I__hl__Z__hl__ACQ_1.sif eadCksum 3ebc6fd49b9764b348b62645d36085fd simulationCount 1 exportVars {} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__I__hl__Z__hl__ACQ_1.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__I__hl__Z__hl__ACQ_1.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/BUFFD4.cdl sifCksum f5cea1e814fd95c669b1eaecf67cfa2c}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ BUFFD4 delay__I__hl__Z__hl__ACQ_1 0.1 0.0 1.38 0.12 1 6.20848703384 ieng6-ece-08.ucsd.edu 1748034344.92 1748034351.13
+Info:    Loading information for cell INVD24... (SMSC-60)
+Info:    Current directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL' (SIM-68)
+Info:    Working in directory '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__I__lh__ZN__hl__ACQ_1.sif_0' (SIM-69)
+Info:    Executing 'hspice deck.cir -o deck' (SIM-30)
+Warning: return code 0 (hspice: No such file or directory)
+Info:    Simulation delay__I__lh__ZN__hl__ACQ_1.sif for cell INVD24 completed successfully. (SMSC-103)
+Info:    IO Retry 0
+Info:    set _SIS_CLIENT_RESULT_ {{INVD24 delay__I__lh__ZN__hl__ACQ_1 {sifTS 0.0 sifName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__I__lh__ZN__hl__ACQ_1.sif eadCksum 9d0da698cb6162aab653514644e27183 simulationCount 1 exportVars {} errorList {} sofName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__I__lh__ZN__hl__ACQ_1.sof eadTS 0.0 eadName /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/siliconsmart.ieng6-ece-08.150149.25984/delay__I__lh__ZN__hl__ACQ_1.ead enableCache 0 status done depFiles /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/netlists/INVD24.cdl sifCksum 012d9dee572f2677c7388c31cb881f8d}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    __recordTaskStats__ INVD24 delay__I__lh__ZN__hl__ACQ_1 0.11 0.01 2.88 0.1 1 8.0749309063 ieng6-ece-08.ucsd.edu 1748034351.13 1748034359.2
+Info:    The char directory is /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL
+Warning: Operating condition 'SS_0.9_-40_ALL' already exists, skipped.
+Info:    Initializing modeler.
+Info:    Creating recharacterized libraries. 
+Info:    Reading /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/models/liberty/cellmodels/header.lib ...
+Info:    Reading /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/models/liberty/cellmodels/AN2XD1.lib ...
+Info:    Writing libraries ...
+Info:    Creating Liberty file "/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/models/liberty/cells/AN2XD1_SS_0.9_-40_ALL.lib".
+Info:    re-positioning normalized_driver_waveform (ndw_ntin_nvolt_7x13) after templates
+Info:    __recordTaskStats__ AN2XD1 modeling 0.85 0.02 0.01 0.03 1 5.20944309235 ieng6-ece-08.ucsd.edu 1748034364.94 1748034370.15
+Info:    set _SIS_CLIENT_RESULT_ {{AN2XD1 modeling {status done exportVars {} errorList {} sifName {} sofName {} eadName {} depFiles {} tmpHeader {SS_0.9_-40_ALL /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/runtime/modeling/merge/AN2XD1_SS_0.9_-40_ALL.header} tmpBody {SS_0.9_-40_ALL_AN2XD1 /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/runtime/modeling/merge/AN2XD1_SS_0.9_-40_ALL.body}}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    Initializing modeler.
+Info:    Creating recharacterized libraries. 
+Info:    Reading /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/models/liberty/cellmodels/header.lib ...
+Info:    Reading /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/models/liberty/cellmodels/XOR2D2.lib ...
+Info:    Writing libraries ...
+Warning: Power model 1855 (internal_power_group:1853) for rise_power for related_pin A1 to Z  with when: none could not be recharacterized, therefore deleting this model..
+Warning: Power model 1856 (internal_power_group:1854) for fall_power for related_pin A1 to Z  with when: none could not be recharacterized, therefore deleting this model..
+Warning: Power model 1869 (internal_power_group:1867) for rise_power for related_pin A2 to Z  with when: none could not be recharacterized, therefore deleting this model..
+Warning: Power model 1870 (internal_power_group:1868) for fall_power for related_pin A2 to Z  with when: none could not be recharacterized, therefore deleting this model..
+Info:    Creating Liberty file "/home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/models/liberty/cells/XOR2D2_SS_0.9_-40_ALL.lib".
+Info:    __recordTaskStats__ XOR2D2 modeling 0.99 0.02 0.01 0.04 1 4.08011484146 ieng6-ece-08.ucsd.edu 1748034370.16 1748034374.24
+Info:    set _SIS_CLIENT_RESULT_ {{XOR2D2 modeling {status done exportVars {} errorList {} sifName {} sofName {} eadName {} depFiles {} tmpHeader {SS_0.9_-40_ALL /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/runtime/modeling/merge/XOR2D2_SS_0.9_-40_ALL.header} tmpBody {SS_0.9_-40_ALL_XOR2D2 /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/runtime/modeling/merge/XOR2D2_SS_0.9_-40_ALL.body}}}}
+Info:    _SIS_CLIENT_RESULT_END
+Info:    CDPL worker exited normally.
+Info:    Maximum virtual memory size: 640.92MB
+Info:    Switching log to /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/runtime/cdpl/sis.W12.ieng6-ece-08.ucsd.edu.25984.log at Fri May 23 14:06:37 2025
+.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Info:    Switching log from /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL/temp/sis.cs241asp25bu.25984.log at Fri May 23 14:06:37 2025
+Info:    Log written by SiliconSmart version L-2016.06-SP1-2 on Fri May 23 14:06:37 2025
+Info:    Build date: Dec 07, 2016 16:59:49
+Info:    SiliconSmart Path: /acsnfs3/software/SiliconSmartAce-2016.06-SP1-2/linux64/bin/siliconsmart
+Info:    Host Name: ieng6-ece-08.ucsd.edu, User Name: cs241asp25bu, PID: 25984
+Info:    CPU: 8 x 2195 MHz, Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz (2 socket, 4 core)
+Info:    Memory: 32 GB RAM, 1 GB Swap
+Info:    Directory: /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_SS_0.9_-40_ALL
+Info:    Maximum virtual memory size: 640.92MB
+Info:    Maximum virtual memory size: 640.918 MB

@@ -1,0 +1,11 @@
+CMD: /software/ECE/Cadence-Voltus-23.10/tools.lnx86/ssvtools/bin/64bit/voltus_rail -nhbPort 54154 -procInfoHost ieng6-ece-01.ucsd.edu:50005 -temp_directory_name /tmp/ssv_tmpdir_1710_657b1111-5f86-4ab3-bab0-60b5dfaa5594_zfwc9j -eps -clienttimeout 3600 -machine ieng6-ece-01.ucsd.edu -port 50156 -hbPort 51395 -id 0 
+CWD: /home/linux/ieng6/cs241asp25/cs241asp25/lab6/run_static
+PID: 3611
+Host: ieng6-ece-01.ucsd.edu
+Number of CPU(s): 8
+System total memory: 32011MB
+date_time max RSS memory(MB) RSS memory(MB) virtual memory(MB) shared memory(MB)
+2025-5-27 5:2:40 546 296 2434 19
+2025-5-27 5:2:50 546 308 2434 20
+2025-5-27 5:3:0 826 826 3716 21
+end

@@ -1,0 +1,67 @@
+* The organization, structure, and layout of this file are copyrights and
+* confidential and proprietary trade secrets of Cadence Design Systems, Inc.,
+* subject to the terms and conditions of the license agreement in effect
+* between you and Cadence Design Systems, Inc. This file and its information
+* may not be disclosed, sold, or otherwise transferred to any third party
+* without the express written consent of Cadence Design Systems, Inc. Export
+* of any or all of this file in violation of any statute or regulation is
+* strictly prohibited.
+* 
+
+FORMAT: 11.0
+PROJECT: mpeg2_top
+NET: VSS 
+CREATOR: smg
+
+CREATED: 2025-Jun-02 11:25:05 (2025-Jun-02 18:25:05 GMT)
+
+LAYOUT_XMIN: 0
+LAYOUT_YMIN: 0
+LAYOUT_XMAX: 47628
+LAYOUT_YMAX: 47160
+
+NODES: 37077
+NODE_FILE: VSS.mnode
+RESISTORS: 47650
+INDUCTORS: 0
+
+LAYERS: 22
+LAYER: M9 M 2526 VSS.ml00
+LAYER: V8 V 2436 VSS.ml01
+LAYER: M8 M 4907 VSS.ml02
+LAYER: V7 V 1764 VSS.ml03
+LAYER: M7 M 2849 VSS.ml04
+LAYER: V6 V 686 VSS.ml05
+LAYER: M6 M 1120 VSS.ml06
+LAYER: V5 V 56 VSS.ml07
+LAYER: M5 M 114 VSS.ml08
+LAYER: V4 V 53 VSS.ml09
+LAYER: M4 M 115 VSS.ml10
+LAYER: V3 V 58 VSS.ml11
+LAYER: M3 M 223 VSS.ml12
+LAYER: V2 V 109 VSS.ml13
+LAYER: M2 M 1262 VSS.ml14
+LAYER: V1 V 1134 VSS.ml15
+LAYER: M1 M 5833 VSS.ml16
+LAYER: V0 V 4611 VSS.ml17
+LAYER: LISD M 17794 VSS.ml18
+LAYER: GATE P 0 VSS.ml19
+LAYER: CSUBSTRATE M 0 VSS.ml20
+LAYER: REDUCED V 0 VSS.ml21
+
+CUT_LAYER: none
+GRID_CAP: false
+DIFF_CAP: false
+NUM_PINS: 13872
+PINS: VSS.bmpin
+NUM_INSTANCE_TAPS: 13872
+INSTANCES: VSS.bminst
+NUM_INSTANCES: 13872
+I_LOADS:
+NODE_MAP:
+RESISTOR_MAP:
+OUTPUT_WLT: drawn
+LAYOUT_SCALE_FACTOR: 1
+TEMPERATURE: 25
+BINARY_INST: true
+MICRON_UNITS: 1000

@@ -1,0 +1,63 @@
+Open nets were found during extraction.
+
+Open nets are composed of multiple resistively connected groups (RCGs).
+
+StarRC attempts to determine the location where a net becomes open using
+the topology of the extracted resistor network. However, this determination
+is approximate. This determination is also affected by settings of the
+REDUCTION, REDUCTION_MAX_DELAY_ERROR and EXTRACTION options.
+
+OPEN net: clk__L3_N1  (2 RCGs) :
+	shorting resistor: 40 (resistance=0.01,width=100) is inserted between nodes clk__L3_N1:19 (located at (166.1000,234.0000), layer M1) and u0/w_reg_2__16_:CP (located at (166.8500,235.9200), layer M1 (floating))
+OPEN net: clk__L3_N10  (2 RCGs) :
+	shorting resistor: 36 (resistance=0.01,width=100) is inserted between nodes clk__L3_N10:15 (located at (175.9000,128.0000), layer M1) and u0/w_reg_2__25_:CP (located at (178.1000,125.9050), layer M1 (floating))
+OPEN net: clk__L3_N11  (2 RCGs) :
+	shorting resistor: 40 (resistance=0.01,width=100) is inserted between nodes clk__L3_N11:32 (located at (161.1000,135.2000), layer M4) and u0/w_reg_2__28_:CP (located at (161.0500,135.1200), layer M1 (floating))
+OPEN net: clk__L3_N13  (3 RCGs) :
+	shorting resistor: 35 (resistance=0.01,width=100) is inserted between nodes clk__L3_N13:30 (located at (217.3000,194.9000), layer M1) and text_in_r_reg_116_:CP (located at (217.2500,192.7200), layer M1 (floating))
+	shorting resistor: 36 (resistance=0.01,width=100) is inserted between nodes text_out_reg_22_:CP (located at (215.5500,196.3200), layer M1 (floating)) and text_in_r_reg_116_:CP (located at (217.2500,192.7200), layer M1 (floating))
+OPEN net: clk__L3_N16  (2 RCGs) :
+	shorting resistor: 37 (resistance=0.01,width=100) is inserted between nodes clk__L3_N16:15 (located at (114.7000,203.6000), layer M1) and u0/w_reg_0__4_:CP (located at (116.7500,196.3200), layer M1 (floating))
+OPEN net: clk__L3_N17  (2 RCGs) :
+	shorting resistor: 36 (resistance=0.01,width=100) is inserted between nodes u0/w_reg_0__2_:CP (located at (103.8000,207.0525), layer M1) and u0/w_reg_1__2_:CP (located at (101.3000,208.7050), layer M1 (floating))
+OPEN net: clk__L3_N2  (2 RCGs) :
+	shorting resistor: 38 (resistance=0.01,width=100) is inserted between nodes clk__L3_N2:15 (located at (190.3000,234.2000), layer M1) and text_in_r_reg_118_:CP (located at (190.1500,235.9200), layer M1 (floating))
+OPEN net: clk__L3_N20  (2 RCGs) :
+	shorting resistor: 37 (resistance=0.01,width=100) is inserted between nodes clk__L3_N20:22 (located at (114.9000,46.8000), layer M1) and text_out_reg_67_:CP (located at (112.9500,54.0800), layer M1 (floating))
+OPEN net: clk__L3_N23  (2 RCGs) :
+	shorting resistor: 34 (resistance=0.01,width=100) is inserted between nodes u0/r0/out_reg_30_:CP (located at (174.2000,163.8125), layer M1) and text_out_reg_87_:CP (located at (172.5500,160.3200), layer M1 (floating))
+OPEN net: clk__L3_N25  (2 RCGs) :
+	shorting resistor: 36 (resistance=0.01,width=100) is inserted between nodes clk__L3_N25:25 (located at (203.3000,162.3000), layer M1) and text_out_reg_26_:CP (located at (202.9500,163.9200), layer M1 (floating))
+OPEN net: clk__L3_N26  (2 RCGs) :
+	shorting resistor: 37 (resistance=0.01,width=100) is inserted between nodes clk__L3_N26:25 (located at (169.7000,158.4000), layer M1) and text_out_reg_63_:CP (located at (167.3500,160.3200), layer M1 (floating))
+OPEN net: clk__L3_N28  (3 RCGs) :
+	shorting resistor: 35 (resistance=0.01,width=100) is inserted between nodes clk__L3_N28:15 (located at (203.9000,167.4000), layer M1) and u0/w_reg_3__12_:CP (located at (204.3500,165.6800), layer M1 (floating))
+	shorting resistor: 36 (resistance=0.01,width=100) is inserted between nodes u0/w_reg_3__12_:CP (located at (204.3500,165.6800), layer M1 (floating)) and text_out_reg_16_:CP (located at (205.7500,171.1200), layer M1 (floating))
+OPEN net: clk__L3_N3  (2 RCGs) :
+	shorting resistor: 41 (resistance=0.01,width=100) is inserted between nodes clk__L3_N3:25 (located at (214.9000,235.8000), layer M1) and u0/w_reg_3__18_:CP (located at (214.7000,233.9050), layer M1 (floating))
+OPEN net: clk__L3_N30  (3 RCGs) :
+	shorting resistor: 31 (resistance=0.01,width=100) is inserted between nodes sa02_reg_0_:CP (located at (174.0000,113.4125), layer M1) and text_out_reg_91_:CP (located at (173.3500,111.6800), layer M1 (floating))
+	shorting resistor: 32 (resistance=0.01,width=100) is inserted between nodes text_out_reg_91_:CP (located at (173.3500,111.6800), layer M1 (floating)) and text_out_reg_106_:CP (located at (178.5500,111.6800), layer M1 (floating))
+OPEN net: clk__L3_N35  (3 RCGs) :
+	shorting resistor: 34 (resistance=0.01,width=100) is inserted between nodes sa11_reg_4_:CP (located at (168.7000,118.7050), layer M1 (floating)) and sa00_reg_6_:CP (located at (168.1000,115.1050), layer M1 (floating))
+	shorting resistor: 35 (resistance=0.01,width=100) is inserted between nodes clk__L3_N35:18 (located at (158.5000,122.6000), layer M1) and sa11_reg_4_:CP (located at (168.7000,118.7050), layer M1 (floating))
+OPEN net: clk__L3_N37  (3 RCGs) :
+	shorting resistor: 33 (resistance=0.01,width=100) is inserted between nodes text_out_reg_107_:CP (located at (166.5500,216.0800), layer M1 (floating)) and text_in_r_reg_106_:CP (located at (164.5500,217.9200), layer M1 (floating))
+	shorting resistor: 34 (resistance=0.01,width=100) is inserted between nodes clk__L3_N37:15 (located at (164.9000,212.6000), layer M1) and text_out_reg_107_:CP (located at (166.5500,216.0800), layer M1 (floating))
+OPEN net: clk__L3_N39  (3 RCGs) :
+	shorting resistor: 33 (resistance=0.01,width=100) is inserted between nodes u0/w_reg_2__5_:CP (located at (113.8500,217.9200), layer M1 (floating)) and text_out_reg_102_:CP (located at (110.5500,216.0800), layer M1 (floating))
+	shorting resistor: 34 (resistance=0.01,width=100) is inserted between nodes clk__L3_N39:23 (located at (117.5000,219.6000), layer M1) and u0/w_reg_2__5_:CP (located at (113.8500,217.9200), layer M1 (floating))
+OPEN net: clk__L3_N4  (3 RCGs) :
+	shorting resistor: 36 (resistance=0.01,width=100) is inserted between nodes u0/w_reg_1__22_:CP (located at (207.9000,226.7050), layer M1 (floating)) and text_out_reg_28_:CP (located at (209.9500,225.1200), layer M1 (floating))
+	shorting resistor: 37 (resistance=0.01,width=100) is inserted between nodes clk__L3_N4:22 (located at (205.7000,223.2000), layer M1) and u0/w_reg_1__22_:CP (located at (207.9000,226.7050), layer M1 (floating))
+OPEN net: clk__L3_N40  (4 RCGs) :
+	shorting resistor: 28 (resistance=0.01,width=100) is inserted between nodes text_in_r_reg_110_:CP (located at (121.3500,214.3200), layer M1 (floating)) and clk__L3_N40:15 (located at (120.3000,214.2000), layer M1)
+	shorting resistor: 29 (resistance=0.01,width=100) is inserted between nodes text_in_r_reg_100_:CP (located at (119.9500,219.6800), layer M1 (floating)) and clk__L3_N40:17 (located at (122.3000,223.2000), layer M1)
+	shorting resistor: 30 (resistance=0.01,width=100) is inserted between nodes u0/r0/out_reg_6_:CP (located at (116.3500,216.0800), layer M1 (floating)) and clk__L3_N40:15 (located at (120.3000,214.2000), layer M1)
+OPEN net: clk__L3_N41  (2 RCGs) :
+	shorting resistor: 39 (resistance=0.01,width=100) is inserted between nodes clk__L3_N41:26 (located at (94.3000,212.6000), layer M1) and text_in_r_reg_44_:CP (located at (93.9500,217.9200), layer M1 (floating))
+OPEN net: clk__L3_N5  (2 RCGs) :
+	shorting resistor: 38 (resistance=0.01,width=100) is inserted between nodes clk__L3_N5:24 (located at (209.9000,140.4000), layer M1) and text_out_reg_17_:CP (located at (212.3500,142.3200), layer M1 (floating))
+OPEN net: clk__L3_N6  (3 RCGs) :
+	shorting resistor: 33 (resistance=0.01,width=100) is inserted between nodes clk__L3_N6:26 (located at (192.1000,133.4000), layer M3) and text_out_reg_58_:CP (located at (192.3500,133.2800), layer M1 (floating))
+	shorting resistor: 34 (resistance=0.01,width=100) is inserted between nodes text_out_reg_1_:CP (located at (194.1500,136.8800), layer M1 (floating)) and text_out_reg_58_:CP (located at (192.3500,133.2800), layer M1 (floating))

@@ -1,0 +1,19 @@
+*----------------------------------------------------------------------------------------
+*	Voltus Power Analysis - Power Calculator - Version v23.14-s083_1 64-bit (03/05/2025 19:55:08)
+*	Copyright 2007, Cadence Design Systems, Inc.
+*
+* 	Date & Time:	2025-Jun-02 13:06:01 (2025-Jun-02 20:06:01 GMT)
+*
+*----------------------------------------------------------------------------------------
+* 
+* Total number of data nets : 13896
+* Constant data nets skipped : 0
+* NoTiming data nets skipped : 0
+* Average data activity : 0.432547
+* Number of iterations : 1
+* Sequential activity : 0.2
+* Dominant Frequency : 5GHz
+*
+Clock       Data        Data        PI_Insts    Flop_Insts                Comb_Insts                Macro_Insts               Idle_Insts                ICG_Insts                 Clock_Comb_Insts         
+Frequency   Activity    #Nets       SW/Total    SW/Total                  SW/Total                  SW/Total                  Idle/Total                SW/Total                  SW/Total                 
+5GHz        0.433       13896       21/77(27%)  706/3528(20%)             8280/10246(81%)           0/0(0%)                   4788/13774(35%)           0/0(0%)                   98/98(100%)              

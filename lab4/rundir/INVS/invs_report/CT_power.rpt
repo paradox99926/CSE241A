@@ -1,0 +1,96 @@
+*----------------------------------------------------------------------------------------
+*	Innovus 21.10-p004_1 (64bit) 05/18/2021 11:58 (Linux 3.10.0-693.el7.x86_64)
+*	
+*
+* 	Date & Time:	2025-Apr-28 18:36:02 (2025-Apr-29 01:36:02 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: jpeg_encoder
+*
+*	Liberty Libraries used: 
+*	        WC_VIEW: /home/linux/ieng6/cs241asp25/public/data/libraries/lib/tcbn65gpluswc.lib
+*
+*	Power Domain used: 
+*
+*       Power View : WC_VIEW
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile ./invs_report/CT_power.rpt
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:       36.53286803 	   73.2480%
+Total Switching Power:      12.29452936 	   24.6504%
+Total Leakage Power:         1.04821471 	    2.1017%
+Total Power:                49.87561238 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                         23.04      0.9468       0.289       24.28       48.68 
+Macro                                  0           0           0           0           0 
+IO                                     0           0   1.457e-06   1.457e-06   2.921e-06 
+Combinational                      12.41       7.839      0.7447       20.99       42.09 
+Clock (Combinational)              1.077       3.509     0.01452         4.6       9.224 
+Clock (Sequential)                     0           0           0           0           0 
+-----------------------------------------------------------------------------------------
+Total                              36.53       12.29       1.048       49.88         100 
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Default                   0.9      36.53       12.29       1.048       49.88         100 
+
+
+Clock                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+clk                                1.077       3.509     0.01452         4.6       9.224 
+-----------------------------------------------------------------------------------------
+Total (excluding duplicates)       1.077       3.509     0.01452         4.6       9.224 
+-----------------------------------------------------------------------------------------
+Clock: clk
+Clock Period: 0.002000 usec 
+Clock Toggle Rate:  1000.0000 Mhz 
+Clock Static Probability:  0.5000
+
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*                Highest Average Power:       CTS_ccl_a_buf_00001 (CKBD16):          0.08309 
+*                Highest Leakage Power:         FE_USKC1179_CTS_9 (BUFFD16):        0.0002474 
+*          Total Cap:      1.50702e-10 F
+*          Total instances in design: 32479
+*          Total instances in design with no power:     0
+*          Total instances in design with no activity:     0
+*          Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+

@@ -1,0 +1,595 @@
+[05/01 12:37:56      0s] 
+[05/01 12:37:56      0s] Cadence Innovus(TM) Implementation System.
+[05/01 12:37:56      0s] Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+[05/01 12:37:56      0s] 
+[05/01 12:37:56      0s] Version:	v21.10-p004_1, built Tue May 18 11:58:29 PDT 2021
+[05/01 12:37:56      0s] Options:	
+[05/01 12:37:56      0s] Date:		Thu May  1 12:37:56 2025
+[05/01 12:37:56      0s] Host:		ieng6-ece-08.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB)
+[05/01 12:37:56      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[05/01 12:37:56      0s] 
+[05/01 12:37:56      0s] License:
+[05/01 12:37:57      0s] 		invs	Innovus Implementation System	21.1	checkout succeeded
+[05/01 12:37:57      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[05/01 12:38:15     15s] Reset Parastics called with the command setExtractRCMode -reset**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+[05/01 12:38:19     19s] @(#)CDS: Innovus v21.10-p004_1 (64bit) 05/18/2021 11:58 (Linux 3.10.0-693.el7.x86_64)
+[05/01 12:38:19     19s] @(#)CDS: NanoRoute 21.10-p004_1 NR210506-1544/21_10-UB (database version 18.20.544) {superthreading v2.14}
+[05/01 12:38:19     19s] @(#)CDS: AAE 21.10-p006 (64bit) 05/18/2021 (Linux 3.10.0-693.el7.x86_64)
+[05/01 12:38:19     19s] @(#)CDS: CTE 21.10-p004_1 () May 13 2021 20:04:41 ( )
+[05/01 12:38:19     19s] @(#)CDS: SYNTECH 21.10-b006_1 () Apr 18 2021 22:44:07 ( )
+[05/01 12:38:19     19s] @(#)CDS: CPE v21.10-p004
+[05/01 12:38:19     19s] @(#)CDS: IQuantus/TQuantus 20.1.2-s510 (64bit) Sun Apr 18 10:29:16 PDT 2021 (Linux 2.6.32-431.11.2.el6.x86_64)
+[05/01 12:38:19     19s] @(#)CDS: OA 22.60-p052 Thu Feb 25 10:35:13 2021
+[05/01 12:38:19     19s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[05/01 12:38:19     19s] @(#)CDS: RCDB 11.15.0
+[05/01 12:38:19     19s] @(#)CDS: STYLUS 21.10-d038_1 (02/12/2021 04:34 PST)
+[05/01 12:38:19     19s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_27816_ieng6-ece-08.ucsd.edu_cs241asp25bu_SnOzHx.
+
+[05/01 12:38:20     19s] Change the soft stacksize limit to 0.2%RAM (64 mbytes). Set global soft_stack_size_limit to change the value.
+[05/01 12:38:22     21s] 
+[05/01 12:38:22     21s] **INFO:  MMMC transition support version v31-84 
+[05/01 12:38:22     21s] 
+[05/01 12:38:22     21s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[05/01 12:38:22     21s] <CMD> suppressMessage ENCEXT-2799
+[05/01 12:38:22     22s] <CMD> win
+[05/01 12:39:08     29s] <CMD> is_common_ui_mode
+[05/01 12:39:08     29s] <CMD> restoreDesign /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat jpeg_encoder
+[05/01 12:39:08     29s] #% Begin load design ... (date=05/01 12:39:08, mem=625.7M)
+[05/01 12:39:08     29s] Set Default Input Pin Transition as 0.1 ps.
+[05/01 12:39:09     30s] Loading design 'jpeg_encoder' saved by 'Innovus' '21.10-p004_1' on 'Mon Apr 28 18:51:11 2025'.
+[05/01 12:39:09     30s] % Begin Load MMMC data ... (date=05/01 12:39:09, mem=627.6M)
+[05/01 12:39:09     30s] % End Load MMMC data ... (date=05/01 12:39:09, total cpu=0:00:00.0, real=0:00:00.0, peak res=628.4M, current mem=628.4M)
+[05/01 12:39:09     30s] 
+[05/01 12:39:09     30s] Loading LEF file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef ...
+[05/01 12:39:09     30s] WARNING (LEFPARS-2007): NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 28.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 867.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 877.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1014.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1024.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1161.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1171.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1308.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1318.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1372.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1383.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1604.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2019): TOPOFSTACKONLY statement is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1614.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1769.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1771.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1772.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1776.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1778.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1779.
+[05/01 12:39:09     30s] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[05/01 12:39:09     30s] The LEF parser will ignore this statement.
+[05/01 12:39:09     30s] To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/lef/tcbn65gplus_8lmT2.lef at line 1783.
+[05/01 12:39:09     30s] Set DBUPerIGU to M2 pitch 400.
+[05/01 12:39:09     30s] **WARN: (IMPLF-200):	Pin 'I' in macro 'ANTENNA' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/01 12:39:09     30s] Type 'man IMPLF-200' for more detail.
+[05/01 12:39:09     30s] 
+[05/01 12:39:09     30s] viaInitial starts at Thu May  1 12:39:09 2025
+viaInitial ends at Thu May  1 12:39:09 2025
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[05/01 12:39:09     30s] Loading view definition file from /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/viewDefinition.tcl
+[05/01 12:39:09     30s] Reading WC_LIB timing library '/home/linux/ieng6/cs241asp25/public/data/libraries/lib/tcbn65gpluswc.lib' ...
+[05/01 12:39:10     31s] Read 811 cells in library 'tcbn65gpluswc' 
+[05/01 12:39:10     31s] Ending "PreSetAnalysisView" (total cpu=0:00:01.4, real=0:00:01.0, peak res=716.9M, current mem=649.0M)
+[05/01 12:39:10     31s] *** End library_loading (cpu=0.02min, real=0.02min, mem=24.0M, fe_cpu=0.53min, fe_real=1.23min, fe_mem=880.3M) ***
+[05/01 12:39:10     32s] % Begin Load netlist data ... (date=05/01 12:39:10, mem=648.0M)
+[05/01 12:39:10     32s] *** Begin netlist parsing (mem=880.3M) ***
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D4' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D4' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D2' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D2' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D1' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D1' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR4D0' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR4D0' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D4' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D4' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D2' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D2' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D1' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D1' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR3D0' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR3D0' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2D4' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2D4' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VSS' of cell 'XOR2D2' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (IMPVL-159):	Pin 'VDD' of cell 'XOR2D2' is defined in LEF but not in the timing library.
+[05/01 12:39:10     32s] Type 'man IMPVL-159' for more detail.
+[05/01 12:39:10     32s] **WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+[05/01 12:39:10     32s] To increase the message display limit, refer to the product command reference manual.
+[05/01 12:39:10     32s] Created 811 new cells from 1 timing libraries.
+[05/01 12:39:10     32s] Reading netlist ...
+[05/01 12:39:10     32s] Backslashed names will retain backslash and a trailing blank character.
+[05/01 12:39:10     32s] Reading verilogBinary netlist '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/jpeg_encoder.v.bin'
+[05/01 12:39:11     32s] 
+[05/01 12:39:11     32s] *** Memory Usage v#1 (Current mem = 894.328M, initial mem = 316.801M) ***
+[05/01 12:39:11     32s] *** End netlist parsing (cpu=0:00:00.1, real=0:00:01.0, mem=894.3M) ***
+[05/01 12:39:11     32s] % End Load netlist data ... (date=05/01 12:39:11, total cpu=0:00:00.1, real=0:00:01.0, peak res=666.2M, current mem=666.2M)
+[05/01 12:39:11     32s] Set top cell to jpeg_encoder.
+[05/01 12:39:11     32s] Hooked 811 DB cells to tlib cells.
+[05/01 12:39:11     32s] Ending "BindLib:" (total cpu=0:00:00.1, real=0:00:00.0, peak res=680.5M, current mem=680.5M)
+[05/01 12:39:11     32s] Starting recursive module instantiation check.
+[05/01 12:39:11     32s] No recursion found.
+[05/01 12:39:11     32s] Building hierarchical netlist for Cell jpeg_encoder ...
+[05/01 12:39:11     32s] *** Netlist is unique.
+[05/01 12:39:11     32s] Setting Std. cell height to 3600 DBU (smallest netlist inst).
+[05/01 12:39:11     32s] ** info: there are 847 modules.
+[05/01 12:39:11     32s] ** info: there are 32479 stdCell insts.
+[05/01 12:39:11     32s] 
+[05/01 12:39:11     32s] *** Memory Usage v#1 (Current mem = 960.754M, initial mem = 316.801M) ***
+[05/01 12:39:11     32s] *info: set bottom ioPad orient R0
+[05/01 12:39:11     32s] **WARN: (IMPFP-3961):	The techSite 'dcore' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[05/01 12:39:11     32s] Type 'man IMPFP-3961' for more detail.
+[05/01 12:39:11     32s] **WARN: (IMPFP-3961):	The techSite 'ccore' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[05/01 12:39:11     32s] Type 'man IMPFP-3961' for more detail.
+[05/01 12:39:11     32s] Set Default Net Delay as 1000 ps.
+[05/01 12:39:11     32s] Set Default Net Load as 0.5 pF. 
+[05/01 12:39:11     32s] Set Default Input Pin Transition as 0.1 ps.
+[05/01 12:39:11     32s] Loading preference file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/gui.pref.tcl ...
+[05/01 12:39:11     32s] ##  Process: 65            (User Set)               
+[05/01 12:39:11     32s] ##     Node: (not set)                           
+[05/01 12:39:11     32s] 
+##  Check design process and node:  
+##  Design tech node is not set.
+
+[05/01 12:39:11     32s] Applying the recommended capacitance filtering threshold values for 65nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+[05/01 12:39:11     32s] 	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+[05/01 12:39:11     32s] 	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+[05/01 12:39:11     32s] 	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+[05/01 12:39:11     32s] 	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+[05/01 12:39:11     32s] **WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+[05/01 12:39:11     32s] AAE_INFO: switching -siAware from false to true ...
+[05/01 12:39:11     32s] AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
+[05/01 12:39:11     32s] Change floorplan default-technical-site to 'core'.
+[05/01 12:39:12     33s] Extraction setup Delayed 
+[05/01 12:39:12     33s] *Info: initialize multi-corner CTS.
+[05/01 12:39:12     33s] Ending "SetAnalysisView" (total cpu=0:00:00.1, real=0:00:00.0, peak res=953.2M, current mem=717.5M)
+[05/01 12:39:12     33s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[05/01 12:39:12     33s] 
+[05/01 12:39:12     33s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign Begin ...
+[05/01 12:39:12     33s] Summary for sequential cells identification: 
+[05/01 12:39:12     33s]   Identified SBFF number: 199
+[05/01 12:39:12     33s]   Identified MBFF number: 0
+[05/01 12:39:12     33s]   Identified SB Latch number: 0
+[05/01 12:39:12     33s]   Identified MB Latch number: 0
+[05/01 12:39:12     33s]   Not identified SBFF number: 0
+[05/01 12:39:12     33s]   Not identified MBFF number: 0
+[05/01 12:39:12     33s]   Not identified SB Latch number: 0
+[05/01 12:39:12     33s]   Not identified MB Latch number: 0
+[05/01 12:39:12     33s]   Number of sequential cells which are not FFs: 104
+[05/01 12:39:12     33s] Total number of combinational cells: 497
+[05/01 12:39:12     33s] Total number of sequential cells: 303
+[05/01 12:39:12     33s] Total number of tristate cells: 11
+[05/01 12:39:12     33s] Total number of level shifter cells: 0
+[05/01 12:39:12     33s] Total number of power gating cells: 0
+[05/01 12:39:12     33s] Total number of isolation cells: 0
+[05/01 12:39:12     33s] Total number of power switch cells: 0
+[05/01 12:39:12     33s] Total number of pulse generator cells: 0
+[05/01 12:39:12     33s] Total number of always on buffers: 0
+[05/01 12:39:12     33s] Total number of retention cells: 0
+[05/01 12:39:12     33s] List of usable buffers: BUFFD1 BUFFD0 BUFFD2 BUFFD3 BUFFD4 BUFFD6 BUFFD8 BUFFD12 BUFFD16 BUFFD20 BUFFD24 CKBD1 CKBD0 CKBD2 CKBD3 CKBD4 CKBD6 CKBD8 CKBD12 CKBD16 CKBD20 CKBD24 GBUFFD1 GBUFFD3 GBUFFD2 GBUFFD4 GBUFFD8
+[05/01 12:39:12     33s] Total number of usable buffers: 27
+[05/01 12:39:12     33s] List of unusable buffers:
+[05/01 12:39:12     33s] Total number of unusable buffers: 0
+[05/01 12:39:12     33s] List of usable inverters: CKND1 CKND0 CKND2 CKND3 CKND4 CKND6 CKND8 CKND12 CKND16 CKND20 CKND24 GINVD2 GINVD1 GINVD4 GINVD3 GINVD8 INVD1 INVD0 INVD2 INVD3 INVD4 INVD6 INVD8 INVD12 INVD16 INVD20 INVD24
+[05/01 12:39:12     33s] Total number of usable inverters: 27
+[05/01 12:39:12     33s] List of unusable inverters:
+[05/01 12:39:12     33s] Total number of unusable inverters: 0
+[05/01 12:39:12     33s] List of identified usable delay cells: DEL0 DEL005 DEL01 DEL015 DEL02 DEL1 DEL2 DEL3 DEL4
+[05/01 12:39:12     33s] Total number of identified usable delay cells: 9
+[05/01 12:39:12     33s] List of identified unusable delay cells:
+[05/01 12:39:12     33s] Total number of identified unusable delay cells: 0
+[05/01 12:39:12     33s] 
+[05/01 12:39:12     33s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign End ...
+[05/01 12:39:12     33s] 
+[05/01 12:39:12     33s] TimeStamp Deleting Cell Server Begin ...
+[05/01 12:39:12     33s] 
+[05/01 12:39:12     33s] TimeStamp Deleting Cell Server End ...
+[05/01 12:39:12     33s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=958.6M, current mem=958.5M)
+[05/01 12:39:12     33s] 
+[05/01 12:39:12     33s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign Begin ...
+[05/01 12:39:12     33s] Summary for sequential cells identification: 
+[05/01 12:39:12     33s]   Identified SBFF number: 199
+[05/01 12:39:12     33s]   Identified MBFF number: 0
+[05/01 12:39:12     33s]   Identified SB Latch number: 0
+[05/01 12:39:12     33s]   Identified MB Latch number: 0
+[05/01 12:39:12     33s]   Not identified SBFF number: 0
+[05/01 12:39:12     33s]   Not identified MBFF number: 0
+[05/01 12:39:12     33s]   Not identified SB Latch number: 0
+[05/01 12:39:12     33s]   Not identified MB Latch number: 0
+[05/01 12:39:12     33s]   Number of sequential cells which are not FFs: 104
+[05/01 12:39:12     33s]  Visiting view : WC_VIEW
+[05/01 12:39:12     33s]    : PowerDomain = none : Weighted F : unweighted  = 14.30 (1.000) with rcCorner = 0
+[05/01 12:39:12     33s]    : PowerDomain = none : Weighted F : unweighted  = 12.40 (1.000) with rcCorner = -1
+[05/01 12:39:12     33s]  Visiting view : BC_VIEW
+[05/01 12:39:12     33s]    : PowerDomain = none : Weighted F : unweighted  = 14.30 (1.000) with rcCorner = 1
+[05/01 12:39:12     33s]    : PowerDomain = none : Weighted F : unweighted  = 12.40 (1.000) with rcCorner = -1
+[05/01 12:39:12     33s] 
+[05/01 12:39:12     33s] TimeStamp Creating Cell Server ...(0, 0, 0, 0) in restoreDesign End ...
+[05/01 12:39:12     33s] % Begin Load MMMC data post ... (date=05/01 12:39:12, mem=959.0M)
+[05/01 12:39:12     33s] % End Load MMMC data post ... (date=05/01 12:39:12, total cpu=0:00:00.0, real=0:00:00.0, peak res=959.1M, current mem=959.1M)
+[05/01 12:39:12     33s] Reading floorplan file - /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/jpeg_encoder.fp.gz (mem = 1194.8M).
+[05/01 12:39:12     33s] % Begin Load floorplan data ... (date=05/01 12:39:12, mem=959.2M)
+[05/01 12:39:13     33s] *info: reset 35141 existing net BottomPreferredLayer and AvoidDetour
+[05/01 12:39:13     33s] Deleting old partition specification.
+[05/01 12:39:13     33s] Set FPlanBox to (0 0 965600 961600)
+[05/01 12:39:13     33s] **WARN: (IMPFP-3961):	The techSite 'dcore' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[05/01 12:39:13     33s] Type 'man IMPFP-3961' for more detail.
+[05/01 12:39:13     33s] **WARN: (IMPFP-3961):	The techSite 'ccore' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+[05/01 12:39:13     33s] Type 'man IMPFP-3961' for more detail.
+[05/01 12:39:13     33s]  ... processed partition successfully.
+[05/01 12:39:13     33s] Reading binary special route file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/jpeg_encoder.fp.spr.gz (Created by Innovus v21.10-p004_1 on Mon Apr 28 18:51:09 2025, version: 1)
+[05/01 12:39:13     33s] Convert 0 swires and 0 svias from compressed groups
+[05/01 12:39:13     33s] 0 swires and 0 svias were compressed
+[05/01 12:39:13     33s] 0 swires and 0 svias were decompressed from small or sparse groups
+[05/01 12:39:13     33s] Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=959.9M, current mem=959.9M)
+[05/01 12:39:13     33s] There are 69 nets with weight being set
+[05/01 12:39:13     33s] There are 81 nets with bottomPreferredRoutingLayer being set
+[05/01 12:39:13     33s] There are 69 nets with avoidDetour being set
+[05/01 12:39:13     33s] Extracting standard cell pins and blockage ...... 
+[05/01 12:39:13     33s] Pin and blockage extraction finished
+[05/01 12:39:13     33s] % End Load floorplan data ... (date=05/01 12:39:13, total cpu=0:00:00.1, real=0:00:01.0, peak res=960.5M, current mem=960.4M)
+[05/01 12:39:13     33s] Reading congestion map file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/jpeg_encoder.route.congmap.gz ...
+[05/01 12:39:13     33s] % Begin Load SymbolTable ... (date=05/01 12:39:13, mem=960.7M)
+[05/01 12:39:13     33s] Suppress "**WARN ..." messages.
+[05/01 12:39:13     33s] routingBox: (0 0) (965600 961600)
+[05/01 12:39:13     33s] coreBox:    (20000 20000) (945600 941600)
+[05/01 12:39:13     33s] Un-suppress "**WARN ..." messages.
+[05/01 12:39:13     33s] % End Load SymbolTable ... (date=05/01 12:39:13, total cpu=0:00:00.1, real=0:00:00.0, peak res=967.4M, current mem=967.4M)
+[05/01 12:39:13     33s] Loading place ...
+[05/01 12:39:13     33s] % Begin Load placement data ... (date=05/01 12:39:13, mem=967.4M)
+[05/01 12:39:13     33s] Reading placement file - /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/jpeg_encoder.place.gz.
+[05/01 12:39:13     33s] ** Reading stdCellPlacement_binary (Created by Innovus v21.10-p004_1 on Mon Apr 28 18:51:09 2025, version# 2) ...
+[05/01 12:39:13     34s] Read Views for adaptive view pruning ...
+[05/01 12:39:13     34s] Read 0 views from Binary DB for adaptive view pruning
+[05/01 12:39:13     34s] *** Completed restorePlace (cpu=0:00:00.1 real=0:00:00.0 mem=1208.9M) ***
+[05/01 12:39:13     34s] Total net length = 3.261e+05 (1.528e+05 1.733e+05) (ext = 1.879e+03)
+[05/01 12:39:14     34s] % End Load placement data ... (date=05/01 12:39:13, total cpu=0:00:00.1, real=0:00:00.0, peak res=973.4M, current mem=971.9M)
+[05/01 12:39:14     34s] % Begin Load routing data ... (date=05/01 12:39:14, mem=971.9M)
+[05/01 12:39:14     34s] Reading routing file - /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/jpeg_encoder.route.gz.
+[05/01 12:39:14     34s] Reading Innovus routing data (Created by Innovus v21.10-p004_1 on Mon Apr 28 18:51:09 2025 Format: 20.1) ...
+[05/01 12:39:14     34s] *** Total 35141 nets are successfully restored.
+[05/01 12:39:14     34s] *** Completed restoreRoute (cpu=0:00:00.3 real=0:00:00.0 mem=1240.9M) ***
+[05/01 12:39:14     34s] % End Load routing data ... (date=05/01 12:39:14, total cpu=0:00:00.3, real=0:00:00.0, peak res=1008.9M, current mem=1007.9M)
+[05/01 12:39:14     34s] Loading Drc markers ...
+[05/01 12:39:14     34s] ... 1 markers are loaded ...
+[05/01 12:39:14     34s] ... 0 geometry drc markers are loaded ...
+[05/01 12:39:14     34s] ... 1 antenna drc markers are loaded ...
+[05/01 12:39:14     34s] TAT_INFO: restoreCongMap REAL = 0 : CPU = 0 : MEM = 0.
+[05/01 12:39:14     34s] Reading property file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/jpeg_encoder.prop
+[05/01 12:39:14     34s] *** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1243.9M) ***
+[05/01 12:39:15     34s] Reading dirtyarea snapshot file /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/jpeg_encoder.db.da.gz (Create by Innovus v21.10-p004_1 on Mon Apr 28 18:51:10 2025, version: 4).
+[05/01 12:39:15     34s] Set Default Input Pin Transition as 0.1 ps.
+[05/01 12:39:15     35s] eee: readRCCornerMetaData, file read unsuccessful: /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/extraction/extractionMetaData.gz
+[05/01 12:39:15     35s] Extraction setup Started 
+[05/01 12:39:15     35s] Initializing multi-corner RC extraction with 2 active RC Corners ...
+[05/01 12:39:15     35s] Reading Capacitance Table File /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/mmmc/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[05/01 12:39:15     35s] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[05/01 12:39:15     35s] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[05/01 12:39:15     35s] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[05/01 12:39:15     35s] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[05/01 12:39:15     35s] Reading Capacitance Table File /home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/mmmc/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+[05/01 12:39:15     35s] **WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[05/01 12:39:15     35s] **WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+[05/01 12:39:15     35s] **WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+[05/01 12:39:15     35s] **WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+[05/01 12:39:15     35s] Importing multi-corner RC tables ... 
+[05/01 12:39:15     35s] Summary of Active RC-Corners : 
+[05/01 12:39:15     35s]  
+[05/01 12:39:15     35s]  Analysis View: WC_VIEW
+[05/01 12:39:15     35s]     RC-Corner Name        : Cmax
+[05/01 12:39:15     35s]     RC-Corner Index       : 0
+[05/01 12:39:15     35s]     RC-Corner Temperature : 125 Celsius
+[05/01 12:39:15     35s]     RC-Corner Cap Table   : '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/mmmc/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[05/01 12:39:15     35s]     RC-Corner PreRoute Res Factor         : 1
+[05/01 12:39:15     35s]     RC-Corner PreRoute Cap Factor         : 1
+[05/01 12:39:15     35s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[05/01 12:39:15     35s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[05/01 12:39:15     35s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[05/01 12:39:15     35s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[05/01 12:39:15     35s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[05/01 12:39:15     35s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[05/01 12:39:15     35s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[05/01 12:39:15     35s]  
+[05/01 12:39:15     35s]  Analysis View: BC_VIEW
+[05/01 12:39:15     35s]     RC-Corner Name        : Cmin
+[05/01 12:39:15     35s]     RC-Corner Index       : 1
+[05/01 12:39:15     35s]     RC-Corner Temperature : -40 Celsius
+[05/01 12:39:15     35s]     RC-Corner Cap Table   : '/home/linux/ieng6/cs241asp25/cs241asp25bu/lab4/rundir/INVS/jpeg_encoder_routed.enc.dat/libs/mmmc/cln65g+_1p08m+alrdl_top2_cworst.captable'
+[05/01 12:39:15     35s]     RC-Corner PreRoute Res Factor         : 1
+[05/01 12:39:15     35s]     RC-Corner PreRoute Cap Factor         : 1
+[05/01 12:39:15     35s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[05/01 12:39:15     35s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[05/01 12:39:15     35s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[05/01 12:39:15     35s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[05/01 12:39:15     35s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[05/01 12:39:15     35s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[05/01 12:39:15     35s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[05/01 12:39:15     35s] LayerId::1 widthSet size::4
+[05/01 12:39:15     35s] LayerId::2 widthSet size::4
+[05/01 12:39:15     35s] LayerId::3 widthSet size::4
+[05/01 12:39:15     35s] LayerId::4 widthSet size::4
+[05/01 12:39:15     35s] LayerId::5 widthSet size::4
+[05/01 12:39:15     35s] LayerId::6 widthSet size::4
+[05/01 12:39:15     35s] LayerId::7 widthSet size::4
+[05/01 12:39:15     35s] LayerId::8 widthSet size::4
+[05/01 12:39:15     35s] eee: pegSigSF::1.070000
+[05/01 12:39:15     35s] Initializing multi-corner capacitance tables ... 
+[05/01 12:39:16     35s] Initializing multi-corner resistance tables ...
+[05/01 12:39:16     35s] eee: l::1 avDens::0.010075 usedTrk::553.115555 availTrk::54900.000000 sigTrk::553.115555
+[05/01 12:39:16     35s] eee: l::2 avDens::0.158307 usedTrk::8805.044672 availTrk::55620.000000 sigTrk::8805.044672
+[05/01 12:39:16     35s] eee: l::3 avDens::0.154617 usedTrk::8599.778529 availTrk::55620.000000 sigTrk::8599.778529
+[05/01 12:39:16     35s] eee: l::4 avDens::0.067608 usedTrk::3535.210553 availTrk::52290.000000 sigTrk::3535.210553
+[05/01 12:39:16     35s] eee: l::5 avDens::0.037238 usedTrk::676.995803 availTrk::18180.000000 sigTrk::676.995803
+[05/01 12:39:16     35s] eee: l::6 avDens::0.017165 usedTrk::301.244442 availTrk::17550.000000 sigTrk::301.244442
+[05/01 12:39:16     35s] eee: l::7 avDens::0.050998 usedTrk::237.522223 availTrk::4657.500000 sigTrk::237.522223
+[05/01 12:39:16     35s] eee: l::8 avDens::0.050150 usedTrk::197.466668 availTrk::3937.500000 sigTrk::197.466668
+[05/01 12:39:16     35s] Preroute length aware model : n: 40 ; LLS: 2-3 ; HLS: 3-5 ; rDens: 0.297922 ; uaWl: 0.975601 ; uaWlH: 0.183016 ; aWlH: 0.019133 ; Pmax: 0.821400 ; wcR: 0.636400 ; newSi: 0.082200 ; pMod: 82 ; 
+[05/01 12:39:16     35s] Start generating vias ..
+[05/01 12:39:16     35s] #create default rule from bind_ndr_rule rule=0x7f70caaa2cc0 0x7f70ad9e94f8
+[05/01 12:39:16     35s] ### import design signature (1): route=1 fixed_route=1 flt_obj=0 vio=1905142130 swire=1 shield_wire=1 net_attr=1 dirty_area=0 del_dirty_area=0 cell=0 placement=0 pin_access=1 inst_pattern=1
+[05/01 12:39:16     35s] #Skip building auto via since it is not turned on.
+[05/01 12:39:16     35s] Extracting standard cell pins and blockage ...... 
+[05/01 12:39:16     35s] Pin and blockage extraction finished
+[05/01 12:39:16     35s] Via generation completed.
+[05/01 12:39:16     35s] % Begin Load power constraints ... (date=05/01 12:39:16, mem=1050.4M)
+[05/01 12:39:16     35s] % End Load power constraints ... (date=05/01 12:39:16, total cpu=0:00:00.0, real=0:00:00.0, peak res=1056.9M, current mem=1056.9M)
+[05/01 12:39:16     36s] % Begin load AAE data ... (date=05/01 12:39:16, mem=1080.7M)
+[05/01 12:39:17     36s] AAE DB initialization (MEM=1341.17 CPU=0:00:00.1 REAL=0:00:00.0) 
+[05/01 12:39:17     36s] % End load AAE data ... (date=05/01 12:39:17, total cpu=0:00:00.8, real=0:00:01.0, peak res=1092.5M, current mem=1092.5M)
+[05/01 12:39:17     36s] Restoring CCOpt config...
+[05/01 12:39:17     36s]   Extracting original clock gating for clk...
+[05/01 12:39:17     37s]     clock_tree clk contains 5067 sinks and 0 clock gates.
+[05/01 12:39:17     37s]   Extracting original clock gating for clk done.
+[05/01 12:39:17     37s]   The skew group clk/CON was created. It contains 5067 sinks and 1 sources.
+[05/01 12:39:17     37s]   The skew group clk/CON was created. It contains 5067 sinks and 1 sources.
+[05/01 12:39:17     37s] Restoring CCOpt config done.
+[05/01 12:39:17     37s] 
+[05/01 12:39:17     37s] TimeStamp Deleting Cell Server Begin ...
+[05/01 12:39:17     37s] 
+[05/01 12:39:17     37s] TimeStamp Deleting Cell Server End ...
+[05/01 12:39:17     37s] 
+[05/01 12:39:17     37s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign Begin ...
+[05/01 12:39:17     37s] Summary for sequential cells identification: 
+[05/01 12:39:17     37s]   Identified SBFF number: 199
+[05/01 12:39:17     37s]   Identified MBFF number: 0
+[05/01 12:39:17     37s]   Identified SB Latch number: 0
+[05/01 12:39:17     37s]   Identified MB Latch number: 0
+[05/01 12:39:17     37s]   Not identified SBFF number: 0
+[05/01 12:39:17     37s]   Not identified MBFF number: 0
+[05/01 12:39:17     37s]   Not identified SB Latch number: 0
+[05/01 12:39:17     37s]   Not identified MB Latch number: 0
+[05/01 12:39:17     37s]   Number of sequential cells which are not FFs: 104
+[05/01 12:39:17     37s] Total number of combinational cells: 497
+[05/01 12:39:17     37s] Total number of sequential cells: 303
+[05/01 12:39:17     37s] Total number of tristate cells: 11
+[05/01 12:39:17     37s] Total number of level shifter cells: 0
+[05/01 12:39:17     37s] Total number of power gating cells: 0
+[05/01 12:39:17     37s] Total number of isolation cells: 0
+[05/01 12:39:17     37s] Total number of power switch cells: 0
+[05/01 12:39:17     37s] Total number of pulse generator cells: 0
+[05/01 12:39:17     37s] Total number of always on buffers: 0
+[05/01 12:39:17     37s] Total number of retention cells: 0
+[05/01 12:39:17     37s] List of usable buffers: BUFFD1 BUFFD0 BUFFD2 BUFFD3 BUFFD4 BUFFD6 BUFFD8 BUFFD12 BUFFD16 CKBD1 CKBD0 CKBD2 CKBD3 CKBD4 CKBD6 CKBD8 CKBD12 CKBD16
+[05/01 12:39:17     37s] Total number of usable buffers: 18
+[05/01 12:39:17     37s] List of unusable buffers: BUFFD20 BUFFD24 CKBD20 CKBD24 GBUFFD1 GBUFFD3 GBUFFD2 GBUFFD4 GBUFFD8
+[05/01 12:39:17     37s] Total number of unusable buffers: 9
+[05/01 12:39:17     37s] List of usable inverters: CKND1 CKND0 CKND2 CKND3 CKND4 CKND6 CKND8 CKND12 CKND16 INVD1 INVD0 INVD2 INVD3 INVD4 INVD6 INVD8 INVD12 INVD16
+[05/01 12:39:17     37s] Total number of usable inverters: 18
+[05/01 12:39:17     37s] List of unusable inverters: CKND20 CKND24 GINVD2 GINVD1 GINVD4 GINVD3 GINVD8 INVD20 INVD24
+[05/01 12:39:17     37s] Total number of unusable inverters: 9
+[05/01 12:39:17     37s] List of identified usable delay cells:
+[05/01 12:39:17     37s] Total number of identified usable delay cells: 0
+[05/01 12:39:17     37s] List of identified unusable delay cells: DEL0 DEL005 DEL01 DEL015 DEL02 DEL1 DEL2 DEL3 DEL4
+[05/01 12:39:17     37s] Total number of identified unusable delay cells: 9
+[05/01 12:39:17     37s] 
+[05/01 12:39:17     37s] TimeStamp Creating Cell Server ...(0, 1, 1, 1) in restoreDesign End ...
+[05/01 12:39:17     37s] All delay cells are dont_use. Buffers will be used to fix hold violations.
+[05/01 12:39:17     37s] 
+[05/01 12:39:17     37s] TimeStamp Deleting Cell Server Begin ...
+[05/01 12:39:17     37s] 
+[05/01 12:39:17     37s] TimeStamp Deleting Cell Server End ...
+[05/01 12:39:18     37s] #% End load design ... (date=05/01 12:39:17, total cpu=0:00:07.5, real=0:00:10.0, peak res=1112.1M, current mem=1102.6M)
+[05/01 12:39:18     37s] 
+[05/01 12:39:18     37s] *** Summary of all messages that are not suppressed in this session:
+[05/01 12:39:18     37s] Severity  ID               Count  Summary                                  
+[05/01 12:39:18     37s] WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[05/01 12:39:18     37s] WARNING   IMPFP-3961           4  The techSite '%s' has no related standar...
+[05/01 12:39:18     37s] WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+[05/01 12:39:18     37s] WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+[05/01 12:39:18     37s] WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+[05/01 12:39:18     37s] WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+[05/01 12:39:18     37s] WARNING   IMPVL-159         1622  Pin '%s' of cell '%s' is defined in LEF ...
+[05/01 12:39:18     37s] WARNING   IMPTCM-77            1  Option "%s" for command %s is obsolete a...
+[05/01 12:39:18     37s] *** Message Summary: 1636 warning(s), 0 error(s)
+[05/01 12:39:18     37s] 
+[05/01 12:40:17     47s] <CMD> report_ccopt_clock_tree_structure
+[05/01 12:40:17     47s] Clock tree clk:
+[05/01 12:40:17     47s]  Total FF: 5067
+[05/01 12:40:17     47s]  Max Level: 6
+[05/01 12:40:17     47s]   (L1) output port clk
+[05/01 12:40:17     47s]    \_ (L2) CTS_ccl_a_buf_00053/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00001/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (97 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00002/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (94 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00011/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (95 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00012/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ (L4) FE_USKC1174_CTS_2/I -> ZN (CKND16)
+[05/01 12:40:17     47s]    |   |       \_ (L5) FE_USKC1175_CTS_2/I -> ZN (CKND16)
+[05/01 12:40:17     47s]    |   |           \_ ... (97 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00013/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (91 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00018/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (100 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00020/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (95 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00022/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (94 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00027/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (96 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00030/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (95 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00031/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ (L4) FE_USKC1179_CTS_9/I -> Z (BUFFD16)
+[05/01 12:40:17     47s]    |   |       \_ ... (100 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00037/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (98 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00041/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |       \_ (L4) FE_USKC1181_CTS_11/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |           \_ ... (98 sinks omitted)
+[05/01 12:40:17     47s]    \_ (L2) CTS_ccl_a_buf_00054/I -> Z (CKBD6)
+[05/01 12:40:17     47s]    |   \_ (L3) FE_USKC1171_CTS_19/I -> Z (BUFFD6)
+[05/01 12:40:17     47s]    |       \_ (L4) CTS_ccl_a_buf_00014/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |       |   \_ ... (98 sinks omitted)
+[05/01 12:40:17     47s]    |       \_ (L4) CTS_ccl_a_buf_00015/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |       |   \_ ... (99 sinks omitted)
+[05/01 12:40:17     47s]    |       \_ (L4) CTS_ccl_a_buf_00021/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |       |   \_ ... (96 sinks omitted)
+[05/01 12:40:17     47s]    |       \_ (L4) CTS_ccl_a_buf_00028/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |       |   \_ ... (94 sinks omitted)
+[05/01 12:40:17     47s]    |       \_ (L4) CTS_ccl_a_buf_00033/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |       |   \_ ... (99 sinks omitted)
+[05/01 12:40:17     47s]    |       \_ (L4) CTS_ccl_a_buf_00042/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |           \_ ... (99 sinks omitted)
+[05/01 12:40:17     47s]    \_ (L2) CTS_ccl_a_buf_00055/I -> Z (CKBD12)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00003/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (95 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00005/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ (L4) FE_USKC1178_CTS_35/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |       \_ ... (99 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00016/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (96 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00017/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (100 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00032/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (93 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00035/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (95 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00036/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ (L4) FE_USKC1172_CTS_26/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |       \_ ... (99 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00038/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (97 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00040/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (99 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00043/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (100 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00044/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (100 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00045/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (100 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00046/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |       \_ ... (100 sinks omitted)
+[05/01 12:40:17     47s]    \_ (L2) CTS_ccl_a_buf_00056/I -> Z (CKBD8)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00004/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (100 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00023/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (97 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00024/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (96 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00034/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (99 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00047/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (99 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00048/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (99 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00049/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |   |   \_ ... (99 sinks omitted)
+[05/01 12:40:17     47s]    |   \_ (L3) CTS_ccl_a_buf_00050/I -> Z (CKBD16)
+[05/01 12:40:17     47s]    |       \_ ... (100 sinks omitted)
+[05/01 12:40:17     47s]    \_ (L2) CTS_ccl_a_buf_00057/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        \_ (L3) CTS_ccl_a_buf_00006/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |   \_ ... (98 sinks omitted)
+[05/01 12:40:17     47s]        \_ (L3) CTS_ccl_a_buf_00007/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |   \_ ... (95 sinks omitted)
+[05/01 12:40:17     47s]        \_ (L3) CTS_ccl_a_buf_00008/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |   \_ ... (97 sinks omitted)
+[05/01 12:40:17     47s]        \_ (L3) CTS_ccl_a_buf_00009/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |   \_ ... (98 sinks omitted)
+[05/01 12:40:17     47s]        \_ (L3) CTS_ccl_a_buf_00010/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |   \_ ... (100 sinks omitted)
+[05/01 12:40:17     47s]        \_ (L3) CTS_ccl_a_buf_00019/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |   \_ ... (96 sinks omitted)
+[05/01 12:40:17     47s]        \_ (L3) CTS_ccl_a_buf_00025/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |   \_ (L4) FE_USKC1180_CTS_49/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |       \_ ... (97 sinks omitted)
+[05/01 12:40:17     47s]        \_ (L3) CTS_ccl_a_buf_00026/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |   \_ ... (98 sinks omitted)
+[05/01 12:40:17     47s]        \_ (L3) CTS_ccl_a_buf_00029/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |   \_ ... (93 sinks omitted)
+[05/01 12:40:17     47s]        \_ (L3) CTS_ccl_a_buf_00039/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |   \_ (L4) FE_USKC1176_CTS_52/I -> ZN (CKND16)
+[05/01 12:40:17     47s]        |       \_ (L5) FE_USKC1177_CTS_52/I -> ZN (CKND16)
+[05/01 12:40:17     47s]        |           \_ ... (100 sinks omitted)
+[05/01 12:40:17     47s]        \_ (L3) CTS_ccl_a_buf_00051/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |   \_ (L4) FE_USKC1173_CTS_53/I -> Z (CKBD16)
+[05/01 12:40:17     47s]        |       \_ ... (100 sinks omitted)
+[05/01 12:40:17     47s]        \_ (L3) CTS_ccl_a_buf_00052/I -> Z (CKBD16)
+[05/01 12:40:17     47s]            \_ ... (98 sinks omitted)
+[05/01 12:40:17     47s] 
+[05/01 12:41:11     56s] <CMD> get_ccopt_clock_tree_cells -node_types buffer

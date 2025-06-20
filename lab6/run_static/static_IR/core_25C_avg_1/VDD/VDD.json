@@ -1,0 +1,43 @@
+{
+    "net_name": "VDD",
+    "smg": {
+        "config": {
+            "name": "VDD",
+            "output_path": "static_IR\/core_25C_avg_1\/\/VDD",
+            "nominal_voltage": "0.699999988"
+        },
+        "result": {
+            "DefInstData": {
+                "path": "static_IR\/core_25C_avg_1\/\/VDD\/VDD.defInstData",
+                "type": "proto::voltus.def_instdata_mgr.proto.DefInstDataManager"
+            },
+            "layerInfo": {
+                "path": "static_IR\/core_25C_avg_1\/\/VDD\/layerInfo",
+                "type": "proto.voltus.layer_manager.LayerManager"
+            },
+            "pgdb": {
+                "path": "static_IR\/core_25C_avg_1\/\/VDD"
+            },
+            "cellview": {
+                "path": "static_IR\/core_25C_avg_1\/\/VDD\/VDD.cellviews",
+                "type": "txt"
+            },
+            "pgv_table": {
+                "path": "static_IR\/core_25C_avg_1\/\/VDD\/VDD.pgv_table.rpt",
+                "type": "txt"
+            },
+            "pg_candidate": {
+                "dir": "static_IR\/core_25C_avg_1\/\/VDD\/pg_candidate",
+                "net": "VDD"
+            },
+            "grid_report": {
+                "path": "static_IR\/core_25C_avg_1\/\/VDD\/VDD.grid.report",
+                "type": "txt"
+            },
+            "missing_pgv": {
+                "path": "static_IR\/core_25C_avg_1\/\/VDD\/VDD.missingPGVData.protobuf",
+                "type": "protobuf.VOLTUS.SMGDATA.MissingPGV"
+            }
+        }
+    }
+}

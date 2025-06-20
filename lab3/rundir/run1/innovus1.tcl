@@ -1,0 +1,9 @@
+source loadDesignTech.tcl
+source initialFloorplan.tcl
+set_clock_uncertainty 0.118
+source placement.tcl
+set_clock_uncertainty 0.0826
+source clock.tcl
+set_clock_uncertainty 0.059
+source route.tcl
+source reportDesign.tcl

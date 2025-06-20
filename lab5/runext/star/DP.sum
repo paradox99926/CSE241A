@@ -1,0 +1,29 @@
+----------------------------------------------------------------------------------------------
+CPU#   | STAGE SUMMARY                                            |END TIME             |HOST NAME
+----------------------------------------------------------------------------------------------
+CPU_01 |*Setup                     Elp=00:00:03 Cpu=00:00:01 Mem=543.1  |May 23 14:47:40 |ieng6-ece-08.ucsd.edu
+CPU_01 |*Layers                    Elp=00:00:00 Cpu=00:00:00 Mem=543.1  |May 23 14:47:40 |ieng6-ece-08.ucsd.edu
+CPU_01 |*HN                        Elp=00:00:01 Cpu=00:00:00 Mem=553.1  |May 23 14:47:43 |ieng6-ece-08.ucsd.edu
+CPU_01 |*Cells                     Elp=00:00:00 Cpu=00:00:00 Mem=582.8  |May 23 14:47:43 |ieng6-ece-08.ucsd.edu
+CPU_01 |*Translate                 Elp=00:00:01 Cpu=00:00:00 Mem=569.1  |May 23 14:47:44 |ieng6-ece-08.ucsd.edu
+CPU_01 |*NetlistSetup              Elp=00:00:00 Cpu=00:00:00 Mem=535.7  |May 23 14:47:44 |ieng6-ece-08.ucsd.edu
+CPU_01 |*GPD_XtractSetup           Elp=00:00:00 Cpu=00:00:00 Mem=544    |May 23 14:47:46 |ieng6-ece-08.ucsd.edu
+CPU_01 |*GPD_NameMap               Elp=00:00:01 Cpu=00:00:00 Mem=537.4  |May 23 14:47:49 |ieng6-ece-08.ucsd.edu
+CPU_01 |*xTract                    Elp=00:00:18 Cpu=00:00:16 Mem=1203.5 |May 23 14:48:07 |ieng6-ece-08.ucsd.edu
+CPU_01 |*xTractPP                  Elp=00:00:04 Cpu=00:00:00 Mem=380.3  |May 23 14:48:11 |ieng6-ece-08.ucsd.edu
+CPU_01 |*ReportViolations          Elp=00:00:01 Cpu=00:00:00 Mem=536.2  |May 23 14:48:14 |ieng6-ece-08.ucsd.edu
+CPU_01 |*ReportOpens               Elp=00:00:00 Cpu=00:00:00 Mem=534.5  |May 23 14:48:16 |ieng6-ece-08.ucsd.edu
+CPU_01 |*GPD_PostProcess           Elp=00:00:00 Cpu=00:00:00 Mem=534.9  |May 23 14:48:18 |ieng6-ece-08.ucsd.edu
+CPU_01 |*GPD_Converter_DP          Elp=00:00:03 Cpu=00:00:00 Mem=392    |May 23 14:48:23 |ieng6-ece-08.ucsd.edu
+CPU_01 |*GPD_Converter_merge       Elp=00:00:00 Cpu=00:00:00 Mem=374.5  |May 23 14:48:25 |ieng6-ece-08.ucsd.edu
+----------------------------------------------------------------------------------------------
+Start Time: Fri May 23 14:47:37 2025
+End Time: Fri May 23 14:48:18 2025
+----------------------------------------------------------------------------------------------
+Overall:         Elp=00:00:41 Cpu= 00:00:19 Peak_Mem(MB)=1203.5
+PreXtraction:    Elp=00:00:12 Cpu= 00:00:03 Peak_Mem(MB)=582.8
+Xtraction:       Elp=00:00:18 Cpu= 00:00:16 Peak_Mem(MB)=1203.5
+PostXtraction:   Elp=00:00:11 Cpu= 00:00:00 Peak_Mem(MB)=536.2
+----------------------------------------------------------------------------------------------
+Spef Output:     Elp= 00:00:05 Cpu= 00:00:00 Peak_Mem(MB)=392
+----------------------------------------------------------------------------------------------

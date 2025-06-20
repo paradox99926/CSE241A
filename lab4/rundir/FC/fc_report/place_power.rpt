@@ -1,0 +1,73 @@
+****************************************
+Report : power
+        -significant_digits 2
+Design : jpeg_encoder
+Version: V-2023.12-SP5-5
+Date   : Mon Apr 28 18:11:56 2025
+****************************************
+Information: Activity propagation will be performed for scenario WC.
+Information: Doing activity propagation for mode 'WC' and corner 'WC' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario WC (POW-052)
+Infomation: Fast mode activity propagation power.rtl_activity_annotation setup is ignored. Always use accurate mode.
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 6 ****
+Mode: WC
+Corner: WC
+Scenario: WC
+Voltage: 0.90
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1pF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1nW
+Leakage Power Unit   : 1nW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell fdct_zigzag_dct_mod_ddin_reg_1_ for parameter Tinp. Lowest table value = 0.005600, highest table value = 0.708800, value = 0.000477 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell fdct_zigzag_dct_mod_ddin_reg_2_ for parameter Tinp. Lowest table value = 0.005600, highest table value = 0.708800, value = 0.000610 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell fdct_zigzag_dct_mod_ddin_reg_4_ for parameter Tinp. Lowest table value = 0.005600, highest table value = 0.708800, value = 0.000343 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell fdct_zigzag_dct_mod_ddin_reg_7_ for parameter Tinp. Lowest table value = 0.005600, highest table value = 0.708800, value = 0.000591 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell fdct_zigzag_dct_mod_ddin_reg_8_ for parameter Tinp. Lowest table value = 0.005600, highest table value = 0.708800, value = 0.000248 (POW-046)
+Warning: Fall toggles on pin fdct_zigzag_dct_mod_dct_block_7_dct_unit_0_coef_reg_23_/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell qnr_divider_id_reg_0_ for parameter Tinp. Lowest table value = 0.005600, highest table value = 0.708800, value = 0.003414 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell qnr_divider_id_reg_1_ for parameter Tinp. Lowest table value = 0.005600, highest table value = 0.708800, value = 0.001240 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell qnr_divider_id_reg_2_ for parameter Tinp. Lowest table value = 0.005600, highest table value = 0.708800, value = 0.000801 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell qnr_divider_id_reg_3_ for parameter Tinp. Lowest table value = 0.005600, highest table value = 0.708800, value = 0.000324 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell qnr_divider_id_reg_4_ for parameter Tinp. Lowest table value = 0.005600, highest table value = 0.708800, value = 0.000191 (POW-046)
+Note - message 'POW-046' limit (10) exceeded. Remainder will be suppressed.
+Warning: Fall toggles on pin fdct_zigzag_dct_mod_dct_block_0_dct_unit_4_coef_reg_29_/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Fall toggles on pin fdct_zigzag_dct_mod_dct_block_4_dct_unit_0_coef_reg_29_/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Fall toggles on pin fdct_zigzag_dct_mod_dct_block_0_dct_unit_0_coef_reg_29_/Q are impossible given input states; converted to rise toggles. (POW-069)
+
+  Cell Internal Power    = 2.01e+07 nW ( 76.2%)
+  Net Switching Power    = 6.27e+06 nW ( 23.8%)
+Total Dynamic Power      = 2.64e+07 nW (100.0%)
+
+Cell Leakage Power       = 1.04e+06 nW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             1.58e+07               3.93e+06               1.43e+04               1.98e+07    ( 72.1%)        i
+register                  2.04e+06               3.23e+05               2.97e+05               2.66e+06    (  9.7%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             2.25e+06               2.02e+06               7.32e+05               5.00e+06    ( 18.2%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     2.01e+07 nW            6.27e+06 nW            1.04e+06 nW            2.74e+07 nW
+1

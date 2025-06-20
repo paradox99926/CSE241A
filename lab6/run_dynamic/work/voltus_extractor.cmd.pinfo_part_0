@@ -1,0 +1,52 @@
+
+Begin Preparing Data for Parasitic Extraction
+.
+Ended Preparing Data for Parasitic Extraction: (cpu=0:00:01, real=0:00:03, mem(process/total/peak)=223.87MB/9401.73MB/3310.59MB)
+
+Begin Parasitic Extraction
+
+Nets to Extract:
+VSS
+VDD
+
+** INFO:  (VOLTUS_EXTR-1054): Extracting following DFM effects:
+ MetalFill        : OFF 
+ WEE Effects      : n/a 
+ Erosion Effects  : n/a 
+ T/B Enlargements : ON 
+ R(w) Effects     : ON 
+ R(w,s) Effects   : n/a 
+ R(sw,st) Effects : n/a 
+ TC(w) Effects    : n/a 
+Some effects indicate n/a because of non-availability of relevant input
+data (or) requested to be off.
+
+   0% at 11:36:57 06/02/2025 
+
+  11% at 11:36:57 06/02/2025
+
+  22% at 11:36:57 06/02/2025
+
+  33% at 11:36:57 06/02/2025
+
+  44% at 11:36:57 06/02/2025
+
+  55% at 11:36:57 06/02/2025
+
+  66% at 11:36:57 06/02/2025
+
+  77% at 11:36:57 06/02/2025
+
+  88% at 11:36:57 06/02/2025
+
+ 100% at 11:36:57 06/02/2025 
+
+Ended Parasitic Extraction: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=241.07MB/9450.03MB/3310.59MB)
+
+Hostname ieng6-ece-08.ucsd.edu
+
+Wall clock 6.563664
+
+CPU time 2.853065
+
+Peak memory (process): 211685376

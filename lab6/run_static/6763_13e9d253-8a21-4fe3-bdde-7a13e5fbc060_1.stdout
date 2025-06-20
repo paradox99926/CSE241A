@@ -1,0 +1,427 @@
+INFO (PRL-725): EDP: start server on ieng6-ece-08.ucsd.edu:54828
+
+INFO (PRL-756): Mon Jun  2 11:24:50 2025: Successfully connected to the client manager.
+
+INFO (PRL-760): sending server data to client ieng6-ece-08.ucsd.edu 54828 1 6820 
+
+Invoking: "/software/ECE/Cadence-Voltus-23.10/tools.lnx86/ssvtools/bin/64bit/voltus_rail_smg -cmd static_IR/core_25C_avg_1/voltus_rail_smg.VDD.cmd -l static_IR/core_25C_avg_1/voltus_rail_smg.VDD.log" ...
+Begin Merging power grid
+Tech reference temperature: 25
+Target temperature: 25
+
+Grid Statistics of Net VDD:
+- NODE
+  Total node: 39348
+    Top Level grid node: 39348
+      Top level interface node: 13872
+    Missing interface node: 0
+    Cell internal node: 0
+- ELEM
+  Total element: 50906
+    Top Level grid element: 50906
+    Cell internal element: 0
+- INST
+  Instance logically connected: 13872
+    Tech: 13872
+    StdCell: 0
+    Macro:
+      Early: 0
+      IR: 0
+      EM: 0
+    Current Region:  0
+  Dropped instance due to missing/incomplete cell library: 0
+- TAP
+  Total tap: 13872
+
+Ended Merging power grid: (cpu=0:00:02, real=0:00:02, mem(process/total/peak)=33.77MB/11028.93MB/3860.45MB)
+
+Analysis_Output_Directory is static_IR/core_25C_avg_1//VDD
+Analysis_Power_Domain is core
+
+
+
+Begin Report Generation
+
+
+Net VDD:
+
+
+Begin Preparing Database for Report Generation
+
+Circuit profile:
+                                                      Current    Voltage
+Layer Name                       Nodes   Resistors    Sources    Sources
+----- --------------------  ----------  ----------  ---------  ---------
+0     M9                          2888        2886          0          4
+1     V8                             0        2784          0          0
+2     M8                          5952        5944          0          0
+3     V7                             0        2304          0          0
+4     M7                          3600        3592          0          0
+5     V6                             0         784          0          0
+6     M6                          1274        1267          0          0
+7     V5                             0          56          0          0
+8     M5                           116         112          0          0
+9     V4                             0          52          0          0
+10    M4                           156         104          0          0
+11    V3                             0          52          0          0
+12    M3                           272         216          0          0
+13    V2                             0         108          0          0
+14    M2                          1272        1258          0          0
+15    V1                             0        1136          0          0
+16    M1                          5929        5838          0          0
+17    V0                             0        4611          0          0
+18    LISD                       17889       17802      13315          0
+                            ----------  ----------  ---------  ---------
+19    Circuit total              39349       50906      13315          4
+Ended Preparing Database for Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=333.64MB/16503.73MB/4566.20MB)
+
+Initializing Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=333.80MB/16503.73MB/4566.20MB)
+
+Begin IR Drop (Linear) Report Generation
+  Voltage: 0.7
+  Threshold: 0.4
+  Minimum, Average, Maximum IR Drop: 0.670V, 0.690V, 0.700V
+    Range 1(    0.670V  -      0.674V ):        19 (  0.05%)
+    Range 2(    0.674V  -      0.677V ):        54 (  0.14%)
+    Range 3(    0.677V  -      0.681V ):       831 (  2.11%)
+    Range 4(    0.681V  -      0.685V ):     15649 ( 39.77%)
+    Range 5(    0.685V  -      0.689V ):      7909 ( 20.10%)
+    Range 6(    0.689V  -      0.692V ):      1012 (  2.57%)
+    Range 7(    0.692V  -      0.696V ):       142 (  0.36%)
+    Range 8(    0.696V  -      0.700V ):     13732 ( 34.90%)
+    Layer with maximum IR Drop:  LISD
+      M9: 0.0015085 [0.69849 - 0.7]
+      M8: 0.001878 [0.69792 - 0.6998]
+      M7: 0.0018882 [0.69788 - 0.69977]
+      M6: 0.0020887 [0.69761 - 0.69969]
+      M5: 0.0037906 [0.69349 - 0.69728]
+      M4: 0.0038424 [0.69032 - 0.69416]
+      M3: 0.0055383 [0.68703 - 0.69257]
+      M2: 0.0099858 [0.68177 - 0.69176]
+      M1: 0.015253 [0.67634 - 0.69159]
+      LISD: 0.021818 [0.66976 - 0.69158]
+  IR Report: static_IR/core_25C_avg_1/Reports/VDD/VDD.main.rpt
+  GIF plot: static_IR/core_25C_avg_1/Reports/VDD/ir_linear.gif
+Ended IR Drop (Linear) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=378.51MB/16503.74MB/4648.00MB)
+
+
+Begin IR Drop (Limit) Report Generation
+  Voltage: 0.7
+  Threshold: 0.4
+  Minimum, Average, Maximum IR Drop: 0.670V, 0.690V, 0.700V
+    Range 1(    0.400V  -      0.400V ):         0 (  0.00%)
+    Range 2(    0.400V  -      0.425V ):         0 (  0.00%)
+    Range 3(    0.425V  -      0.450V ):         0 (  0.00%)
+    Range 4(    0.450V  -      0.475V ):         0 (  0.00%)
+    Range 5(    0.475V  -      0.500V ):         0 (  0.00%)
+    Range 6(    0.500V  -      0.525V ):         0 (  0.00%)
+    Range 7(    0.525V  -      0.550V ):         0 (  0.00%)
+    Range 8(    0.550V  -      0.700V ):     39348 (100.00%)
+    Layer with maximum IR Drop:  LISD
+      M9: 0.0015085 [0.69849 - 0.7]
+      M8: 0.001878 [0.69792 - 0.6998]
+      M7: 0.0018882 [0.69788 - 0.69977]
+      M6: 0.0020887 [0.69761 - 0.69969]
+      M5: 0.0037906 [0.69349 - 0.69728]
+      M4: 0.0038424 [0.69032 - 0.69416]
+      M3: 0.0055383 [0.68703 - 0.69257]
+      M2: 0.0099858 [0.68177 - 0.69176]
+      M1: 0.015253 [0.67634 - 0.69159]
+      LISD: 0.021818 [0.66976 - 0.69158]
+  IR Report: static_IR/core_25C_avg_1/Reports/VDD/VDD.main.rpt
+  GIF plot: static_IR/core_25C_avg_1/Reports/VDD/ir_limit.gif
+Ended IR Drop (Limit) Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=380.87MB/16503.74MB/4652.72MB)
+
+
+Begin Tap Current Report Generation
+  Minimum, Average, Maximum Tap Current: 0.181nA, 4.415uA, 0.286mA
+  Total Current: 58.783mA
+    Range 1(   1.000mA  -     1.000GA ):         0 (  0.00%)
+    Range 2( 100.000uA  -     1.000mA ):        40 (  0.30%)
+    Range 3(  10.000uA  -   100.000uA ):      1230 (  9.24%)
+    Range 4(   1.000uA  -    10.000uA ):      4972 ( 37.34%)
+    Range 5( 100.000nA  -     1.000uA ):      5924 ( 44.49%)
+    Range 6(  10.000nA  -   100.000nA ):       898 (  6.74%)
+    Range 7(   1.000nA  -    10.000nA ):       194 (  1.46%)
+    Range 8(    0.000A  -     1.000nA ):        57 (  0.43%)
+  GIF plot: static_IR/core_25C_avg_1/Reports/VDD/tc.gif
+Ended Tap Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=381.00MB/16503.74MB/4652.96MB)
+
+
+Begin Instance Based IR Drop Report Generation
+  Minimum, Average, Maximum Instance Based IR Drop: 0.670V, 0.684V, 0.691V
+    Range 1(    0.400V  -      0.400V ):         0 (  0.00%)
+    Range 2(    0.400V  -      0.425V ):         0 (  0.00%)
+    Range 3(    0.425V  -      0.450V ):         0 (  0.00%)
+    Range 4(    0.450V  -      0.475V ):         0 (  0.00%)
+    Range 5(    0.475V  -      0.500V ):         0 (  0.00%)
+    Range 6(    0.500V  -      0.525V ):         0 (  0.00%)
+    Range 7(    0.525V  -      0.550V ):         0 (  0.00%)
+    Range 8(    0.550V  -      0.700V ):     13315 (100.00%)
+  GIF plot: static_IR/core_25C_avg_1/Reports/VDD/iv.gif
+Ended Instance Based IR Drop Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=381.42MB/16503.73MB/4653.96MB)
+
+
+Begin Effective Instance Voltage Report Generation
+
+ Avg EIV:
+  Minimum, Average, Maximum Effective Instance Voltage: 0.639V, 0.668V, 0.681V
+    Range 1(    0.639V  -      0.645V ):         8 (  0.06%)
+    Range 2(    0.645V  -      0.650V ):        16 (  0.12%)
+    Range 3(    0.650V  -      0.655V ):        18 (  0.13%)
+    Range 4(    0.655V  -      0.660V ):       309 (  2.23%)
+    Range 5(    0.660V  -      0.665V ):      3904 ( 28.14%)
+    Range 6(    0.665V  -      0.671V ):      6471 ( 46.65%)
+    Range 7(    0.671V  -      0.676V ):      2723 ( 19.63%)
+    Range 8(    0.676V  -      0.681V ):       423 (  3.05%)
+  GIF plot: static_IR/core_25C_avg_1/Reports/VDD_VSS.avg_div.gif
+  GIF Limit plot: static_IR/core_25C_avg_1/Reports/VDD_VSS.avg_limit_div.gif
+  **** Note: Histogram and gif file are generated based on elapsed EIV results.
+Ended Effective Instance Voltage Report Generation: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=398.59MB/16503.73MB/4754.23MB)
+
+
+Begin Voltage Source Current Report Generation
+  Minimum, Average, Maximum Voltage Source Current: -20.410mA, -14.696mA, -9.872mA
+  Total Current: -58.783mA
+    Range 1( -20.412mA  -   -19.093mA ):         1 ( 25.00%)
+    Range 2( -19.093mA  -   -17.775mA ):         0 (  0.00%)
+    Range 3( -17.775mA  -   -16.458mA ):         0 (  0.00%)
+    Range 4( -16.458mA  -   -15.141mA ):         0 (  0.00%)
+    Range 5( -15.141mA  -   -13.824mA ):         2 ( 50.00%)
+    Range 6( -13.824mA  -   -12.507mA ):         0 (  0.00%)
+    Range 7( -12.507mA  -   -11.189mA ):         0 (  0.00%)
+    Range 8( -11.189mA  -    -9.871mA ):         1 ( 25.00%)
+  GIF plot: static_IR/core_25C_avg_1/Reports/VDD/vc.gif
+Ended Voltage Source Current Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=398.67MB/16503.75MB/4758.96MB)
+
+
+Begin Resistor Current Report Generation
+  Minimum, Average, Maximum Resistor Current: 0.000A, 66.253uA, 11.221mA
+    Range 1(   1.000mA  -     1.000GA ):       420 (  0.83%)
+    Range 2( 100.000uA  -     1.000mA ):      7085 ( 13.92%)
+    Range 3(  10.000uA  -   100.000uA ):     17222 ( 33.83%)
+    Range 4(   1.000uA  -    10.000uA ):     18303 ( 35.95%)
+    Range 5(   0.100uA  -     1.000uA ):      3406 (  6.69%)
+    Range 6(  10.000nA  -     0.100uA ):       357 (  0.70%)
+    Range 7(   1.000nA  -    10.000nA ):        45 (  0.09%)
+    Range 8(    0.000A  -     1.000nA ):      4068 (  7.99%)
+  GIF plot: static_IR/core_25C_avg_1/Reports/VDD/rc.gif
+Ended Resistor Current Report Generation: (cpu=0:00:03, real=0:00:04, mem(process/total/peak)=493.28MB/16503.75MB/4884.60MB)
+
+
+Begin Resistor Voltage Report Generation
+  Minimum, Average, Maximum Resistor Voltage: 0.000V, 0.115mV, 9.338mV
+    Range 1(   8.171mV  -     9.339mV ):         2 (  0.00%)
+    Range 2(   7.003mV  -     8.171mV ):         9 (  0.02%)
+    Range 3(   5.836mV  -     7.003mV ):        10 (  0.02%)
+    Range 4(   4.669mV  -     5.836mV ):        11 (  0.02%)
+    Range 5(   3.502mV  -     4.669mV ):        26 (  0.05%)
+    Range 6(   2.334mV  -     3.502mV ):       161 (  0.32%)
+    Range 7(   1.167mV  -     2.334mV ):       383 (  0.75%)
+    Range 8(    0.000V  -     1.167mV ):     50304 ( 98.82%)
+  GIF plot: static_IR/core_25C_avg_1/Reports/VDD/rv.gif
+Ended Resistor Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=495.98MB/16503.76MB/4890.43MB)
+
+
+Begin Power Gate I/Idsat Report Generation
+  No data found.
+Ended Power Gate I/Idsat Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=495.98MB/16503.76MB/4891.50MB)
+
+
+Begin Power Gate Voltage Report Generation
+  No data found.
+Ended Power Gate Voltage Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=496.01MB/16503.76MB/4891.50MB)
+
+
+Begin Resistance of the Least Resistive Path Report Generation
+  Minimum, Average, Maximum Resistance of the Least Resistive Path: 32.227Ohm, 80.963Ohm, 133.850Ohm
+    Range 1(  121.147Ohm  -    133.863Ohm ):       214 (  1.54%)
+    Range 2(  108.444Ohm  -    121.147Ohm ):      1144 (  8.25%)
+    Range 3(   95.741Ohm  -    108.444Ohm ):      2435 ( 17.55%)
+    Range 4(   83.039Ohm  -     95.741Ohm ):      2779 ( 20.03%)
+    Range 5(   70.336Ohm  -     83.039Ohm ):      2816 ( 20.30%)
+    Range 6(   57.633Ohm  -     70.336Ohm ):      2351 ( 16.95%)
+    Range 7(   44.930Ohm  -     57.633Ohm ):      1467 ( 10.58%)
+    Range 8(   32.224Ohm  -     44.930Ohm ):       666 (  4.80%)
+  GIF plot: static_IR/core_25C_avg_1/Reports/VDD/rlrp.gif
+Ended Resistance of the Least Resistive Path Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=509.56MB/17784.96MB/5186.92MB)
+
+** WARN: (VOLTUS_RAIL-2074): The layer M9 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer V8 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer M8 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer V7 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer M7 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer V6 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer M6 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer V5 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer M5 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer V4 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer M4 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer V3 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer M3 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer V2 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer M2 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer V1 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer V0 has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer GATE has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer CSUBSTRATE has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+** WARN: (VOLTUS_RAIL-2074): The layer REDUCED has no EM model parameters defined.
+EM checks will be disabled for this layer.
+The variable "em_use_layer_default_rules" may be set to true to enable
+EM checks for this layer using the default EM model parameters.
+
+Use "set_advanced_rail_options -voltus_rail_include_file_begin" command
+to specify this variable.
+
+Begin Current Density (J/JMAX) Report Generation
+  Minimum, Average, Maximum Current Density (J/JMAX): 0.000, 0.249, 8.056
+    Range 1(    1.000  -     1.000G ):       935 (  3.96%)
+    Range 2(    0.857  -      1.000 ):       394 (  1.67%)
+    Range 3(    0.714  -      0.857 ):       452 (  1.91%)
+    Range 4(    0.571  -      0.714 ):       668 (  2.83%)
+    Range 5(    0.429  -      0.571 ):      1020 (  4.31%)
+    Range 6(    0.286  -      0.429 ):      1830 (  7.74%)
+    Range 7(    0.143  -      0.286 ):      4963 ( 20.99%)
+    Range 8(    0.000  -      0.143 ):     13378 ( 56.59%)
+  GIF plot: static_IR/core_25C_avg_1/Reports/VDD/rj.gif
+*** Note:27266 resistors skipped by EM rules.
+Ended Current Density (J/JMAX) Report Generation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=791.43MB/19066.15MB/5469.16MB)
+
+
+Begin Voltage Across Vias and Contacts Report Generation
+Ended Voltage Across Vias and Contacts Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=791.44MB/19066.15MB/5469.18MB)
+
+
+Begin Weak Grid Connectivity Report
+Ended Weak Grid Connectivity Report: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=791.46MB/19066.15MB/5469.21MB)
+
+
+Begin Grid Integrity Report Generation
+  # Missing Cell Power-Grid Views: 0
+  # Physically Disconnected Instances: 0
+  # Instances with Floating Power Pins: 0
+  # Disconnected Wire Segments: 0
+  # Weakly Connected Metal Segments: 4
+  # Dropped Voltage Sources: 0
+Ended Grid Integrity Report Generation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=791.53MB/19066.15MB/5469.26MB)
+
+Ended Report Generation: (cpu=0:00:14, real=0:00:17, mem(process/total/peak)=791.56MB/19066.13MB/5469.34MB)
+
+INFO (PRL-700): EDP: Close channel handler 17 when receive message in connection server side
+
+INFO (PRL-701): EDP: Close channel handler 17 when meet event 25 in connection server side
+

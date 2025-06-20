@@ -1,0 +1,102 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -nworst 1
+        -max_paths 1
+        -report_by design
+        -nosplit
+        -nets
+Design : jpeg_encoder
+Version: V-2023.12-SP5-5
+Date   : Mon Apr 28 18:49:41 2025
+****************************************
+Information: Timer using 'SI, Timing Window Analysis'. (TIM-050)
+
+  Startpoint: fdct_zigzag_dct_mod_ddgo_reg (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_21_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: WC
+  Corner: WC
+  Scenario: WC
+  Path Group: clk
+  Path Type: max
+
+  Point                                                                      Fanout    Incr      Path  
+  ------------------------------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                                0.00      0.00
+  clock network delay (propagated)                                                     0.19      0.19
+
+  fdct_zigzag_dct_mod_ddgo_reg/CP (EDFCNQD1)                                           0.00      0.19 r
+  fdct_zigzag_dct_mod_ddgo_reg/Q (EDFCNQD1)                                            0.20      0.38 r
+  fdct_zigzag_dct_mod_ddgo (net)                                                2
+  ZBUF_32_inst_9396/Z (BUFFD2)                                                         0.06      0.44 r
+  ZBUF_32_0 (net)                                                               2
+  HFSBUF_18026_704/Z (BUFFD16)                                                         0.08      0.52 r
+  HFSNET_494 (net)                                                             30
+  HFSBUF_11165_699/Z (BUFFD8)                                                          0.09      0.60 r
+  HFSNET_489 (net)                                                             22
+  ctmTdsLR_1_6369/ZN (INR2D2)                                                          0.03      0.63 f
+  DP_OP_619J1_162_5377_n121 (net)                                               2
+  DP_OP_619J1_162_5377_U110/ZN (CKND2D2)                                               0.02      0.66 r
+  DP_OP_619J1_162_5377_n81 (net)                                                2
+  U9603/ZN (CKND1)                                                                     0.02      0.68 f
+  DP_OP_619J1_162_5377_n79 (net)                                                1
+  DP_OP_619J1_162_5377_U104/ZN (AOI21D2)                                               0.06      0.74 r
+  DP_OP_619J1_162_5377_n77 (net)                                                3
+  DP_OP_619J1_162_5377_U98/ZN (OAI21D1)                                                0.04      0.78 f
+  DP_OP_619J1_162_5377_n74 (net)                                                2
+  DP_OP_619J1_162_5377_U90/ZN (AOI21D1)                                                0.07      0.85 r
+  DP_OP_619J1_162_5377_n69 (net)                                                3
+  DP_OP_619J1_162_5377_U84/ZN (OAI21D1)                                                0.06      0.91 f
+  DP_OP_619J1_162_5377_n66 (net)                                                3
+  DP_OP_619J1_162_5377_U76/ZN (AOI21D2)                                                0.07      0.98 r
+  DP_OP_619J1_162_5377_n61 (net)                                                3
+  DP_OP_619J1_162_5377_U70/ZN (OAI21D2)                                                0.07      1.04 f
+  DP_OP_619J1_162_5377_n58 (net)                                                3
+  DP_OP_619J1_162_5377_U62/ZN (AOI21D2)                                                0.06      1.11 r
+  DP_OP_619J1_162_5377_n53 (net)                                                3
+  DP_OP_619J1_162_5377_U56/ZN (OAI21D2)                                                0.05      1.16 f
+  DP_OP_619J1_162_5377_n50 (net)                                                2
+  DP_OP_619J1_162_5377_U48/ZN (AOI21D2)                                                0.06      1.21 r
+  DP_OP_619J1_162_5377_n45 (net)                                                2
+  DP_OP_619J1_162_5377_U42/ZN (OAI21D2)                                                0.05      1.27 f
+  DP_OP_619J1_162_5377_n42 (net)                                                3
+  DP_OP_619J1_162_5377_U34/ZN (AOI21D1)                                                0.06      1.33 r
+  DP_OP_619J1_162_5377_n37 (net)                                                2
+  DP_OP_619J1_162_5377_U28/ZN (OAI21D1)                                                0.04      1.37 f
+  DP_OP_619J1_162_5377_n34 (net)                                                2
+  ctmTdsLR_1_3576/ZN (IOA21D2)                                                         0.06      1.43 f
+  n2925 (net)                                                                   1
+  DP_OP_619J1_162_5377_U17/CO (FA1D1)                                                  0.07      1.50 f
+  DP_OP_619J1_162_5377_n28 (net)                                                2
+  ctmTdsLR_2_10726/CON (FCICOND1)                                                      0.08      1.59 r
+  DP_OP_619J1_162_5377_n4 (net)                                                 2
+  DP_OP_619J1_162_5377_U10/ZN (OAI21D1)                                                0.06      1.65 f
+  DP_OP_619J1_162_5377_n24 (net)                                                1
+  DP_OP_619J1_162_5377_U8/CO (FA1D2)                                                   0.10      1.74 f
+  DP_OP_619J1_162_5377_n23 (net)                                                1
+  DP_OP_619J1_162_5377_U7/CO (FA1D1)                                                   0.08      1.82 f
+  DP_OP_619J1_162_5377_n22 (net)                                                1
+  DP_OP_619J1_162_5377_U6/CO (FA1D1)                                                   0.07      1.89 f
+  DP_OP_619J1_162_5377_n21 (net)                                                2
+  ctmTdsLR_3_10208/CON (FCICOND1)                                                      0.09      1.98 r
+  tmp_net972 (net)                                                              2
+  ctmTdsLR_2_10207/ZN (MOAI22D1)                                                       0.09      2.07 r
+  fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_N43 (net)                     1
+  fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_21_/D (EDFQD1)            0.00      2.07 r
+  data arrival time                                                                              2.07
+
+  clock clk (rise edge)                                                                2.00      2.00
+  clock network delay (propagated)                                                     0.24      2.24
+  fdct_zigzag_dct_mod_dct_block_4_dct_unit_6_macu_result_reg_21_/CP (EDFQD1)           0.00      2.24 r
+  clock uncertainty                                                                   -0.12      2.12
+  library setup time                                                                  -0.07      2.05
+  data required time                                                                             2.05
+  ------------------------------------------------------------------------------------------------------------
+  data required time                                                                             2.05
+  data arrival time                                                                             -2.07
+  ------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                              -0.02
+
+
+1

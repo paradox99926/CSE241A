@@ -1,0 +1,66 @@
+cmd: /software/ECE/Cadence-Voltus-23.10/tools.lnx86/ssvtools/bin/64bit/voltus_power -logfile ./dynamic_power/powercollect_dummy.log -cmdlog ./dynamic_power/powercollect_dummy.cmdlog ./dynamic_power/voltus_power_collect_16717.cmd -x 0001B13AE4030FAB65C39206EC3F3E8F4FF9AE2DD7030FA364C9B43F912C60CB3E81B632B97534823E9FA60BF332209473EFAC7DF62D3C8F66DF983AFD3D35897FC7AB34D12B338F7CD5AF3D9C6E7E982187BB60E56A35C92388AD1DD90950FB24B0A83D45FCF83B10B0AB68FD3F238B21D1F077E13A3598269DF46AEB70339A7CDFB374B06461CB648AA83DC30C50FB10B0C0000209BFCE788D00004601
+---------------------------------------------------------------------------------------------
+Voltus Power Analysis - Power Calculator - Version v23.14-s083_1 64-bit (03/05/2025 19:55:08)
+---------------------------------------------------------------------------------------------
+Copyright 2007, Cadence Design Systems, Inc.
+
+~~~~~~~~~~~~~~~~~~~~ System Information ~~~~~~~~~~~~~~~~~~~~
+Hardware/Operating System information:
+  Username                 = "cs241asp25bu"
+  Hostname                 = "ieng6-ece-08.ucsd.edu"
+  Main Process Id          = 17505
+  Working directory        = /home/linux/ieng6/cs241asp25/cs241asp25bu/lab6/run_dynamic
+  Number of processors     = 8
+  Open Access Version      = <No Open Access Version>
+  Hardware                 = x86_64
+  Operating System         = Linux 3.10.0-1160.119.1.el7.x86_64
+                             [CentOS Linux release 7.9.2009 (Core)]
+  Memory page size         = 4,096 bytes
+  Total physical RAM       = 33,566,445,568 bytes
+  Available RAM            = 2,900,275,200 bytes
+  Available shared mem     = 0 bytes
+  Buffer space used        = 544,686,080 bytes
+  Total swap space         = 1,375,727,616 bytes
+  Available swap           = 251,723,776 bytes
+  OS additional info       = #1 SMP Tue Jun 4 14:43:51 UTC 2024
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Number of command line arguments: 7
+Arguments:
+ "-logfile"
+ "./dynamic_power/powercollect_dummy.log"
+ "-cmdlog"
+ "./dynamic_power/powercollect_dummy.cmdlog"
+ "./dynamic_power/voltus_power_collect_16717.cmd"
+ "-x"
+ "0001B13AE4030FAB65C39206EC3F3E8F4FF9AE2DD7030FA364C9B43F912C60CB3E81B632B97534823E9FA60BF332209473EFAC7DF62D3C8F66DF983AFD3D35897FC7AB34D12B338F7CD5AF3D9C6E7E982187BB60E56A35C92388AD1DD90950FB24B0A83D45FCF83B10B0AB68FD3F238B21D1F077E13A3598269DF46AEB70339A7CDFB374B06461CB648AA83DC30C50FB10B0C0000209BFCE788D00004601"
+
+Executing: set_message -limit 20 
+Executing: sxclDesign design ./dynamic_power
+Executing: design rUseSfeDefParser  1
+Executing: design rSuppressStdout  1
+Executing: design calLef ./dynamic_power/voltus_dummy.lef
+Executing: design calDef voltus_dummy.def
+Executing: sxclPowerMeter ChipPwr design
+Executing: create_result_json -dir {./dynamic_power}
+Finished Power Analysis at 11:36:37 06/02/2025 (cpu=0:00:00, real=0:00:01, peak mem=2633.95MB)
+Current Voltus IC Power Integrity Solution resource usage: (total cpu=0:01:26, real=0:01:19, mem=2633.95MB)
+
+
+~~~~~~~~~~~~~~~~~~~~ Process Information ~~~~~~~~~~~~~~~~~~~~
+Process Info :
+  User time          = 0 seconds
+  System time        = 0 seconds
+  Children user time = 0 seconds
+  Children sys time  = 0 seconds
+  Virtual mem. size  = 623,792,128 bytes
+  Total alloc size   = 0 bytes
+  In use alloc size  = 0 bytes
+  Page fault w/o IO  = 14,079
+  Page fault w/  IO  = 0
+  No. of swaps       = 0
+  Page size          = 4,096 bytes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Exit code 0.
+Voltus Power Analysis exited successfully.

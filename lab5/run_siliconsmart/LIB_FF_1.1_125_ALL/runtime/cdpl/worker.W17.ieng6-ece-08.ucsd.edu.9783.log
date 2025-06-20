@@ -1,0 +1,175 @@
+1748033911.120066: 9783-7f0c9aa8e000: cdpl_log.c:221: in cdpl_log_open(): debug: @@start_of_log@@
+1748033911.120094: 9783-7f0c9aa8e000: cdpl_log.c:729: in cdpl_log_dump_sysinfo(): info: time: 2025/05/23 13:58:31 PDT -0700
+1748033911.120098: 9783-7f0c9aa8e000: cdpl_log.c:731: in cdpl_log_dump_sysinfo(): info: version: L_2016.03_SP2_PROD_CDPL 
+1748033911.120101: 9783-7f0c9aa8e000: cdpl_log.c:736: in cdpl_log_dump_sysinfo(): info: system: Linux 3.10.0-1160.119.1.el7.x86_64 #1 SMP Tue Jun 4 14:43:51 UTC 2024
+1748033911.120104: 9783-7f0c9aa8e000: cdpl_log.c:740: in cdpl_log_dump_sysinfo(): info: processor: x86_64 64-bits
+1748033911.120106: 9783-7f0c9aa8e000: cdpl_log.c:742: in cdpl_log_dump_sysinfo(): info: hostname: ieng6-ece-08.ucsd.edu
+1748033911.120109: 9783-7f0c9aa8e000: cdpl_log.c:223: in cdpl_log_open(): debug: path: /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_FF_1.1_125_ALL/runtime/cdpl/worker.W17.ieng6-ece-08.ucsd.edu.9783.log
+1748033911.120111: 9783-7f0c9aa8e000: cdpl_log.c:224: in cdpl_log_open(): debug: dir: /home/linux/ieng6/cs241asp25/cs241asp25bu/lab5/run_siliconsmart/LIB_FF_1.1_125_ALL/runtime/cdpl
+1748033911.120117: 9783-7f0c9aa8e000: cdpl_worker.c:728: in cdpl_wk_new(): info: creating worker instance
+1748033911.121331: 9783-7f0c9aa8e000: cdpl_worker.c:925: in cdpl_wk_start(): debug: starting worker
+1748033911.121341: 9783-7f0c9aa8e000: cdpl_worker.c:276: in cdpl_wk_setup(): info: CDPL_SERVER is "128.54.67.138:41471"
+1748033911.121345: 9783-7f0c9aa8e000: cdpl_worker.c:299: in cdpl_wk_setup(): info: server 128.54.67.138, port 41471
+1748033911.121348: 9783-7f0c9aa8e000: cdpl_worker.c:319: in cdpl_wk_setup(): info: CDPL_ID is "17:1:1:1:99684891"
+1748033911.121357: 9783-7f0c9aa8e000: cdpl_worker.c:361: in cdpl_wk_setup(): info: we are W17-B1-J1-M1-S99684891
+1748033911.121360: 9783-7f0c9aa8e000: cdpl_worker.c:363: in cdpl_wk_setup(): info: we are on host ieng6-ece-08.ucsd.edu
+1748033911.121362: 9783-7f0c9aa8e000: cdpl_worker.c:372: in cdpl_wk_daemonize(): debug: will *not* daemonize
+1748033911.121366: 9783-7f0c9aa8e000: cdpl_ipc.c:2593: in cdpl_ipc_connect(): info: connecting to 128.54.67.138:41471
+1748033911.121442: 9783-7f0c9aa8e000: cdpl_ipc.c:2659: in cdpl_ipc_connect(): info: connected as `128.54.67.138:42742'
+1748033911.121458: 9783-7f0c9aa8e000: cdpl_ipc.c:1763: in cdpl_ipc_host_accept(): debug: accepted host `128.54.67.138:41471'
+1748033911.121466: 9783-7f0c9aa8e000: cdpl_ipc.c:2436: in cdpl_ipc_start(): debug: starting IPC server 128.54.67.138:36617
+1748033911.121599: 9783-7f0c9aa8e000: cdpl_compat_worker.c:148: in cdplStartWorker(): info: SNPSLMD_LICENSE_FILE is 1705@its-flexlm-lnx4.ucsd.edu:1705@acms-flexlm-lnx4.ucsd.edu,1705@acms-flexlm-lnx5.ucsd.edu,1705@acms-flexlm-lnx6.ucsd.edu
+1748033911.121685: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [Maximum lifespan of worker is set to 1200m]
+1748033911.121727: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [Peak virtual memory is set to 128GB]
+1748033911.125373: 9783-7f0c8c16f700: cdpl_worker.c:528: in cdpl_wk_listen(): debug: ready
+1748033911.149434: 9783-7f0c8b96e700: cdpl_worker.c:656: in cdpl_wk_heartbeat(): debug: starting heartbeat
+1748033911.149445: 9783-7f0c8b96e700: cdpl_worker.c:665: in cdpl_wk_heartbeat(): info: setting heartbeat period to 60 sec
+1748033911.149449: 9783-7f0c8b96e700: cdpl_worker.c:673: in cdpl_wk_heartbeat(): info: first heartbeat in 1 sec
+1748033940.024941: 9783-7f0c8c16f700: cdpl_worker.c:616: in cdpl_wk_listen(): debug: received RELAY message
+1748033940.211376: 9783-7f0c8c16f700: cdpl_worker.c:616: in cdpl_wk_listen(): debug: received RELAY message
+1748033940.417510: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748033940.417540: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T68
+1748033940.554504: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive DFCSNQD1 delay__SDN__hl__Q__lh__ACQ_1 job_69 ]
+1748033950.419462: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T68
+1748033950.433346: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748033950.433375: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T120
+1748033950.433395: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive DFCSNQD2 recover__CDN__lh__CP__lh__ACQ_1 job_121 ]
+1748033985.892414: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T120
+1748033985.900344: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748033985.911323: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T182
+1748033985.911341: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive LHQD2 cmpw__E__lh__E__hl__ACQ_1 job_183 ]
+1748033987.931944: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T182
+1748033987.932121: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748033987.932130: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T184
+1748033987.932137: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive LHQD2 Cin__E__hl__ACQ_2 job_185 ]
+1748033990.854800: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T184
+1748033990.855349: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748033990.855363: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T189
+1748033990.855372: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive AOI21D0 leakage_power__ACQ_2 job_190 ]
+1748033992.593838: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T189
+1748033992.594037: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748033992.594047: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T195
+1748033992.594054: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive AOI21D0 delay__A2__hl__ZN__lh__ACQ_1 job_196 ]
+1748033996.712833: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T195
+1748033996.720542: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748033996.720557: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T213
+1748033996.720565: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive AOI21D2 Cin__A2__hl__ACQ_1 job_214 ]
+1748033999.147759: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T213
+1748033999.147980: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748033999.147991: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T220
+1748033999.148000: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive AOI21D2 Cin__A2__lh__ACQ_1 job_221 ]
+1748034001.607601: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T220
+1748034001.618471: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034001.618495: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T230
+1748034001.618514: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive AOI21D4 leakage_power__ACQ_1 job_231 ]
+1748034003.524351: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T230
+1748034003.524851: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034003.525046: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T236
+1748034003.525056: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive AOI21D4 delay__A2__lh__ZN__hl__ACQ_1 job_237 ]
+1748034012.511435: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T236
+1748034012.522400: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034012.522413: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T275
+1748034012.522421: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive MUX2D2 delay__S__lh__Z__lh__ACQ_1 job_276 ]
+1748034018.403037: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T275
+1748034018.416796: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034018.416810: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T302
+1748034018.416818: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive MUX2D4 Cin__I1__hl__ACQ_1 job_303 ]
+1748034020.657433: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T302
+1748034020.657593: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034020.657601: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T313
+1748034020.657608: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive OAI21D0 Cin__A1__hl__ACQ_1 job_314 ]
+1748034022.218286: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T313
+1748034022.218450: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034022.218467: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T324
+1748034022.218476: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive OAI21D1 delay__A1__hl__ZN__lh__ACQ_1 job_325 ]
+1748034025.625163: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T324
+1748034025.625332: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034025.625344: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T344
+1748034025.625352: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive OAI21D2 Cin__B__hl__ACQ_1 job_345 ]
+1748034027.909010: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T344
+1748034027.909184: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034027.909201: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T358
+1748034027.909212: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive OAI21D4 Cin__B__hl__ACQ_1 job_359 ]
+1748034030.022297: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T358
+1748034030.022463: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034030.022602: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T372
+1748034030.022613: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive AN2D1 Cin__A1__lh__ACQ_1 job_373 ]
+1748034031.815268: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T372
+1748034031.815454: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034031.815463: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T385
+1748034031.815470: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive AN2D2 leakage_power__ACQ_1 job_386 ]
+1748034033.359671: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T385
+1748034033.359837: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034033.359865: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T394
+1748034033.359877: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive AN2D4 delay__A1__hl__Z__hl__ACQ_1 job_395 ]
+1748034037.597822: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T394
+1748034037.598164: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034037.598175: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T423
+1748034037.598182: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive ND2D0 leakage_power__ACQ_1 job_424 ]
+1748034039.374680: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T423
+1748034039.374834: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034039.374852: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T436
+1748034039.374861: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive ND2D1 leakage_power__ACQ_4 job_437 ]
+1748034041.450717: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T436
+1748034041.450868: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034041.466324: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T450
+1748034041.466340: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive ND2D2 delay__A2__hl__ZN__lh__ACQ_1 job_451 ]
+1748034044.656599: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T450
+1748034044.664577: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034044.664592: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T475
+1748034044.664600: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive ND2D8 delay__A1__hl__ZN__lh__ACQ_1 job_476 ]
+1748034052.880336: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T475
+1748034052.881751: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034052.881762: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T535
+1748034052.881769: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive NR2D8 delay__A1__lh__ZN__hl__ACQ_1 job_536 ]
+1748034062.207361: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T535
+1748034062.210319: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034062.211721: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T605
+1748034062.211734: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive XNR2D1 delay__A1__lh__ZN__hl__ACQ_1 job_606 ]
+1748034068.181063: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T605
+1748034068.181373: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034068.181409: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T636
+1748034068.181418: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive XOR2D0 delay__A2__hl__Z__hl__ACQ_1 job_637 ]
+1748034073.592462: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T636
+1748034073.603351: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034073.603404: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T656
+1748034073.603417: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive XOR2D2 delay__A2__hl__Z__hl__ACQ_1 job_657 ]
+1748034078.740917: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T656
+1748034078.748367: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034078.748388: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T695
+1748034078.748401: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive BUFFD8 delay__I__lh__Z__lh__ACQ_1 job_696 ]
+1748034084.871051: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T695
+1748034084.873331: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034084.873347: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T740
+1748034084.873357: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [runOneAcquisitionAdaptive INVD8 delay__I__hl__ZN__lh__ACQ_1 job_741 ]
+1748034087.278593: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T740
+1748034094.724800: 9783-7f0c8c16f700: cdpl_worker.c:616: in cdpl_wk_listen(): debug: received RELAY message
+1748034096.638925: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034096.638944: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T758
+1748034096.756640: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [modelOneCellAdaptive {AN2D1 }]
+1748034099.680851: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T758
+1748034099.686375: 9783-7f0c8c16f700: cdpl_worker.c:585: in cdpl_wk_listen(): debug: received ASSIGN message
+1748034099.686391: 9783-7f0c9aa8e000: cdpl_worker.c:1092: in cdpl_wk_wait_timeout(): info: starting task T780
+1748034099.686404: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [modelOneCellAdaptive {XNR2D0 }]
+1748034103.102985: 9783-7f0c9aa8e000: cdpl_worker.c:1208: in cdpl_wk_finalize(): info: finishing task T780
+1748034128.958394: 9783-7f0c8c16f700: cdpl_worker.c:616: in cdpl_wk_listen(): debug: received RELAY message
+1748034128.987686: 9783-7f0c8c970700: cdpl_ipc.c:606: in _readv(): warning: read(): EOF
+1748034128.987725: 9783-7f0c8c970700: cdpl_ipc.c:1462: in _epoll_recv(): debug: _readv(): Broken pipe
+1748034128.987735: 9783-7f0c8c970700: cdpl_ipc.c:1683: in _epoll_main(): debug: _epoll_recv(): Broken pipe
+1748034128.987748: 9783-7f0c8c970700: cdpl_ipc.c:1061: in _host_drop__UNSAFE(): debug: dropping host `128.54.67.138:41471'
+1748034128.987825: 9783-7f0c8c16f700: cdpl_worker.c:561: in cdpl_wk_listen(): debug: received DROP notification
+1748034128.987834: 9783-7f0c8c16f700: cdpl_worker.c:565: in cdpl_wk_listen(): debug: we were dropped by the server
+1748034128.987840: 9783-7f0c8c16f700: cdpl_worker.c:492: in _wk_kill(): debug: killing worker
+1748034128.987846: 9783-7f0c8c16f700: cdpl_ipc.c:2481: in cdpl_ipc_kill(): debug: stopping event server
+1748034128.987870: 9783-7f0c8c16f700: cdpl_worker.c:542: in cdpl_wk_listen(): debug: leaving now
+1748034128.987935: 9783-7f0c8c970700: cdpl_ipc.c:1720: in _epoll_main(): debug: server going down...
+1748034128.988052: 9783-7f0c9aa8e000: cdpl_compat_worker.c:597: in cdplWorkerLogInfo(): info: [Worker shutdown. Code: 3]
+1748034128.997399: 9783-7f0c9aa8e000: cdpl_worker.c:856: in _wk_shutdown(): debug: waiting for heartbeat thread
+1748034128.997429: 9783-7f0c8b96e700: cdpl_worker.c:709: in cdpl_wk_heartbeat(): info: stopping heartbeat
+1748034128.997507: 9783-7f0c9aa8e000: cdpl_ipc.c:1781: in cdpl_ipc_host_release(): debug: releasing host `128.54.67.138:41471'
+1748034128.997554: 9783-7f0c9aa8e000: cdpl_ipc.c:2532: in cdpl_ipc_free(): debug: releasing IPC handle
+1748034128.997563: 9783-7f0c9aa8e000: cdpl_ipc.c:986: in _host_free__UNSAFE(): debug: freeing host `128.54.67.138:41471'
+1748034128.997572: 9783-7f0c9aa8e000: cdpl_ipc.c:1028: in _host_free__UNSAFE(): debug: [0 outq, 0 spR, 0 spW]
+1748034128.997605: 9783-7f0c9aa8e000: cdpl_ipc.c:2571: in cdpl_ipc_free(): debug: done
+1748034128.997614: 9783-7f0c9aa8e000: cdpl_worker.c:912: in cdpl_wk_free(): info: freed
+1748034128.997621: 9783-7f0c9aa8e000: cdpl_log.c:359: in cdpl_log_close(): debug: @@end_of_log@@

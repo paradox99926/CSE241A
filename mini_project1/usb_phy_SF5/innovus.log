@@ -1,0 +1,1000 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v21.10-p004_1, built Tue May 18 11:58:29 PDT 2021
+Options:	-no_gui -file run_eco.tcl 
+Date:		Sat May 24 16:55:09 2025
+Host:		ieng6-ece-16.ucsd.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (4cores*8cpus*Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz 25344KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	21.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+Change the soft stacksize limit to 0.2%RAM (64 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+Sourcing file "run_eco.tcl" ...
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> set init_verilog ../usb_phy/usb_phy.v
+<CMD> set init_design_netlisttype Verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell usb_phy
+<CMD> set init_lef_file /home/linux/ieng6/cs241asp25/public/data/libraries/techfiles/contest.lef
+<CMD> create_library_set -name WC_LIB -timing $libworst
+<CMD> create_library_set -name BC_LIB -timing $libworst
+<CMD> create_rc_corner -name Cmax -cap_table $captblworst -T 125
+<CMD> create_rc_corner -name Cmin -cap_table $captblworst -T -40
+<CMD> create_delay_corner -name WC -library_set WC_LIB -rc_corner Cmax
+<CMD> create_delay_corner -name BC -library_set BC_LIB -rc_corner Cmin
+<CMD> create_constraint_mode -name CON -sdc_file [list $sdc]
+<CMD> create_analysis_view -name WC_VIEW -delay_corner WC -constraint_mode CON
+<CMD> create_analysis_view -name BC_VIEW -delay_corner BC -constraint_mode CON
+<CMD> init_design -setup WC_VIEW -hold BC_VIEW
+
+Loading LEF file /home/linux/ieng6/cs241asp25/public/data/libraries/techfiles/contest.lef ...
+Set DBUPerIGU to M2 pitch 280.
+
+viaInitial starts at Sat May 24 16:55:36 2025
+viaInitial ends at Sat May 24 16:55:36 2025
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Reading WC_LIB timing library '/home/linux/ieng6/cs241asp25/public/data/libraries/lib/contest.lib' ...
+Read 333 cells in library 'contest' 
+*** End library_loading (cpu=0.00min, real=0.02min, mem=19.0M, fe_cpu=0.33min, fe_real=0.47min, fe_mem=752.4M) ***
+#% Begin Load netlist data ... (date=05/24 16:55:37, mem=571.5M)
+*** Begin netlist parsing (mem=752.4M) ***
+Created 333 new cells from 1 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../usb_phy/usb_phy.v'
+
+*** Memory Usage v#1 (Current mem = 752.379M, initial mem = 308.777M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=752.4M) ***
+#% End Load netlist data ... (date=05/24 16:55:37, total cpu=0:00:00.0, real=0:00:00.0, peak res=576.7M, current mem=576.7M)
+Set top cell to usb_phy.
+Hooked 333 DB cells to tlib cells.
+** Removed 2 unused lib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell usb_phy ...
+*** Netlist is unique.
+** info: there are 333 modules.
+** info: there are 442 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 799.805M, initial mem = 308.777M) ***
+**WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'core' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'core' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Generated pitch 0.84 in M8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in M7 is different from 0.8 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+WC_VIEW BC_VIEW
+Extraction setup Started 
+Initializing multi-corner RC extraction with 2 active RC Corners ...
+Reading Capacitance Table File /home/linux/ieng6/cs241asp25/public/data/libraries/techfiles/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+**WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+**WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+**WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+**WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+Reading Capacitance Table File /home/linux/ieng6/cs241asp25/public/data/libraries/techfiles/cln65g+_1p08m+alrdl_top2_cworst.captable ...
+**WARN: (IMPEXT-2760):	Layer M9 specified in the cap table is ignored because it is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+**WARN: (IMPEXT-2771):	Via VIA_8 specified in the cap table is ignored because its top layer, M9, is greater than the maximum number of layers, 8, specified in the technology LEF file. Check the cap table for the invalid layer specification.
+**WARN: (IMPEXT-2801):	Resistance values are not provided in the Cap Table. Sheet resistance defined in the LEF file will be used.
+**WARN: (IMPEXT-2710):	Basic Cap table for layer M9 is ignored because the layer is not specified in the technology LEF file.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: WC_VIEW
+    RC-Corner Name        : Cmax
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : '/home/linux/ieng6/cs241asp25/public/data/libraries/techfiles/cln65g+_1p08m+alrdl_top2_cworst.captable'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+ 
+ Analysis View: BC_VIEW
+    RC-Corner Name        : Cmin
+    RC-Corner Index       : 1
+    RC-Corner Temperature : -40 Celsius
+    RC-Corner Cap Table   : '/home/linux/ieng6/cs241asp25/public/data/libraries/techfiles/cln65g+_1p08m+alrdl_top2_cworst.captable'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '../usb_phy/usb_phy.sdc' ...
+Current (total cpu=0:00:20.6, real=0:00:29.0, peak res=846.7M, current mem=846.7M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../usb_phy/usb_phy.sdc, Line 8).
+
+**WARN: (TCLNL-330):	set_input_delay on clock root 'clk' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File ../usb_phy/usb_phy.sdc, Line 44).
+
+INFO (CTE): Reading of timing constraints file ../usb_phy/usb_phy.sdc completed, with 2 WARNING
+WARNING (CTE-25): Line: 9 of File ../usb_phy/usb_phy.sdc : Skipped unsupported command: set_max_area
+
+
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=866.2M, current mem=866.2M)
+Current (total cpu=0:00:20.6, real=0:00:29.0, peak res=866.2M, current mem=866.2M)
+Total number of combinational cells: 330
+Total number of sequential cells: 1
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers:
+Total number of usable buffers: 0
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: in01s01 in01s02 in01s03 in01s04 in01s06 in01s08 in01s10 in01s20 in01s40 in01s80 in01m01 in01m02 in01m03 in01m04 in01m06 in01m08 in01m10 in01m20 in01m40 in01m80 in01f01 in01f02 in01f03 in01f04 in01f06 in01f08 in01f10 in01f20 in01f40 in01f80
+Total number of usable inverters: 30
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells:
+Total number of identified usable delay cells: 0
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+**WARN: (IMPOPT-3000):	Buffer footprint is not defined or is an invalid buffer footprint.
+Type 'man IMPOPT-3000' for more detail.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPFP-3961           4  The techSite '%s' has no related standar...
+WARNING   IMPEXT-2710          2  Basic Cap table for layer M%d is ignored...
+WARNING   IMPEXT-2760          2  Layer M%d specified in the cap table is ...
+WARNING   IMPEXT-2771          2  Via %s specified in the cap table is ign...
+WARNING   IMPEXT-2801          2  Resistance values are not provided in th...
+WARNING   IMPOPT-3000          1  Buffer footprint is not defined or is an...
+WARNING   TCLCMD-1461          1  Skipped unsupported command: %s          
+WARNING   TCLNL-330            1  set_input_delay on clock root '%s' is no...
+*** Message Summary: 15 warning(s), 0 error(s)
+
+<CMD> set_interactive_constraint_modes {CON}
+<CMD> setDesignMode -process 65
+##  Process: 65            (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 65nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+<CMD> defIn ../usb_phy/usb_phy.def
+Reading DEF file '../usb_phy/usb_phy.def', current time is Sat May 24 16:55:38 2025 ...
+--- DIVIDERCHAR '/'
+--- UnitsPerDBU = 1.0000
+**WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'core' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'pad' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'core' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Generated pitch 0.84 in M8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in M7 is different from 0.8 defined in technology file in preferred direction.
+--- DIEAREA (0 0) (113120 110880)
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+DEF file '../usb_phy/usb_phy.def' is parsed, current time is Sat May 24 16:55:39 2025.
+Updating the floorplan ...
+<CMD> setAnalysisMode -analysisType onChipVariation -cppr both
+<CMD> setDelayCalMode -reset
+<CMD> setDelayCalMode -SIAware true
+AAE_INFO: switching -siAware from false to true ...
+AAE_INFO: The setting is changed from false to true in setDelayCalMode -SIAware
+<CMD> setExtractRCMode -coupled true -engine postRoute
+<CMD> report_timing
+AAE_INFO: opIsDesignInPostRouteState() is 1
+AAE DB initialization (MEM=1115.8 CPU=0:00:00.0 REAL=0:00:00.0) 
+Starting SI iteration 1 using Infinite Timing Windows
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: usb_phy
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+**WARN: (IMPEXT-3518):	The lower process node is set (using command 'setDesignMode') but the technology file for TQuantus extraction not specified. Therefore, going for postRoute (effortLevel low) extraction instead of recommended extractor 'TQuantus' for lower nodes. Use command 'set_analysis_view/update_rc_corner' to specify the technology file for TQuantus extraction to take place.
+Extraction called for design 'usb_phy' of instances=442 and nets=461 using extraction engine 'postRoute' at effort level 'low' .
+PostRoute (effortLevel low) RC Extraction called for design usb_phy.
+RC Extraction called in multi-corner(2) mode.
+**WARN: (IMPEXT-3442):	The version of the capacitance table file being used is obsolete and is no longer recommended. For improved accuracy, generate the capacitance table file using the generateCapTbl command.
+Process corner(s) are loaded.
+ Corner: Cmax
+ Corner: Cmin
+extractDetailRC Option : -outfile /tmp/innovus_temp_13113_ieng6-ece-16.ucsd.edu_cs241asp25bw_qChSGm/usb_phy_13113_5997nn.rcdb.d  -extended
+RC Mode: PostRoute -effortLevel low [Extended CapTable, LEF Resistances]
+      RC Corner Indexes            0       1   
+Capacitance Scaling Factor   : 1.00000 1.00000 
+Coupling Cap. Scaling Factor : 1.00000 1.00000 
+Resistance Scaling Factor    : 1.00000 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 1.00000 
+Clock Res. Scaling Factor    : 1.00000 1.00000 
+Shrink Factor                : 1.00000
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1115.8M)
+Extracted 10.0446% (CPU Time= 0:00:00.1  MEM= 1156.2M)
+Extracted 20.0574% (CPU Time= 0:00:00.1  MEM= 1156.2M)
+Extracted 30.0383% (CPU Time= 0:00:00.1  MEM= 1156.2M)
+Extracted 40.051% (CPU Time= 0:00:00.1  MEM= 1156.2M)
+Extracted 50.0638% (CPU Time= 0:00:00.1  MEM= 1156.2M)
+Extracted 60.0446% (CPU Time= 0:00:00.1  MEM= 1156.2M)
+Extracted 70.0574% (CPU Time= 0:00:00.1  MEM= 1156.2M)
+Extracted 80.0383% (CPU Time= 0:00:00.1  MEM= 1156.2M)
+Extracted 90.051% (CPU Time= 0:00:00.1  MEM= 1157.2M)
+Extracted 100% (CPU Time= 0:00:00.1  MEM= 1157.2M)
+Number of Extracted Resistors     : 4688
+Number of Extracted Ground Cap.   : 4998
+Number of Extracted Coupling Cap. : 4804
+Filtering XCap in 'relativeAndCoupling' mode using values coupling_c_threshold=0.1fF, relative_c_threshold=1, and total_c_threshold=0fF.
+ Corner: Cmax
+ Corner: Cmin
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1141.2M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.7  Real Time: 0:00:01.0  MEM: 1145.195M)
+AAE_INFO: 1 threads acquired from CTE.
+Start delay calculation (fullDC) (1 T). (MEM=1145.2)
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Total number of fetched objects 457
+AAE_INFO-618: Total number of nets in the design is 461,  100.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=1187.01 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1169.47 CPU=0:00:00.7 REAL=0:00:01.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1169.5M)
+Add other clocks and setupCteToAAEClockMapping during iter 1
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1169.5M)
+Starting SI iteration 2
+Start delay calculation (fullDC) (1 T). (MEM=1141.59)
+Glitch Analysis: View WC_VIEW -- Total Number of Nets Skipped = 0. 
+Glitch Analysis: View WC_VIEW -- Total Number of Nets Analyzed = 457. 
+Total number of fetched objects 457
+AAE_INFO-618: Total number of nets in the design is 461,  0.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=1181.76 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1181.76 CPU=0:00:00.0 REAL=0:00:00.0)
+Path 1: MET Setup Check with Pin i_tx_phy_state_reg_1_/ck 
+Endpoint:   i_tx_phy_state_reg_1_/d   (v) checked with  leading edge of 'clk'
+Beginpoint: i_tx_phy_sft_done_r_reg/o (^) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Analysis View: WC_VIEW
+Other End Arrival Time          0.000
+- Setup                         0.000
++ Phase Shift                 350.000
++ CPPR Adjustment               0.000
+= Required Time               350.000
+- Arrival Time                299.500
+= Slack Time                   50.500
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+     +-------------------------------------------------------------------------------+ 
+     |        Instance         |     Arc     |  Cell   |  Delay | Arrival | Required | 
+     |                         |             |         |        |  Time   |   Time   | 
+     |-------------------------+-------------+---------+--------+---------+----------| 
+     | i_tx_phy_sft_done_r_reg | ck ^        |         |        |   0.000 |   50.500 | 
+     | i_tx_phy_sft_done_r_reg | ck ^ -> o ^ | ms00f80 | 16.100 |  16.100 |   66.600 | 
+     | U433                    | a ^ -> o v  | in01s02 | 14.200 |  30.300 |   80.800 | 
+     | U429                    | a v -> o ^  | na02m02 | 35.700 |  66.000 |  116.500 | 
+     | U426                    | b ^ -> o v  | no02m02 | 33.100 |  99.100 |  149.600 | 
+     | U497                    | a v -> o ^  | na03s02 | 29.500 | 128.600 |  179.100 | 
+     | U500                    | b ^ -> o v  | na03f02 | 38.800 | 167.400 |  217.900 | 
+     | U501                    | a v -> o ^  | no02f02 | 28.800 | 196.200 |  246.700 | 
+     | U482                    | b ^ -> o v  | no04f02 | 25.500 | 221.700 |  272.200 | 
+     | U481                    | a v -> o ^  | ao12f02 | 28.300 | 250.000 |  300.500 | 
+     | U457                    | a ^ -> o v  | oa12f01 | 49.500 | 299.500 |  350.000 | 
+     | i_tx_phy_state_reg_1_   | d v         | ms00f80 |  0.000 | 299.500 |  350.000 | 
+     +-------------------------------------------------------------------------------+ 
+
+<CMD> setEcoMode -refinePlace true
+<CMD> setEcoMode -batchMode true
+**WARN: (IMPOPT-6115):	ECO batch mode has been activated, and '(batch mode)' has been added to the prompt as a reminder of that situation. Specify 'setEcoMode -batchMode  false' after all ECOs are over.
+Type 'man IMPOPT-6115' for more detail.
+**WARN: (IMPOPT-6103):	Timing updates for ECO operations done inside batch mode will happen when exiting batch mode.
+<CMD> ecoChangeCell -inst U407 -cell no02s02
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: usb_phy
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+**Info: (IMPSP-307): Design contains fractional 18 cells.
+Estimated cell power/ground rail width = 0.158 um
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: usb_phy
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+   _____________________________________________________________
+  /  Design State
+ +--------------------------------------------------------------
+ | signal nets: 
+ |    routed nets:      456 (100.0% routed)
+ |     total nets:      456
+ | clock nets: 
+ |    routed nets:        1 (100.0% routed)
+ |     total nets:        1
+ +--------------------------------------------------------------
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: usb_phy
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+Resize U407 (no02m02) to no02s02.
+<CMD> ecoChangeCell -inst U408 -cell na02s01
+Resize U408 (na02m01) to na02s01.
+<CMD> ecoChangeCell -inst U409 -cell ao12m01
+Resize U409 (ao12f01) to ao12m01.
+<CMD> ecoChangeCell -inst U410 -cell na03s01
+Resize U410 (na03m01) to na03s01.
+<CMD> ecoChangeCell -inst U411 -cell na03s02
+Resize U411 (na03m02) to na03s02.
+<CMD> ecoChangeCell -inst U413 -cell no02s02
+Resize U413 (no02m02) to no02s02.
+<CMD> ecoChangeCell -inst U415 -cell no02s02
+Resize U415 (no02m02) to no02s02.
+<CMD> ecoChangeCell -inst U417 -cell na02s03
+Resize U417 (na02m03) to na02s03.
+<CMD> ecoChangeCell -inst U421 -cell no02s02
+Resize U421 (no02m02) to no02s02.
+<CMD> ecoChangeCell -inst U425 -cell no04m06
+Resize U425 (no04f06) to no04m06.
+<CMD> ecoChangeCell -inst U430 -cell na02s02
+Resize U430 (na02m02) to na02s02.
+<CMD> ecoChangeCell -inst U431 -cell na02s02
+Resize U431 (na02m02) to na02s02.
+<CMD> ecoChangeCell -inst U434 -cell na02s02
+Resize U434 (na02m02) to na02s02.
+<CMD> ecoChangeCell -inst U437 -cell na02m08
+Resize U437 (na02f08) to na02m08.
+<CMD> ecoChangeCell -inst U439 -cell in01s02
+Resize U439 (in01m02) to in01s02.
+<CMD> ecoChangeCell -inst U444 -cell no02s02
+Resize U444 (no02m02) to no02s02.
+<CMD> ecoChangeCell -inst U446 -cell in01s01
+Resize U446 (in01m01) to in01s01.
+<CMD> ecoChangeCell -inst U447 -cell oa12s02
+Resize U447 (oa12m02) to oa12s02.
+<CMD> ecoChangeCell -inst U451 -cell na03s02
+Resize U451 (na03m02) to na03s02.
+<CMD> ecoChangeCell -inst U452 -cell no03m03
+Resize U452 (no03f03) to no03m03.
+<CMD> ecoChangeCell -inst U453 -cell oa22s01
+Resize U453 (oa22m01) to oa22s01.
+<CMD> ecoChangeCell -inst U454 -cell oa22s01
+Resize U454 (oa22m01) to oa22s01.
+<CMD> ecoChangeCell -inst U457 -cell oa12m01
+Resize U457 (oa12f01) to oa12m01.
+<CMD> ecoChangeCell -inst U465 -cell in01m01
+Resize U465 (in01f01) to in01m01.
+<CMD> ecoChangeCell -inst U466 -cell in01m02
+Resize U466 (in01f02) to in01m02.
+<CMD> ecoChangeCell -inst U468 -cell na03s02
+Resize U468 (na03m02) to na03s02.
+<CMD> ecoChangeCell -inst U471 -cell oa12s02
+Resize U471 (oa12m02) to oa12s02.
+<CMD> ecoChangeCell -inst U473 -cell oa12s01
+Resize U473 (oa12m01) to oa12s01.
+<CMD> ecoChangeCell -inst U474 -cell oa12s01
+Resize U474 (oa12m01) to oa12s01.
+<CMD> ecoChangeCell -inst U476 -cell oa12s01
+Resize U476 (oa12m01) to oa12s01.
+<CMD> ecoChangeCell -inst U478 -cell oa12s01
+Resize U478 (oa12m01) to oa12s01.
+<CMD> ecoChangeCell -inst U480 -cell no02s02
+Resize U480 (no02m02) to no02s02.
+<CMD> ecoChangeCell -inst U482 -cell no04m02
+Resize U482 (no04f02) to no04m02.
+<CMD> ecoChangeCell -inst U489 -cell oa22m02
+Resize U489 (oa22f02) to oa22m02.
+<CMD> ecoChangeCell -inst U491 -cell oa12m02
+Resize U491 (oa12f02) to oa12m02.
+<CMD> ecoChangeCell -inst U492 -cell ao12m02
+Resize U492 (ao12f02) to ao12m02.
+<CMD> ecoChangeCell -inst U495 -cell ao12m01
+Resize U495 (ao12f01) to ao12m01.
+<CMD> ecoChangeCell -inst U501 -cell no02m02
+Resize U501 (no02f02) to no02m02.
+<CMD> ecoChangeCell -inst U512 -cell na03s02
+Resize U512 (na03m02) to na03s02.
+<CMD> ecoChangeCell -inst U535 -cell in01m02
+Resize U535 (in01f02) to in01m02.
+<CMD> ecoChangeCell -inst U551 -cell na03m02
+Resize U551 (na03f02) to na03m02.
+<CMD> ecoChangeCell -inst U552 -cell in01m02
+Resize U552 (in01f02) to in01m02.
+<CMD> ecoChangeCell -inst U613 -cell in01m01
+Resize U613 (in01f01) to in01m01.
+<CMD> ecoChangeCell -inst U440 -cell ao12s02
+Resize U440 (ao12f02) to ao12s02.
+<CMD> ecoChangeCell -inst U472 -cell ao22s02
+Resize U472 (ao22f02) to ao22s02.
+<CMD> ecoChangeCell -inst U436 -cell oa12s02
+Resize U436 (oa12f02) to oa12s02.
+<CMD> ecoChangeCell -inst U481 -cell ao12s02
+Resize U481 (ao12f02) to ao12s02.
+<CMD> ecoChangeCell -inst U435 -cell no04s02
+Resize U435 (no04f02) to no04s02.
+<CMD> ecoChangeCell -inst U456 -cell ao12s02
+Resize U456 (ao12f02) to ao12s02.
+<CMD> ecoChangeCell -inst U687 -cell ao22s01
+Resize U687 (ao22f01) to ao22s01.
+<CMD> ecoChangeCell -inst U710 -cell ao22s01
+Resize U710 (ao22f01) to ao22s01.
+<CMD> ecoChangeCell -inst U708 -cell ao22s01
+Resize U708 (ao22f01) to ao22s01.
+<CMD> ecoChangeCell -inst U448 -cell ao12s02
+Resize U448 (ao12f02) to ao12s02.
+<CMD> ecoChangeCell -inst U718 -cell no02s01
+Resize U718 (no02f01) to no02s01.
+<CMD> ecoChangeCell -inst U688 -cell no02s01
+Resize U688 (no02f01) to no02s01.
+<CMD> ecoChangeCell -inst U460 -cell oa22s01
+Resize U460 (oa22f01) to oa22s01.
+<CMD> ecoChangeCell -inst U657 -cell ao22s01
+Resize U657 (ao22f01) to ao22s01.
+<CMD> ecoChangeCell -inst U418 -cell ao12s02
+Resize U418 (ao12f02) to ao12s02.
+<CMD> ecoChangeCell -inst U716 -cell na02s01
+Resize U716 (na02f01) to na02s01.
+<CMD> ecoChangeCell -inst U470 -cell oa22s01
+Resize U470 (oa22f01) to oa22s01.
+<CMD> ecoChangeCell -inst U500 -cell na03s02
+Resize U500 (na03f02) to na03s02.
+<CMD> ecoChangeCell -inst U412 -cell ao22s01
+Resize U412 (ao22f01) to ao22s01.
+<CMD> ecoChangeCell -inst U690 -cell oa22s01
+Resize U690 (oa22f01) to oa22s01.
+<CMD> ecoChangeCell -inst U694 -cell oa22s01
+Resize U694 (oa22f01) to oa22s01.
+<CMD> ecoChangeCell -inst U486 -cell ao22s01
+Resize U486 (ao22f01) to ao22s01.
+<CMD> ecoChangeCell -inst U722 -cell ao12s01
+Resize U722 (ao12f01) to ao12s01.
+<CMD> ecoChangeCell -inst U744 -cell oa12s01
+Resize U744 (oa12f01) to oa12s01.
+<CMD> ecoChangeCell -inst U704 -cell ao22s01
+Resize U704 (ao22f01) to ao22s01.
+<CMD> ecoChangeCell -inst U660 -cell oa12s01
+Resize U660 (oa12f01) to oa12s01.
+<CMD> ecoChangeCell -inst U643 -cell oa12s01
+Resize U643 (oa12f01) to oa12s01.
+<CMD> ecoChangeCell -inst U461 -cell ao12s01
+Resize U461 (ao12f01) to ao12s01.
+<CMD> ecoChangeCell -inst U475 -cell na02s01
+Resize U475 (na02f01) to na02s01.
+<CMD> ecoChangeCell -inst U477 -cell na02s01
+Resize U477 (na02f01) to na02s01.
+<CMD> ecoChangeCell -inst U479 -cell na02s01
+Resize U479 (na02f01) to na02s01.
+<CMD> ecoChangeCell -inst U441 -cell na02s02
+Resize U441 (na02f02) to na02s02.
+<CMD> ecoChangeCell -inst U693 -cell na03s01
+Resize U693 (na03f01) to na03s01.
+<CMD> ecoChangeCell -inst U662 -cell ao12s01
+Resize U662 (ao12f01) to ao12s01.
+<CMD> ecoChangeCell -inst U487 -cell in01s02
+Resize U487 (in01f02) to in01s02.
+<CMD> ecoChangeCell -inst U422 -cell no04s04
+Resize U422 (no04f04) to no04s04.
+<CMD> ecoChangeCell -inst U483 -cell no02s02
+Resize U483 (no02f02) to no02s02.
+<CMD> ecoChangeCell -inst U628 -cell na02s02
+Resize U628 (na02f02) to na02s02.
+<CMD> ecoChangeCell -inst U637 -cell na02s01
+Resize U637 (na02f01) to na02s01.
+<CMD> ecoChangeCell -inst U571 -cell no02s02
+Resize U571 (no02f02) to no02s02.
+<CMD> ecoChangeCell -inst U667 -cell no02s02
+Resize U667 (no02f02) to no02s02.
+<CMD> ecoChangeCell -inst U625 -cell no02s01
+Resize U625 (no02f01) to no02s01.
+<CMD> ecoChangeCell -inst U442 -cell no02s01
+Resize U442 (no02f01) to no02s01.
+<CMD> ecoChangeCell -inst U484 -cell ao12s01
+Resize U484 (ao12f01) to ao12s01.
+<CMD> ecoChangeCell -inst U420 -cell na02s01
+Resize U420 (na02f01) to na02s01.
+<CMD> ecoChangeCell -inst U424 -cell no02s04
+Resize U424 (no02f04) to no02s04.
+<CMD> ecoChangeCell -inst U458 -cell no02s03
+Resize U458 (no02f03) to no02s03.
+<CMD> ecoChangeCell -inst U450 -cell in01s02
+Resize U450 (in01f02) to in01s02.
+<CMD> ecoChangeCell -inst U443 -cell no02s04
+Resize U443 (no02f04) to no02s04.
+<CMD> ecoChangeCell -inst U553 -cell no02s02
+Resize U553 (no02f02) to no02s02.
+<CMD> ecoChangeCell -inst U445 -cell in01s01
+Resize U445 (in01f01) to in01s01.
+<CMD> ecoChangeCell -inst U648 -cell in01s01
+Resize U648 (in01f01) to in01s01.
+<CMD> ecoChangeCell -inst U462 -cell na02s03
+Resize U462 (na02f03) to na02s03.
+<CMD> ecoChangeCell -inst U459 -cell na02s02
+Resize U459 (na02f02) to na02s02.
+<CMD> ecoChangeCell -inst U533 -cell in01s02
+Resize U533 (in01f02) to in01s02.
+<CMD> ecoChangeCell -inst U532 -cell no02s04
+Resize U532 (no02f04) to no02s04.
+<CMD> ecoChangeCell -inst U463 -cell no02s01
+Resize U463 (no02f01) to no02s01.
+<CMD> ecoChangeCell -inst U724 -cell no02s02
+Resize U724 (no02f02) to no02s02.
+<CMD> ecoChangeCell -inst U414 -cell no02s02
+Resize U414 (no02f02) to no02s02.
+<CMD> ecoChangeCell -inst U423 -cell na02s02
+Resize U423 (na02f02) to na02s02.
+<CMD> ecoChangeCell -inst U490 -cell no02s02
+Resize U490 (no02f02) to no02s02.
+<CMD> ecoChangeCell -inst FE_OFC1_fs_ce -cell in01s04
+Resize FE_OFC1_fs_ce (in01f04) to in01s04.
+<CMD> ecoChangeCell -inst U614 -cell in01s01
+Resize U614 (in01f01) to in01s01.
+<CMD> ecoChangeCell -inst U498 -cell in01s01
+Resize U498 (in01f01) to in01s01.
+<CMD> setEcoMode -batchMode false
+**Info: (IMPSP-307): Design contains fractional 18 cells.
+*** Starting refinePlace (0:00:23.6 mem=1247.8M) ***
+Total net bbox length = 2.528e+03 (1.181e+03 1.346e+03) (ext = 4.815e+02)
+Move report: Detail placement moves 0 insts, mean move: 0.00 um, max move: 0.00 um 
+	Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1247.8MB
+Summary Report:
+Instances move: 0 (out of 442 movable)
+Instances flipped: 0
+Mean displacement: 0.00 um
+Max displacement: 0.00 um 
+Total net bbox length = 2.528e+03 (1.181e+03 1.346e+03) (ext = 4.815e+02)
+Runtime: CPU: 0:00:00.0 REAL: 0:00:00.0 MEM: 1247.8MB
+*** Finished refinePlace (0:00:23.6 mem=1247.8M) ***
+<CMD> routeDesign
+#% Begin routeDesign (date=05/24 16:55:43, mem=1014.4M)
+#routeDesign: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1014.54 (MB), peak = 1017.23 (MB)
+AAE_INFO: Pre Route call back at the beginning of routeDesign
+**INFO: User settings:
+setDesignMode -process           65
+setExtractRCMode -coupled        true
+setExtractRCMode -coupling_c_th  0.1
+setExtractRCMode -engine         postRoute
+setExtractRCMode -relative_c_th  1
+setExtractRCMode -total_c_th     0
+setDelayCalMode -SIAware         true
+
+#Cmax has no qx tech file defined
+#No active RC corner or QRC tech file is missing.
+#**INFO: setDesignMode -flowEffort standard
+#**INFO: multi-cut via swapping will be performed after routing.
+#**INFO: All auto set options tuned by routeDesign will be restored to their original settings on command completion.
+Begin checking placement ... (start mem=1270.1M, init mem=1270.1M)
+*info: Placed = 442           
+*info: Unplaced = 0           
+Placement Density:69.62%(894/1284)
+Placement Density (including fixed std cells):69.62%(894/1284)
+Finished checkPlace (total: cpu=0:00:00.0, real=0:00:00.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=1270.1M)
+
+changeUseClockNetStatus Option :  -noFixedNetWires 
+*** Changed status on (0) nets in Clock.
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=1270.1M) ***
+#**INFO: auto set of droutePostRouteSwapVia to multiCut
+% Begin globalDetailRoute (date=05/24 16:55:43, mem=1015.7M)
+
+globalDetailRoute
+
+#Start globalDetailRoute on Sat May 24 16:55:43 2025
+#
+#Generating timing data, please wait...
+#457 total nets, 457 already routed, 457 will ignore in trialRoute
+**WARN: (IMPEXT-3442):	The version of the capacitance table file being used is obsolete and is no longer recommended. For improved accuracy, generate the capacitance table file using the generateCapTbl command.
+#Dump tif for version 2.1
+**WARN: (IMPESI-2017):	There is no coupling capacitance found in the design. Use 'setDelayCalMode -siAware false' to perform base delay analysis. SI analysis requires the parasitics database to contain coupling capacitance. To perform SI analysis, use 'setExtractRCMode -coupled true' prior to extraction or load a SPEF with coupling capacitance and re-run. If the design is small and does not have any coupling, this message can be ignored.
+Total number of fetched objects 457
+AAE_INFO-618: Total number of nets in the design is 461,  100.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=1262.26 CPU=0:00:00.1 REAL=0:00:00.0)
+**WARN: (IMPESI-2017):	There is no coupling capacitance found in the design. Use 'setDelayCalMode -siAware false' to perform base delay analysis. SI analysis requires the parasitics database to contain coupling capacitance. To perform SI analysis, use 'setExtractRCMode -coupled true' prior to extraction or load a SPEF with coupling capacitance and re-run. If the design is small and does not have any coupling, this message can be ignored.
+Glitch Analysis: View WC_VIEW -- Total Number of Nets Skipped = 0. 
+Glitch Analysis: View WC_VIEW -- Total Number of Nets Analyzed = 457. 
+Total number of fetched objects 457
+AAE_INFO-618: Total number of nets in the design is 461,  9.1 percent of the nets selected for SI analysis
+End delay calculation. (MEM=1269.55 CPU=0:00:00.0 REAL=0:00:00.0)
+#Generating timing data took: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 971.97 (MB), peak = 1028.64 (MB)
+#Done generating timing data.
+#create default rule from bind_ndr_rule rule=0x7fed66dbec10 0x7fed4cca94f8
+#WARNING (NRIG-1303) The congestion map does not match the GCELL grid. Clearing the map.
+#num needed restored net=0
+#need_extraction net=0 (total=461)
+#Start reading timing information from file .timing_file_13113.tif.gz ...
+#Read in timing information for 33 ports, 442 instances from timing file .timing_file_13113.tif.gz.
+#NanoRoute Version 21.10-p004_1 NR210506-1544/21_10-UB
+#Total number of trivial nets (e.g. < 2 pins) = 4 (skipped).
+#Total number of routable nets = 457.
+#Total number of nets in the design = 461.
+#457 routable nets have routed wires.
+#No nets have been global routed.
+#Start routing data preparation on Sat May 24 16:55:44 2025
+#
+#Minimum voltage of a net in the design = 0.000.
+#Maximum voltage of a net in the design = 0.700.
+#Voltage range [0.000 - 0.700] has 457 nets.
+#Voltage range [0.700 - 0.700] has 2 nets.
+#Voltage range [0.000 - 0.000] has 2 nets.
+#Rebuild pin access data for design.
+#Initial pin access analysis.
+#Detail pin access analysis.
+# M1           H   Track-Pitch = 0.14000    Line-2-Via Pitch = 0.14000
+# M2           V   Track-Pitch = 0.14000    Line-2-Via Pitch = 0.14000
+# M3           H   Track-Pitch = 0.14000    Line-2-Via Pitch = 0.14000
+# M4           V   Track-Pitch = 0.14000    Line-2-Via Pitch = 0.14000
+# M5           H   Track-Pitch = 0.14000    Line-2-Via Pitch = 0.14000
+# M6           V   Track-Pitch = 0.14000    Line-2-Via Pitch = 0.14000
+# M7           H   Track-Pitch = 0.84000    Line-2-Via Pitch = 0.80000
+# M8           V   Track-Pitch = 0.84000    Line-2-Via Pitch = 0.80000
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 994.49 (MB), peak = 1028.64 (MB)
+#Regenerating Ggrids automatically.
+#Auto generating G-grids with size=15 tracks, using layer M3's pitch = 0.14000.
+#Using automatically generated G-grids.
+#Done routing data preparation.
+#cpu time = 00:00:02, elapsed time = 00:00:02, memory = 1010.85 (MB), peak = 1028.64 (MB)
+#
+#Finished routing data preparation on Sat May 24 16:55:47 2025
+#
+#Cpu time = 00:00:02
+#Elapsed time = 00:00:02
+#Increased memory = 23.70 (MB)
+#Total memory = 1010.96 (MB)
+#Peak memory = 1028.64 (MB)
+#
+#
+#Start global routing on Sat May 24 16:55:47 2025
+#
+#
+#Start global routing initialization on Sat May 24 16:55:47 2025
+#
+#WARNING (NRGR-22) Design is already detail routed.
+#Routing data preparation, pin analysis, global routing and track assignment statistics:
+#Cpu time = 00:00:02
+#Elapsed time = 00:00:02
+#Increased memory = 23.84 (MB)
+#Total memory = 1011.03 (MB)
+#Peak memory = 1028.64 (MB)
+#
+#Start Detail Routing..
+#start initial detail routing ...
+#   number of violations = 0
+#108 out of 442 instances (24.4%) need to be verified(marked ipoed), dirty area = 5.3%.
+#51.8% of the total area is being checked for drcs
+#51.8% of the total area was checked
+#   number of violations = 0
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 1018.05 (MB), peak = 1162.84 (MB)
+#Complete Detail Routing.
+#Total wire length = 3038 um.
+#Total half perimeter of net bounding box = 2811 um.
+#Total wire length on LAYER M1 = 891 um.
+#Total wire length on LAYER M2 = 1367 um.
+#Total wire length on LAYER M3 = 699 um.
+#Total wire length on LAYER M4 = 63 um.
+#Total wire length on LAYER M5 = 17 um.
+#Total wire length on LAYER M6 = 0 um.
+#Total wire length on LAYER M7 = 0 um.
+#Total wire length on LAYER M8 = 0 um.
+#Total number of vias = 1405
+#Total number of multi-cut vias = 1395 ( 99.3%)
+#Total number of single cut vias = 10 (  0.7%)
+#Up-Via Summary (total 1405):
+#                   single-cut          multi-cut      Total
+#-----------------------------------------------------------
+# M1                10 (  1.0%)      1029 ( 99.0%)       1039
+# M2                 0 (  0.0%)       346 (100.0%)        346
+# M3                 0 (  0.0%)        16 (100.0%)         16
+# M4                 0 (  0.0%)         4 (100.0%)          4
+#-----------------------------------------------------------
+#                   10 (  0.7%)      1395 ( 99.3%)       1405 
+#
+#Total number of DRC violations = 0
+#Cpu time = 00:00:01
+#Elapsed time = 00:00:01
+#Increased memory = 7.07 (MB)
+#Total memory = 1018.10 (MB)
+#Peak memory = 1162.84 (MB)
+#
+#Start Post Route via swapping...
+#   number of violations = 0
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1018.19 (MB), peak = 1162.84 (MB)
+#CELL_VIEW usb_phy,init has no DRC violation.
+#Total number of DRC violations = 0
+#No via is swapped.
+#Post Route via swapping is done.
+#Total wire length = 3038 um.
+#Total half perimeter of net bounding box = 2811 um.
+#Total wire length on LAYER M1 = 891 um.
+#Total wire length on LAYER M2 = 1367 um.
+#Total wire length on LAYER M3 = 699 um.
+#Total wire length on LAYER M4 = 63 um.
+#Total wire length on LAYER M5 = 17 um.
+#Total wire length on LAYER M6 = 0 um.
+#Total wire length on LAYER M7 = 0 um.
+#Total wire length on LAYER M8 = 0 um.
+#Total number of vias = 1405
+#Total number of multi-cut vias = 1395 ( 99.3%)
+#Total number of single cut vias = 10 (  0.7%)
+#Up-Via Summary (total 1405):
+#                   single-cut          multi-cut      Total
+#-----------------------------------------------------------
+# M1                10 (  1.0%)      1029 ( 99.0%)       1039
+# M2                 0 (  0.0%)       346 (100.0%)        346
+# M3                 0 (  0.0%)        16 (100.0%)         16
+# M4                 0 (  0.0%)         4 (100.0%)          4
+#-----------------------------------------------------------
+#                   10 (  0.7%)      1395 ( 99.3%)       1405 
+#
+#
+#Start Post Route wire spreading..
+#
+#Start DRC checking..
+#   number of violations = 0
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1018.77 (MB), peak = 1162.84 (MB)
+#CELL_VIEW usb_phy,init has no DRC violation.
+#Total number of DRC violations = 0
+#
+#Start data preparation for wire spreading...
+#
+#Data preparation is done on Sat May 24 16:55:48 2025
+#
+#
+#Start Post Route Wire Spread.
+#Done with 3 horizontal wires in 2 hboxes and 6 vertical wires in 2 hboxes.
+#Complete Post Route Wire Spread.
+#
+#Total wire length = 3041 um.
+#Total half perimeter of net bounding box = 2811 um.
+#Total wire length on LAYER M1 = 891 um.
+#Total wire length on LAYER M2 = 1369 um.
+#Total wire length on LAYER M3 = 700 um.
+#Total wire length on LAYER M4 = 63 um.
+#Total wire length on LAYER M5 = 17 um.
+#Total wire length on LAYER M6 = 0 um.
+#Total wire length on LAYER M7 = 0 um.
+#Total wire length on LAYER M8 = 0 um.
+#Total number of vias = 1405
+#Total number of multi-cut vias = 1395 ( 99.3%)
+#Total number of single cut vias = 10 (  0.7%)
+#Up-Via Summary (total 1405):
+#                   single-cut          multi-cut      Total
+#-----------------------------------------------------------
+# M1                10 (  1.0%)      1029 ( 99.0%)       1039
+# M2                 0 (  0.0%)       346 (100.0%)        346
+# M3                 0 (  0.0%)        16 (100.0%)         16
+# M4                 0 (  0.0%)         4 (100.0%)          4
+#-----------------------------------------------------------
+#                   10 (  0.7%)      1395 ( 99.3%)       1405 
+#
+#
+#Start DRC checking..
+#   number of violations = 0
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1019.16 (MB), peak = 1162.84 (MB)
+#CELL_VIEW usb_phy,init has no DRC violation.
+#Total number of DRC violations = 0
+#   number of violations = 0
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1019.16 (MB), peak = 1162.84 (MB)
+#CELL_VIEW usb_phy,init has no DRC violation.
+#Total number of DRC violations = 0
+#Post Route wire spread is done.
+#Total wire length = 3041 um.
+#Total half perimeter of net bounding box = 2811 um.
+#Total wire length on LAYER M1 = 891 um.
+#Total wire length on LAYER M2 = 1369 um.
+#Total wire length on LAYER M3 = 700 um.
+#Total wire length on LAYER M4 = 63 um.
+#Total wire length on LAYER M5 = 17 um.
+#Total wire length on LAYER M6 = 0 um.
+#Total wire length on LAYER M7 = 0 um.
+#Total wire length on LAYER M8 = 0 um.
+#Total number of vias = 1405
+#Total number of multi-cut vias = 1395 ( 99.3%)
+#Total number of single cut vias = 10 (  0.7%)
+#Up-Via Summary (total 1405):
+#                   single-cut          multi-cut      Total
+#-----------------------------------------------------------
+# M1                10 (  1.0%)      1029 ( 99.0%)       1039
+# M2                 0 (  0.0%)       346 (100.0%)        346
+# M3                 0 (  0.0%)        16 (100.0%)         16
+# M4                 0 (  0.0%)         4 (100.0%)          4
+#-----------------------------------------------------------
+#                   10 (  0.7%)      1395 ( 99.3%)       1405 
+#
+#detailRoute Statistics:
+#Cpu time = 00:00:01
+#Elapsed time = 00:00:01
+#Increased memory = 8.16 (MB)
+#Total memory = 1019.19 (MB)
+#Peak memory = 1162.84 (MB)
+#
+#globalDetailRoute statistics:
+#Cpu time = 00:00:04
+#Elapsed time = 00:00:05
+#Increased memory = 10.18 (MB)
+#Total memory = 1025.90 (MB)
+#Peak memory = 1162.84 (MB)
+#Number of warnings = 2
+#Total number of warnings = 3
+#Number of fails = 0
+#Total number of fails = 0
+#Complete globalDetailRoute on Sat May 24 16:55:48 2025
+#
+% End globalDetailRoute (date=05/24 16:55:48, total cpu=0:00:03.9, real=0:00:05.0, peak res=1162.8M, current mem=1025.7M)
+#Default setup view is reset to WC_VIEW.
+#Default setup view is reset to WC_VIEW.
+AAE_INFO: Post Route call back at the end of routeDesign
+#routeDesign: cpu time = 00:00:04, elapsed time = 00:00:06, memory = 1023.11 (MB), peak = 1162.84 (MB)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPEXT-3442          1  The version of the capacitance table fil...
+WARNING   IMPESI-2017          2  There is no coupling capacitance found i...
+*** Message Summary: 3 warning(s), 0 error(s)
+
+#% End routeDesign (date=05/24 16:55:48, total cpu=0:00:04.1, real=0:00:05.0, peak res=1162.8M, current mem=1023.1M)
+<CMD> report_timing
+AAE_INFO: opIsDesignInPostRouteState() is 1
+AAE DB initialization (MEM=1247.39 CPU=0:00:00.0 REAL=0:00:00.0) 
+Starting SI iteration 1 using Infinite Timing Windows
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: usb_phy
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI On 
+#################################################################################
+**WARN: (IMPEXT-3518):	The lower process node is set (using command 'setDesignMode') but the technology file for TQuantus extraction not specified. Therefore, going for postRoute (effortLevel low) extraction instead of recommended extractor 'TQuantus' for lower nodes. Use command 'set_analysis_view/update_rc_corner' to specify the technology file for TQuantus extraction to take place.
+Extraction called for design 'usb_phy' of instances=442 and nets=461 using extraction engine 'postRoute' at effort level 'low' .
+PostRoute (effortLevel low) RC Extraction called for design usb_phy.
+RC Extraction called in multi-corner(2) mode.
+**WARN: (IMPEXT-3442):	The version of the capacitance table file being used is obsolete and is no longer recommended. For improved accuracy, generate the capacitance table file using the generateCapTbl command.
+Process corner(s) are loaded.
+ Corner: Cmax
+ Corner: Cmin
+extractDetailRC Option : -outfile /tmp/innovus_temp_13113_ieng6-ece-16.ucsd.edu_cs241asp25bw_qChSGm/usb_phy_13113_3H6tZo.rcdb.d -maxResLength 200  -extended
+RC Mode: PostRoute -effortLevel low [Extended CapTable, LEF Resistances]
+      RC Corner Indexes            0       1   
+Capacitance Scaling Factor   : 1.00000 1.00000 
+Coupling Cap. Scaling Factor : 1.00000 1.00000 
+Resistance Scaling Factor    : 1.00000 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 1.00000 
+Clock Res. Scaling Factor    : 1.00000 1.00000 
+Shrink Factor                : 1.00000
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1241.4M)
+Extracted 10.0633% (CPU Time= 0:00:00.1  MEM= 1293.4M)
+Extracted 20.0633% (CPU Time= 0:00:00.1  MEM= 1293.4M)
+Extracted 30.0633% (CPU Time= 0:00:00.1  MEM= 1293.4M)
+Extracted 40.0633% (CPU Time= 0:00:00.1  MEM= 1293.4M)
+Extracted 50.0633% (CPU Time= 0:00:00.1  MEM= 1293.4M)
+Extracted 60.0633% (CPU Time= 0:00:00.1  MEM= 1293.4M)
+Extracted 70.0633% (CPU Time= 0:00:00.1  MEM= 1293.4M)
+Extracted 80.0633% (CPU Time= 0:00:00.1  MEM= 1293.4M)
+Extracted 90.0633% (CPU Time= 0:00:00.1  MEM= 1293.4M)
+Extracted 100% (CPU Time= 0:00:00.1  MEM= 1293.4M)
+Number of Extracted Resistors     : 4712
+Number of Extracted Ground Cap.   : 5022
+Number of Extracted Coupling Cap. : 4820
+Filtering XCap in 'relativeAndCoupling' mode using values coupling_c_threshold=0.1fF, relative_c_threshold=1, and total_c_threshold=0fF.
+ Corner: Cmax
+ Corner: Cmin
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1277.4M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:02.0  MEM: 1285.402M)
+AAE_INFO: 1 threads acquired from CTE.
+Start delay calculation (fullDC) (1 T). (MEM=1285.4)
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Total number of fetched objects 457
+AAE_INFO-618: Total number of nets in the design is 461,  100.0 percent of the nets selected for SI analysis
+End delay calculation. (MEM=1339.77 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1322.23 CPU=0:00:00.7 REAL=0:00:01.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1322.2M)
+Add other clocks and setupCteToAAEClockMapping during iter 1
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1322.2M)
+Starting SI iteration 2
+Start delay calculation (fullDC) (1 T). (MEM=1277.35)
+Glitch Analysis: View WC_VIEW -- Total Number of Nets Skipped = 0. 
+Glitch Analysis: View WC_VIEW -- Total Number of Nets Analyzed = 457. 
+Total number of fetched objects 457
+AAE_INFO-618: Total number of nets in the design is 461,  12.1 percent of the nets selected for SI analysis
+End delay calculation. (MEM=1321.03 CPU=0:00:00.0 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=1321.03 CPU=0:00:00.0 REAL=0:00:00.0)
+Path 1: VIOLATED Setup Check with Pin i_rx_phy_one_cnt_reg_2_/ck 
+Endpoint:   i_rx_phy_one_cnt_reg_2_/d (v) checked with  leading edge of 'clk'
+Beginpoint: i_rx_phy_fs_ce_reg/o      (v) triggered by  leading edge of 'clk'
+Path Groups: {clk}
+Analysis View: WC_VIEW
+Other End Arrival Time          0.000
+- Setup                         0.000
++ Phase Shift                 350.000
++ CPPR Adjustment               0.000
+= Required Time               350.000
+- Arrival Time                350.200
+= Slack Time                   -0.200
+     Clock Rise Edge                 0.000
+     + Clock Network Latency (Ideal) 0.000
+     = Beginpoint Arrival Time       0.000
+     +-------------------------------------------------------------------------------+ 
+     |        Instance         |     Arc     |  Cell   |  Delay | Arrival | Required | 
+     |                         |             |         |        |  Time   |   Time   | 
+     |-------------------------+-------------+---------+--------+---------+----------| 
+     | i_rx_phy_fs_ce_reg      | ck ^        |         |        |   0.000 |   -0.200 | 
+     | i_rx_phy_fs_ce_reg      | ck ^ -> o v | ms00f80 | 17.200 |  17.200 |   17.000 | 
+     | FE_OFC1_fs_ce           | a v -> o ^  | in01s04 | 38.300 |  55.500 |   55.300 | 
+     | U548                    | b ^ -> o v  | no02s02 | 26.000 |  81.500 |   81.300 | 
+     | U549                    | a v -> o ^  | in01s01 | 25.100 | 106.600 |  106.400 | 
+     | U553                    | a ^ -> o v  | no02s02 | 40.800 | 147.400 |  147.200 | 
+     | U628                    | a v -> o ^  | na02s02 | 48.500 | 195.900 |  195.700 | 
+     | U483                    | a ^ -> o v  | no02s02 | 41.800 | 237.700 |  237.500 | 
+     | U456                    | a v -> o ^  | ao12s02 | 46.500 | 284.200 |  284.000 | 
+     | U454                    | d ^ -> o v  | oa22s01 | 66.000 | 350.200 |  350.000 | 
+     | i_rx_phy_one_cnt_reg_2_ | d v         | ms00f80 |  0.000 | 350.200 |  350.000 | 
+     +-------------------------------------------------------------------------------+ 
+
+<CMD> saveNetlist usb_phy_eco.v
+Writing Netlist "usb_phy_eco.v" ...
+<CMD> rcOut -excNetFile excNet.rpt -spef usb_phy_eco.spef
+Coupling capacitances are grounded while writing out SPEF for a subset of nets.
+RC Out has the following PVT Info:
+   RC-typical 
+Dumping Spef file.....
+Printing D_NET...
+RC Out from RCDB Completed (CPU Time= 0:00:00.1  MEM= 1353.0M)
+<CMD> defOut -routing usb_phy_eco.def
+Writing DEF file 'usb_phy_eco.def', current time is Sat May 24 16:55:51 2025 ...
+unitPerMicron=2000, dbgMicronPerDBU=0.000500, unitPerDBU=1.000000
+DEF file 'usb_phy_eco.def' is written, current time is Sat May 24 16:55:51 2025 ...
+
+*** Memory Usage v#1 (Current mem = 1311.043M, initial mem = 308.777M) ***
+*** Message Summary: 29 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:29.4, real=0:00:42.0, mem=1311.0M) ---
